@@ -71,9 +71,9 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
 
 ## Data de Entrega
 
-- Serão `X` dias de projeto.
+- Serão 3 dias de projeto.
 
-- Data de entrega para avaliação final do projeto: `DD/MM/YYYY - 14:00h`.
+- Data de entrega para avaliação final do projeto: `24/08/2021 - 14:00h`.
 
 ---
 
