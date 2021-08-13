@@ -4,6 +4,7 @@ const generateBoard = document.getElementById('generate-board');
 const inputSize = document.getElementById('board-size');
 const clear = document.getElementById('clear-board');
 const pixels = document.getElementsByClassName('pixel');
+let selectedNumber = 5;
 
 // Generates random color(rgb)
 function generateRandomColor() {
