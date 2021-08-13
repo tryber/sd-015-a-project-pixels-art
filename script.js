@@ -18,7 +18,7 @@ function sizePixel() {
   const eachPixel = document.querySelectorAll('.pixel');
   const newPixelSize = 40;
   const pixelBoard = document.getElementById('pixel-board');
-  const pixelBoardSize = 5 * newPixelSize;
+  const pixelBoardSize = 5 * newPixelSize +10;
   pixelBoard.style.width = pixelBoardSize + 'px';
   pixelBoard.style.height = pixelBoardSize + 'px';
 
@@ -31,7 +31,7 @@ function sizePixel() {
 
 sizePixel();
 
-// Delete the class selected from the previous element and add it in the one clicked
+// Delete the class 'selected' from the previous element and add it in the new one clicked
 
 function resetSelected() {
   const colors = document.getElementsByClassName('color');
@@ -46,3 +46,16 @@ function newSelected(colorClicked) {
 }
 
 document.getElementById('color-palette').addEventListener('click', newSelected);
+
+// Colouring the pixel with the 'selected' color
+// Thanks to the following link I found out about the 'getComputedStyle' method, which helped me solving this issue
+// Source: https://stackoverflow.com/questions/1887104/how-to-get-the-background-color-of-an-html-element
+
+function paint(pixelTrigger) {
+  const selectedElement = document.querySelector('.selected');
+  const newColor = getComputedStyle(selectedElement).backgroundColor;
+
+  pixelTrigger.target.style.backgroundColor = newColor;
+}
+
+document.getElementById('pixel-board').addEventListener('click', paint);
