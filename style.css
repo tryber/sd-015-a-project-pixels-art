@@ -1,0 +1,28 @@
+#blue{
+    background-color: blue;
+    width: 40px;
+    height: 40px;
+    border: solid black 1px;
+    display: inline-block;
+}
+#red{
+    background-color: red;
+    width: 40px;
+    height: 40px;
+    border: solid black 1px;
+    display: inline-block;
+}
+#black{
+    background-color: black;
+    width: 40px;
+    height: 40px;
+    border: solid  1px ;
+    display: inline-block;
+}
+#green{
+    background-color: green;
+    width: 40px;
+    height: 40px;
+    border: solid  1px;
+    display: inline-block;
+}
