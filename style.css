@@ -4,39 +4,44 @@
 .color{ 
     
 }
-.color-1{ 
+#color-1{   
+    width: 100px;
+    height: 100px;
+    background-color: rgb(0,0,0);
+    border: solid black;
+    border-width: 01px;
+}
+
+
+#color-2{ 
      width: 100px;    
         height: 100px;
         background-color: magenta;
-        margin: 100px;
         border:solid black;
         border-width: 01px
 }
-.color-2{ 
+#color-3{ 
     width: 100px;    
        height: 100px;
        background-color: darkorange;
-       margin: 100px;
        border: solid black;
        border-width: 01px
 
 }
-.color-3{ 
+#color-4{ 
     width: 100px;    
        height: 100px;
        background-color: royalblue;
-       margin: 100px;
        border:solid black;
        border-width: 01px;
       
        
        
 }
-.color-4{ 
+#color-5{ 
     width: 100px;    
        height: 100px;
        background-color: green;
-       margin: 100px;
        border: solid black;
        border-width: 01px
 }
