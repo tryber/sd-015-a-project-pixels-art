@@ -45,6 +45,14 @@ function changePixelColor(event) {
   elementoEvento.style.backgroundColor = colorElement;
 }
 
+function clearBoard() {
+  const pixelClass = document.getElementsByClassName('pixel');
+  for (let i = 0; i < pixelClass.length; i += 1) {
+    const pixelElement = pixelClass[i];
+    pixelElement.style.backgroundColor = 'white';
+  }
+}
+
 function addEvent() {
   const colorClass = document.getElementsByClassName('color');
   for (let i = 0; i < colorClass.length; i += 1) {
@@ -56,6 +64,8 @@ function addEvent() {
     const pixelElement = pixelClass[i];
     pixelElement.addEventListener('click', changePixelColor);
   }
+  const clearButton = document.getElementById('clear-board');
+  clearButton.addEventListener('click', clearBoard);
 }
 
 addEvent();
