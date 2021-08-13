@@ -27,3 +27,10 @@ function createPixels (height,width) {
 }
 
 createPixels(heightPixelBoard, widthPixelBoard);
+
+let selectedColor;
+
+window.onload = function() {
+  selectedColor = document.querySelector('.color');
+  selectedColor.classList.add('selected');
+}
