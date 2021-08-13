@@ -2,8 +2,17 @@ body {
   margin: 0px;
 }
 
+header {
+  background-color: blueviolet;
+}
+
+#title {
+  margin: 20px 0px 20px 50px;
+}
+
 #color-palette {
   position: absolute;
+  left: 50px;
   margin: 10px;
   padding: 20px;
   width: 400px;
@@ -17,7 +26,6 @@ body {
   width: 100px;
   height: 100px;
   border: 1px solid black;
-  display: inline-table;
 }
 
 #black {
@@ -34,4 +42,22 @@ body {
 
 #green {
   left: 310px;
+}
+
+#pixel-board {
+  position: absolute;
+  left: 130px;
+  top: 250px;
+  margin: 10px;
+  padding: 20px;
+  width: 220px;
+  height: 220px;
+  border: 1px solid black;
+}
+
+.pixel {
+  border: 1px solid black;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
 }
