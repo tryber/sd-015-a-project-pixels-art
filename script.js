@@ -16,14 +16,31 @@ function makePixels(lines) {
 }
 makePixels(5);
 
-function toSelect(event) {
-  const colors = document.querySelector('#color-palette').children;
-  for (let i = 0; i < colors.length; i += 1) {
-    colors[i].className = 'color';
+function selectedF() {
+  function toSelect(event) {
+    const colors = document.querySelector('#color-palette').children;
+    for (let i = 0; i < colors.length; i += 1) {
+      colors[i].className = 'color';
+    }
+    const evento = event.target;
+    evento.className = 'color selected';
   }
-  const evento = event.target;
-  evento.className = 'color selected';
-}
-const paleta = document.querySelector('#color-palette');
+  const paleta = document.querySelector('#color-palette');
 
-paleta.addEventListener('click', toSelect);
+  paleta.addEventListener('click', toSelect);
+}
+selectedF();
+
+function pintPixel() {
+  const pixelsBoardLines = document.querySelector('#pixel-board .pixelLine');
+
+  function paintClick(event) {
+    const colorSelected = document.querySelector('.selected');
+    const inkwell = window.getComputedStyle(colorSelected).backgroundColor;
+    const evento = event.target;
+    evento.style.backgroundColor = inkwell;
+  }
+
+  pixelsBoardLines.addEventListener('click', paintClick);
+}
+pintPixel();
