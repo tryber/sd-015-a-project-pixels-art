@@ -1,0 +1,13 @@
+body {
+  background-color: #bd93f9;
+  font-size: 20px;
+  font-family: Verdana, sans-serif;
+}
+
+h1 {
+  color: #61f586;
+  width: 28%;
+  text-align: center;
+  margin-left: 36%;
+  margin-right: 36%;
+}
