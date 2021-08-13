@@ -29,6 +29,29 @@ function clearBoard() {
   }
 }
 
+// Function to generate custom board
+function generateBoard() {
+  const boardSizeInput = document.getElementById('board-size');
+
+  if (boardSizeInput.value === '') {
+    alert('Board inválido!');
+  }
+  else {
+    // https://developer.mozilla.org/pt-BR/docs/Web/API/Node/removeChild
+    while (pixelBoardSection.firstChild) {
+      pixelBoardSection.removeChild(pixelBoardSection.firstChild);
+    }
+
+    if (boardSizeInput.value < 5) {
+        boardSizeInput.value = 5
+    }
+    else if (boardSizeInput.value > 50) {
+        boardSizeInput.value = 50
+    }
+    fillPixelBoard(boardSizeInput.value, boardSizeInput.value);
+  }
+}
+
 // Create Color Palette Boxes
 const colorPaletteSection = document.getElementById('color-palette');
 
@@ -90,3 +113,8 @@ window.onload = () => {
 const clearButton = document.getElementById('clear-board');
 
 clearButton.addEventListener('click', clearBoard);
+
+// Add listener for generate board button
+const generateBoardButton = document.getElementById('generate-board');
+
+generateBoardButton.addEventListener('click', generateBoard);

@@ -10,8 +10,12 @@
   border-radius: 1px;
 }
 
-#clear-board {
+button {
   margin-bottom: 10px;
+}
+
+#board-size {
+  width: 180px;
 }
 
 .line {
