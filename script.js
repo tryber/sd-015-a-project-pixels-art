@@ -38,11 +38,23 @@ function colorPicker(event) {
   event.target.classList.add('selected');
 }
 
+function changePixelColor(event) {
+  const elementSelected = document.querySelector('.selected');
+  const colorElement = window.getComputedStyle(elementSelected).backgroundColor;
+  const elementoEvento = event.target;
+  elementoEvento.style.backgroundColor = colorElement;
+}
+
 function addEvent() {
   const colorClass = document.getElementsByClassName('color');
   for (let i = 0; i < colorClass.length; i += 1) {
     const colorElement = colorClass[i];
     colorElement.addEventListener('click', colorPicker);
+  }
+  const pixelClass = document.getElementsByClassName('pixel');
+  for (let i = 0; i < pixelClass.length; i += 1) {
+    const pixelElement = pixelClass[i];
+    pixelElement.addEventListener('click', changePixelColor);
   }
 }
 
