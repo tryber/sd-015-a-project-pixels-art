@@ -1,11 +1,18 @@
 const colorPalet = document.querySelector('#color-palette');
 const pixelBoard = document.querySelector('#pixel-board');
 
+function randomColorGenerator() {
+  const red = Math.floor(Math.random() * 256);
+  const green = Math.floor(Math.random() * 256);
+  const blue = Math.floor(Math.random() * 256);
+
+  return `rgb(${red},${green},${blue})`;
+}
+
 function criaCoresDaPaleta(cor, classe) {
   const corDiv = document.createElement('div');
   corDiv.style.backgroundColor = cor;
   console.log(classe);
-  corDiv.classList.add(cor);
   corDiv.classList.add('color');
   if (typeof classe !== 'undefined')corDiv.classList.add(classe);
   corDiv.style.width = '40px';
@@ -15,9 +22,9 @@ function criaCoresDaPaleta(cor, classe) {
 }
 
 criaCoresDaPaleta('black', 'selected');
-criaCoresDaPaleta('blue');
-criaCoresDaPaleta('red');
-criaCoresDaPaleta('yellow');
+criaCoresDaPaleta(randomColorGenerator());
+criaCoresDaPaleta(randomColorGenerator());
+criaCoresDaPaleta(randomColorGenerator());
 let color = document.querySelector('.selected').style.backgroundColor;
 
 function criaLinhaQuadro(tamanho, largAlt) {
