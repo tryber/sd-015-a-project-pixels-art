@@ -23,7 +23,7 @@ window.onload = function() {
     }
   }
 
-  criaQuadro(5);
+  criaQuadro(8);
 
   let cores = document.querySelectorAll(".color");
   for (let index = 0; index < cores.length; index += 1) {
@@ -47,7 +47,6 @@ window.onload = function() {
       
       paletaSelecionada = document.querySelector(".selected");
 
-      
       if (paletaSelecionada.classList.contains("black")) {
         corSelecionada = "black";
       }
@@ -60,11 +59,20 @@ window.onload = function() {
       else {
         corSelecionada = "blue";
       }
-      
-
-      console.log(corSelecionada);
 
       event.target.style.backgroundColor = corSelecionada;
     })
   }
+
+  let botaoLimpar = document.createElement("button");
+  botaoLimpar.innerHTML = "Limpar";
+  botaoLimpar.style.margin = "50px";
+  botaoLimpar.addEventListener("click", function() {
+    for (let i = 0; i < pixels.length; i += 1) {
+      pixels[i].style.backgroundColor = "white";
+    }
+  })
+  document.body.appendChild(botaoLimpar);
+
+
 }
