@@ -1,60 +1,72 @@
-/*
-   7 - Clicar em uma das cores da paleta faz com que ela seja selecionada e utilizada para preencher os pixels no quadro.
-
-      A classe selected deve ser adicionada à cor selecionada na paleta, ao mesmo tempo em que é removida da cor anteriormente selecionada;
-
-      Somente uma das cores da paleta deve ter a classe selected de cada vez;
-
-      Note que os elementos que deverão receber a classe selected devem ser os mesmos elementos que possuem a classe color, como especificado no requisito 2.
-
-   O que será verificado:
-
-      Verifica se somente uma cor da paleta de cores tem a classe selected de cada vez
-
-   Verifica se os pixels dentro do quadro não têm a classe selected quando são clicados
-*/
-
-
-// Capiturando os "pixels" de classe "color"
-let pixelSelect = document.querySelectorAll(".color");
+// Capiturando as paletas de cor, da classe  "color"
+let colorSelected = document.querySelectorAll(".color");
 
 let tagSelected = "não possui a classe selected";
 
-// Percorrendo o array "pixelSelected" 
-pixelSelect.forEach(element => {
+//Capiturando os "pixels"
 
+// Percorrendo o array "colorSelecteded" 
+colorSelected.forEach(element => {
+	
 	
 	if (element.classList.contains("selected")) {
-	
+		
 		tagSelected = element;
-		changeTagSelected(tagSelected);
-	}
-	
+    changeTagSelected(tagSelected);
+  }
 });
 
-function changeTagSelected(tagSelected){
+function changeTagSelected(tagSelected) {
 
-	
 	let oldTagSelected = "";
 	
-	//Percorrendo novamente o array "pixelSelected"
-	pixelSelect.forEach(element =>{	
+  //Percorrendo novamente o array "colorSelecteded"
+  colorSelected.forEach(element => {
+		
+		// Adicionando um escutador de evento em cada elemento do array "colorSelecteded"
+    element.addEventListener("click", event => {
 
-		// Adicionando um escutador de evento em cada elemento do array "pixelSelected"
-		element.addEventListener("click", event =>{
-			
 			// Guardando a tag antiga
-			oldTagSelected = tagSelected;
+      oldTagSelected = tagSelected;
 
-			// Guardando a nova tag a ser selecionada
-			tagSelected = event.target;
+      // Guardando a nova tag a ser selecionada
+      tagSelected = event.target;
 
-			// Removendo a classe da tag antiga
-			oldTagSelected.classList.remove("selected");
+      // Removendo a classe da tag antiga
+      oldTagSelected.classList.remove("selected");
+
+      // Adicionando a classe na tag nova
+      tagSelected.classList.add("selected");
 			
-			// Adicionando a classe na tag nova
-			tagSelected.classList.add("selected");
-		});
-		console.log(element);
-	});
+    });
+  });
 }
+
+
+let whitePixels = document.querySelectorAll(".pixel");
+
+
+whitePixels.forEach(pixel =>{
+
+	pixel.addEventListener("click", () =>{
+
+		let paletSelected = document.querySelector(".selected");
+		
+		if(paletSelected.classList.contains("black")){
+			pixel.style.backgroundColor = "black";
+		}
+		if(paletSelected.classList.contains("red")){
+			pixel.style.backgroundColor = "red";
+			
+		}
+		if(paletSelected.classList.contains("blue")){
+			pixel.style.backgroundColor = "blue";
+		}
+
+		if(paletSelected.classList.contains("green")){
+			pixel.style.backgroundColor = "green";
+			
+		}
+
+	});
+});

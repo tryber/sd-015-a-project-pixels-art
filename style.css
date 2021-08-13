@@ -37,19 +37,19 @@ main{
 */
 
 .black{
-   background: black;
+   background-color: black;
 }
 
 .red{
-   background: red;
+   background-color: red;
 }
 
 .blue{
-   background: blue;
+   background-color: blue;
 }
 
 .green{
-   background: green;
+   background-color: green;
 }
 /*
    Estilizando a section/conteiner dos pixels
