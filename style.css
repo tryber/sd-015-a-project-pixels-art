@@ -1,0 +1,9 @@
+/*
+   Estilizando o header
+*/
+
+#header{
+   width: 100%;
+   text-align: center;
+   font-size: 25px;
+}
