@@ -17,8 +17,7 @@
   background-color: pink;
 }
 #pixel-board {
-  width: 250px;
-  height: 250px;
+  border-spacing: 0px;
 }
 .pixel {
   border: black solid 1px;
@@ -27,4 +26,7 @@
   display: inline-block;
   background-color: white;
   margin: 0px;  
+}
+tr {
+  border: 0px;
 }
