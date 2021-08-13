@@ -19,3 +19,16 @@ for (let i = 0; i < colorList.length; i += 1) {
   colorList[i].style.border = '1px black solid';
   colorList[i].style.display = 'inline-block';
 }
+
+function removePreviousSelected() {
+  for (let idx = 0; idx < colorList.length; idx += 1) {
+    colorList[idx].classList.remove('selected');
+  }
+}
+
+function selectColor(event) {
+  removePreviousSelected();
+  event.target.classList.add('selected');
+}
+
+colorPaletteSection.addEventListener('click', selectColor);
