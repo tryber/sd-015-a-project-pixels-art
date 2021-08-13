@@ -3,6 +3,7 @@ const colorSelector = document.getElementsByClassName('color');
 const colorMenu = document.getElementById('color-palette');
 const canvas = document.getElementById('pixel-board');
 const linha = document.querySelectorAll('.line');
+// const pixelColorido = document.getElementsByClassName('pixel');
 let tamanho = 5;
 
 function setColor() {
@@ -59,7 +60,9 @@ colorMenu.addEventListener('click', selecionaCor);
 function pintaCor(colorir) {
   const selecionada = document.getElementsByClassName('selected');
   const cor = selecionada[0].style.backgroundColor;
-  colorir.target.style.backgroundColor = cor;
+  if (colorir.target.className === 'pixel') {
+    colorir.target.style.backgroundColor = cor;
+  }
 }
 
 canvas.addEventListener('click', pintaCor);
