@@ -1,6 +1,10 @@
 let coresDaPaleta = document.getElementsByClassName('color');
-for (let i=0; i < coresDaPaleta.length; i += 1) {
-  coresDaPaleta[i].style.backgroundColor = coresDaPaleta[i].id;
+document.getElementById('black').style.backgroundColor = 'black';
+for (let i=1; i < coresDaPaleta.length; i += 1) {
+  let r = Math.random() * 255;
+  let g = Math.random() * 255;
+  let b = Math.random() * 255;
+  coresDaPaleta[i].style.backgroundColor = 'rgb(' + r + ', ' + g + ', ' + b +')'
 }
 
 function criaQuadro(valor) {
