@@ -2,7 +2,6 @@ body {
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
-
 }
 
 #color-palette * {
@@ -35,7 +34,7 @@ body {
 
 #pixel-board {
     list-style: none;
-    margin-left: 20px;
+    margin-left: 10px;
 }
 
 .LINHAS {
