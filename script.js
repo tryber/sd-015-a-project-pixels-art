@@ -40,3 +40,8 @@ newPalletBlock(sectionPalletCollor, 4)
 
 const sectionPixelBoard = document.getElementById('pixel-board');
 newPixel(sectionPixelBoard, 25);
+
+const palletBlock = document.querySelector('.color');
+window.onload = () =>{
+  palletBlock.className = 'color selected'
+}
