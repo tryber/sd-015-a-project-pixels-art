@@ -1,4 +1,4 @@
-window.onload = function js() {
+window.onload = function () {
   function makePixels(lines) {
     const pixelsBoard = document.querySelector('#pixel-board');
     for (let i = 0; i < lines; i += 1) {
@@ -16,4 +16,6 @@ window.onload = function js() {
     }
   }
   makePixels(5);
+
+
 };
