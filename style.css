@@ -1,14 +1,25 @@
+body {
+    background-color: palegoldenrod;
+}
 #title {
     text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 #color-palette {
     /* display: inline-block; */
+    padding: 30px;
 }
 
 .color {
     display: inline-block;
     border: 1px solid black;
     background-color: darkgrey;
-    width: 50px;
-    height: 50px;
+    width: 75px;
+    height: 75px;
+    position: relative;
+    left: 38%;
+}
+
+#pixel-board {
+    background-color: darksalmon;
 }
