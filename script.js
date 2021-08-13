@@ -1,6 +1,6 @@
 // divPallet.innerHTML = 'divtext'
 
-let cores = ['brown', 'blue', 'green', 'purple']
+let cores = ['black', 'blue', 'green', 'purple']
 
 for (index = 0; index < cores.length; index +=1){
   let section1 = document.createElement('div')
