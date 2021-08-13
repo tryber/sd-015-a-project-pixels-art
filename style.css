@@ -20,3 +20,23 @@
 .blue {
   background-color: blue;
 }
+
+#color-palette {
+  margin-bottom: 30px;
+}
+
+.boardLine {
+  margin-bottom: 0;
+  padding: 0;
+  height:50px;
+}
+
+.pixel {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  background-color: white;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
