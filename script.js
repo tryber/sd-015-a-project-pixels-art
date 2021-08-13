@@ -19,6 +19,16 @@ function changeSelectedColor(evt) {
   }
 }
 
+// Function to clear board
+function clearBoard() {
+  const pixelLines = document.getElementsByClassName('line');
+  for (line of pixelLines) {
+    for (pixel of line.children) {
+      pixel.style.backgroundColor = 'white';
+    }
+  }
+}
+
 // Create Color Palette Boxes
 const colorPaletteSection = document.getElementById('color-palette');
 
@@ -75,3 +85,8 @@ window.onload = () => {
     }
   }
 };
+
+// Add listener for clear button
+const clearButton = document.getElementById('clear-board');
+
+clearButton.addEventListener('click', clearBoard);
