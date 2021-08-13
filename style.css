@@ -1,9 +1,9 @@
-.pink {
+.black {
     border: 1px solid black;
     display: inline-block;
     width: 55px;
     height: 55px;
-    background-color: pink;
+    background-color: black;
 }
 .purple {
     border: 1px solid black;
@@ -12,12 +12,12 @@
     height: 55px;
     background-color: purple;
 }
-.black {
+.blue {
     border: 1px solid black;
     display: inline-block;
     width: 55px;
     height: 55px;
-    background-color: black;
+    background-color: blue;
 }
 .green {
     border: 1px solid black;
