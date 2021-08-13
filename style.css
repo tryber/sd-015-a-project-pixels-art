@@ -36,3 +36,12 @@
   margin-top: -3px;
   margin-bottom: -3px;
 }
+#clear-board {
+  text-align: center;
+  margin:auto;
+  
+}
+
+#button-container {
+  text-align: center;
+}

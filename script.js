@@ -62,5 +62,17 @@ function selected(e) {
 pixelBoardArea.addEventListener('click', pixelColor)
 function pixelColor (e) {
   let corSelecionada = document.getElementsByClassName('selected')[0];
-  e.target.style.backgroundColor = corSelecionada.style.backgroundColor
+  if (e.target.className !== 'pixelLine' && e.target.id !== 'pixel-board'){
+  e.target.style.backgroundColor = corSelecionada.style.backgroundColor;
+  }
+}
+
+// Exercício 9 - Função do botão 'limpar', que reseta as cores do board para branco.
+let buttonLimpar = document.getElementById('clear-board');
+buttonLimpar.addEventListener('click', resetColors);
+function resetColors() {
+  allPixels = document.getElementsByClassName('pixel');
+  for (let index = 0; index < allPixels.length; index += 1) {
+    allPixels[index].style.backgroundColor = 'white'
+  }
 }
