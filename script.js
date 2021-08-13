@@ -39,8 +39,8 @@ function escolhendoCor() {
   const parent = document.querySelector('#color-palette');
   parent.addEventListener('click', (e) => {
     const cores = document.getElementsByClassName('color');
-    for (const color of cores) {
-      color.className = 'color';
+    for (let c = 0; c < cores.length; c += 1) {
+      cores[c].className = 'color';
     }
     e.target.className = 'color selected';
   });
@@ -52,8 +52,7 @@ function colorir() {
   const pixels = document.getElementById('pixel-board');
   pixels.addEventListener('click', (e) => {
     e.target.style.backgroundColor = document.querySelector('.selected').style.backgroundColor;
-  })
-  
+  });
 }
 colorir();
 
@@ -62,30 +61,39 @@ function clear() {
   const button = document.getElementById('clear-board');
   const pixels = document.getElementsByClassName('pixel');
   button.addEventListener('click', (_) => {
-    for(let pixel of pixels) {
-      pixel.style.backgroundColor = 'white';
+    for (let c = 0; c < pixels.length; c += 1) {
+      pixels[c].style.backgroundColor = 'white';
     }
   });
 }
 clear();
 
+function valueValidator(value) {
+  let result = value;
+  if (value < 5) {
+    result = 5;
+  }
+  if (value > 50) {
+    result = 50;
+  }
+  return result;
+}
+
 //  mudar Tamanho
 function changeSize() {
   const button = document.querySelector('#generate-board');
   button.addEventListener('click', (_) => {
-    let input = document.querySelector('#board-size').value;
+    const input = document.querySelector('#board-size').value;
     if (input === '') {
       alert('Board inválido!');
     } else {
-      input < 5 ? input = 5 : '';
-      input > 50 ? input = 50 : '';
+      const result = valueValidator(input);
       const board = document.querySelector('#pixel-board');
       board.innerHTML = '';
-      board.style.gridTemplateColumns = `repeat(${input}, 1fr)`;
-      board.style.gridTemplateRows = `repeat(${input}, 1fr)`;
-      generatePixelBoard(input * input);
+      board.style.gridTemplateColumns = `repeat(${result}, 1fr)`;
+      board.style.gridTemplateRows = `repeat(${result}, 1fr)`;
+      generatePixelBoard(result * result);
     }
   });
-  
 }
 changeSize();
