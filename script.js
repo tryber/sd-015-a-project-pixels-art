@@ -63,3 +63,19 @@ buttonSize.addEventListener('click', () => {
     makeBoard(sizeInput.value);
   }
 });
+
+function makeRandomColor() {
+  const g = Math.floor(Math.random() * 255);
+  const b = Math.floor(Math.random() * 255);
+  const r = Math.floor(Math.random() * 255);
+  return `rgb(${r}, ${g}, ${b})`;
+}
+
+function loadRandomColor() {
+  for (let i = 1; i < colorList.length - 1; i += 1) {
+    console.log(colorList[i]);
+    colorList[i].style.backgroundColor = makeRandomColor();
+  }
+}
+
+window.onload = loadRandomColor;
