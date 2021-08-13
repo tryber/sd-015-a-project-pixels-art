@@ -43,10 +43,29 @@ body {
     background-color: blue;
 }
 
-.blue {
-    background-color: blue;
-}
-
 .yellow {
     background-color: yellow;
+}
+
+#pixel-board {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.border-pixel-board {
+    border: 1px solid black;
+    padding: 3px;
+    border-radius: 5px;
+    display: inline-block;
+    height: 276px;
+}
+
+.pixel {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border: 1px solid black;
+    display: inline-block;
 }
