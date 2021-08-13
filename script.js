@@ -2,10 +2,10 @@ window.onload = function(){
     document.querySelector('.color').classList.add('selected')
 }
 
-const colorOne = document.getElementById("black");
-const colorTwo = document.getElementById("green");
-const colorThree = document.getElementById("red");
-const colorFour = document.getElementById("blue");
+const colorOne = document.getElementById("first");
+const colorTwo = document.getElementById("second");
+const colorThree = document.getElementById("third");
+const colorFour = document.getElementById("fourth");
 const pixelBoard = document.getElementById("pixel-board");
 
 colorOne.style.backgroundColor = "black";
