@@ -1,4 +1,3 @@
-function cores() {
 const divs = document.querySelectorAll('.color');
 for (let i = 0; i < divs.length; i += 1) {
   if (divs[i] === divs[0]) {
@@ -10,15 +9,13 @@ for (let i = 0; i < divs.length; i += 1) {
   } else if (divs[i] === divs[3]) {
     divs[i].style.backgroundColor = '#564d80';
   }
- }
 }
-cores();
-const pixelsId = document.getElementById('pixel-board')
-const pixels = document.createElement('li');
+
+const pixelsId = document.getElementById('pixel-board');
 
 for(let i = 0; i < 25; i += 1){
   const pixels = document.createElement('li');
   pixels.classList = 'pixel';
   pixels.style.backgroundColor = 'white'
-  pixelsId.appendChild(pixels) 
-}
+  pixelsId.appendChild(pixels);
+};
