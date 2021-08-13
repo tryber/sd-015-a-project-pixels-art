@@ -21,6 +21,10 @@ main{
 /*
    Estilizando paleta de cores
 */
+
+#color-palette{
+   margin-bottom: 50px;
+}
 .color{
    border: 1px solid black;
    width: 100px;
@@ -46,4 +50,23 @@ main{
 
 .green{
    background: green;
+}
+/*
+   Estilizando a section/conteiner dos pixels
+*/
+
+#pixel-board{
+   display: inline-block;
+   width: 250px;
+   height: 250px;
+   border: 2px solid black;
+   text-align: center;
+   padding: 30px;
+}
+.pixel{
+   background: white;
+   display: inline-block;
+   border: 1px solid black;
+   width: 40px;
+   height: 40px;
 }
