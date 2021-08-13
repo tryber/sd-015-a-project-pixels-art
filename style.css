@@ -14,4 +14,20 @@ body {
     display: inline-block;
     margin-right: 2px;
     border: 1px solid black;
+    border-radius: 50%;
+    text-align: center;
+
+  }
+
+#pixel-board{
+  width: 550px;
+  height: 550px;
+}
+
+  .pixel {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+
   }
