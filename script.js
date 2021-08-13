@@ -62,4 +62,12 @@ function colorir (quadrado) {
 
   }
   
-  
+let botao = document.querySelector('#clear-board')
+let motherBoard = document.querySelector('#pixel-board').children
+botao.addEventListener('click', limpador)
+
+function limpador (){
+  for (let idx3 = 0; idx3 < motherBoard.length; idx3 += 1 ) {
+    motherBoard[idx3].style.backgroundColor = 'white'
+  }
+}
