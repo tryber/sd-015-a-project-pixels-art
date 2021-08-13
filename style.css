@@ -1,0 +1,20 @@
+div {
+    height: 80px;
+    width: 80px;
+    border: 1px solid black;
+    display: inline-block;
+}
+
+#red { 
+    background-color: red
+}
+#blue {
+    background-color: blue;
+}
+#black {
+    background-color: black;
+}
+#yellow {
+    background-color: yellow;
+}
+
