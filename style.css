@@ -4,6 +4,9 @@
      height: 40px;
      display: inline-block;
  }
+ .color-pallete{
+     margin-bottom: 10px;
+ }
  .linha{
      height:42px;
      width: 210px;
@@ -19,7 +22,9 @@
  #pixel-board{
      border: solid black 1px;
      width: 210px;
+     margin-top: 10px;
  }
+ 
  /* #first{
     background-color: black;
  }

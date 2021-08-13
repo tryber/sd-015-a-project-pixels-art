@@ -11,9 +11,34 @@
         elementosPaleta[i].addEventListener("click",selecionaCor);
     }
 
+    let elementosQuadro = document.getElementsByClassName("pixel");
+    for(let i=0; i<elementosQuadro.length; i+=1){
+        elementosQuadro[i].addEventListener("click",trocaCor);
+    }
+
+    let botaoLimpar= document.getElementById("clear-board");
+    botaoLimpar.addEventListener("click", limpaQuadro);
+
+    // document.addEventListener("click", function(evento){
+    //     if (evento.target.classList.contains("pixel")){
+    //         trocaCor();
+    //     }
+    // }, false);
+
+    function limpaQuadro(evento){
+        let elementosQuadro = document.getElementsByClassName("pixel");
+    for(let i=0; i<elementosQuadro.length; i+=1){
+        elementosQuadro[i].style.backgroundColor="white"
+    }
+    }
+
+    function trocaCor(evento){
+        let corFinal= document.getElementsByClassName("selected")[0].style.backgroundColor;
+        console.log(corFinal);
+        evento.target.style.backgroundColor= corFinal;
+    }
     function selecionaCor(evento){
         let selecionada= document.getElementsByClassName("selected")[0];
-        // selecionada.classList.remove();
         selecionada.className="color";
         evento.target.className="color selected";
     }
