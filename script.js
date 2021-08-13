@@ -1,33 +1,29 @@
-window.addEventListener('load', app);
-
-function app(){
-  //aqui vai ficar todas as chamadas.
+window.addEventListener('load', function(){
   fillColorPalette();
-
-}
+});
 
 /* 
   funcao usada para preenchimento da paleta de cores
   de acordo com o array de objetos allColors.
-  */
-  function fillColorPalette() {
-    const colors = document.getElementsByClassName('color');
+*/
+function fillColorPalette() {
+  const colors = document.getElementsByClassName('color');
     
-    for (let i = 0; i < colors.length; i += 1) {
-      let colorNum = coresAleatorias();
+  for (let i = 0; i < colors.length; i += 1) {
+    let colorNum = coresAleatorias();
       
-      if (i === 0 ) {
-        colors[i].style.backgroundColor = 'black';
-      } else {
-        colors[i].style.backgroundColor = allColors[colorNum].name;
+    if (i === 0 ) {
+      colors[i].style.backgroundColor = 'black';
+    } else {
+      colors[i].style.backgroundColor = allColors[colorNum].name;
       }
 
     }
   }
 
-  function coresAleatorias() {
-    return Math.floor( Math.random() * 148 + 1);
-  }
+function coresAleatorias() {
+  return Math.floor(Math.random() * 148 + 1);
+}
 
 /*
   É possível pegar todas as cores de forma manual para gerar
@@ -188,5 +184,5 @@ const allColors = [
   { name: 'white' },
   { name: 'whitesmoke' },
   { name: 'yellow' },
-  { name: 'yellowgreen' }
-]
+  { name: 'yellowgreen' },
+];
