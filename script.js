@@ -22,9 +22,8 @@ function criaQuadro(valor) {
   const pixelBoard = document.createElement('div');
   pixelBoard.id = 'pixel-board';
   document.querySelector('body').appendChild(pixelBoard);
-  const numeroDeLinhas = checkValor;
-  for (let linha = 0; linha < numeroDeLinhas; linha += 1) {
-    for (let i = 0; i < numeroDeLinhas; i += 1) {
+  for (let linha = 0; linha < checkValor; linha += 1) {
+    for (let i = 0; i < checkValor; i += 1) {
       const pixel = document.createElement('div');
       pixel.className = 'pixel';
       pixel.addEventListener('click', pintaPixel);
@@ -50,7 +49,7 @@ botao.innerText = 'Limpar';
 botao.id = 'clear-board';
 botao.style.marginBottom = '10px';
 document.querySelector('body').insertBefore(botao, document.getElementById('pixel-board'));
-botao.onclick = function limpaQuadro () {
+botao.onclick = function limpaQuadro() {
   for (let i = 0; i < document.getElementsByClassName('pixel').length; i += 1) {
     document.getElementsByClassName('pixel')[i].style.backgroundColor = 'white';
   }

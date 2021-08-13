@@ -3,7 +3,7 @@
   width: 30px;
   height: 30px;
   display: inline-block;
-  margin: 0px 5px;
+  margin: 5px;
 }
 
 .pixel {
@@ -12,7 +12,7 @@
   width: 40px;
   height: 40px;
   border: 1px solid black;
-  margin: -3px -3px;
+  margin: -3px;
 }
 
 #board-size {
@@ -22,8 +22,4 @@
 
 #pixel-board {
   width: max-content;
-}
-
-#black {
-  background-color: black;
 }
