@@ -25,14 +25,18 @@ blockMaker(sideSize);
 //GRAB THE COLOR FROM PALETTE
 
 function getColor() {
-  let colorPalette = document.getElementById('color-palette');
-  colorPalette.addEventListener('click', function(event) {
-    if (event.target.className !== 'color selected') {
-      currentColor = document.getElementsByClassName('color selected')[0];
-      currentColor.className = 'color';
-      event.target.className = 'color selected';
-    }
-  })
+  let pallet = document.getElementById('color-palette').children;
+  for (index = 0; index < pallet.length -1; index += 1) {
+    let color = pallet[index];
+    color.addEventListener('click', function(event) {
+      if (event.target.className !== 'color selected') {
+        currentColor = document.getElementsByClassName('color selected')[0];
+        currentColor.className = 'color';
+        event.target.className = 'color selected';
+      }
+    })
+  }
 }
 
 getColor();
+
