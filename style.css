@@ -42,22 +42,22 @@ header ul li {
   padding-right: 2%;
 }
 
-#black {
+#color-1 {
   background-color: black;
   color: ghostwhite;
 }
 
-#yellow {
+#color-2 {
   background-color: yellow;
   color: #282a36;
 }
 
-#cyan {
+#color-3 {
   background-color: cyan;
   color: #282a36;
 }
 
-#orangered {
+#color-4 {
   background-color: orangered;
   color: ghostwhite;
 }

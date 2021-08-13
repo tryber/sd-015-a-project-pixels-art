@@ -1,5 +1,5 @@
 window.onload = function() {
-  let blackColorFromPalette = document.querySelector('#black');
+  let blackColorFromPalette = document.querySelector('#color-1');
   blackColorFromPalette.classList.add('selected');
   selectPaletteColor()
   coloring()
@@ -26,8 +26,7 @@ function coloring() {
   for (let pixel of pixelsArray) {
     pixel.addEventListener('click', function() {
       let currentSelectedElement = document.querySelector('.selected')
-      console.log(currentSelectedElement.id)
-      pixel.style.backgroundColor = currentSelectedElement.id
+      pixel.style.backgroundColor = currentSelectedElement.innerText
     })
   }
 }
