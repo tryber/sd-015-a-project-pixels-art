@@ -4,6 +4,7 @@ body {
   margin: 0;
   background-color: rgb(0, 29, 61);
   color: white;
+  text-align: center;
 }
 
 #title {
@@ -12,11 +13,11 @@ body {
 }
 
 #color-palette {
-  text-align: center;
+  margin-bottom: 40px;
 }
 
 #color1 {
-  background-color: rgb(0, 0, 0);
+  background-color: black;
 }
 
 #color2 {
@@ -35,4 +36,14 @@ body {
   padding: 30px;
   display: inline-block;
   border: solid black 1px;
+}
+
+.pixel {
+  width: 30px;
+  height: 30px;
+  padding: 30px;
+  margin: 1px;
+  display: inline-block;
+  border: solid black 1px;
+  background-color: white;
 }
