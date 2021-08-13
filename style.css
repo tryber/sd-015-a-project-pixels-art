@@ -22,3 +22,8 @@
 #green-color {
   background-color: green;
 }
+
+#color-palette {
+  width: 400px;
+  height: 100px;
+}
