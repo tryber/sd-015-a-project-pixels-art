@@ -5,7 +5,7 @@ console.log('hello world');
 function criarDivsDasCores() {
   const divDasPaletas = document.querySelector('#color-palette');
   for (let index = 0; index < 4; index += 1) {
-    let divCor = document.createElement('div');
+    const divCor = document.createElement('div');
     divCor.classList = 'color';
     divDasPaletas.appendChild(divCor);
   }
