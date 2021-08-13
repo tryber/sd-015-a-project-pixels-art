@@ -1,0 +1,64 @@
+#selected-color-text {
+    display: inline-block;
+}
+
+#selected-color-box {
+    background: white;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin-left: 5px;
+    border-style: solid;
+    border-width: 1px;
+}
+
+#black {
+    background: black;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    margin-left: 5px;
+    border-style: solid;
+    border-width: 1px;
+}
+
+#red {
+    background: red;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    margin-left: 5px;
+    border-style: solid;
+    border-width: 1px;
+}
+
+#blue {
+    background: blue;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    margin-left: 5px;
+    border-style: solid;
+    border-width: 1px;
+}
+
+
+#yellow {
+    background: yellow;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    margin-left: 5px;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.pixel {
+    background: white;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    margin-left: 1px;
+    border-style: solid;
+    border-width: 1px;
+}
