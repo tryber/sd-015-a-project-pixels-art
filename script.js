@@ -45,9 +45,14 @@ generateBoard.addEventListener("click", function createBoard() {
   let selectedNumber = inputSize.value;
   pixelBoard.innerHTML = '';
 
-  if (selectedNumber === "" || selectedNumber < 5 || selectedNumber > 50) {
-    selectedNumberValidador(selectedNumber); 
-  } else {
+  if (selectedNumber === "") {
+    alert('Board inválido!');
+  } else if (selectedNumber < 5) {
+    selectedNumber = 5;
+  } else if (selectedNumber > 50) {
+    selectedNumber = 50;
+  }
+
   for (let i = 0; i < selectedNumber; i += 1) {
     let newLine = document.createElement('tr');
     for (let j = 0; j < selectedNumber; j += 1) {
@@ -55,21 +60,8 @@ generateBoard.addEventListener("click", function createBoard() {
     }
     pixelBoard.appendChild(newLine);
   }
-}
-});
 
-// Validades selected number for grid size
-function selectedNumberValidador(selectedNumber) {
-  if (selectedNumber === "") {
-    alert('Board inválido!');
-  } else if (selectedNumber < 5) {
-    selectedNumber = 5;
-    return selectedNumber;
-  } else if (selectedNumber > 50){
-    selectedNumber = 50;
-    return selectedNumber;
-  }
-}
+});
 
 // Paints pixels with selected color
 pixelBoard.addEventListener('click', function paintPixels(event) {
