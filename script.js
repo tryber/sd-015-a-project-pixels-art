@@ -64,15 +64,18 @@ window.onload = function () {
     evento.target.className = 'color selected';
   }
   function paletaCores() {
-    let first = (document.getElementById('first').style.backgroundColor =
-      'black');
+    let first= document.getElementById("first").style.backgroundColor="black";
     firstPreta();
-    let second = (document.getElementById('second').style.backgroundColor =
-      'aqua');
-    let third = (document.getElementById('third').style.backgroundColor =
-      'red');
-    let fourth = (document.getElementById('fourth').style.backgroundColor =
-      'green');
+    let second= document.getElementById("second").style.backgroundColor= getRandomColor();
+    let third= document.getElementById("third").style.backgroundColor=getRandomColor();
+    let fourth= document.getElementById("fourth").style.backgroundColor=getRandomColor();
+//    function(){
+//        for (let i=0; i<3 ; i += 1){
+
+//        }
+//     let randomColor= Math.floor(Math.random()*255)
+
+//    }
   }
   function firstPreta() {
     let corInicial = document.getElementById('first');
@@ -117,4 +120,17 @@ window.onload = function () {
     pixel.className = classe;
     return pixel;
   }
+
+  function gerarCores(){
+
+  }
+
+  function getRandomColor() {
+    let letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i += 1) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  } //função retirada de https://www.ti-enxame.com/pt/javascript/gerador-de-cores-aleatorias/967183954/
 };
