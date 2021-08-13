@@ -2,10 +2,27 @@ function createPalleteColor(color) {
   const palleteBox = document.getElementById('color-palette');
   const palleteColor = document.createElement('div');
   palleteColor.style.backgroundColor = color;
-  palleteColor.style.width = '50px';
-  palleteColor.style.height = '50px';
+  palleteColor.style.width = '40px';
+  palleteColor.style.height = '40px';
   palleteColor.className = 'color';
+  palleteColor.style.border = 'solid 1px';
+  if(color == 'black'){
+    palleteColor.className = 'color selected';
+  }
+  palleteColor.addEventListener('click',function(event){
+    let colorElements = document.getElementsByClassName('color');
+    clearSelectedClass(colorElements);
+    makeSelected(event.target)    
+  })
   palleteBox.appendChild(palleteColor);
+}
+function clearSelectedClass(elements){
+  for(let index = 0; index < elements.length; index += 1){
+    elements[index].className = elements[index].className.replace(' selected','');
+  }
+}
+function makeSelected(element){
+  element.className = `${element.className} selected`
 }
 
 function createLines(numberOfLines){
@@ -16,11 +33,13 @@ function createLines(numberOfLines){
     pixelBoard.appendChild(line);
   }  
 }
+
 function fillLines(line,numberOfColumns){
   for(let index = 0; index < numberOfColumns; index += 1){
     createPixel(line);    
   }
 }
+
 function createPixel(line){
   const pixel = document.createElement('div');
   pixel.className = 'pixel';
@@ -28,13 +47,17 @@ function createPixel(line){
   pixel.style.border = 'solid 1px';
   pixel.style.width = '40px';
   pixel.style.height = '40px';
+  pixel.addEventListener('click',function(event){
+    event.target.style.backgroundColor = document.getElementsByClassName('selected')[0].style.backgroundColor;
+    console.log(document.getElementsByClassName('color selected')[0])
+  })
   line.appendChild(pixel);
+  
 }
 
 function fillBoard(numberOfLines,numberOfColumns){
   createLines(numberOfLines);
   const lines = document.getElementsByClassName('lines');
-  console.log(lines)
   for(let index = 0; index < lines.length; index += 1){
     fillLines(lines[index],numberOfColumns);
   }
@@ -54,5 +77,4 @@ createPalleteColor('black');
 createPalleteColor('#1abc9c');
 createPalleteColor('#3498db');
 createPalleteColor('#e74c3c');
-createPalleteColor('#f39c12');
 fillBoard(5,5)

@@ -6,5 +6,10 @@
 
 .pixel {
   display: inline-block;
+  margin: 0;
+}
+
+#pixel-board{
+  font-size: 0;
 }
 
