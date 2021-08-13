@@ -63,9 +63,23 @@ function removerCriancas(elemento) {
   }
 }
 
+function checkTamanhoDoLado(tamanho) {
+  let retorno = tamanho;
+  if (tamanho < 5) {
+    alert('Tamanho mínimo é 5');
+    retorno = 5;
+  }
+  if (tamanho > 50) {
+    alert('Tamanho máximo é 50');
+    retorno = 50;
+  }
+  return retorno;
+}
+
 function refazerQuadrado() {
   tamanhoDoLado = document.getElementById('board-size').value;
   if (tamanhoDoLado !== '') {
+    tamanhoDoLado = checkTamanhoDoLado(tamanhoDoLado);
     if (tamanhoDoLado >= 5 && tamanhoDoLado <= 50) {
       removerCriancas(linhas);
       criarLinhas(tamanhoDoLado);
