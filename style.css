@@ -1,7 +1,8 @@
-.color-black{
+.color{
     border: 1px solid;
     height: 80px;
     width: 80px;
     background-color: black;
+    display: inline-block;
 }
 
