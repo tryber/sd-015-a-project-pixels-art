@@ -14,9 +14,10 @@ main {
   margin: 0 10px 20px 0;
 }
 
-#pixel-board{
+#pixel-board {
   margin: 10px 0;
 }
+
 .pixel {
   background-color: white;
 }

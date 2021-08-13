@@ -16,6 +16,7 @@ myColors.forEach(createElementColor);
 // criando grade de pixels
 function createPixelBoard(size) {
   const pixelBoard = document.getElementById('pixel-board');
+  pixelBoard.innerHTML = '';
   for (let line = 0; line < size; line += 1) {
     const pixelLine = document.createElement('div');
     pixelLine.className = 'pixel-line';
@@ -69,7 +70,6 @@ function paintPixel() {
 paintPixel();
 
 // limpa painel de pixels
-
 function clearBoard() {
   const clearButton = document.getElementById('clear-board');
   const pixels = document.querySelectorAll('.pixel');
@@ -82,3 +82,19 @@ function clearBoard() {
 }
 
 clearBoard();
+
+// Modifica tamanho do quadro de pixels
+function changePixelBoardSize() {
+  const button = document.getElementById('generate-board');
+  button.addEventListener('click', () => {
+    const text = document.getElementById('board-size');
+    const size = parseInt(text.value, 10);
+    if (size > 0) {
+      createPixelBoard(size);
+    } else {
+      alert('Board inválido!');
+    }
+  });
+}
+
+changePixelBoardSize();
