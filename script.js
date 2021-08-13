@@ -37,3 +37,14 @@ for (let i = 0; i < document.querySelectorAll('.pixel').length; i += 1) {
 function pintaPixel(pixel) {
   pixel.target.style.backgroundColor = document.querySelector('.selected').style.backgroundColor;
 }
+
+let botao = document.createElement('button');
+botao.innerText = 'Limpar';
+botao.id = 'clear-board';
+botao.style.marginBottom = '10px';
+document.querySelector('body').insertBefore(botao, document.getElementById('pixel-board'))
+botao.onclick = function() {
+  for (let i = 0; i < document.getElementsByClassName("pixel").length; i += 1) {
+    document.getElementsByClassName("pixel")[i].style.backgroundColor = 'white';
+  }
+}
