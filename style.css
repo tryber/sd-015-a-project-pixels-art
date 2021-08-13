@@ -1,0 +1,22 @@
+#firstColor {
+    background-color: green;
+}
+
+#secondColor {
+    background-color: purple;
+}
+
+#thirdColor {
+    background-color: yellow;
+}
+
+#fourthColor {
+    background-color: pink;
+}
+
+.color {
+    display: inline-block;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+}
