@@ -68,6 +68,7 @@ main {
 
 #pixel-board {
   border: #ff5555 solid 5px;
+  border-radius: 25%;
   background-color: #50fa7b;
   display: block;
   width: 80%;
@@ -91,4 +92,15 @@ main {
 
 #ultimoDaLinha {
   margin-right: 25%;
+}
+
+#clear-board {
+  border-radius: 15%;
+  background-color: wheat;
+  color: cornflowerblue;
+  width: 15%;
+  font-size: 2em;
+  margin-top: 4%;
+  margin-left: 42.5%;
+  margin-right: 42.5%;
 }

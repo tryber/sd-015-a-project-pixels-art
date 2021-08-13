@@ -3,6 +3,7 @@ window.onload = function() {
   blackColorFromPalette.classList.add('selected');
   selectPaletteColor()
   coloring()
+  cleanPixels()
 }
 
 //Criando função para selecionar cor da paleta:
@@ -29,4 +30,17 @@ function coloring() {
       pixel.style.backgroundColor = currentSelectedElement.id
     })
   }
+}
+
+//Criando função para limpar o quadrados pintados:
+function cleanPixels() {
+  let getCleanButton = document.getElementById('clear-board')
+
+  getCleanButton.addEventListener('click', function() {
+    let pixelsArray = document.getElementById('pixel-board').children;
+
+    for (let pixel of pixelsArray) {
+      pixel.style.backgroundColor = 'white'
+    }
+  })
 }
