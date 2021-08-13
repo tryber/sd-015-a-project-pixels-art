@@ -4,7 +4,6 @@ const generateBoard = document.getElementById('generate-board');
 const inputSize = document.getElementById('board-size');
 const clear = document.getElementById('clear-board');
 const pixels = document.getElementsByClassName('pixel');
-let selectedNumber = 5;
 
 // Generates random color(rgb)
 function generateRandomColor() {
@@ -69,7 +68,8 @@ generateBoard.addEventListener('click', createBoard);
 
 // Paints pixels with selected color
 function paintPixels(event) {
-  event.target.style.backgroundColor = document.querySelector('.selected').style.backgroundColor;
+  const eventTarget = event.target;
+  eventTarget.style.backgroundColor = document.querySelector('.selected').style.backgroundColor;
 }
 
 pixelBoard.addEventListener('click', paintPixels);
@@ -85,12 +85,14 @@ clear.addEventListener('click', clearBoard);
 
 // Highlight hover pixel
 function highlightPixel(event) {
+  const eventTarget = event.target;
   /* Source do box shadow https://getcssscan.com/css-box-shadow-examples */
-  event.target.style.boxShadow = 'rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset';
+  eventTarget.style.boxShadow = 'rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset';
 }
 
 function removeHighlight(event) {
-  event.target.style.boxShadow = '';
+  const eventTarget = event.target;
+  eventTarget.style.boxShadow = '';
 }
 
 pixelBoard.addEventListener('mouseout', removeHighlight);

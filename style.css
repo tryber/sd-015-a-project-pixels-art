@@ -98,7 +98,7 @@ input , button {
 #pixel-board {
 
   /* Source do box shadow https://getcssscan.com/css-box-shadow-examples */
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  box-shadow: rgba(0, 0, 0, 0.35) 1px 5px 15px;
 }
 
 .white {
