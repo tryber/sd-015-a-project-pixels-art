@@ -26,3 +26,44 @@
     background-color: purple;
     left: 190px;
 }
+
+#pixel-board {
+    border-color: black;
+    border-style: solid;
+    width: 504px;
+    height: 500px;
+    top:400px;
+    position: absolute;
+}
+
+.pixel {
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    width: 100px;
+    height: 98px;
+}
+
+#c2 {
+    position: absolute;
+    left: 101px;
+    top: 0px;
+}
+
+#c3 {
+    position: absolute;
+    left: 202px;
+    top: 0px;
+}
+
+#c4 {
+    position: absolute;
+    left: 303px;
+    top: 0px;
+}
+
+#c5 {
+    position: absolute;
+    left: 404px;
+    top: 0px;
+}
