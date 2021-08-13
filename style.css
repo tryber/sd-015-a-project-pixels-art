@@ -1,0 +1,24 @@
+.color {
+  border-style: solid;
+  border-width: 1px;
+  width: 80px;
+  height: 80px;
+  margin-right: 10px;
+  float: left;
+}
+
+#black-color {
+  background-color: black;
+}
+
+#red-color {
+  background-color: red;
+}
+
+#blue-color {
+  background-color: blue;
+}
+
+#green-color {
+  background-color: green;
+}
