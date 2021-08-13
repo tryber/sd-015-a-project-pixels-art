@@ -3,10 +3,21 @@ const pixelPallet = document.querySelector('#color-palette');
 const colorsPallet = document.querySelectorAll('.color');
 const buttonClear = document.querySelector('#clear-board');
 const buttonSizeBoard = document.querySelector('#generate-board');
-let valueBoard = 5;
 
 for (let i = 0; i < colorsPallet.length; i += 1) {
-  colorsPallet[i].style.backgroundColor = colorsPallet[i].id;
+  const colorPallet = colorsPallet[i].id;
+  if (colorPallet === 'black') {
+    colorsPallet[i].style.backgroundColor = colorPallet;
+  } else {
+    const valueRed = Math.random() * 255;
+    const valueGreen = Math.random() * 255;
+    const valueYellow = Math.random() * 255;
+    const colorPalletRandon = colorsPallet[i];
+    const colorNow = 'rgb(' + valueRed + ', ' + valueGreen + ', ' + valueYellow + ')';
+    colorPalletRandon.style.backgroundColor = colorNow;
+
+    colorPalletRandon.id = colorNow;
+  }
 }
 
 function createBoard(size) {
@@ -30,7 +41,7 @@ function createBoard(size) {
 function initialColor() {
   const pixelBlack = document.querySelector('#black');
   pixelBlack.classList.add('selected');
-  createBoard(valueBoard);
+  createBoard(5);
 }
 
 window.onload = initialColor;
