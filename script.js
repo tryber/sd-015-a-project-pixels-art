@@ -40,10 +40,10 @@ function createPixel() {
 function createBoard() {
   for (let i = 0; i < 5; i += 1) {
     let newLine = document.createElement('tr');
-    for (let j = 0; j < 5; j += 1) {
+    for (let j = 0; j < 5; j += 1){
       newLine.appendChild(createPixel());
     }
-    pixelBoard.appendChild(newLine)
+    pixelBoard.appendChild(newLine);
   }
 };
 

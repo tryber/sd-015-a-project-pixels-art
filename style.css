@@ -49,6 +49,8 @@ body {
 
 #pixel-board {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  height: 210px;
+  width: 210px;
 }
 
 .white {

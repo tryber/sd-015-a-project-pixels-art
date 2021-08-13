@@ -8,15 +8,24 @@
     <title>Project - Pixel Art</title>
   </head>
   <body>
+    <!-- Header -->
     <header id="header-container">
       <h1 id="title">Paleta de Cores</h1>
     </header>
     <main>
+      <!-- Color Palette -->
       <section id="color-palette">
         <div class="color selected" id="black"></div>
         <div class="color" id="second"></div>
         <div class="color" id="third"></div>
         <div class="color" id="forth"></div>
+      </section>
+      <!-- Choose Grid Size -->
+      <section id="board-size-container">
+        <form>
+          Tamanho:
+          <input type="number" id="board-size" min="5" max="50" placeholder="5 - 50">
+        </form>
       </section>
       <section id="board-container">
         <table id="pixel-board">
