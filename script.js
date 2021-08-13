@@ -4,16 +4,32 @@ const secondColor = firstColor.nextElementSibling;
 const thirdColor = secondColor.nextElementSibling;
 const fourthColor = colorPaletteSection.lastElementChild;
 const colorList = document.querySelectorAll('#color-palette div');
+let rgbString = 'rgb(';
+
+function generateRandomNumber() {
+  for (let index = 0; index < 3; index += 1) {
+    const rgbNumber = parseInt(Math.random() * 256 + 1, 10);
+    if (index === 2) {
+      rgbString += `${rgbNumber})`;
+    } else {
+      rgbString += `${rgbNumber}, `;
+    }
+  }
+}
 
 function changeBackgroundColor(event, color) {
   const elem = event;
   elem.style.backgroundColor = color;
+  rgbString = 'rgb(';
 }
 
 changeBackgroundColor(firstColor, 'black');
-changeBackgroundColor(secondColor, 'red');
-changeBackgroundColor(thirdColor, 'blue');
-changeBackgroundColor(fourthColor, 'green');
+generateRandomNumber();
+changeBackgroundColor(secondColor, rgbString);
+generateRandomNumber();
+changeBackgroundColor(thirdColor, rgbString);
+generateRandomNumber();
+changeBackgroundColor(fourthColor, rgbString);
 
 for (let i = 0; i < colorList.length; i += 1) {
   colorList[i].style.border = '1px black solid';
