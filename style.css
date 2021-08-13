@@ -1,0 +1,35 @@
+body {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+
+}
+
+#color-palette * {
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    border: black solid 1px;
+    margin: 5px;
+    
+}
+
+.black {
+    background-color: black;
+}
+
+.blue {
+    background-color: blue;
+} 
+
+.red {
+    background-color: red;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.orange {
+    background-color: orange;
+}
