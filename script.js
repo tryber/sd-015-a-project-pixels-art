@@ -29,3 +29,11 @@ function createPixelBoard(size) {
 }
 
 createPixelBoard(5);
+
+// inicia cor preta como selecionada
+function selectColor(color) {
+  const colorSelected = document.getElementById(color);
+  colorSelected.classList.add('selected');
+}
+
+selectColor('black');
