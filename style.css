@@ -1,25 +1,30 @@
-#color-palette{
-    
-}
-.color{
+.color {
     display: inline-block;
     width: 50px;
     height: 50px;
     border: 1px black solid;
 }
-.black{
+.black {
     background-color: black;
-    
 }
-.red{
+.red {
     background-color: red;
-    
 }
-.blue{
+.blue {
     background-color: blue;
-    
 }
-.green{
+.green {
     background-color: green;
-    
+}
+#pixel-board {
+    display: table;
+    border-spacing: 1px;
+    background-color: black;
+    border: 1px solid black;
+}
+.pixel {
+    display: table-cell;
+    width: 40px;
+    height: 40px;
+    background-color: white;
 }
