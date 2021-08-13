@@ -1,0 +1,53 @@
+#color-pallete {
+  display: inline-flex;
+}
+
+.color {
+  display: inline-block;
+  border: black solid 1px;
+  padding: 10px;
+  height: 75px;
+  width: 75px;
+}
+
+.selected {
+  display: inline-block;
+  border: black solid 1px;
+  padding: 10px;
+  height: 75px;
+  width: 75px;
+}
+
+#black {
+  background-color: black;
+}
+
+#red {
+  background-color: red;
+}
+
+#blue {
+  background-color: blue;
+}
+
+#purple {
+  background-color: purple;
+}
+
+
+#pixel-board {
+  margin-top: 30px;
+}
+
+.pixel {
+  height: 40px;
+  width: 40px;
+  background-color: white;
+  display: inline-block;
+  border: black solid 1px;
+  padd;
+}
+
+#clear-board {
+  margin-top: 25px;
+}
