@@ -1,0 +1,17 @@
+body {
+  background-color: bisque;
+}
+
+#color-palette{
+ 
+ display: inline-block;
+}
+
+
+  .color{
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    margin-right: 2px;
+    border: 1px solid black;
+  }
