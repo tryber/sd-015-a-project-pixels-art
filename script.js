@@ -47,5 +47,10 @@ function addListeners(targetElement, targetEvent, targetFunction) {
 // Selected Color
 
 function selectColor(color) {
+  let colors = document.querySelectorAll('.color');
+  for (let i = 0; i < colors.length; i += 1) {
+    colors[i].classList.remove('selected');
+  }
+  color.target.classList.add('selected');
   console.log(color.target);
 }
