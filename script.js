@@ -41,3 +41,14 @@ function selectColor() {
     newColor.classList.add('selected');
   });
 }
+
+function fillPixel() {
+  const pixel = document.getElementById('pixel-board');
+
+  pixel.addEventListener('click', (event) => {
+    const selectedColor = document.querySelector('.selected').style.backgroundColor;
+    const selectedPixel = event.target;
+
+    selectedPixel.style.backgroundColor = selectedColor;
+  });
+}
