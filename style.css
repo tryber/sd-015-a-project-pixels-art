@@ -1,0 +1,24 @@
+.color {
+  height: 35px;
+  margin-left: 10px;
+  vertical-align: middle;
+  width: 35px;
+  border: 1px solid black;
+  display: inline-block;
+}
+
+#black {
+  background: black;
+}
+
+#red {
+  background: red;
+}
+
+#blue {
+  background: blue;
+}
+
+#green {
+  background: green;
+}
