@@ -17,3 +17,19 @@
 .color:nth-child(4){
   background-color: green;
 }
+#pixel-board {
+  width: 240px;
+  height: 200px;
+  margin: 5px;
+  font-size: 0;
+  display: inline-block;
+}
+
+.pixel {
+  border: 1px black solid;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  font-size: 0;
+  background-color: rgb(255, 255, 255);
+}
