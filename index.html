@@ -16,7 +16,12 @@
     <div id="green" class="color"></div>
   </section>
 
-  <button id="clear-board">Limpar</button>
+  <section id="settings">
+    <span>Defina o tamanho do quadro: </span>
+    <input type="number" min="1" oninput="validity.valid||(value='');" id="board-size">
+    <button id="generate-board">VQV</button>
+    <button id="clear-board">Limpar</button>
+  </section>
 
   <section id="pixel-board"></section>
 
