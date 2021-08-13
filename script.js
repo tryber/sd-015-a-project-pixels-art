@@ -7,13 +7,9 @@ const pixels = document.getElementsByClassName('pixel');
 
 // Generates random color(rgb)
 function generateRandomColor() {
-  let r;
-  let g;
-  let b;
-
-  r = Math.floor(Math.random() * 254);
-  g = Math.floor(Math.random() * 254);
-  b = Math.floor(Math.random() * 254);
+  const r = Math.floor(Math.random() * 254);
+  const g = Math.floor(Math.random() * 254);
+  const b = Math.floor(Math.random() * 254);
 
   return `rgb(${r}, ${g}, ${b})`;
 }
