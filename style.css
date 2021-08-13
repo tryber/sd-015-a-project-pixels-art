@@ -1,7 +1,8 @@
    #color-palette {
     border-style: solid;
     border-color: black;
-    width: 1px;
+    border-width: 1px;
+    padding: 25px;
     position: absolute;
     top: 300px;
 }
@@ -13,15 +14,15 @@
 
 .yellow {
     background-color: yellow;
-    left: 50px;
+    left: 70px;
 }
 
 .red {
     background-color: red;
-    left: 90px;
+    left: 130px;
 }
 
 .purple {
     background-color: purple;
-    left: 130px;
+    left: 190px;
 }
