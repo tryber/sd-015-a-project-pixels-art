@@ -1,7 +1,8 @@
 window.onload = function() {
-  let blackColorFromPalette = document.querySelector('#color1');
+  let blackColorFromPalette = document.querySelector('#black');
   blackColorFromPalette.classList.add('selected');
   selectPaletteColor()
+  coloring()
 }
 
 //Criando função para selecionar cor da paleta:
@@ -13,8 +14,19 @@ function selectPaletteColor() {
       let currentSelectedElement = document.querySelector('.selected');
       currentSelectedElement.classList.remove('selected');
       element.classList.add('selected');
-      console.log(element);
     })
   }
 }
 
+//Criando função para pintar os quadrados com a cor selecionada:
+function coloring() {
+  let pixelsArray = document.getElementById('pixel-board').children;
+
+  for (let pixel of pixelsArray) {
+    pixel.addEventListener('click', function() {
+      let currentSelectedElement = document.querySelector('.selected')
+      console.log(currentSelectedElement.id)
+      pixel.style.backgroundColor = currentSelectedElement.id
+    })
+  }
+}
