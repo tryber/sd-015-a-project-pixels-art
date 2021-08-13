@@ -1,17 +1,12 @@
 #title {
     text-align: center;
 }
-.container {
-    box-sizing: border-box;
-    padding: 30px;
-    width: 80px;
-    text-align: center;
-}
 #color-palette {
-    display: inline-block;
+    /* display: inline-block; */
 }
 
 .color {
+    display: inline-block;
     border: 1px solid black;
     background-color: darkgrey;
     width: 50px;
