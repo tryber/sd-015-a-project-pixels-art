@@ -1,0 +1,26 @@
+.color
+{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border: 1px solid;
+    margin: 1px;
+   
+}
+#pixel-board
+{
+    display: inline-block;
+    width: 536px;
+    height: 536px;
+    border: 1px solid;
+    margin: 1px;
+}
+.pixel
+{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border: 1px solid;
+    margin: 1px;
+    background-color: white;
+}
