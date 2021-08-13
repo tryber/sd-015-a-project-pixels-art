@@ -61,7 +61,7 @@ function randomColorPicker() {
   const titleColor = document.getElementById('title');
   for (let i = 0; i < colorPickers.length; i += 1) {
     const color = colorPickers[i];
-    if (!(color.classList.contains('selected'))) {
+    if (!color.classList.contains('selected')) {
       color.style.backgroundColor = randomColors();
     }
   }
