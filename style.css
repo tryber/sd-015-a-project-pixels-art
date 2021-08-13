@@ -60,13 +60,14 @@ section {
   font-size: 20px;
 }
 
-input {
+input, button {
   border: none;
 }
 
 #generate-board,
 #clear-board {
   width: 100px;
+  height: 35px;
   background-color: #00ebc7;
   color: #00214d;
   padding: 5px 11px;
