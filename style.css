@@ -1,3 +1,10 @@
+body{
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+}
+h1{
+    font-family: fantasy;
+}
 .color:nth-of-type(1){
     border: 1px solid black;
     display: inline-block;
@@ -31,4 +38,11 @@
     display: inline-block;
     border: 1px solid black;
     background-color: white;
+}
+#pixel-board{
+    width: 280px;
+    display: inline-block;
+}
+#clear-board{
+    margin-bottom: 10px;
 }
