@@ -1,0 +1,28 @@
+   div div {
+    border-style: solid;
+    border-color: black;
+    width: 1px;
+    position: absolute;
+    top: 300px;
+    padding: 10px;
+}
+
+.blue {
+    background-color: blue;
+    left:10px;
+}
+
+.yellow {
+    background-color: yellow;
+    left: 50px;
+}
+
+.red {
+    background-color: red;
+    left: 90px;
+}
+
+.purple {
+    background-color: purple;
+    left: 130px;
+}
