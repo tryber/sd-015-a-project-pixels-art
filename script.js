@@ -21,6 +21,21 @@ function criaQuadroDePixels() {
 }
 criaQuadroDePixels();
 
+function selecionaCorPreencher() {
+  const selecionadaInicial = document.getElementsByClassName('selected color');
+  const coresSeleção = document.querySelector('color');
+
+  function selecionaCores(event) {
+    if (selecionadaInicial.length === 0) {
+      event.target.className = 'selected color';
+    } else {
+      event.target.className = 'color';
+    }
+  }
+  coresSeleção.addEventListener('click', selecionaCores);
+}
+selecionaCorPreencher();
+
 window.onload = function colorClassSelected() {
   const selecionaColor = document.querySelector('.color');
   selecionaColor.className = 'selected color';
