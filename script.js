@@ -46,3 +46,12 @@ const td = document.querySelectorAll('.pixel');
 for (let x = 0; x < td.length; x += 1) {
   td[x].addEventListener('click', paintPixels);
 }
+
+function clearAll() {
+  for (let ind = 0; ind < td.length; ind += 1) {
+    td[ind].style.backgroundColor = 'white';
+  }
+}
+
+const clearButton = document.getElementById('clear-board');
+clearButton.addEventListener('click', clearAll);
