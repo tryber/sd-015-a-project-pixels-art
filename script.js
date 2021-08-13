@@ -10,4 +10,6 @@ window.onload = function () {
   }
 
   definirPaletaDeCores();
+
+  document.querySelector('.pixel').style.backgroundColor = 'white';
 };

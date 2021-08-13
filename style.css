@@ -1,6 +1,21 @@
-.color {
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+  margin-left: 50px;
+}
+
+.color, .pixel {
   display: inline-block;
   height: 50px;
   width: 50px;
   border: 1px solid black;
 }
+
+.pixel {
+  margin: -2px;
+  background-color: rgb(255, 255, 255);
+}
+
