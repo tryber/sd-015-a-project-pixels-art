@@ -61,9 +61,10 @@ main{
    height: 250px;
    border: 2px solid black;
    text-align: center;
-   padding: 30px;
+   padding: 10px;
 }
 .pixel{
+   margin-top: 4px;
    background: white;
    display: inline-block;
    border: 1px solid black;
