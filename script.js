@@ -1,4 +1,4 @@
-const paletaDeCores = ['blue', 'red', 'green', 'yellow', 'black'];
+const paletaDeCores = ['black', 'red', 'green', 'blue'];
 
 window.onload = function () {
   function definirPaletaDeCores() {
