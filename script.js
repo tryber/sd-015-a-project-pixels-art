@@ -57,8 +57,9 @@ function mudarCorPaleta(evento) {
 }
 
 function pintarPixels(evento) {
+  const alvo = evento.target;
   const cor = document.querySelector('.selected').style.backgroundColor;
-  evento.target.style.backgroundColor = cor;
+  alvo.style.backgroundColor = cor;
 }
 
 function pintarDeBranco() {
@@ -91,17 +92,21 @@ function checkTamanhoDoLado(tamanho) {
   return retorno;
 }
 
+function construcaoQuadrado(tamanho) {
+  if (tamanho >= 5 && tamanho <= 50) {
+    removerCriancas(linhas);
+    criarLinhas(tamanho);
+    adicionarEventos(pixels, 'click', pintarPixels);
+  } else {
+    alert('Tamanho minimo é 5 e o máximo é 50');
+  }
+}
+
 function refazerQuadrado() {
   tamanhoDoLado = document.getElementById('board-size').value;
   if (tamanhoDoLado !== '') {
     tamanhoDoLado = checkTamanhoDoLado(tamanhoDoLado);
-    if (tamanhoDoLado >= 5 && tamanhoDoLado <= 50) {
-      removerCriancas(linhas);
-      criarLinhas(tamanhoDoLado);
-      adicionarEventos(pixels, 'click', pintarPixels);
-    } else {
-      alert('Tamanho minimo é 5 e o máximo é 50');
-    }
+    construcaoQuadrado(tamanhoDoLado);
   } else {
     alert('Board inválido!');
   }
