@@ -28,29 +28,41 @@ function addClassToBlack() {
 function turnToSelect() {
   let whichColor = document.getElementsByClassName('color');
   let paletteAll = document.querySelector('#color-palette');
-  
+
   paletteAll.addEventListener('click', function (event) {
     for (let index = 0; index < whichColor.length; index += 1) {
-      console.log(whichColor[index])
+      console.log(whichColor[index]);
       whichColor[index].classList.remove('selected');
     }
     event.target.classList.add('selected');
-
   });
 }
 
-function fillPixel () {
-  
-  let boardFill = document.querySelector("#pixel-board")
-  
-  boardFill.addEventListener("click", function(event) {
-    let whoWillFill = document.querySelector(".selected")
-    event.target.style.backgroundColor = whoWillFill.style.backgroundColor
-  })
+function fillPixel() {
+  let boardFill = document.querySelector('#pixel-board');
 
+  boardFill.addEventListener('click', function (event) {
+    let whoWillFill = document.querySelector('.selected');
+    event.target.style.backgroundColor = whoWillFill.style.backgroundColor;
+  });
 }
+
+function clearAll() {
+  let motherBoard = document.getElementsByClassName('pixel');
+  console.log(motherBoard);
+  let buttonClearAll = document.querySelector('#clear-board');
+
+  buttonClearAll.addEventListener('click', function () {
+    for (let index = 0; index < motherBoard.length; index += 1) {
+      console.log(motherBoard[index]);
+      motherBoard[index].style.backgroundColor = 'white';
+    }
+  });
+}
+
 divColor();
 creatBoard();
 addClassToBlack();
 turnToSelect();
-fillPixel ()
+fillPixel();
+clearAll();
