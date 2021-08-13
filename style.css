@@ -28,3 +28,18 @@
 .black {
   background-color: black;
 }
+
+#pixel-board {
+  width: 200px;
+  height: 200px;
+  margin: 5px auto;
+}
+
+.pixel {
+  background-color: white;
+  border: 1px solid black;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  margin: -2px -1px -4px -1px;
+}
