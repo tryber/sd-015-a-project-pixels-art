@@ -55,3 +55,11 @@ function selecionaCor(clicado) {
 }
 colorMenu.addEventListener('click', selecionaCor);
 // final do eventListener de seleção de cor
+
+function pintaCor(colorir) {
+  const selecionada = document.getElementsByClassName('selected');
+  const cor = selecionada[0].style.backgroundColor;
+  colorir.target.style.backgroundColor = cor;
+}
+
+canvas.addEventListener('click', pintaCor);
