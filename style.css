@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap') ;
+
+* {
+  font-family: 'Baloo 2', cursive;
+}
+
+body {
+  text-align: center;
+  height: 100%;
+  background: url('blob-scene-haikei.svg') no-repeat center fixed;
+  background-size: cover;
+}
+
+section {
+  color: #a7a9be;
+}
+
+#header-container {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #00214d;
+  margin-bottom: -35px;
+}
+
+#color-palette {
+  margin: auto;
+  height: 80px;
+  color: #272727;
+}
+
+.color {
+  border: 1px solid black;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  margin-right: 10px;
+  transition: border-radius 0.6s;
+}
+
+.color:hover {
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.selected {
+  border-radius: 50px;
+}
+
+#board-size-container {
+  margin: 0 auto -30px;
+  height: 90px;
+  font-size: 20px;
+  color: #272727;
+}
+
+#board-size {
+  width: 75px;
+  font-weight: 300;
+  margin-right: 5px;
+  font-size: 20px;
+}
+
+input , button {
+  border: none;
+}
+
+#generate-board , #clear-board {
+  width: 100px;
+  height: 35px;
+  background-color: #00ebc7;
+  color: #00214d;
+  padding: 5px 11px;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 18px;
+  transition: 0.3s ease-in;
+}
+
+#generate-board {
+  margin-left: 10px;
+}
+
+#clear-board {
+  margin-bottom: 30px;
+}
+
+#generate-board:hover , #clear-board:hover {
+  background-color: #ff5470;
+  cursor: pointer;
+}
+
+#board-container {
+  margin: 0 auto 50px;
+  text-align: center;
+}
+
+#pixel-board {
+
+  /* Source do box shadow https://getcssscan.com/css-box-shadow-examples */
+  box-shadow: rgba(0, 0, 0, 0.35) 1px 5px 15px;
+}
+
+.white {
+  background-color: white;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.pixel {
+  height: 41px;
+  width: 41px;
+  border: 1px solid black;
+}
