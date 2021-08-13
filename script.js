@@ -1,19 +1,30 @@
 const paletaDeCores = ['black', 'red', 'green', 'blue'];
 const colorSlot = document.getElementById('color-palette').children;
-const pixels = document.getElementsByClassName('pixel');
 const botaoLimpar = document.getElementById('clear-board');
+const pixels = document.getElementsByClassName('pixel');
+const linhas = document.getElementsByClassName('lines');
+const botaoVQV = document.getElementById('generate-board');
 
-window.onload = function () {
-  function definirPaletaDeCores() {
-    for (let index = 0; index < colorSlot.length; index += 1) {
-      colorSlot[index].style.backgroundColor = paletaDeCores[index];
-    }
+let tamanhoDoLado = 5;
+
+function preencherLinhas(cadaLinha) {
+  for (let index = 0; index < tamanhoDoLado; index += 1) {
+    const pixelElement = document.createElement('div');
+    pixelElement.classList.add('pixel');
+
+    cadaLinha.appendChild(pixelElement);
   }
+}
 
-  definirPaletaDeCores();
+function criarLinhas(numeroDeLinhas) {
+  for (let index = 0; index < numeroDeLinhas; index += 1) {
+    const linha = document.createElement('div');
+    linha.classList.add('lines');
+    preencherLinhas(linha);
 
-  document.querySelector('.color').classList.add('selected');
-};
+    document.getElementById('pixel-board').appendChild(linha);
+  }
+}
 
 function adicionarEventos(elemento, evento, funcao) {
   if (elemento.length > 0) {
@@ -41,6 +52,45 @@ function pintarDeBranco() {
   }
 }
 
+function removerCriancas(elemento) {
+  if (elemento.length > 0) {
+    const vezes = elemento.length;
+    for (let index = 0; index < vezes; index += 1) {
+      elemento[0].parentNode.removeChild(elemento[0]);
+    }
+  } else {
+    elemento.parentNode.removeChild(elemento);
+  }
+}
+
+function refazerQuadrado() {
+  tamanhoDoLado = document.getElementById('board-size').value;
+  if (tamanhoDoLado !== '') {
+    if (tamanhoDoLado >= 5 && tamanhoDoLado <= 50) {
+      removerCriancas(linhas);
+      criarLinhas(tamanhoDoLado);
+      adicionarEventos(pixels, 'click', pintarPixels);
+    } else {
+      alert('Tamanho minimo é 5 e o máximo é 50');
+    }
+  } else {
+    alert('Board inválido!');
+  }
+}
+
+function definirPaletaDeCores() {
+  for (let index = 0; index < colorSlot.length; index += 1) {
+    colorSlot[index].style.backgroundColor = paletaDeCores[index];
+  }
+}
+
 adicionarEventos(colorSlot, 'click', mudarCorPaleta);
-adicionarEventos(pixels, 'click', pintarPixels);
 adicionarEventos(botaoLimpar, 'click', pintarDeBranco);
+adicionarEventos(botaoVQV, 'click', refazerQuadrado);
+
+window.onload = function iniciar() {
+  definirPaletaDeCores();
+  adicionarEventos(pixels, 'click', pintarPixels);
+
+  document.querySelector('.color').classList.add('selected');
+};
