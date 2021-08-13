@@ -27,7 +27,7 @@
 }
 
 #blue {
-  background-color: royalblue;
+  background-color: blue;
 }
 
 #purple {
@@ -46,4 +46,8 @@
   display: inline-block;
   border: black solid 1px;
   padd;
+}
+
+#clear-board {
+  margin-top: 25px;
 }

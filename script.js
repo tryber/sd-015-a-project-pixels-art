@@ -21,6 +21,18 @@ function selectColor() {
   })
 }
 
+function pixelColorFill() {
+  const pixelBoxes = document.getElementById('pixel-board');
+  pixelBoxes.addEventListener('click', function(event) {
+    const colorToFill = document.getElementsByClassName('color selected')[0].id;
+    event.target.style.backgroundColor = colorToFill;
+  })
+}
 
+function resetButton() {
+  const buttonPath = document.querySelector('#clear-board')
+}
 
+resetButton()
+pixelColorFill()
 selectColor()
