@@ -23,7 +23,12 @@ window.onload = function() {
     }
   }
 
-  criaQuadro(8);
+  if (document.getElementById("board-size").innerText == "")
+  {
+    criaQuadro(5);
+  }
+
+
 
   let cores = document.querySelectorAll(".color");
   for (let index = 0; index < cores.length; index += 1) {
@@ -65,14 +70,38 @@ window.onload = function() {
   }
 
   let botaoLimpar = document.createElement("button");
-  botaoLimpar.innerHTML = "Limpar";
+  botaoLimpar.innerText = "Limpar";
   botaoLimpar.style.margin = "50px";
+  botaoLimpar.id = "clear-board";
   botaoLimpar.addEventListener("click", function() {
     for (let i = 0; i < pixels.length; i += 1) {
       pixels[i].style.backgroundColor = "white";
     }
   })
-  document.body.appendChild(botaoLimpar);
 
+  let botaoTamanho = document.getElementById("generate-board");
+  botaoTamanho.addEventListener("click", function(event) {
+    let input = document.getElementById("board-size");
+    let tamanhoEntrada = input.value;
+    let tamanhoFinal = 0;
+
+    if (tamanhoEntrada == "") {
+      alert("Board inválido!");
+    }
+    else if (tamanhoEntrada < 5) {
+      tamanhoFinal = 5;
+    }
+    else if (tamanhoEntrada > 50) {
+      tamanhoFinal = 50;
+    } else {
+      tamanhoFinal = tamanhoEntrada;
+    }
+
+    document.getElementById("pixel-board").innerText = "";
+
+    criaQuadro(tamanhoFinal)
+  })
+
+  document.body.appendChild(botaoLimpar);
 
 }

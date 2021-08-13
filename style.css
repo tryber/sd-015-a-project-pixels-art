@@ -13,6 +13,10 @@
   background-color: white;
 }
 
+#board-size {
+  margin: 10px;
+}
+
 .linhas {
     height: 40px;
 }
