@@ -26,12 +26,15 @@ function changeSelected(event){
     }
 }
 
-let mudaCor = document.getElementById('pixel-board');
-mudaCor.addEventListener('click', funcCor);
+let mudaCor = document.getElementsByClassName('pixel');
+for (let i = 0; i < mudaCor.length; i += 1){
+    mudaCor[i].addEventListener('click', funcCor);
+}
 
 function funcCor (event) {
     let clicar = document.querySelector('.selected');
     let pixelBoard = document.querySelectorAll('.pixel');
     let cor = getComputedStyle(clicar); 
         event.target.style.backgroundColor = cor.backgroundColor;
-}
+};
+
