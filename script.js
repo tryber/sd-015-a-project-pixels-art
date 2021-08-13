@@ -15,7 +15,17 @@ let pixel = document.querySelectorAll('.pixel')
 for (let i = 0; i < pixel.length; i++){
     pixel[i].addEventListener('click', pintar)
     function pintar (){
-        pixel[i].style.backgroundColor =  selected.classList[1]
+        pixel[i].style.backgroundColor = selected.classList[1]
+    }
+}
+
+//Botão para limpar o quadro
+let btn = document.getElementById('clear-board')
+btn.addEventListener('click', limparQuadro);
+function limparQuadro () {
+    let todosPixel = document.querySelectorAll('.pixel')
+    for (let i = 0; i < todosPixel.length; i++) {
+        todosPixel[i].style.backgroundColor = 'white'
     }
 }
 
