@@ -1,6 +1,7 @@
 const colors = document.getElementById('color-palette');
 const pixelBoard = document.getElementById('pixel-board');
 const generateBoard = document.getElementById('generate-board');
+const inputSize = document.getElementById('board-size');
 const clear = document.getElementById('clear-board');
 const pixels = document.getElementsByClassName('pixel');
 
@@ -40,17 +41,19 @@ function createPixel() {
   return newPixel;
 }
 
-function createBoard() {
-  for (let i = 0; i < 5; i += 1) {
-    const newLine = document.createElement('tr');
-    for (let j = 0; j < 5; j += 1) {
+generateBoard.addEventListener("click", function createBoard() {
+  let selectedNumber = inputSize.value;
+  pixelBoard.innerHTML = '';
+
+  for (let i = 0; i < selectedNumber; i += 1) {
+    let newLine = document.createElement('tr');
+    for (let j = 0; j < selectedNumber; j += 1) {
       newLine.appendChild(createPixel());
     }
     pixelBoard.appendChild(newLine);
   }
-}
 
-createBoard();
+});
 
 // Paints pixels with selected color
 pixelBoard.addEventListener('click', function paintPixels(event) {
