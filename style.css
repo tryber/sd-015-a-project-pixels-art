@@ -4,10 +4,21 @@
      height: 40px;
      display: inline-block;
  }
- #first{
-     background-color: black;
+ .pixel{
+     margin: 0;
+     border: solid black 1px;
+     background-color: white;
+     width: 40px;
+     height: 40px;
+     display:inline-block;
  }
- #second{
+ .pixel-board{
+     width: 100px;
+ }
+ #first{
+    background-color: black;
+ }
+ #second{   
      background-color: aqua;
  }
 
