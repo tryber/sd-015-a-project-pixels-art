@@ -1,55 +1,23 @@
 // Function to fill pixel with selected color
-function fillWithColor(evt) {
+function fillWithColor(event) {
+  const evt = event;
   evt.target.style.backgroundColor = sessionStorage.getItem('selectedColor');
 }
 
 // Function to change selected color
-function changeSelectedColor(evt) {
-  sessionStorage.setItem('selectedColor', evt.target.style.backgroundColor);
+function changeSelectedColor(event) {
+  sessionStorage.setItem('selectedColor', event.target.style.backgroundColor);
 
-  const paletteColorsDiv = document.getElementsByClassName('color');
+  const paletteColorsDiv = document.querySelectorAll('.color');
 
-  for (const color of paletteColorsDiv) {
+  paletteColorsDiv.forEach((color) => {
     if (color.classList.contains('selected')) {
       color.classList.remove('selected');
     }
-    if (color.style.backgroundColor === evt.target.style.backgroundColor) {
+    if (color.style.backgroundColor === event.target.style.backgroundColor) {
       color.classList.add('selected');
     }
-  }
-}
-
-// Function to clear board
-function clearBoard() {
-  const pixelLines = document.getElementsByClassName('line');
-  for (let line of pixelLines) {
-    for (const pixel of line.children) {
-      pixel.style.backgroundColor = 'white';
-    }
-  }
-}
-
-// Function to generate custom board
-function generateBoard() {
-  const boardSizeInput = document.getElementById('board-size');
-
-  if (boardSizeInput.value === '') {
-    alert('Board inválido!');
-  }
-  else {
-    // https://developer.mozilla.org/pt-BR/docs/Web/API/Node/removeChild
-    while (pixelBoardSection.firstChild) {
-      pixelBoardSection.removeChild(pixelBoardSection.firstChild);
-    }
-
-    if (boardSizeInput.value < 5) {
-        boardSizeInput.value = 5
-    }
-    else if (boardSizeInput.value > 50) {
-        boardSizeInput.value = 50
-    }
-    fillPixelBoard(boardSizeInput.value, boardSizeInput.value);
-  }
+  });
 }
 
 // Create Color Palette Boxes
@@ -57,17 +25,17 @@ const colorPaletteSection = document.getElementById('color-palette');
 
 const paletteColors = ['black'];
 
-for (idx = 0; idx < 3; idx += 1) {
-    const rgb1 = Math.floor(Math.random() * 255)
-    const rgb2 = Math.floor(Math.random() * 255)
-    const rgb3 = Math.floor(Math.random() * 255)
+for (let idx = 0; idx < 3; idx += 1) {
+  const rgb1 = Math.floor(Math.random() * 255);
+  const rgb2 = Math.floor(Math.random() * 255);
+  const rgb3 = Math.floor(Math.random() * 255);
 
-    paletteColors.push(`rgb(${rgb1}, ${rgb2}, ${rgb3})`)
+  paletteColors.push(`rgb(${rgb1}, ${rgb2}, ${rgb3})`);
 }
 
 function createPalette(colors) {
-  for (const color of colors) {
-    let colorBox = document.createElement('div');
+  colors.forEach((color) => {
+    const colorBox = document.createElement('div');
     colorBox.className = 'color';
     colorBox.style.backgroundColor = color;
     colorBox.style.border = '1px solid black';
@@ -78,7 +46,7 @@ function createPalette(colors) {
     }
 
     colorPaletteSection.appendChild(colorBox);
-  }
+  });
 }
 
 createPalette(paletteColors);
@@ -106,15 +74,54 @@ function fillPixelBoard(lines, boxesPerLine) {
 
 fillPixelBoard(5, 5);
 
+// Function to clear board
+function clearBoard() {
+  const pixelLines = document.querySelectorAll('.line');
+  pixelLines.forEach((line) => {
+    line.childNodes.forEach((pixel) => {
+      const pxl = pixel;
+      pxl.style.backgroundColor = 'white';
+    });
+  });
+}
+
+// Function to check  if user input is OK
+function checkInput(num) {
+  if (num < 5) {
+    return 5;
+  }
+  if (num > 50) {
+    return 50;
+  }
+  return num;
+}
+
+// Function to generate custom board
+function generateBoard() {
+  const boardSizeInput = document.getElementById('board-size');
+
+  if (boardSizeInput.value === '') {
+    alert('Board inválido!');
+  } else {
+    // https://developer.mozilla.org/pt-BR/docs/Web/API/Node/removeChild
+    while (pixelBoardSection.firstChild) {
+      pixelBoardSection.removeChild(pixelBoardSection.firstChild);
+    }
+
+    const boardSize = checkInput(boardSizeInput.value);
+    fillPixelBoard(boardSize, boardSize);
+  }
+}
+
 // Set initial selected color to black (default)
 window.onload = () => {
-  const paletteColorsDiv = document.getElementsByClassName('color');
+  const paletteColorsDiv = document.querySelectorAll('.color');
 
-  for (const color of paletteColorsDiv) {
+  paletteColorsDiv.forEach((color) => {
     if (color.classList.contains('selected')) {
       sessionStorage.selectedColor = color.style.backgroundColor;
     }
-  }
+  });
 };
 
 // Add listener for clear button
