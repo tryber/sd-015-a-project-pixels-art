@@ -93,3 +93,34 @@ function alerts() {
   vqvButton.addEventListener('click', onClickTwo);
 }
 alerts();
+
+function randomColors() {
+  const r = Math.random() * 255;
+  const g = Math.random() * 255;
+  const b = Math.random() * 255;
+  const rgbArray = [r, g, b];
+  const virgula = ', ';
+  let rgbcolor = '';
+  for (let i = 0; i < rgbArray.length; i += 1) {
+    const inteiro = Math.round((rgbArray[i]));
+    if (i < 2) {
+      rgbcolor = rgbcolor + inteiro + virgula;
+    } else {
+      rgbcolor += inteiro;
+    }
+  }
+  const fraseRgb = 'rgb (';
+  const fechaParentesis = ')';
+  let rgb = fraseRgb + rgbcolor + fechaParentesis;
+  return rgb
+}
+
+function aplyColors() {
+  const vermelho = document.querySelector('#vermelho');
+  const laranja = document.querySelector('#laranja');
+  const amarelo = document.querySelector('#amarelo');
+  vermelho.style.backgroundColor = randomColors();
+  laranja.style.backgroundColor = randomColors();
+  amarelo.style.backgroundColor = randomColors();
+}
+window.onload = aplyColors();
