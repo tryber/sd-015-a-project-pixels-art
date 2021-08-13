@@ -1,0 +1,14 @@
+.color {
+  height: 100px;
+  width: 100px;
+  display: inline-block;
+  border: 1px solid black;
+}
+
+.pixel {
+  height: 40px;
+  width: 40px;
+  display: inline-block;
+  border: 1px solid black;
+  background-color: white;
+}
