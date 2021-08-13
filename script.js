@@ -8,3 +8,23 @@ function criarquadro(){
     }; 
 };
 criarquadro();
+
+let corInicial = document.querySelector('#preta');
+function classPreta(){
+    corInicial.classList.add('selected');
+}
+classPreta();
+
+let deleteSelected = document.getElementById('color-palette');
+deleteSelected.addEventListener('click', changeSelected);
+
+function changeSelected(event){
+    let classDelet = document.querySelectorAll('.color');
+    for (let index = 0; index < classDelet.length; index +=1) {
+        classDelet[index].classList.remove('selected');
+        event.target.classList.add('selected');
+    }
+}
+
+
+
