@@ -24,6 +24,22 @@ function addClassToBlack() {
     .querySelector('#color-palette')
     .firstElementChild.classList.add('selected');
 }
+
+function turnToSelect() {
+  let whichColor = document.getElementsByClassName('color');
+  let paletteAll = document.querySelector('#color-palette');
+  
+  paletteAll.addEventListener('click', function (event) {
+    for (let index = 0; index < whichColor.length; index += 1) {
+      console.log(whichColor[index])
+      whichColor[index].classList.remove('selected');
+    }
+    event.target.classList.add('selected');
+
+  });
+  console.log(paletteAll)
+}
 divColor();
 creatBoard();
 addClassToBlack();
+turnToSelect();
