@@ -4,6 +4,19 @@
      paletaCores()
      montaBoard(boardSize);
 
+
+
+    let elementosPaleta = document.getElementsByClassName("color");
+    for(let i=0; i<elementosPaleta.length; i+=1){
+        elementosPaleta[i].addEventListener("click",selecionaCor);
+    }
+
+    function selecionaCor(evento){
+        let selecionada= document.getElementsByClassName("selected")[0];
+        // selecionada.classList.remove();
+        selecionada.className="color";
+        evento.target.className="color selected";
+    }
     function paletaCores(){
         let first= document.getElementById("first").style.backgroundColor="black";
         firstPreta();
