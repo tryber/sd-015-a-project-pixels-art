@@ -22,7 +22,7 @@
 }
 
 .line {
-  display: inline-block;
+  margin-bottom: -4px;
 }
 
 .pixel {
@@ -30,4 +30,5 @@
   border: 1px solid black;
   height: 40px;
   width: 40px;
+  display: inline-block;
 }
