@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap');
+
+* {
+  font-family: 'Baloo 2', cursive;
+}
+
+body {
+  text-align: center;
+  height: 100%;
+  background: url(blob-scene-haikei.svg) no-repeat center fixed;
+  background-size: cover;
+}
