@@ -13,12 +13,12 @@ const pixelBoard = document.getElementById('pixel-board');
 let heightPixelBoard = 5;
 let widthPixelBoard = 5;
 
-function createPixels (height,width) {
-  for (let line = 1; line <= height; line += 1) {
+function createPixels(height, width) {
+  for (let l = 1; l <= height; l += 1) {
     let line = document.createElement('section');
     line.className = 'line';
     pixelBoard.appendChild(line);
-    for (let pixel = 1; pixel <= width; pixel += 1) {
+    for (let px = 1; px <= width; px += 1) {
       let pixel = document.createElement('div');
       pixel.className = 'pixel';
       line.appendChild(pixel);
@@ -30,9 +30,15 @@ createPixels(heightPixelBoard, widthPixelBoard);
 
 let selectedColor;
 
-window.onload = function() {
+window.onload = function () {
   selectedColor = document.querySelector('.color');
   selectedColor.classList.add('selected');
+};
+
+function EvListenerInArrayOfElem(arrayOfElements, eventString, functionToCall) {
+  for (let i = 0; i < arrayOfElements.length; i += 1) {
+    arrayOfElements[i].addEventListener(eventString, functionToCall);
+  }
 }
 
 function selectColor(event) {
@@ -41,6 +47,16 @@ function selectColor(event) {
   selectedColor.classList.add('selected');
 }
 
-for (let i = 0; i < colors.length; i += 1) {
-  colors[i].addEventListener('click', selectColor);
+EvListenerInArrayOfElem(colors, 'click', selectColor);
+// for (let i = 0; i < colors.length; i += 1) {
+//   colors[i].addEventListener('click', selectColor);
+// }
+
+let pixels = document.querySelectorAll('.pixel');
+
+function changePixelColor(event) {
+  let color = selectedColor.style.backgroundColor;
+  event.target.style.backgroundColor = color;
 }
+
+EvListenerInArrayOfElem(pixels, 'click', changePixelColor);
