@@ -29,14 +29,6 @@ function changeSelected (div) {
   div.target.classList.add('selected')
   
 
-  // colorSelection.addEventListener('mouseover', atual)
-  // function atual() {
-  //   let listaDeDivs2 = document.getElementsByClassName('color')
-
-
-  //   listaDeDivs2[2].classList.add('selected')
-  // }
-  
   console.log(colorSelection)
 }
 
@@ -61,6 +53,13 @@ for (idx = 0; idx < 5; idx += 1) {
   }
 }
 
-// evento de click remove classe selected - verificação feita na #color-palette
-// evento de click adiciona classe selected na div clicada
+let quadro = document.querySelector('#pixel-board')
 
+quadro.addEventListener('click', colorir)
+
+function colorir (quadrado) {
+   quadrado.target.style.backgroundColor = document.querySelector('.selected').style.backgroundColor
+
+  }
+  
+  
