@@ -1,4 +1,4 @@
-window.onload = function() {
+window.onload = function () {
   const classSelect = 'color selected'
 
   const firstColorBlack = document.querySelector('#black');
@@ -8,7 +8,7 @@ window.onload = function() {
 
 function selectColor() {
   const colors = document.getElementById('color-palette')
-  colors.addEventListener('click', function(event) {
+  colors.addEventListener('click', function (event) {
     const selectColor = 'color selected';
     const unselectColors = 'color';
     const colorsPath = document.querySelector('#color-palette');
@@ -23,16 +23,25 @@ function selectColor() {
 
 function pixelColorFill() {
   const pixelBoxes = document.getElementById('pixel-board');
-  pixelBoxes.addEventListener('click', function(event) {
+  pixelBoxes.addEventListener('click', function (event) {
     const colorToFill = document.getElementsByClassName('color selected')[0].id;
     event.target.style.backgroundColor = colorToFill;
   })
 }
 
 function resetButton() {
-  const buttonPath = document.querySelector('#clear-board')
-}
+  const buttonPath = document.querySelector('#clear-board');
 
-resetButton()
-pixelColorFill()
-selectColor()
+  buttonPath.addEventListener('click', function() {
+      const boxes = document.querySelectorAll('.pixel');
+
+      for (let i = 0; i < boxes.length; i += 1) {
+        let white = boxes[i];
+        white.style.backgroundColor = 'white'
+      }
+    })
+  }
+
+  resetButton()
+  pixelColorFill()
+  selectColor()
