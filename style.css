@@ -1,0 +1,8 @@
+/* Estilização do REQUISITO 2 */
+.color {
+  border: solid black 1px;
+  width: 70px;
+  display: inline-block;
+  margin: 2px;
+  height: 70px;
+}
