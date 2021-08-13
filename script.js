@@ -45,3 +45,17 @@ function boardGenerator(n) {
   }
 }
 boardGenerator(5);
+
+// Exercício 7 - Criação da função que muda o dono da classe 'selected'.
+let seletedTarget = document.getElementById('color-palette');
+seletedTarget.addEventListener('click', selected);
+function selected(e) {
+  let alvo = e.target;
+  let alvoInicial = document.getElementsByClassName('color selected')[0];
+  if (alvo.className === 'color') {
+    alvoInicial.className = 'color';
+    alvo.className = 'color selected';
+    }
+}
+
+//Exercício 8 - Cria uma função que pinta os pixels com a cor de classe 'selected'
