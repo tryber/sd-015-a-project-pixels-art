@@ -9,19 +9,29 @@
 </head>
 <body>
     <header></header>
-    <h1 id="title">Paleta de Cores</h1>
-    <section id="color-palette">
-        <div class="color selected" id="preto"></div>
-        <div class="color" id="vermelho"></div>
-        <div class="color" id="laranja"></div>
-        <div class="color" id="amarelo"></div>
-        <!-- <div class="color" id="verde"></div>
-        <div class="color" id="azul"></div>
-        <div class="color" id="anil"></div>
-        <div class="color" id="violeta"></div> -->
-    </section>
-    <input type="button" id="clear-board" value="Limpar">
-    <section id="pixel-board"></section>
+    <div id="centralize">
+        <div id="title-countainer">
+            <h1 id="title">Paleta de Cores</h1>
+        </div>
+        <section id="color-palette">
+            <div class="color selected" id="preto"></div>
+            <div class="color" id="vermelho"></div>
+            <div class="color" id="laranja"></div>
+            <div class="color" id="amarelo"></div>
+            <!-- <div class="color" id="verde"></div>
+            <div class="color" id="azul"></div>
+            <div class="color" id="anil"></div>
+            <div class="color" id="violeta"></div> -->
+        </section>
+        <div id="button-countainer">
+         <input type="button" id="clear-board" value="Limpar">
+         <input type="number" id="board-size" min="5" max="50" placeholder="5">
+         <input type="button" id="generate-board" value="VQV">
+        </div>
+    </div>
+    <div id="board-countainer">
+        <section id="pixel-board"></section>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

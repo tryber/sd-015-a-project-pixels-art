@@ -1,3 +1,19 @@
+body {
+    background-color: rgb(231, 221, 222);
+}
+
+#centralize {
+    display: block;
+font-family: 'Courier New', Courier, monospace;
+margin: 0 auto;
+width: 400px;
+text-align: center;
+}
+
+#button-countainer{
+    margin: 0 auto;
+}
+
 .color {
     display: inline-block;
     width: 42px;
@@ -50,4 +66,27 @@ margin: 0;
 padding: 0%;
 border: 0c;
 height: 40px;
+}
+
+#clear-board {
+  margin: 5px 0 7px 0;
+}
+
+#title {
+  display: block;
+  margin: 0 auto;
+  background-color: rgb(235, 187, 187);
+  width: 300px;
+}
+
+#title-countainer {
+  text-align: center;
+    width: 400px;
+    margin: 0 0 15px 0;
+}
+
+#board-countainer {
+  text-align: center;
+  max-width: 3000px;
+  margin: 0 auto;
 }

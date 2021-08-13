@@ -57,3 +57,20 @@ function clear() {
   clearButton.addEventListener('click', btClear);
 }
 clear();
+
+function boardSize() {
+  const vqvButton = document.querySelector('#generate-board');
+  const sizeInput = document.querySelector('#board-size');
+  const boardPx = document.querySelector('#pixel-board');
+
+  function onClick() {
+    if (sizeInput.value > 50 || sizeInput.value < 5 || sizeInput.value === '') {
+      alert('Board inválido!');
+    } else {
+      boardPx.innerHTML = '';
+      makePixels(sizeInput.value);
+    }
+  }
+  vqvButton.addEventListener('click', onClick);
+}
+boardSize();
