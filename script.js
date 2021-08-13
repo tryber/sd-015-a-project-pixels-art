@@ -14,6 +14,7 @@ criarDivsDasCores();
 // cores atribuidas resgatando cada elemento nó e atribuindo cor de fundo. caracteristicas gerais no css
 const color1 = document.querySelectorAll('.color')[0];
 color1.style.backgroundColor = 'black';
+color1.classList.add = 'selected';
 const color2 = document.querySelectorAll('.color')[1];
 color2.style.backgroundColor = 'red';
 const color3 = document.querySelectorAll('.color')[2];
