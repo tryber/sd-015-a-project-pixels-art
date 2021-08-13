@@ -10,3 +10,32 @@ body {
   background: url(blob-scene-haikei.svg) no-repeat center fixed;
   background-size: cover;
 }
+
+#header-container {
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #00214d;
+}
+
+#color-palette {
+  margin: auto;
+  height: 80px;
+  color: #272727;
+}
+
+.color {
+  border: 1px solid black;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  margin-right: 10px;
+  /* Source do box shadow https://getcssscan.com/css-box-shadow-examples */
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  transition: border-radius 0.6s;
+}
+
+.color:hover {
+  border-radius: 50px;
+  cursor: pointer;
+}
