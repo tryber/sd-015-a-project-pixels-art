@@ -2,12 +2,22 @@
 
 // Função de criação de divs com cores.
 function divGenerator(e) {
-  const colorPallete = document.getElementById('color-palette');
-  const newDiv = document.createElement('div');
-  newDiv.className = 'color';
-  newDiv.id = e;
-  newDiv.style.backgroundColor = e;
-  colorPallete.appendChild(newDiv);
+  if (e !== 'black') {
+    const colorPallete = document.getElementById('color-palette');
+    const newDiv = document.createElement('div');
+    newDiv.className = 'color';
+    newDiv.id = e;
+    newDiv.style.backgroundColor = e;
+    colorPallete.appendChild(newDiv);
+  } else {
+    const colorPallete = document.getElementById('color-palette');
+    const newDiv = document.createElement('div');
+    // Exercício 6 - classe inicial da paleta preta precisa iniciar como 'selected'
+    newDiv.className = 'color selected';
+    newDiv.id = e;
+    newDiv.style.backgroundColor = e;
+    colorPallete.appendChild(newDiv);
+  }
 }
 // Aplicação da função 'divGenerator' para criar as divs com cores, sendo a primeira 'preto' e proibindo a criação de 'div's com a cor 'branco'.
 let arreyPalette = ['black', 'red', 'green', 'blue'];
@@ -18,9 +28,8 @@ for (let index = 0; index < arreyPalette.length; index += 1) {
 }
 
 // Exercício 4 - Criação do quadro de pixels para pintar. //
-// Função para criar as 'div's de pixel.
-let pixelBoardArea = document.getElementById('pixel-board');
 
+let pixelBoardArea = document.getElementById('pixel-board');
 // Função responsavel por criar as linhas e colunas do pixel-board.
 function boardGenerator(n) {
   for (let index = 1; index <= n; index += 1) {
@@ -28,12 +37,11 @@ function boardGenerator(n) {
     pixelLine.className = 'pixelLine'
     pixelBoardArea.appendChild(pixelLine);
     //Criação dos pixels de cada linha
-    for (let index2 = 1; index2 <= n; index2 +=1 ) {
+    for (let index2 = 1; index2 <= n; index2 += 1) {
       let pixel = document.createElement('div');
       pixel.className = 'pixel';
       pixelLine.appendChild(pixel);
     }
   }
 }
-boardGenerator(5)
-console.log(pixelBoardArea)
+boardGenerator(5);
