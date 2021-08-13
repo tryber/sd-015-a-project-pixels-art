@@ -1,5 +1,15 @@
+* {
+  margin: 0px;
+  border: 0px;
+  padding: 0px;
+}
 #paleta {
   text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+#paleta h1{
+  margin-bottom: 30px;
 }
 .color {
   width: 50px;
@@ -8,4 +18,14 @@
   border: black 1px solid;
   display: inline-block;
 }
-
+#pixel-board {
+  text-align: center;
+  margin-top: 30px;
+}
+.pixel {
+  width: 40px;
+  height: 40px;
+  border: black 1px solid;
+  display: inline-block;
+  background-color: white;
+}
