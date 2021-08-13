@@ -1,5 +1,5 @@
 const palette = document.getElementById('color-palette');
-const colors = ['rgb(246, 169, 169)', 'rgb(255, 191, 134)', 'rgb(255, 244, 125)', 'rgb(194, 247, 132)'];
+const colors = ['rgb(0, 0, 0)', 'rgb(142, 35, 107)', 'rgb(255, 127, 0)', 'rgb(33, 94, 33)'];
 
 function createItemsPalette() {
     for (let color of colors) {
