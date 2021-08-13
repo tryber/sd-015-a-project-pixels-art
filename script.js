@@ -48,12 +48,3 @@ function criarOQuadroDeArt() {
   }
 }
 criarOQuadroDeArt();
-
-// mudar o lugar a classe selected com event target
-
-function mudarClasseSelected(event) {
-  let selecionado = document.querySelector('.selected')
-  selecionado.classList.remove('.selected');
-  event.target.classList.add('selected');
-}
-
