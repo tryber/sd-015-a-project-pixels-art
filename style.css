@@ -6,9 +6,23 @@
   margin-right: 20px;
   background-color: #ededed;
 }
+
 .color {
   width: 100px;
   height: 100px;
   display: inline-block;
+  border: 1px solid black;
+}
+
+#pixel-board {
+  width: 400px;
+}
+
+.pixel {
+  margin: 0;
+  margin-bottom: -4px;
+  display: inline-block;
+  width: 70px;
+  height: 70px;
   border: 1px solid black;
 }
