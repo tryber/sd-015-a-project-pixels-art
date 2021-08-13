@@ -48,7 +48,23 @@ function removeBoard() {
   }
 }
 
-pixelBoard(5);
+function randomColors() {
+  const r = Math.random() * 255;
+  const g = Math.random() * 255;
+  const b = Math.random() * 255;
+
+  return `rgb(${r}, ${g}, ${b})`;
+}
+
+function randomColorPicker() {
+  const colorPickers = document.getElementsByClassName('color');
+  for (let i = 0; i < colorPickers.length; i += 1) {
+    const color = colorPickers[i];
+    if (!(color.classList.contains('selected'))) {
+      color.style.backgroundColor = randomColors();
+    }
+  }
+}
 
 function colorPicker(event) {
   const colorSelected = document.querySelector('.selected');
@@ -102,4 +118,6 @@ function boardSize() {
 const sizeButton = document.getElementById('generate-board');
 sizeButton.addEventListener('click', boardSize);
 
+randomColorPicker();
+pixelBoard(5);
 addEvent();
