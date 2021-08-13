@@ -1,0 +1,37 @@
+body {
+  margin: 0px;
+}
+
+#color-palette {
+  position: absolute;
+  margin: 10px;
+  padding: 20px;
+  width: 400px;
+  height: 100px;
+  border: 1px solid black;
+  display: inline;
+}
+
+.color {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  display: inline-table;
+}
+
+#black {
+  left: 10px;
+}
+
+#red {
+  left: 110px;
+}
+
+#blue {
+  left: 210px;
+}
+
+#green {
+  left: 310px;
+}
