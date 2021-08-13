@@ -1,24 +1,26 @@
-function paletaCores() {
+const paletaCores = document.querySelector("#color-palette");
+
+function cores() {
   for (let index = 0; index < 4; index += 1) {
-    const paletaCores = document.createElement('div');
-    paletaCores.id = 'color-palette';
-    paletaCores.className = 'color';
+    const cores = document.createElement('div');
+    cores.className = 'color';
     if (index === 0) {
-      paletaCores.style.backgroundColor = 'black';
+      cores.style.backgroundColor = 'black';
+      cores.className = 'color selected';
     }
     if (index === 1) {
-      paletaCores.style.backgroundColor = 'green';
+      cores.style.backgroundColor = 'green';
     }
     if (index === 2) {
-      paletaCores.style.backgroundColor = 'red';
+      cores.style.backgroundColor = 'red';
     }
     if (index === 3) {
-      paletaCores.style.backgroundColor = 'blue';
+      cores.style.backgroundColor = 'blue';
     }
-    document.body.appendChild(paletaCores);
+    paletaCores.appendChild(cores);
   }
 }
-paletaCores();
+cores();
 
 function linhaPixel() {
   const quadroPixels = document.createElement('div');
@@ -38,3 +40,5 @@ function repetelinhaPixel() {
   }
 }
 repetelinhaPixel();
+
+

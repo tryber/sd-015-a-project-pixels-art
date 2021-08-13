@@ -1,6 +1,6 @@
-#color-palette{
-    width: 63px;
-    height: 63px;
+.color{
+    width: 51px;
+    height: 55px;
     border: 1px solid black;
     display: inline-block;
 }
