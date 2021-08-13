@@ -4,4 +4,26 @@
     height: 100px;
     list-style: none;
     padding: 0;
+    margin:auto;
+}
+#title {
+    text-align: center;
+}
+.pixel {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    display: inline-block;
+    border: black solid 1px;
+}
+#pixel-board {
+    margin: auto;
+    margin-top: 20px;
+    border: black solid 1px;
+    width: 500px;
+    height: 500px;
+
+}
+.lines {
+    height: 50px;
 }

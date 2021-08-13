@@ -1,5 +1,7 @@
 const palette = document.getElementById('color-palette');
 const colors = ['rgb(0, 0, 0)', 'rgb(142, 35, 107)', 'rgb(255, 127, 0)', 'rgb(33, 94, 33)'];
+const board = document.getElementById('pixel-board');
+
 
 function createItemsPalette() {
     for (let color of colors) {
@@ -17,3 +19,24 @@ function createItemsPalette() {
 }
 createItemsPalette();
 
+//Cria 5 divs filhas do board que serão as linhas
+function createDiv(n) {
+    for (let i = 1; i <= n; i += 1) {
+    let line = document.createElement('div');
+    line.className = 'lines';
+    board.appendChild(line);
+    }
+}
+createDiv(5);
+
+const lines = document.querySelectorAll(".lines");
+function createPixels() {
+    for (let index = 0; index < lines.length; index += 1) {
+        for (let index2 = 1; index2 <= lines.length; index2 += 1) {
+            let pixel = document.createElement('div');
+            pixel.className = 'pixel';
+            lines[index].appendChild(pixel);
+        }
+    }
+}
+createPixels()
