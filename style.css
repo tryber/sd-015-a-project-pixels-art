@@ -6,12 +6,12 @@
   display: inline-block;
 }
 
-.green {
-  background-color: green;
+.black {
+  background-color: black;
 }
 
 .red {
- background-color: red;
+  background-color: red;
 }
 
 .blue {
