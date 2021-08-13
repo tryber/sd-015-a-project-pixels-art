@@ -1,17 +1,35 @@
 #title {
-    text-align: center;
+  text-align: center;
 }
 
 #color-palette {
-    margin: 0 auto;
-    max-width: 600px;
+  max-width: 568px;
+  margin: auto;
+  padding: 0 auto;
 }
 
 .color {
-    border: 1px solid black;
-    width: 100px;
-    height: 100px;
-    display: inline-block;
-    padding: 10px;
-    margin: 10px;
+  border: 1px solid black;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  padding: 10px;
+  margin: 10px;
+}
+
+#pixel-board {
+  max-width: 510px;
+  margin: 0 auto;
+  line-height: 0px;
+  border: 1px solid black;
+}
+
+.pixel {
+  border: 1px solid black;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  margin: 0px;
+  padding: 0px;
+  background-color: white;
 }
