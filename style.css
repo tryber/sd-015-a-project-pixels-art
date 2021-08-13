@@ -48,3 +48,7 @@
   display: inline-block;
   margin: -2px -1px -4px -1px;
 }
+
+button {
+  margin-bottom: 5px;
+}
