@@ -1,0 +1,31 @@
+#c1 {
+  background-color:blueviolet;
+  width: 50px;
+  height: 50px;
+  border: solid 1px black;
+}
+
+#c2 {
+  background-color:crimson;
+  width: 50px;
+  height: 50px;
+  border: solid 1px black;
+}
+
+#c3 {
+  background-color:darkgreen;
+  width: 50px;
+  height: 50px;
+  border: solid 1px black;
+}
+
+#c4 {
+  background-color: goldenrod;
+  width: 50px;
+  height: 50px;
+  border: solid 1px black;
+}
+
+.color {
+  display: inline-block;
+}
