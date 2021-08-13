@@ -13,21 +13,21 @@ function pintaPixel(pixel) {
 }
 
 function criaQuadro(valor) {
-  let checkValor = valor;
-  if (valor > 50) {
-    checkValor = 50;
-  } else if (valor < 5) {
-    checkValor = 5;
+  let filtro = valor;
+  if (filtro > 49) {
+    filtro = 50;
+  } else if (filtro < 6) {
+    filtro = 5
   }
   const pixelBoard = document.createElement('div');
   pixelBoard.id = 'pixel-board';
   document.querySelector('body').appendChild(pixelBoard);
-  for (let linha = 0; linha < checkValor; linha += 1) {
-    for (let i = 0; i < checkValor; i += 1) {
+  for (let linha = 0; linha < filtro; linha += 1) {
+    for (let i = 0; i < filtro; i += 1) {
       const pixel = document.createElement('div');
       pixel.className = 'pixel';
-      pixel.addEventListener('click', pintaPixel);
       pixelBoard.appendChild(pixel);
+      pixel.addEventListener('click', pintaPixel);
     }
     pixelBoard.appendChild(document.createElement('br'));
   }
