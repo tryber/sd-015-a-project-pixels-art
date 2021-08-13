@@ -18,6 +18,7 @@
 }
 #pixel-board {
   border-spacing: 0px;
+  border: black solid 1px;
 }
 .pixel {
   border: black solid 1px;
@@ -26,7 +27,4 @@
   display: inline-block;
   background-color: white;
   margin: 0px;  
-}
-tr {
-  border: 0px;
 }
