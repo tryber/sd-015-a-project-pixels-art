@@ -1,6 +1,6 @@
 window.onload = function() {
-  let base = 5;
-  let height = 5;
+  const base = 5;
+  const height = 5;
  
   fillPixelboard();
   
@@ -24,15 +24,23 @@ function createPixel(className) {
   return pixel;
 }
 
-
-}
 let pClick = document.getElementsByClassName("color");
 
 pClick[0].classList.add("selected");
 
 for(let index = 0 ; index < pClick.length ; index +=1 ) {
-  pClick[index].addEventListener("click", mudaCor);
-function mudaCor(index){
+   pClick[index].addEventListener("click", mudaCor);
+  
   
 }
+
+function mudaCor(evento){
+ 
+  for(let index = 0 ; index < pClick.length; index += 1){
+    pClick[index].classList.remove("selected");
+  }
+  evento.target.classList.add("selected");
+ 
+}
+
 }
