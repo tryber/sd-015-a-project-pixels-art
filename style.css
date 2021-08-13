@@ -40,7 +40,3 @@
   border-collapse: collapse;
   border-spacing: 0;
 }
-
-.selected {
-  transform: translateY(-10px);
-}
