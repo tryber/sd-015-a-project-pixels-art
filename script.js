@@ -10,9 +10,8 @@ function palette(colorArray) {
     divP.className = 'color';
     divP.classList.add(colorArray[i]);
     divP.style.backgroundColor = colorArray[i];
-
-    if (colorArray[i] === 'black'){
-      divP.classList.add ('selected');
+    if (colorArray[i] === 'black') {
+      divP.classList.add('selected');
     }
     parent.appendChild(divP);
   }
@@ -36,9 +35,7 @@ function setSelected() {
   const selectedBlock = document.querySelector('.selected');
   const clickedBlock = event.currentTarget;
   
-  if (clickedBlock.classList.contains('selected')) {
-
-  } else {
+  if (clickedBlock.classList.contains('selected') === false) {
     clickedBlock.classList.add('selected');
     selectedBlock.classList.remove('selected');
   }
