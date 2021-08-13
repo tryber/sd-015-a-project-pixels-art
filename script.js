@@ -30,7 +30,7 @@ function addBackgroundColor(backgroundColors) {
 let background = ['black', 'red', 'blue', 'green'];
 addBackgroundColor(background);
 
-// Requisito 4 - Adicione à página um quadro de pixels, com 25 pixels.
+// Requisito 4 - Adicione à página um quadro de pixels, com 25 pixels. Requisito 5 - Resolve também a primeira especificação do requisito 5(Verifica se o quadro de pixels tem altura e comprimento de 5 elementos).
 function createFramePixels() {
   let newSection = document.createElement('section');
   newSection.id = 'pixel-board';
@@ -48,3 +48,17 @@ function createFramePixels() {
   }
 }
 createFramePixels();
+
+// Requisito 6 e 7 - Defina a cor preta como cor inicial. Ao carregar a página, a cor preta já deve estar selecionada para pintar os pixels
+// Define a cor preta como padrão ao carregar a página e adiciona classe selected à ela, além de mudar a classe selected para a cor que sofrer o evento 'click'. Resolve também requisito 7 - Clicar em uma das cores da paleta faz com que ela seja selecionada e utilizada para preencher os pixels no quadro.
+let getBlackColor = document.querySelector('.color');
+getBlackColor.classList.add('selected');
+let getClassColor = document.querySelectorAll('.color');
+function setColor(event) {
+  let colorSelected = document.querySelector('.selected');
+  colorSelected.classList.remove('selected');
+  event.target.classList.add('selected');
+};
+for (let index = 0; index < getClassColor.length; index += 1) {
+  getClassColor[index].addEventListener('click', setColor);
+};
