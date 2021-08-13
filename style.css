@@ -29,3 +29,14 @@ width: 40px;
 height: 40px;
 background-color: yellow;
 }
+
+.pixel{
+  height: 40px;
+  width: 40px;
+  border: solid 1px black;
+  float: left;
+  background-color: white;
+}
+#pixel-board{
+  width: 210px;
+}
