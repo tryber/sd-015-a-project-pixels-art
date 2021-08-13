@@ -1,5 +1,5 @@
 function divColor() {
-  let color = ['black', 'red', 'blue', 'yellow'];
+  const color = ['black', 'red', 'blue', 'yellow'];
 
   for (let index in color) {
     let newColor = color[index];
@@ -21,8 +21,7 @@ function creatBoard() {
 
 function addClassToBlack() {
   document
-    .querySelector('#color-palette')
-    .firstElementChild.classList.add('selected');
+    .querySelector('.color').classList.add('selected');
 }
 
 function turnToSelect() {
@@ -49,16 +48,19 @@ function fillPixel() {
 
 function clearAll() {
   let motherBoard = document.getElementsByClassName('pixel');
-  console.log(motherBoard);
+  
   let buttonClearAll = document.querySelector('#clear-board');
 
   buttonClearAll.addEventListener('click', function () {
     for (let index = 0; index < motherBoard.length; index += 1) {
-      console.log(motherBoard[index]);
+      
       motherBoard[index].style.backgroundColor = 'white';
     }
   });
 }
+
+
+
 
 divColor();
 creatBoard();

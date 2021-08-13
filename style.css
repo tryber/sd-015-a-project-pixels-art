@@ -5,7 +5,7 @@
 
 #pixel-board {
   display: block;
-  width: 230px;
+  width: 240px;
 }
 
 #color-palette div {
@@ -19,7 +19,8 @@
   display: inline-block;
   width: 40px;
   height: 40px;
-  margin-right: 2px;
+  margin-right: 3px;
+  margin-left: 3px;
   border: 1px solid black;
   background-color: white;
 }
