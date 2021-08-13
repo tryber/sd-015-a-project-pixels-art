@@ -1,4 +1,5 @@
 const colors = document.getElementById('color-palette');
+const pixelBoard = document.getElementById('pixel-board');
 
 // Selects color
 colors.addEventListener('click', function selectsColor(event) {
@@ -27,3 +28,23 @@ window.onload = function setsColor() {
   document.getElementById('third').style.backgroundColor = generateRandomColor();
   document.getElementById('forth').style.backgroundColor = generateRandomColor();
 };
+
+// Creates pixel board
+function createPixel() {
+  let newPixel = document.createElement('td');
+  newPixel.className = 'pixel';
+  newPixel.classList.add('white');
+  return newPixel;
+};
+
+function createBoard() {
+  for (let i = 0; i < 5; i += 1) {
+    let newLine = document.createElement('tr');
+    for (let j = 0; j < 5; j += 1) {
+      newLine.appendChild(createPixel());
+    }
+    pixelBoard.appendChild(newLine)
+  }
+};
+
+createBoard();

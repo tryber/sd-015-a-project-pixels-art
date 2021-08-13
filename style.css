@@ -41,3 +41,28 @@ body {
 .selected {
   border-radius: 50px;
 }
+
+#board-container {
+  margin: auto;
+  text-align: center;
+}
+
+#pixel-board {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.white {
+  background-color: white;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.pixel {
+  height: 40px;
+  width: 40px;
+  border: 1px solid black;
+}
