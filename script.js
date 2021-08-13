@@ -1,5 +1,6 @@
+// eslint-disable-next-line no-unused-vars
 function createBox(parent) {
-  const colors = ['red', 'blue', 'green', 'yellow'];
+  const colors = ['black', 'blue', 'green', 'yellow'];
   for (let i = 0; i < colors.length; i += 1) {
     const newDiv = document.createElement('div');
     const newLi = document.createElement('li');
