@@ -13,7 +13,7 @@
                 let unidade = montaPixels("pixel");
                 linha.appendChild(unidade);
             }
-             linha.style.margin='0'
+             linha.className="linha";
              pBoard.appendChild(linha);
         }
 

@@ -4,16 +4,21 @@
      height: 40px;
      display: inline-block;
  }
+ .linha{
+     height:42px;
+     width: 210px;
+     margin-right: 0px;
+ }
  .pixel{
-     margin: 0;
      border: solid black 1px;
      background-color: white;
      width: 40px;
      height: 40px;
      display:inline-block;
  }
- .pixel-board{
-     width: 100px;
+ #pixel-board{
+     border: solid black 1px;
+     width: 210px;
  }
  #first{
     background-color: black;
