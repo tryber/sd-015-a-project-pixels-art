@@ -24,3 +24,9 @@ function generateRandomColor() {
 
   return `rgb(${r}, ${g}, ${b})`;
 }
+
+window.onload = function() {
+  document.getElementById('second').style.backgroundColor = generateRandomColor();
+  document.getElementById('third').style.backgroundColor = generateRandomColor();
+  document.getElementById('forth').style.backgroundColor = generateRandomColor();
+};
