@@ -1,4 +1,4 @@
-// CRIA N LINHAS COM N BLOCOS CADA
+// CREATE N LINES WITH N BLOCKS EACH
 
 function blockMaker(sideSize) {
   let board = document.getElementById('pixel-board');
@@ -22,3 +22,17 @@ function blockMaker(sideSize) {
 let sideSize = 5;
 blockMaker(sideSize);
 
+//GRAB THE COLOR FROM PALETTE
+
+function getColor() {
+  let colorPalette = document.getElementById('color-palette');
+  colorPalette.addEventListener('click', function(event) {
+    if (event.target.className !== 'color selected') {
+      currentColor = document.getElementsByClassName('color selected')[0];
+      currentColor.className = 'color';
+      event.target.className = 'color selected';
+    }
+  })
+}
+
+getColor();
