@@ -1,4 +1,4 @@
-let color = document.getElementsByClassName('color');
+const color = document.getElementsByClassName('color');
 
 function selectedColor() {
   for (let i = 0; i < color.length; i += 1) {
@@ -7,6 +7,7 @@ function selectedColor() {
         color[j].classList.remove('selected');
       }
       event.target.classList.add('selected');
+      document.querySelector('.selected').style.backgroundColor = color[i].style.backgroundColor;
     });
   }
 }
