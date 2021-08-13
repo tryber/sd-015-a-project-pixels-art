@@ -59,3 +59,8 @@ function selected(e) {
 }
 
 //Exercício 8 - Cria uma função que pinta os pixels com a cor de classe 'selected'
+pixelBoardArea.addEventListener('click', pixelColor)
+function pixelColor (e) {
+  let corSelecionada = document.getElementsByClassName('selected')[0];
+  e.target.style.backgroundColor = corSelecionada.style.backgroundColor
+}
