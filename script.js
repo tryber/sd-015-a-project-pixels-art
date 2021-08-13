@@ -21,7 +21,7 @@ criaCoresDaPaleta('yellow');
 let color = document.querySelector('.selected').style.backgroundColor;
 
 function criaLinhaQuadro(tamanho, largAlt) {
-  for (let i = 0; i < tamanho; i += 1) {
+  for (let i = 0; i < tamanho*tamanho; i += 1) {
     const elementoQuadro = document.createElement('div');
     elementoQuadro.classList.add('pixel');
     elementoQuadro.style.backgroundColor = 'white';
@@ -34,9 +34,7 @@ function criaLinhaQuadro(tamanho, largAlt) {
 }
 
 function criaQuadro(tamanho, largAlt) {
-  for (let i = 0; i < tamanho; i += 1) {
-    criaLinhaQuadro(tamanho, largAlt);
-  }
+  criaLinhaQuadro(tamanho, largAlt);
   pixelBoard.style.width = '0px';
   pixelBoard.style.width = `${((largAlt + 2) * tamanho)}px`;
 }
