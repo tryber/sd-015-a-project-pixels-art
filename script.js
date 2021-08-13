@@ -15,6 +15,25 @@ for (let i = 0; i < divs; i += 1){
     fatherDiv.appendChild(quebra);
 }
 
+const black = document.getElementById("black")
+const blue = document.getElementById("blue")
+const red = document.getElementById("red")
+const yellow = document.getElementById("yellow")
+
+function changeClass(event) {
+    let elementClass = document.querySelector(".selected")
+
+    elementClass.classList.remove("selected")
+    event.target.classList.add("selected")
+    
+}
+
+black.addEventListener("click", changeClass)
+blue.addEventListener("click", changeClass)
+red.addEventListener("click", changeClass)
+yellow.addEventListener("click", changeClass)
+
+
 
 
         
