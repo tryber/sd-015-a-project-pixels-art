@@ -74,7 +74,7 @@ botao.addEventListener('click', clear);
 const inputPizelSize = document.querySelector('#board-size');
 const generateBoardButton = document.querySelector('#generate-board');
 
-generateBoardButton.addEventListener('click', function alterarTamanhoBoard() {
+function alterarTamanhoBoard() {
   let tamanhoBoard = inputPizelSize.value;
   if (tamanhoBoard === '') {
     alert('Board inválido!');
@@ -92,4 +92,6 @@ generateBoardButton.addEventListener('click', function alterarTamanhoBoard() {
     }
     criarPixel(`${tamanhoBoard}`);
   }
-});
+}
+
+generateBoardButton.addEventListener('click', alterarTamanhoBoard);
