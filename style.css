@@ -21,3 +21,18 @@
 .yellow {
   background-color: yellow;
 }
+
+#pixel-board {
+  width: 250px;
+  height: auto;
+  background-color: white;
+  box-sizing: border-box;
+}
+
+.pixel {
+  display: inline-block;
+  width: 40px ;
+  height: 40px;
+  background-color: white;
+  border: 1px solid black;
+}
