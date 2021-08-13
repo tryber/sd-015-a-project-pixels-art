@@ -1,3 +1,7 @@
+#body {
+  background-color: cyan;
+}
+
 .color {
   border: 1px solid black;
   display: inline-block;
@@ -7,6 +11,7 @@
 
 .pixel {
   display: inline-block;
+  background-color: white;
 }
 
 #pixel-board {

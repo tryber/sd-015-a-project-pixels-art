@@ -1,5 +1,5 @@
 let size = 5;
-let board = document.querySelector('#pixel-board')
+let board = document.querySelector('#pixel-board');
 let pixelPalett = document.querySelector('#color-palette');
 
 function createLine(size) {
