@@ -1,5 +1,10 @@
 #body {
   background-color: cyan;
+  text-align: center;
+}
+
+#title {
+  font-size: 45px;
 }
 
 .color {
