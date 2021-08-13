@@ -1,5 +1,5 @@
 function divColor() {
-  let color = ['black', 'red', 'blue', 'yellow', "brown"];
+  let color = ['black', 'red', 'blue', 'yellow'];
 
   for (let index in color) {
     let newColor = color[index];
