@@ -1,7 +1,7 @@
 .color {
   border: 1px solid black;
-  height: 5em;
-  width: 5em;
+  height: 40px;
+  width: 40px;
   display: inline-block;
 }
 
@@ -19,4 +19,15 @@
 
 #blue {
   background-color: blue;
+}
+
+.line {
+  display: inline-block;
+}
+
+.pixel {
+  background-color: white;
+  border: 1px solid black;
+  height: 40px;
+  width: 40px;
 }
