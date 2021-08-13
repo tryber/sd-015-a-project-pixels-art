@@ -25,3 +25,7 @@ body {
   background-color: rgb(255, 255, 255);
 }
 
+#clear-board {
+  margin: 10px 0;
+}
+
