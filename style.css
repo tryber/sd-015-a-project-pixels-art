@@ -1,0 +1,11 @@
+body {
+    text-align: center;
+}
+
+.color {
+    border: 1px black solid;
+    width: 45px;
+    height: 45px;
+    display: inline-block;    
+}
+
