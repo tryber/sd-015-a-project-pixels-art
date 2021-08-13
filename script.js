@@ -1,3 +1,9 @@
+// eslint-disable-next-line func-names
+window.onload = function () {
+  const blackColor = document.getElementById('color1');
+  blackColor.classList.add('selected');
+};
+
 function createPixelBoard() {
   const body = document.getElementsByTagName('body');
   const pixelBoard = document.createElement('section');
