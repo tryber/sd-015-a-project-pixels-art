@@ -13,11 +13,61 @@
 
     </body>
     <script>
+        // requisito 1
         let body = document.querySelector('body')
         let titulo = document.createElement('h1')
         titulo.id = 'title'
         titulo.innerText='Paleta de Cores'
         body.appendChild(titulo)
         
+        // requisito 2
+        let paletaDeCores = document.createElement('ul')
+        paletaDeCores.id = 'color-palette'
+        body.appendChild(paletaDeCores)
+        paletaDeCores.style.listStyle = 'none'
+        paletaDeCores.style.display = 'flex'
+        
+        let cor1 = document.createElement('li')
+        cor1.className = 'color'
+        paletaDeCores.appendChild(cor1)
+        cor1.style.backgroundColor = 'red'
+        cor1.style.border = '1px solid black'
+        cor1.style.width = '50px'
+        cor1.style.height = '50px'
+        cor1.style.margin = '10px'
+
+        let cor2 = document.createElement('li')
+        cor2.className = 'color'
+        paletaDeCores.appendChild(cor2)
+        cor2.style.backgroundColor = 'green'
+        cor2.style.border = '1px solid black'
+        cor2.style.width = '50px'
+        cor2.style.height = '50px'
+        cor2.style.margin = '10px'
+
+        
+        let cor3 = document.createElement('li')
+        cor3.className = 'color'
+        paletaDeCores.appendChild(cor3)
+        cor3.style.backgroundColor = 'blue'
+        cor3.style.border = '1px solid black'
+        cor3.style.width = '50px'
+        cor3.style.height = '50px'
+        cor3.style.margin = '10px'
+        
+        let cor4 = document.createElement('li')
+        cor4.className = 'color'
+        paletaDeCores.appendChild(cor4)
+        cor4.style.backgroundColor = 'yellow'
+        cor4.style.border = '1px solid black'
+        cor4.style.width = '50px'
+        cor4.style.height = '50px'
+        cor4.style.margin = '10px'
+
+
+        
+        
+        
+
     </script>
 </html>
