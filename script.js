@@ -3,6 +3,7 @@ const gridHeight = 5;
 const gridWidth = 5;
 const gridSize = gridHeight * gridWidth;
 
+
 function palette(howMany) {
   for (let i = 0; i < howMany.length; i += 1) {
     const divP = document.createElement('div');
@@ -11,7 +12,7 @@ function palette(howMany) {
     divP.classList.add(howMany[i]);
     divP.style.backgroundColor = howMany[i];
 
-    if(howMany[i] === 'black'){
+    if (howMany[i] === 'black'){
       divP.classList.add('selected');
     }
     parent.appendChild(divP);
@@ -31,3 +32,21 @@ function createGrid() {
 }
 
 createGrid();
+
+let selectedColor = document.querySelector('.selected');
+for (i = 0; i < colors.length; i += 1) {
+  const blockColors = document.querySelectorAll('.color')[i];
+  blockColors.addEventListener('click', setSelected);
+}
+
+function setSelected() {
+  const selectedBlock = document.querySelector('.selected');
+  const clickedBlock = event.currentTarget;
+  
+  if (clickedBlock.classList.contains('selected')) {
+
+  } else {
+    clickedBlock.classList.add('selected');
+    selectedBlock.classList.remove('selected');
+  }
+}
