@@ -21,8 +21,9 @@ body {
   }
 
 #pixel-board{
-  width: 220px;
-  height: 220px;
+  width: 210px;
+  height: 210px;
+  border-collapse: collapse;
 }
 
   .pixel {
@@ -37,5 +38,8 @@ body {
 
 #clear-board {
   margin-bottom: 7px;
+  
+}
+#board-size{
   
 }

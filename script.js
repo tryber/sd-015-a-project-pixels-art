@@ -33,26 +33,36 @@ function changeSelected (div) {
 }
 
 
-for (idx = 0; idx < 5; idx += 1) {
-  let motherPixel = document.createElement('div');
-  let eachPixel = document
+
+let generateBoard = document.querySelector('#generate-board')
+generateBoard.addEventListener('click', gerarBoard)
+
+
+function gerarBoard () {
+  let valor = document.querySelector('#board-size').value
+}
+  
+  
+  for (idx = 0; idx < 5; idx += 1) {
+    let motherPixel = document.createElement('div');
+    let eachPixel = document
     .querySelector('#pixel-board')
     .appendChild(motherPixel);
-  eachPixel.innerHTML = '';
-  eachPixel.className = 'pixel';
-  eachPixel.style.backgroundColor = 'white';
-
-  for (idx2 = 0; idx2 < 4; idx2 += 1) {
-    let motherPixel2 = document.createElement('div');
-    let eachPixel2 = document
+    eachPixel.innerHTML = '';
+    eachPixel.className = 'pixel';
+    eachPixel.style.backgroundColor = 'white';
+    
+    for (idx2 = 1; idx2 < 4; idx2 += 1) {
+      let motherPixel2 = document.createElement('div');
+      let eachPixel2 = document
       .querySelector('#pixel-board')
       .appendChild(motherPixel2);
-    eachPixel2.innerHTML = '';
-    eachPixel2.className = 'pixel';
-    eachPixel2.style.backgroundColor = 'white';
+      eachPixel2.innerHTML = '';
+      eachPixel2.className = 'pixel';
+      eachPixel2.style.backgroundColor = 'white';
+    }
   }
-}
-
+  
 let quadro = document.querySelector('#pixel-board')
 
 quadro.addEventListener('click', colorir)
@@ -71,3 +81,10 @@ function limpador (){
     motherBoard[idx3].style.backgroundColor = 'white'
   }
 }
+
+
+
+console.log(document.querySelector('#board-size').value)
+
+// let inputValues = document.querySelector('#board-size')
+// inputValues.addEventListener('')
