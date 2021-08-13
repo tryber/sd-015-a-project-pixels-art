@@ -1,0 +1,11 @@
+#paleta {
+  text-align: center;
+}
+.color {
+  width: 50px;
+  height: 50px;
+  border-radius: 3px;
+  border: black 1px solid;
+  display: inline-block;
+}
+
