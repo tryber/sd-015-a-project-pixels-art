@@ -13,7 +13,6 @@ function blockMaker(sideSize) {
       block.style.backgroundColor = 'rgb(255, 255, 255)';
       line.appendChild(block);
     }
-    console.log(line)
     board.appendChild(line);
 
   }
@@ -39,4 +38,18 @@ function getColor() {
 }
 
 getColor();
+
+//PAINT THE BOARD
+
+function painter() {
+  let pixelBoard = document.getElementById('pixel-board');
+  pixelBoard.addEventListener('click', function(event) {
+    let selectedColor = document.getElementsByClassName('color selected')[0];
+    let color = selectedColor.style.backgroundColor;
+    event.target.style.backgroundColor = selectedColor.innerHTML;
+    console.log(selectedColor.innerHTML)
+  })
+}
+
+painter();
 
