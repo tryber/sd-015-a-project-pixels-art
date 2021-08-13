@@ -1,7 +1,7 @@
 const pixelBoard = document.querySelector('#pixel-board');
 const pixelPallet = document.querySelector('#color-palette');
 const colorsPallet = document.querySelectorAll('.color');
-const colorSelect = document.querySelector('.selected');
+const buttonClear = document.querySelector('button');
 
 for (let i = 0; i < colorsPallet.length; i += 1) {
   colorsPallet[i].style.backgroundColor = colorsPallet[i].id;
@@ -38,10 +38,23 @@ function addOnlySelect(event) {
 pixelPallet.addEventListener('click', addOnlySelect);
 
 function changeColorBoard(event) {
-  const colorSelected = document.querySelector('.selected');
-  const color = colorSelected.id;
   const newColor = event.target;
-  newColor.style.backgroundColor = color;
+
+  if (newColor.classList.length >= 1) {
+    const colorSelected = document.querySelector('.selected');
+    const color = colorSelected.id;
+    newColor.style.backgroundColor = color;
+  }
 }
 
 pixelBoard.addEventListener('click', changeColorBoard);
+
+function clearBoard() {
+  const pixel = document.querySelectorAll('.pixel');
+
+  for (let i = 0; i < pixel.length; i += 1) {
+    pixel[i].style.backgroundColor = 'rgb(255, 255, 255)';
+  }
+}
+
+buttonClear.addEventListener('click', clearBoard);
