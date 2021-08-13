@@ -1,37 +1,38 @@
-let coresDaPaleta = document.getElementsByClassName("color");
+let coresDaPaleta = document.getElementsByClassName('color');
 for (let i=0; i < coresDaPaleta.length; i += 1) {
   coresDaPaleta[i].style.backgroundColor = coresDaPaleta[i].id;
 }
 
-function criaQuadro() {
+function criaQuadro(valor) {
+  if (valor > 50) {
+    valor = 50;
+  } else if (valor < 5) {
+    valor = 5;
+  }
   let pixelBoard = document.createElement("div");
   pixelBoard.id = 'pixel-board';
   document.querySelector('body').appendChild(pixelBoard);
-  let numeroDeLinhas = 5;
-  let numeroDePixels = 5;
+  let numeroDeLinhas = valor;
   for (let linha = 0; linha < numeroDeLinhas; linha += 1) {
-    for (let i = 0; i < numeroDePixels; i += 1) {
-      let pixel = document.createElement("div");
-      pixel.className = "pixel";
+    for (let i = 0; i < numeroDeLinhas; i += 1) {
+      const pixel = document.createElement('div');
+      pixel.className = 'pixel';
+      pixel.addEventListener('click', pintaPixel);
       pixelBoard.appendChild(pixel);
     }
-    pixelBoard.appendChild(document.createElement("br"));
+    pixelBoard.appendChild(document.createElement('br'));
   }
- }
-
-criaQuadro();
-
-for (let i = 0; i < document.querySelectorAll('.color').length; i += 1) {
-  document.querySelectorAll('.color')[i].addEventListener('click', selectColor);
 }
 
+criaQuadro(5);
+
 function selectColor(cor) {
-  document.querySelector('.selected').classList.remove("selected");
+  document.querySelector('.selected').classList.remove('selected');
   cor.target.classList.add('selected');
 }
 
-for (let i = 0; i < document.querySelectorAll('.pixel').length; i += 1) {
-  document.querySelectorAll('.pixel')[i].addEventListener('click', pintaPixel);
+for (let i = 0; i < document.querySelectorAll('.color').length; i += 1) {
+  document.querySelectorAll('.color')[i].addEventListener('click', selectColor);
 }
 
 function pintaPixel(pixel) {
@@ -48,3 +49,23 @@ botao.onclick = function() {
     document.getElementsByClassName("pixel")[i].style.backgroundColor = 'white';
   }
 }
+
+let tamanho = document.createElement('input');
+tamanho.id = 'board-size';
+tamanho.type = 'number';
+tamanho.min = '1';
+tamanho.max = '50';
+let resizeBoard = document.createElement('button');
+resizeBoard.id = 'generate-board';
+resizeBoard.innerText = 'VQV!'
+resizeBoard.onclick = function limpaQuadro() {
+  if (tamanho.value < 1) {
+    alert('Board inválido!')
+  } else{
+    let pixelBoard = document.querySelector('#pixel-board');
+    pixelBoard.parentNode.removeChild(pixelBoard);
+    criaQuadro(tamanho.value);
+  }
+}
+document.querySelector('body').insertBefore(tamanho, document.getElementById('pixel-board'))
+document.querySelector('body').insertBefore(resizeBoard, document.getElementById('pixel-board'))
