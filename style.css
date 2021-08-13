@@ -1,20 +1,30 @@
 h1 {
   text-align: center;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: Trebuchet MS, Lucida Sans Unicode, Lucida Grande;
 
 }
 
-body {
-  background-color: rgb(252, 224, 193);
-}
 
 .color {
   border: solid 1px black;
   display: inline;
   padding: 20px;
-  
+
 }
 
-h1,#color-palette {
+h1 , #color-palette {
   text-align: center;
+
 }
+
+#pixel-board {
+  max-width: 210px;
+  max-height: 210px;
+  margin: 0 auto;
+  margin-top: 50px;
+  line-height: 0px;
+
+}
+
+
+
