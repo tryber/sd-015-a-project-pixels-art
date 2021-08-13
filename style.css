@@ -45,3 +45,6 @@
 .clear {
     clear: both;
 }
+button {
+    margin: 10px 0;
+}

@@ -20,13 +20,25 @@ window.onload = function() {
             event.target.style.backgroundColor = cssBackground;
         }
     })
+
+    let button = document.querySelector('button');
+
+    button.addEventListener('click', function() {
+        let getPixel = document.querySelectorAll('.pixel')
+        for (let index = 0; index < getPixel.length; index += 1) {
+            getPixel[index].style.backgroundColor = "rgb(255,255,255)";
+        }
+    })
 }
-// ### 8 - Clicar em um pixel dentro do quadro após selecionar uma cor na paleta faz com que o pixel seja preenchido com a cor selecionada.
+
+// ### 9 - Crie um botão que, ao ser clicado, limpa o quadro preenchendo a cor de todos seus pixels com branco.
 
 // **O que será verificado:**
 
-// - Verifica se ao carregar a página deve ser possível pintar os pixels de preto
+// - Verifica se o botão tem o `id` denominado `clear-board`
 
-// - Verifica se após selecionar uma outra cor na paleta, é possível pintar os pixels com essa cor
+// - Verifica se o botão está posicionado entre a paleta de cores e o quadro de pixels
 
-// - Verifica se somente o pixel que foi clicado foi preenchido com a cor selecionada, sem influenciar na cor dos demais pixels.
+// - Verifica se o texto do botão é \'Limpar\'
+
+// - Verifica se ao clicar no botão, o quadro de pixels é totalmente preenchido de branco
