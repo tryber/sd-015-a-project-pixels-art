@@ -1,8 +1,19 @@
  
-.color-red{
-color: black;
-display: inline-block;
-width: 100px;
-height: 100px;
-border:solid black 1px; 
+.color{
+    display: inline-block;
+    border: solid 1px black;
+    height:100px;
+    width: 100px;
+}
+#color-one{
+   background-color: rgb(0, 0, 0);
+}
+#color-two{
+    background-color: purple;
+}
+#color-three{
+    background-color: blue;
+}
+#color-four{
+    background-color: green;
 }
