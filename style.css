@@ -1,0 +1,26 @@
+.color{
+    display: inline-block;
+    border-style: solid;
+    border-width: 1px;
+}
+
+#preta{
+    background-color: black;
+    width: 200px;
+    height: 200px;
+}
+#amarelo{
+    background-color: lightyellow;
+    width: 200px;
+    height: 200px;
+}
+#verde{
+    background-color: lightgreen;
+    width: 200px;
+    height: 200px;
+}
+#vermelho{
+    background-color: lightsalmon;
+    width: 200px;
+    height: 200px;
+}
