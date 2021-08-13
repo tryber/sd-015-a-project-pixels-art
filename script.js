@@ -1,4 +1,6 @@
 /* eslint-disable no-unused-vars */
+const boardPixel = 'pixel-board';
+
 function createBox(parent) {
   const colors = ['black', 'blue', 'green', 'yellow'];
   for (let i = 0; i < colors.length; i += 1) {
@@ -43,7 +45,7 @@ function selectColor() {
 }
 
 function fillPixel() {
-  const pixel = document.getElementById('pixel-board');
+  const pixel = document.getElementById(boardPixel);
 
   pixel.addEventListener('click', (event) => {
     const selectedColor = document.querySelector('.selected').style.backgroundColor;
@@ -65,3 +67,30 @@ function clearBoard() {
     }
   });
 }
+
+function definePixelSize() {
+  const input = document.querySelector('input');
+  const vqvBtn = document.getElementById('generate-board');
+
+  input.id = 'board-size';
+
+  vqvBtn.addEventListener('click', () => {
+    const valueInput = Number(input.value);
+    const pixelBoard = document.getElementById(boardPixel);
+    const allPixels = document.querySelectorAll('.pixel');
+
+    pixelBoard.style.width = `${((valueInput) + 2) * 5}px`;
+    for (let i = 0; i < allPixels.length; i += 1) {
+      allPixels[i].style.width = `${valueInput}px`;
+      allPixels[i].style.height = `${valueInput}px`;
+    }
+  });
+}
+
+createBox('color-palette');
+createPixel(boardPixel);
+defineColor();
+selectColor();
+fillPixel();
+clearBoard();
+definePixelSize();
