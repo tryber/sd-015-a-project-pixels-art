@@ -14,13 +14,25 @@ criarDivsDasCores();
 // cores atribuidas resgatando cada elemento nó e atribuindo cor de fundo. caracteristicas gerais no css
 const color1 = document.querySelectorAll('.color')[0];
 color1.style.backgroundColor = 'black';
-color1.classList.add = 'selected';
+color1.classList.add('selected');
 const color2 = document.querySelectorAll('.color')[1];
 color2.style.backgroundColor = 'red';
 const color3 = document.querySelectorAll('.color')[2];
 color3.style.backgroundColor = 'blue';
 const color4 = document.querySelectorAll('.color')[3];
 color4.style.backgroundColor = 'green';
+
+// remove e adiciona classe nas cores da paleta.
+function trocarClasseSelected(event) {
+  const selecionado = document.querySelector('.selected');
+  selecionado.classList.remove('selected');
+  event.target.classList.add('selected');
+}
+
+color1.addEventListener('click', trocarClasseSelected);
+color2.addEventListener('click', trocarClasseSelected);
+color3.addEventListener('click', trocarClasseSelected);
+color4.addEventListener('click', trocarClasseSelected);
 
 // criar os quadros de pixels
 
@@ -36,3 +48,12 @@ function criarOQuadroDeArt() {
   }
 }
 criarOQuadroDeArt();
+
+// mudar o lugar a classe selected com event target
+
+function mudarClasseSelected(event) {
+  let selecionado = document.querySelector('.selected')
+  selecionado.classList.remove('.selected');
+  event.target.classList.add('selected');
+}
+
