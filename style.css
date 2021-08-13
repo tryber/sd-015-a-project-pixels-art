@@ -28,3 +28,11 @@
   display: inline-table;
   margin: -3px -1px;
 }
+
+#btn-wrapper {
+  display: block;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+  padding: 20px;
+}
