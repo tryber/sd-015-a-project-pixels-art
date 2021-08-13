@@ -83,12 +83,23 @@ function clearBoard() {
 
 clearBoard();
 
+// função para converter e limitar valores de entrada para o tamanho do painel de pixels
+function convertToInteger(string) {
+  let result = parseInt(string, 10);
+  if (result > 50) {
+    result = 50;
+  } else if (result < 5) {
+    result = 5;
+  }
+  return result;
+}
+
 // Modifica tamanho do quadro de pixels
 function changePixelBoardSize() {
   const button = document.getElementById('generate-board');
   button.addEventListener('click', () => {
     const text = document.getElementById('board-size');
-    const size = parseInt(text.value, 10);
+    const size = convertToInteger(text.value);
     if (size > 0) {
       createPixelBoard(size);
     } else {
