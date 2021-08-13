@@ -32,7 +32,7 @@ header ul {
 }
 
 header ul li {
-  border: black solid 1px;
+  border: 1px solid rgb(0, 0, 0);
   display: inline-block;
   font-size: 1.3em;
   font-weight: 500;
@@ -42,22 +42,53 @@ header ul li {
   padding-right: 2%;
 }
 
-#color-1 {
+#color1 {
   background-color: black;
   color: ghostwhite;
 }
 
-#color-2 {
+#color2 {
   background-color: #f1fa8c;
   color: #282a36;
 }
 
-#color-3 {
+#color3 {
   background-color: #8be9fd;
   color: #282a36;
 }
 
-#color-4 {
+#color4 {
   background-color: #ff5555;
   color: ghostwhite;
+}
+
+main {
+  border: green solid 5px;
+  margin-top: 3%;
+}
+
+#pixel-board {
+  border: #ff5555 solid 5px;
+  display: block;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+.pixel {
+  border: #282a36 solid 1px;
+  background-color: white;
+  display: inline-block;
+  width: 8%;
+  padding-bottom: 8%;
+}
+
+#primeiroDaLinha {
+  margin-left: 25%;
+}
+
+#ultimoDaLinha {
+  margin-right: 25%;
 }
