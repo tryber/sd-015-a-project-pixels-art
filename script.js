@@ -3,9 +3,12 @@ window.onload = function () {
   document.getElementById('black').classList.add('selected');
   addListeners('.color', 'click', selectColor);
   addListeners('.pixel', 'click', paintPixel);
+  addListeners('#clear-board', 'click', clearBoard);
 };
 
 // O Código de criação da Pixel Board foi baseado no código da dinâmica do fim do bloco 5
+
+// Create Board
 
 function createPixelBoard(height, width) {
   createLines(height);
@@ -36,6 +39,8 @@ function createPixels(pixLine, width) {
   }
 }
 
+// Add Event Listeners
+
 function addListeners(targetElement, targetEvent, targetFunction) {
   let elementArray = document.querySelectorAll(targetElement);
   for (let i = 0; i < elementArray.length; i += 1) {
@@ -63,4 +68,13 @@ function paintPixel(pixel) {
   let targetBgColor =
     getComputedStyle(targetColor).getPropertyValue('background-color');
   pixel.target.style.backgroundColor = targetBgColor;
+}
+
+// Board Cleaner
+
+function clearBoard(cbButton) {
+  let pixels = document.querySelectorAll('.pixel');
+  for (let i = 0; i < pixels.length; i += 1) {
+    pixels[i].style.backgroundColor = 'white';
+  }
 }
