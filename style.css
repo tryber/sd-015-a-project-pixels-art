@@ -9,43 +9,40 @@
 
 .black {
     background-color: black;
-    left:10px;
+    left:45px;
 }
 
 .yellow {
     background-color: yellow;
-    left: 70px;
+    left: 105px;
 }
 
 .red {
     background-color: red;
-    left: 130px;
+    left: 165px;
 }
 
 .purple {
     background-color: purple;
-    left: 190px;
+    left: 225px;
 }
 
 #pixel-board {
-    border-width: 1px;
-    border-style: solid;
-    width: 202px;
-    height: 210px;
-    top:400px;
     position: absolute;
+    left: 40px;
+    top: 400px;
+    background-color:red;
 }
 
 .pixel {
+    background-color:cyan;
     width: 40px;
     height: 40px;
-    background-color: white;
+    display: inline-block;
     border-style: solid;
-    border-color: black;
-    border-width: 1px;
 }
 
-#c1 {
+/* #c1 {
     left: 0px;
 }
 
@@ -71,4 +68,7 @@
     position: absolute;
     left: 160px;
     top: 0px;
+} */
+
+.teste {
 }
