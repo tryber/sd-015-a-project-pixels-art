@@ -1,10 +1,10 @@
-let quadro = document.getElementById('pixel-board');
+const quadro = document.getElementById('pixel-board');
 
-function criarquadro(){
-    for (let index = 0; index < 25; index +=1){
-       let quadroTamanho = document.createElement('div');
-       quadroTamanho.className = 'pixel';
-       quadro.appendChild(quadroTamanho);
+function criarquadro() {
+  for (let index = 0; index < 25; index += 1) {
+    let quadroTamanho = document.createElement('div');
+    quadroTamanho.className = 'pixel';
+    quadro.appendChild(quadroTamanho);
     }; 
 };
 criarquadro();
@@ -26,5 +26,12 @@ function changeSelected(event){
     }
 }
 
+let mudaCor = document.getElementById('pixel-board');
+mudaCor.addEventListener('click', funcCor);
 
-
+function funcCor (event) {
+    let clicar = document.querySelector('.selected');
+    let pixelBoard = document.querySelectorAll('.pixel');
+    let cor = getComputedStyle(clicar); 
+        event.target.style.backgroundColor = cor.backgroundColor;
+}
