@@ -67,3 +67,18 @@ function paintPixel() {
 }
 
 paintPixel();
+
+// limpa painel de pixels
+
+function clearBoard (){
+  const clearButton = document.getElementById('clear-board');
+  const pixels = document.querySelectorAll('.pixel');
+  
+  clearButton.addEventListener('click', () => {
+    for (pixel of pixels) {
+      pixel.style.backgroundColor = 'white';
+    }
+  });
+}
+
+clearBoard();
