@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap') ;
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap');
 
 * {
   font-family: 'Baloo 2', cursive;
@@ -64,7 +64,8 @@ input {
   border: none;
 }
 
-#generate-board {
+#generate-board,
+#clear-board {
   width: 100px;
   background-color: #00ebc7;
   color: #00214d;
@@ -75,7 +76,12 @@ input {
   transition: 0.3s ease-in;
 }
 
-#generate-board:hover {
+#generate-board {
+  margin-left: 10px;
+}
+
+#generate-board:hover,
+#clear-board:hover {
   background-color: #ff5470;
   cursor: pointer;
 }
@@ -83,6 +89,10 @@ input {
 #board-container {
   margin: auto;
   text-align: center;
+}
+
+#clear-board {
+  margin-bottom: 30px;
 }
 
 #pixel-board {

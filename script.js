@@ -11,9 +11,9 @@ colors.addEventListener('click', function selectsColor(event) {
 
 // Generates random color(rgb)
 function generateRandomColor() {
-  const r;
-  const g;
-  const b;
+  let r;
+  let g;
+  let b;
 
   r = Math.floor(Math.random() * 254);
   g = Math.floor(Math.random() * 254);
