@@ -1,4 +1,19 @@
-const paletaDeCores = ['black', 'red', 'green', 'blue'];
+function numeroAleatorio() {
+  return Math.round(Math.random()*255);
+}
+
+function corAleatoria() {
+  let cor = 'rgb(';
+  cor += numeroAleatorio();
+  cor += ',';
+  cor += numeroAleatorio();
+  cor += ',';
+  cor += numeroAleatorio();
+  cor += ')';
+  return cor;
+}
+
+const paletaDeCores = ['black', corAleatoria(), corAleatoria(), corAleatoria()];
 const colorSlot = document.getElementById('color-palette').children;
 const botaoLimpar = document.getElementById('clear-board');
 const pixels = document.getElementsByClassName('pixel');
