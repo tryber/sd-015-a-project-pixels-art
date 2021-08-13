@@ -1,6 +1,13 @@
 #title {
     text-align: center;
 }
+.container {
+    border: 2px solid black;
+    box-sizing: border-box;
+    padding: 30px;
+    width: 80px;
+    text-align: center;
+}
 #color-palette {
     display: inline-block;
 }
