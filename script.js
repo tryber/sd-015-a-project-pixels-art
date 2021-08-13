@@ -44,3 +44,16 @@ function pintPixel() {
   pixelsBoardLines.addEventListener('click', paintClick);
 }
 pintPixel();
+
+function clear() {
+  const clearButton = document.querySelector('#clear-board');
+  const pixels = document.querySelectorAll('.pixel');
+
+  function btClear() {
+    for (let i = 0; i < pixels.length; i += 1) {
+      pixels[i].style.backgroundColor = 'white';
+    }
+  }
+  clearButton.addEventListener('click', btClear);
+}
+clear();
