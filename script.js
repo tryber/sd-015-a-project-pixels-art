@@ -16,11 +16,13 @@ function createPalleteColor(color) {
   })
   palleteBox.appendChild(palleteColor);
 }
+
 function clearSelectedClass(elements){
   for(let index = 0; index < elements.length; index += 1){
     elements[index].className = elements[index].className.replace(' selected','');
   }
 }
+
 function makeSelected(element){
   element.className = `${element.className} selected`
 }
@@ -81,16 +83,6 @@ function RGBRamdon(){
 
 }
 
-// function createPixelLines(columns){
-//   const pixelBoard = document.getElementById('pixel-board');
-//   for(let index = 0; index < columns; index +=1){
-//     const pixel = document.createElement('div');
-//     pixel.className = 'pixel';
-//     pixel.style.backgroundColor = 'white';
-//     pixel    
-//   }
-// }
-
 createPalleteColor('black');
 createPalleteColor(RGBRamdon());
 createPalleteColor(RGBRamdon());
@@ -110,6 +102,6 @@ document.getElementById('generate-board').addEventListener('click',function(){
   document.getElementById("pixel-board").innerHTML = "";
   fillBoard(numberOfLines,numberOfLines);
   console.log(numberOfLines)
-})
+});
 //fillBoard(5,5)
 clearBoard();
