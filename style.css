@@ -1,0 +1,23 @@
+.color {
+  display: inline-block;
+  border: 1px solid black;
+  width: 100px;
+  height: 100px;
+  color: white
+}
+
+.preto {
+  background-color: black;
+}
+
+.vermelho {
+  background-color: red;
+}
+
+.azul {
+  background-color: blue;
+}
+
+.verde {
+  background-color: green;
+}
