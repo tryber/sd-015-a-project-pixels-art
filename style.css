@@ -27,3 +27,9 @@
 .lines {
     height: 40px;
 }
+#clear-board {
+    width: 210px;
+    margin: auto;
+    margin-top: 20px;
+    text-align: center;
+}

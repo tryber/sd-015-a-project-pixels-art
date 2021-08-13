@@ -35,6 +35,7 @@ function createPixels() {
         for (let index2 = 1; index2 <= lines.length; index2 += 1) {
             let pixel = document.createElement('div');
             pixel.className = 'pixel';
+            pixel.style.backgroundColor = 'white';
             lines[index].appendChild(pixel);
         }
     }
@@ -65,4 +66,14 @@ function paintPixels (event) {
     let rgbColorCurrent = colorCurrent.style.backgroundColor;
     event.target.style.backgroundColor = rgbColorCurrent;
 
+}
+const buttonClear = document.querySelector('#clear-board');
+buttonClear.addEventListener('click', clearPixels);
+function clearPixels () {
+    let divPixel = document.querySelectorAll('.pixel');
+    for (let index = 0; index < divPixel.length; index += 1) {
+        if (divPixel[index].style.backgroundColor !== 'white') {
+            divPixel[index].style.backgroundColor = 'white';
+        }
+    }
 }
