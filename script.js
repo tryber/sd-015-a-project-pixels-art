@@ -14,3 +14,10 @@ for (let i = 1; i < 6; i += 1) {
     line.appendChild(pixel);
   }
 }
+
+function initialColor() {
+  const pixelBlack = document.querySelector('#first-color');
+  pixelBlack.classList.add('selected');
+}
+
+window.onload = initialColor;
