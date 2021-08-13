@@ -2,6 +2,7 @@ window.onload = function () {
   createPixelBoard(5, 5);
   document.getElementById('black').classList.add('selected');
   addListeners('.color', 'click', selectColor);
+  addListeners('.pixel', 'click', paintPixel);
 };
 
 // O Código de criação da Pixel Board foi baseado no código da dinâmica do fim do bloco 5
@@ -46,8 +47,9 @@ function addListeners(targetElement, targetEvent, targetFunction) {
 
 // Select a Color
 
+let colors = document.querySelectorAll('.color');
+
 function selectColor(color) {
-  let colors = document.querySelectorAll('.color');
   for (let i = 0; i < colors.length; i += 1) {
     colors[i].classList.remove('selected');
   }
@@ -56,4 +58,9 @@ function selectColor(color) {
 
 // Paint a Pixel
 
-function paintPixel(pixel) {}
+function paintPixel(pixel) {
+  let targetColor = document.querySelector('.selected');
+  let targetBgColor =
+    getComputedStyle(targetColor).getPropertyValue('background-color');
+  pixel.target.style.backgroundColor = targetBgColor;
+}
