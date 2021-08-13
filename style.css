@@ -74,6 +74,7 @@ main {
   width: 80%;
   margin-left: 10%;
   margin-right: 10%;
+  margin-bottom: 5%;
   padding-top: 5%;
   padding-bottom: 5%;
 }
@@ -100,7 +101,8 @@ main {
   color: cornflowerblue;
   width: 15%;
   font-size: 2em;
-  margin-top: 4%;
+  margin-top: 3%;
   margin-left: 42.5%;
   margin-right: 42.5%;
+  margin-top: 3%;
 }
