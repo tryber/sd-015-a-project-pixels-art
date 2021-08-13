@@ -16,22 +16,6 @@ body {
   margin-bottom: 40px;
 }
 
-#color1 {
-  background-color: black;
-}
-
-#color2 {
-  background-color: rgb(2, 62, 138);
-}
-
-#color3 {
-  background-color: rgb(199, 31, 55);
-}
-
-#color4 {
-  background-color: rgb(255, 255, 63);
-}
-
 .color {
   padding: 30px;
   display: inline-block;
