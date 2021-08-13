@@ -1,0 +1,11 @@
+#title {
+    text-align: center;
+}
+#color-palette {
+    display: inline-block;
+}
+
+#color {
+    width: 450px;
+    height: 50px;
+}
