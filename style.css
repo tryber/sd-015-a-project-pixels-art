@@ -1,9 +1,6 @@
-/* .color:nth-of-type(1){
-    border: 1px solid black;
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-} */
+body {
+    text-align: center;
+}
 
 .color {
     display: inline-block;
@@ -26,4 +23,12 @@
 
 #quartaCor {
     background-color: deeppink;
+}
+
+.pixel {
+    height: 40px;
+    width: 40px;
+    border: 1px solid black;
+    display: inline-block;
+    background-color: white;
 }
