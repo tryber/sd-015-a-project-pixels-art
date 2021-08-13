@@ -16,14 +16,14 @@
 }
 
 #pixel-board {
-  height: 500px;
-  width: 500px;
+  height: 200px;
+  width: 200px;
   margin: auto;
 }
 
 .pixel {
-  height: 20%;
-  width: 20%;
+  height: 40px;
+  width: 40px;
   border: 1px solid black;
   display: inline-table;
   margin: -3px -1px;
