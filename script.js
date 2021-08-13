@@ -30,7 +30,7 @@ createPixels(heightPixelBoard, widthPixelBoard);
 
 let selectedColor;
 
-window.onload = function () {
+window.onload = function defaultColor() {
   selectedColor = document.querySelector('.color');
   selectedColor.classList.add('selected');
 };
@@ -48,9 +48,6 @@ function selectColor(event) {
 }
 
 EvListenerInArrayOfElem(colors, 'click', selectColor);
-// for (let i = 0; i < colors.length; i += 1) {
-//   colors[i].addEventListener('click', selectColor);
-// }
 
 let pixels = document.querySelectorAll('.pixel');
 
@@ -60,3 +57,13 @@ function changePixelColor(event) {
 }
 
 EvListenerInArrayOfElem(pixels, 'click', changePixelColor);
+
+let clearBoard = document.getElementById('clear-board');
+
+function clearAllPixels () {
+  for (let i = 0; i < pixels.length; i += 1) {
+    pixels[i].style.backgroundColor = 'white';
+  }
+}
+
+clearBoard.addEventListener('click', clearAllPixels);
