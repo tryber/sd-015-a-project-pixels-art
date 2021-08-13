@@ -10,15 +10,14 @@ function backgroundOfColors() {
 backgroundOfColors();
 
 const pixelBoard = document.getElementById('pixel-board');
-const heightPixelBoard = 5;
-const widthPixelBoard = 5;
+let sizeValue = 5;
 
-function createPixels(height, width) {
-  for (let l = 1; l <= height; l += 1) {
+function createPixels(size) {
+  for (let l = 1; l <= size; l += 1) {
     const line = document.createElement('ul');
     line.className = 'line';
     pixelBoard.appendChild(line);
-    for (let px = 1; px <= width; px += 1) {
+    for (let px = 1; px <= size; px += 1) {
       const pixel = document.createElement('li');
       pixel.className = 'pixel';
       line.appendChild(pixel);
@@ -26,7 +25,7 @@ function createPixels(height, width) {
   }
 }
 
-createPixels(heightPixelBoard, widthPixelBoard);
+createPixels(sizeValue);
 
 let selectedColor;
 
@@ -49,11 +48,11 @@ function selectColor(event) {
 
 EvListenerInArrayOfElem(colors, 'click', selectColor);
 
-const pixels = document.querySelectorAll('.pixel');
+let pixels = document.querySelectorAll('.pixel');
 
 function changePixelColor(event) {
   const color = selectedColor.style.backgroundColor;
-  let pixelToChange = event.target;
+  const pixelToChange = event.target;
   pixelToChange.style.backgroundColor = color;
 }
 
@@ -68,3 +67,18 @@ function clearAllPixels() {
 }
 
 clearBoard.addEventListener('click', clearAllPixels);
+
+function changeBoard() {
+  sizeValue = document.getElementById('board-size').value;
+  if (sizeValue === '' || sizeValue < 1) {
+    window.alert('Board inválido!');
+  } else {
+    pixelBoard.innerHTML = '';
+    createPixels(sizeValue);
+    pixels = document.querySelectorAll('.pixel');
+    EvListenerInArrayOfElem(pixels, 'click', changePixelColor);
+  }
+}
+
+const btnBoardSize = document.querySelector('#generate-board');
+btnBoardSize.addEventListener('click', changeBoard);
