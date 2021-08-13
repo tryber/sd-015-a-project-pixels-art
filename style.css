@@ -11,7 +11,7 @@
 }
 
 .color:nth-child(1) {
-    background-color: blueviolet;
+    background-color: black;
 }
 
 .color:nth-child(2) {
@@ -24,4 +24,20 @@
 
 .color:nth-child(4) {
     background-color: gold;
+}
+
+#pixel-board {
+    width: 310px;
+    border: 1px solid black;
+}
+
+.pixel {
+    display: block;
+    width: 60px;
+    height: 60px;
+    border: black solid 1px;
+    margin: 0;
+    padding: 0;
+    float: left;
+    background-color: rgb(255,255,255);
 }
