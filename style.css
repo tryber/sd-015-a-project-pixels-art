@@ -25,3 +25,17 @@ h1 , #color-palette {
   line-height: 0px;
 
 }
+
+#clear-board {
+  margin-top: 50px;
+  font-family: Verdana;
+  width: 80px;
+  height: 30px;
+  background-color: blue;
+  color: white;
+
+}
+
+body {
+  text-align: center;
+}

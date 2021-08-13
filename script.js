@@ -39,3 +39,10 @@ for(let superIndex = 0; superIndex < arrayOfColors.length; superIndex+=1) {
     })
   }
 
+  let clearButton = document.querySelector("#clear-board");
+  clearButton.addEventListener("click", () => {
+    let arrayOfBoxes = document.querySelectorAll(".pixel");
+    for(let coolIndex = 0; coolIndex < arrayOfBoxes.length; coolIndex +=1) {
+      arrayOfBoxes[coolIndex].style.backgroundColor = "white";
+    }
+  })
