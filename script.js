@@ -1,6 +1,8 @@
 const colors = document.getElementById('color-palette');
 const pixelBoard = document.getElementById('pixel-board');
 const generateBoard = document.getElementById('generate-board');
+const clear = document.getElementById('clear-board');
+const pixels = document.getElementsByClassName('pixel');
 
 // Selects color
 colors.addEventListener('click', function selectsColor(event) {
@@ -53,4 +55,11 @@ createBoard();
 // Paints pixels with selected color
 pixelBoard.addEventListener('click', function paintPixels(event) {
   event.target.style.backgroundColor = document.querySelector('.selected').style.backgroundColor;
+});
+
+// Clear Board
+clear.addEventListener('click', function clearBoard() {
+  for (let i = 0; i < pixels.length; i += 1) {
+    pixels[i].style.backgroundColor = 'white';
+  }
 });
