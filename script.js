@@ -42,14 +42,28 @@ getColor();
 //PAINT THE BOARD
 
 function painter() {
-  let pixelBoard = document.getElementById('pixel-board');
-  pixelBoard.addEventListener('click', function(event) {
-    let selectedColor = document.getElementsByClassName('color selected')[0];
-    let color = selectedColor.style.backgroundColor;
-    event.target.style.backgroundColor = selectedColor.innerHTML;
-    console.log(selectedColor.innerHTML)
-  })
+  let pixelBoard = document.getElementsByClassName('pixel');
+  for (pixel of pixelBoard) {
+    pixel.addEventListener('click', function(event) {
+      let selectedColor = document.getElementsByClassName('color selected')[0];
+      let color = selectedColor.style.backgroundColor;
+      event.target.style.backgroundColor = selectedColor.innerHTML;
+    })
+  }
 }
 
 painter();
 
+//RESET BUTTON
+
+function clear() {
+  resetButton = document.getElementById('clear-board');
+  resetButton.addEventListener('click', function() {
+    pixels = document.querySelectorAll('.pixel');
+    for (pixel of pixels) {
+      pixel.style.backgroundColor = 'white';
+    }
+  })
+}
+
+clear();

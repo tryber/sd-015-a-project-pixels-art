@@ -65,7 +65,10 @@ header {
   display: inline-block;
 }
 
-
+#clear-board {
+  display: block;
+  margin: 0px auto 30px;
+}
 
 
 
