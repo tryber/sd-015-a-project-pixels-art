@@ -28,7 +28,7 @@ criaCoresDaPaleta(randomColorGenerator());
 let color = document.querySelector('.selected').style.backgroundColor;
 
 function criaLinhaQuadro(tamanho, largAlt) {
-  for (let i = 0; i < tamanho*tamanho; i += 1) {
+  for (let i = 0; i < tamanho * tamanho; i += 1) {
     const elementoQuadro = document.createElement('div');
     elementoQuadro.classList.add('pixel');
     elementoQuadro.style.backgroundColor = 'white';
