@@ -1,0 +1,75 @@
+body {
+  margin: 0px;
+}
+
+header {
+  background-color: blueviolet;
+}
+
+section {
+  position: absolute;
+  margin: 10px;
+}
+
+#title {
+  margin: 20px 0px 20px 50px;
+}
+
+#color-palette {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  margin: 10px;
+  padding: 20px;
+  width: 400px;
+  height: 100px;
+  border: 1px solid black;
+  display: inline;
+}
+
+.color {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+}
+
+#black {
+  left: 10px;
+}
+
+#red {
+  left: 110px;
+}
+
+#blue {
+  left: 210px;
+}
+
+#yellow {
+  left: 310px;
+}
+
+#clear-board {
+  position: absolute;
+  top: 220px;
+  left: 240px;
+}
+
+#pixel-board {
+  position: absolute;
+  left: 130px;
+  top: 250px;
+  margin: 10px;
+  padding: 20px;
+  width: 220px;
+  height: 220px;
+  border: 1px solid black;
+}
+
+.pixel {
+  border: 1px solid black;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+}
