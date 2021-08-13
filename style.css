@@ -7,7 +7,7 @@ body {
 .color{
     display: inline-block;
     border: black solid 1px;
-    width: 50px;
+    width: 40px;
     height: 50px;
     margin: 3px;
 }
@@ -17,5 +17,6 @@ body {
     height: 40px;
     display: inline-block;
     border: black solid 1px;    
-    margin: -3px;
+    margin-top: -2px;
+    margin-bottom: -2px;
 }

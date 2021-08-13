@@ -32,7 +32,7 @@ function createColorPalette() {
 }
 
 function createLinePixel() {
-  for (let indexLine = 1; indexLine <= 5; indexLine += 1) {
+  for (let indexLine = 0; indexLine < 5; indexLine += 1) {
     const divPixelBoard = document.querySelector('#pixel-board');
     const divLine = document.createElement('div');
     divLine.className = 'line';
