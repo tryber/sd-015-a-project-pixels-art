@@ -12,12 +12,12 @@ function createLine(size) {
       createBoard.style.width = '40px';
       createBoard.style.height = '40px';
       createBoard.style.border = '1px solid black';
+      window.onload = function() {
+        createBoard.style.backgroundColor = 'white';
+      }
       createBoardLines.appendChild(createBoard);
     }
   }
 } 
-
-
 createLine(size);
-
 
