@@ -39,3 +39,7 @@ body {
   border-radius: 50px;
   cursor: pointer;
 }
+
+.selected {
+  border-radius: 50px;
+}
