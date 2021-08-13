@@ -41,20 +41,28 @@ function createPixels() {
 }
 createPixels()
 
-const color = document.getElementsByClassName('color');
-let colorBlack = color[0];
-colorBlack.classList.add('selected');
-window.onload = colorOnload;
 
+
+window.onload = colorOnload;
+const color = document.getElementsByClassName('color');
 function colorOnload () {
-    let selectColor = document.getElementsByClassName('selected')[0];
+    let colorBlack = color[0];
+    colorBlack.classList.add('selected');
+    let selectColor = document.querySelector('.selected');
 }
 colorOnload();
 
 palette.addEventListener('click', selecionaCor);
 function selecionaCor (event) {
-    let colorCurrent = document.getElementsByClassName('color selected')[0];
+    let colorCurrent = document.querySelector('.selected');
     colorCurrent.classList.remove('selected');
     event.target.classList.add('selected');
     
+}
+board.addEventListener('click', paintPixels);
+function paintPixels (event) {
+    let colorCurrent = document.querySelector('.selected');
+    let rgbColorCurrent = colorCurrent.style.backgroundColor;
+    event.target.style.backgroundColor = rgbColorCurrent;
+
 }
