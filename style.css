@@ -12,15 +12,15 @@
 
 #pixel-board {
     display: inline-block;
-    width: 150px;
-    height: 220px;
+    width: 220px;
+    height: 235px;
 }
 
 .pixel {
     background-color: rgb(255, 255, 255);
     display: inline-block;
-    width: 22px;
-    height: 22px;
+    width: 40px;
+    height: 40px;
     padding: 1px;
     border: 1px solid black;
 }
