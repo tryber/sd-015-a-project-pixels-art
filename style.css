@@ -1,5 +1,5 @@
 .color {
-  border: 1px solid black;
+  border: black solid 1px;
   display: inline-block;
   background-color: white;
 }
@@ -17,4 +17,11 @@
 }
 .pixel {
   background-color: white;
+  border: black solid 1px;
+  width: 40px;
+  height: 40px;
+  display: table-cell;
+}
+#pixel-board {
+  
 }
