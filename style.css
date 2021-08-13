@@ -1,0 +1,23 @@
+body {
+  margin-left: 50px;
+}
+
+.color , .pixel {
+  display: inline-block;
+  border: 1px solid black;
+}
+
+.color {
+  height: 50px;
+  width: 50px;
+}
+
+.pixel {
+  height: 40px;
+  width: 40px;
+  background-color: white;
+}
+
+#clear-board {
+  margin: 10px 0;
+}
