@@ -1,18 +1,21 @@
 //  Gerando cores aleatorias
 function gerarCorAleatoria() {
-  return `rgb(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)})`
+  const r = Math.floor(Math.random() * 255);
+  const g = Math.floor(Math.random() * 255);
+  const b = Math.floor(Math.random() * 255);
+  return `rgb(${r}, ${g}, ${b})`;
 }
 
 //  Gerando a palleta de cor
 function generateColorPallete() {
   const parent = document.getElementById('color-palette');
   for (let c = 0; c < 4; c += 1) {
-    const div = document.createElement('div')
-    if (c === 0){
+    const div = document.createElement('div');
+    if (c === 0) {
       div.className = 'color selected';
       div.style.backgroundColor = 'black';
       parent.appendChild(div);
-    }else {
+    } else {
       div.className = 'color';
       div.style.backgroundColor = gerarCorAleatoria();
       parent.appendChild(div);
@@ -21,13 +24,12 @@ function generateColorPallete() {
 }
 generateColorPallete();
 
-
 //  Gerando o pixel-bord
 function generatePixelBoard(size) {
   const parent = document.getElementById('pixel-board');
   for (let c = 0; c < size; c += 1) {
     const div = document.createElement('div');
-    div.className = "pixel";
+    div.className = 'pixel';
     parent.appendChild(div);
   }
 }
@@ -35,42 +37,42 @@ generatePixelBoard(25);
 
 function escolhendoCor() {
   const parent = document.querySelector('#color-palette');
-  parent.addEventListener('click', e => {
+  parent.addEventListener('click', (e) => {
     const cores = document.getElementsByClassName('color');
-    for (let color of cores){
+    for (const color of cores) {
       color.className = 'color';
     }
     e.target.className = 'color selected';
-  })
+  });
 }
-escolhendoCor()
+escolhendoCor();
 
 //  Colorir a paleta
 function colorir() {
   const pixels = document.getElementById('pixel-board');
-  pixels.addEventListener('click', e => {
+  pixels.addEventListener('click', (e) => {
     e.target.style.backgroundColor = document.querySelector('.selected').style.backgroundColor;
   })
   
 }
-colorir()
+colorir();
 
 //  clear box
 function clear() {
   const button = document.getElementById('clear-board');
   const pixels = document.getElementsByClassName('pixel');
-  button.addEventListener('click', e => {
-    for(let pixel of pixels){
+  button.addEventListener('click', (_) => {
+    for(let pixel of pixels) {
       pixel.style.backgroundColor = 'white';
     }
-  })
+  });
 }
-clear()
+clear();
 
 //  mudar Tamanho
 function changeSize() {
   const button = document.querySelector('#generate-board');
-  button.addEventListener('click', e => {
+  button.addEventListener('click', (_) => {
     let input = document.querySelector('#board-size').value;
     if (input === '') {
       alert('Board inválido!');
@@ -83,7 +85,7 @@ function changeSize() {
       board.style.gridTemplateRows = `repeat(${input}, 1fr)`;
       generatePixelBoard(input * input);
     }
-  })
+  });
   
 }
-changeSize()
+changeSize();
