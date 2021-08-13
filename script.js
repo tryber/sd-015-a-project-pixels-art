@@ -73,6 +73,11 @@ function changeBoard() {
   if (sizeValue === '' || sizeValue < 1) {
     window.alert('Board inválido!');
   } else {
+    if (sizeValue < 5) {
+      sizeValue = 5;
+    } else if (sizeValue > 50) {
+      sizeValue = 50;
+    }
     pixelBoard.innerHTML = '';
     createPixels(sizeValue);
     pixels = document.querySelectorAll('.pixel');
