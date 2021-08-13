@@ -77,3 +77,26 @@ function paintPixel () {
 }
 
 paintPixel();
+
+function createClearButton() {
+  let button = document.createElement('button');
+  button.id = 'clear-board';
+  button.innerHTML = 'Limpar';
+  let section = document.querySelector('.button-section');
+  section.appendChild(button);
+}
+
+function clearButton() {
+  let button = document.querySelector('#clear-board');
+  button.addEventListener('click', clearBoard);
+
+  function clearBoard() {
+    let board = document.querySelectorAll('.pixel');
+    for (let index = 0; index < board.length; index += 1) {
+      board[index].style.backgroundColor = 'white';
+    }
+  }
+}
+
+createClearButton();
+clearButton();

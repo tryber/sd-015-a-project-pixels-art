@@ -6,12 +6,18 @@ header {
   background-color: blueviolet;
 }
 
+section {
+  position: absolute;
+  margin: 10px;
+}
+
 #title {
   margin: 20px 0px 20px 50px;
 }
 
 #color-palette {
   position: absolute;
+  top: 50px;
   left: 50px;
   margin: 10px;
   padding: 20px;
@@ -42,6 +48,12 @@ header {
 
 #yellow {
   left: 310px;
+}
+
+#clear-board {
+  position: absolute;
+  top: 220px;
+  left: 240px;
 }
 
 #pixel-board {
