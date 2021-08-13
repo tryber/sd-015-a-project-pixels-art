@@ -5,13 +5,6 @@ const inputSize = document.getElementById('board-size');
 const clear = document.getElementById('clear-board');
 const pixels = document.getElementsByClassName('pixel');
 
-// Selects color
-colors.addEventListener('click', function selectsColor(event) {
-  const selectedElement = document.querySelector('.selected');
-  selectedElement.classList.remove('selected');
-  event.target.classList.add('selected');
-});
-
 // Generates random color(rgb)
 function generateRandomColor() {
   let r;
@@ -33,6 +26,15 @@ window.onload = function setsColor() {
   document.getElementById('forth').style.backgroundColor = generateRandomColor();
 };
 
+// Selects color
+function selectsColor(event) {
+  const selectedElement = document.querySelector('.selected');
+  selectedElement.classList.remove('selected');
+  event.target.classList.add('selected');
+}
+
+colors.addEventListener('click', selectsColor);
+
 // Creates pixel board
 function createPixel() {
   const newPixel = document.createElement('td');
@@ -41,7 +43,17 @@ function createPixel() {
   return newPixel;
 }
 
-generateBoard.addEventListener("click", function createBoard() {
+function createBoardLoop(selectedNumber) {
+  for (let i = 0; i < selectedNumber; i += 1) {
+    const newLine = document.createElement('tr');
+    for (let j = 0; j < selectedNumber; j += 1) {
+      newLine.appendChild(createPixel());
+    }
+    pixelBoard.appendChild(newLine);
+  }
+}
+
+function createBoard() {
   let selectedNumber = inputSize.value;
   pixelBoard.innerHTML = '';
 
@@ -53,33 +65,36 @@ generateBoard.addEventListener("click", function createBoard() {
     selectedNumber = 50;
   }
 
-  for (let i = 0; i < selectedNumber; i += 1) {
-    let newLine = document.createElement('tr');
-    for (let j = 0; j < selectedNumber; j += 1) {
-      newLine.appendChild(createPixel());
-    }
-    pixelBoard.appendChild(newLine);
-  }
-});
+  createBoardLoop(selectedNumber);
+}
+
+generateBoard.addEventListener('click', createBoard);
 
 // Paints pixels with selected color
-pixelBoard.addEventListener('click', function paintPixels(event) {
+function paintPixels(event) {
   event.target.style.backgroundColor = document.querySelector('.selected').style.backgroundColor;
-});
+}
+
+pixelBoard.addEventListener('click', paintPixels);
 
 // Clear Board
-clear.addEventListener('click', function clearBoard() {
+function clearBoard() {
   for (let i = 0; i < pixels.length; i += 1) {
     pixels[i].style.backgroundColor = 'white';
   }
-});
+}
+
+clear.addEventListener('click', clearBoard);
 
 // Highlight hover pixel
-pixelBoard.addEventListener('mouseover', function (event) {
+function highlightPixel(event) {
   /* Source do box shadow https://getcssscan.com/css-box-shadow-examples */
-  event.target.style.boxShadow = "rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset";
-});
+  event.target.style.boxShadow = 'rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset';
+}
 
-pixelBoard.addEventListener("mouseout", function(event) {
+function removeHighlight(event) {
   event.target.style.boxShadow = '';
-})
+}
+
+pixelBoard.addEventListener('mouseout', removeHighlight);
+pixelBoard.addEventListener('mouseover', highlightPixel);

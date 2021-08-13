@@ -20,6 +20,7 @@ section {
   font-weight: 700;
   letter-spacing: 1px;
   color: #00214d;
+  margin-bottom: -35px;
 }
 
 #color-palette {
@@ -47,7 +48,7 @@ section {
 }
 
 #board-size-container {
-  margin: auto;
+  margin: 0 auto -30px;
   height: 90px;
   font-size: 20px;
   color: #272727;
@@ -93,7 +94,7 @@ button {
 }
 
 #board-container {
-  margin: auto;
+  margin: 0 auto 50px;
   text-align: center;
 }
 
