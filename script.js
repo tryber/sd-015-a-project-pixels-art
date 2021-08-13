@@ -11,3 +11,16 @@ colors.addEventListener('click', function(event) {
   selectedElement.classList.remove('selected');
   event.target.classList.add('selected');
 });
+
+// Generates random color(rgb)
+function generateRandomColor() {
+  let r;
+  let g;
+  let b;
+
+  r = Math.floor(Math.random() * 254);
+  g = Math.floor(Math.random() * 254);
+  b = Math.floor(Math.random() * 254);
+
+  return `rgb(${r}, ${g}, ${b})`;
+}
