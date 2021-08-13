@@ -1,5 +1,4 @@
 #color-palette {
-
 }
 
 .color {
@@ -8,29 +7,38 @@
     height: 40px;
     width: 40px;
     padding: 40px;
-
 }
-
     #black {
         background-color: black;
-        color: black;
-        
+        color: black;     
     }
-
     #red {
         background-color: red;
         color: red;
-        
     }
-
     #blue {
         background-color: blue;
-        color: blue;
-        
+        color: blue;  
     }
-
     #green {
         background-color: green;
         color:green;
         
     }
+
+#pixel-board {
+}
+
+.pixel {
+    border: solid 1px;
+    width: 40px;
+    height: 40px;
+    padding: 40px;
+    color:black;
+    background-color: white;
+    
+}
+
+.pixel-lines {
+    display:inline-flex;
+}
