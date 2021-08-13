@@ -1,5 +1,32 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+ul li{
+  list-style: none;
+  display: inline-block;
+  margin-right: 10px;
+}
+
 .color{
-    width: 50px;
-    height: 50px;
-    border: solid 1px black;
+  width: 50px;
+  height: 50px;
+  border: solid 1px black;
+  display: inline-block;
+}
+
+#color1 {
+  background-color: blue;
+}
+
+#color2 {
+  background-color: red;
+}
+
+#color3 {
+  background-color: green;
+}
+
+#color4 {
+  background-color: yellow;
 }
