@@ -2,13 +2,12 @@ window.onload = function() {
   function criaLinha(dimensao, numeroDalinha) {
     for (let index = 0; index < dimensao; index += 1) {
       let pixel = document.createElement("div");
-      pixel.className = "color pixel"
+      pixel.className = "pixel"
       let linha = document.getElementById("linha" + numeroDalinha);
       linha.appendChild(pixel);
     }
   
   }
-
 
   function criaQuadro(dimensao) {
     for (let index = 0; index < dimensao; index += 1) {
@@ -25,8 +24,47 @@ window.onload = function() {
   }
 
   criaQuadro(5);
-  
-  
 
-  
+  let cores = document.querySelectorAll(".color");
+  for (let index = 0; index < cores.length; index += 1) {
+    cores[index].addEventListener("click", function(event) {
+      console.log(event.target);
+
+      for (let i = 0; i < cores.length; i += 1) {
+        if (cores[i].classList.remove("selected")) {
+          console.log(cores[i]);
+        }
+      }
+
+      event.target.className += " selected";
+    })
+  }
+
+  let pixels = document.querySelectorAll(".pixel");
+  for (let index = 0; index < pixels.length; index += 1) {
+    pixels[index].addEventListener("click", function(event) {
+      let corSelecionada = "red";
+      
+      paletaSelecionada = document.querySelector(".selected");
+
+      
+      if (paletaSelecionada.classList.contains("black")) {
+        corSelecionada = "black";
+      }
+      else if (paletaSelecionada.classList.contains("red")) {
+        corSelecionada = "red";
+      }
+      else if (paletaSelecionada.classList.contains("green")) {
+        corSelecionada = "green";
+      }
+      else {
+        corSelecionada = "blue";
+      }
+      
+
+      console.log(corSelecionada);
+
+      event.target.style.backgroundColor = corSelecionada;
+    })
+  }
 }
