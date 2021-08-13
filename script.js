@@ -74,6 +74,6 @@ function clearPixels () {
     for (let index = 0; index < divPixel.length; index += 1) {
         if (divPixel[index].style.backgroundColor !== 'white') {
             divPixel[index].style.backgroundColor = 'white';
-        }
+        }                                                 
     }
 }
