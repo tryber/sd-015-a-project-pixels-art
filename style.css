@@ -23,17 +23,17 @@
   background: green;
 }
 
-#pixel-board{
-    border: 1px solid black;
-    height: 226px;
-    width: 226px;
-    display: inline-block;
+#pixel-board {
+  border: 1px solid black;
+  height: 226px;
+  width: 226px;
+  display: inline-block;
 }
 
-.pixel{
-    border: 1px solid black;
-    height: 40px;
-    width: 40px;
-    display: inline-block;
-    background: white;
+.pixel {
+  border: 1px solid black;
+  height: 40px;
+  width: 40px;
+  display: inline-block;
+  background: white;
 }
