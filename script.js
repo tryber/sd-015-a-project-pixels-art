@@ -1,7 +1,7 @@
-const colors = document.getElementById('color-palette')
+const colors = document.getElementById('color-palette');
 
-//Selects color
-colors.addEventListener('click', function(event) {
+// Selects color
+colors.addEventListener('click', function selectsColor(event) {
   let selectedElement = document.querySelector('.selected');
   selectedElement.classList.remove('selected');
   event.target.classList.add('selected');
@@ -21,7 +21,7 @@ function generateRandomColor() {
 };
 
 // Sets first color to black and randomizes the rest
-window.onload = function() {
+window.onload = function setsColor() {
   document.getElementById('black').style.backgroundColor = 'black';
   document.getElementById('second').style.backgroundColor = generateRandomColor();
   document.getElementById('third').style.backgroundColor = generateRandomColor();
