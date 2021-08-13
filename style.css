@@ -31,12 +31,12 @@
     display: inline-block;
     width: 40px;
     height: 40px;
-    padding: 5px;
     background-color: white;
+    margin: 2px 2px 2px 5px;
 }
 .color {
     margin-bottom: 15px;
 }
 #pixel-board {
-    width: 260px;
+    width: 250px;
 }
