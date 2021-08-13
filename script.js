@@ -20,3 +20,8 @@ function criaQuadroDePixels() {
   }
 }
 criaQuadroDePixels();
+
+window.onload = function colorClassSelected() {
+  const selecionaColor = document.querySelector('.color');
+  selecionaColor.className = 'selected color';
+};
