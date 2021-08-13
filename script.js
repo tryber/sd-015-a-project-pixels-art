@@ -1,11 +1,11 @@
-// cor random
 const colorSelector = document.getElementsByClassName('color');
 const colorMenu = document.getElementById('color-palette');
 const canvas = document.getElementById('pixel-board');
 const linha = document.querySelectorAll('.line');
-// const pixelColorido = document.getElementsByClassName('pixel');
+const botao = document.getElementById('clear-board');
 let tamanho = 5;
 
+// cor random
 function setColor() {
   const tag = '#';
   for (let i = 0; i < colorSelector.length; i += 1) {
@@ -56,7 +56,7 @@ function selecionaCor(clicado) {
 }
 colorMenu.addEventListener('click', selecionaCor);
 // final do eventListener de seleção de cor
-
+// pinta o canvas
 function pintaCor(colorir) {
   const selecionada = document.getElementsByClassName('selected');
   const cor = selecionada[0].style.backgroundColor;
@@ -66,3 +66,14 @@ function pintaCor(colorir) {
 }
 
 canvas.addEventListener('click', pintaCor);
+// final do pintar o canvas
+// botão para limpar o canvas
+function clear() {
+  const cor = document.getElementsByClassName('pixel');
+  for (let i = 0; i < cor.length; i += 1) {
+    cor[i].style.backgroundColor = 'white';
+  }
+}
+botao.addEventListener('click', clear);
+// final do botão para limpar o canvas
+
