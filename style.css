@@ -4,10 +4,60 @@ body {
   font-family: Verdana, sans-serif;
 }
 
-h1 {
+header {
+  background-color: #282a36;
+  margin-top: 0%;
+  padding-bottom: 2%;
+}
+
+header h1 {
   color: #61f586;
   width: 28%;
   text-align: center;
+  margin-top: 0%;
   margin-left: 36%;
   margin-right: 36%;
+  margin-bottom: 2%;
+  padding-top: 1.5%;
+}
+
+header ul {
+  text-align: center;
+  list-style: none;
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+  padding-left: 0%;
+  padding-right: 0%;
+}
+
+header ul li {
+  border: black solid 1px;
+  display: inline-block;
+  font-size: 1.3em;
+  font-weight: 500;
+  margin-right: 2%;
+  margin-left: 2%;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+#color-1 {
+  background-color: #44475a;
+  color: ghostwhite;
+}
+
+#color-2 {
+  background-color: #f1fa8c;
+  color: #282a36;
+}
+
+#color-3 {
+  background-color: #8be9fd;
+  color: #282a36;
+}
+
+#color-4 {
+  background-color: #ff5555;
+  color: ghostwhite;
 }
