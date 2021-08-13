@@ -18,3 +18,7 @@ function createLine(size) {
 } 
 createLine(size);
 
+
+window.onload = function() {
+  let black = document.querySelector('.color').classList.add('selected');
+}
