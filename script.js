@@ -1,5 +1,9 @@
+let colorPalette = document.getElementById("color-palette");
+let pixelBoard = document.getElementById("pixel-board");
+let color = document.getElementsByClassName("color");
+let selectedColor;
+
 for (let i = 0; i < 4; i += 1) {
-  let colorPalette = document.getElementById("color-palette");
   let color = document.createElement("div");
   let colors = ["black", "orange", "red", "green"];
   color.className = "color";
@@ -21,4 +25,14 @@ window.onload = function() {
       selected[i].classList.add("selected");
     }
   }
+}
+
+for (let i = 0; i < color.length; i += 1) {
+  color[i].addEventListener("click", function() {
+    for (let i = 0; i < color.length; i += 1) {
+      color[i].classList.remove("selected");
+    }
+    color[i].classList.add("selected");
+    selectedColor = color[i].style.backgroundColor;
+  })
 }
