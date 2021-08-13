@@ -1,4 +1,5 @@
 const pixelBoard = document.querySelector('#pixel-board');
+const pixelPallet = document.querySelector('#color-palette');
 
 for (let i = 1; i < 6; i += 1) {
   const line = document.createElement('div');
@@ -21,3 +22,12 @@ function initialColor() {
 }
 
 window.onload = initialColor;
+
+function addOnlySelect(event) {
+  const select = document.querySelector('.selected');
+  console.log(select);
+  select.classList.remove('selected');
+  event.target.classList.add('selected');
+}
+
+pixelPallet.addEventListener('click', addOnlySelect);
