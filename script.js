@@ -21,7 +21,6 @@ function createPixels (height,width) {
     for (let pixel = 1; pixel <= width; pixel += 1) {
       let pixel = document.createElement('div');
       pixel.className = 'pixel';
-      pixel.style.backgroundColor = 'white';
       line.appendChild(pixel);
     }
   }
