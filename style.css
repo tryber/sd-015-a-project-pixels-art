@@ -1,0 +1,31 @@
+
+#black{
+  display: inline-block;
+  border: solid 1px black;
+  width: 40px;
+  height: 40px;
+  
+  background-color: black;
+}
+#red{
+display: inline-block;
+border: solid 1px black;
+width: 40px;
+height: 40px;
+background-color: red;
+}
+#blue{
+display: inline-block;
+border: solid 1px black;
+width: 40px;
+height: 40px;
+background-color: blue;
+}
+
+#yellow{
+border: solid 1px black;
+display: inline-block;
+width: 40px;
+height: 40px;
+background-color: yellow;
+}
