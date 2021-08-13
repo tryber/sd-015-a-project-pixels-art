@@ -1,7 +1,7 @@
 let color = document.querySelectorAll('.color');
 for (let index = 0; index < color.length; index++) {
   if (color[index] === color[0]) {
-    color[index].style.backgroundColor = '#8ECAE6';
+    color[index].style.backgroundColor = 'black';
   } else if (color[index] === color[1]) {
     color[index].style.backgroundColor = '#FFB703';
   } else if (color[index] === color[2]) {
