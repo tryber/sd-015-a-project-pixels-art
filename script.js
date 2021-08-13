@@ -62,10 +62,15 @@ function boardSize() {
   const vqvButton = document.querySelector('#generate-board');
   const sizeInput = document.querySelector('#board-size');
   const boardPx = document.querySelector('#pixel-board');
-
   function onClick() {
-    if (sizeInput.value > 50 || sizeInput.value < 5 || sizeInput.value === '') {
+    if (sizeInput.value === '') {
       alert('Board inválido!');
+    } else if (sizeInput.value > 50) {
+      boardPx.innerHTML = '';
+      makePixels(50);
+    } else if (sizeInput.value < 5) {
+      boardPx.innerHTML = '';
+      makePixels(5);
     } else {
       boardPx.innerHTML = '';
       makePixels(sizeInput.value);
@@ -74,3 +79,17 @@ function boardSize() {
   vqvButton.addEventListener('click', onClick);
 }
 boardSize();
+
+function alerts() {
+  const vqvButton = document.querySelector('#generate-board');
+  function onClickTwo() {
+    const sizeInput = document.querySelector('#board-size');
+    if (sizeInput.value > 50) {
+      alert('Valor Máximo de 50px');
+    } else if (sizeInput.value < 5) {
+      alert('Valor Mínimo de 5px');
+    }
+  }
+  vqvButton.addEventListener('click', onClickTwo);
+}
+alerts();
