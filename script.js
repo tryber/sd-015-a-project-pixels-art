@@ -1,6 +1,16 @@
 const colorPalette = document.getElementById('color-palette');
 const colors = colorPalette.children;
-const arrayColors = ['black', 'red', 'yellow', 'orange'];
+
+//Source: https://wallacemaxters.com.br/blog/2021/02/20/como-gerar-cores-aleatorias-no-javascript
+//Utilizei o site para entender como gerar cores aleatórias
+function generateColor() {
+  let r = Math.floor(Math.random() * 255);
+  let g = Math.floor(Math.random() * 255);
+  let b = Math.floor(Math.random() * 255);
+  return `rgb(${r}, ${g}, ${b})`;
+}
+
+const arrayColors = ['black', generateColor(), generateColor(), generateColor()];
 
 function backgroundOfColors() {
   for (let i = 0; i < colors.length; i += 1) {
