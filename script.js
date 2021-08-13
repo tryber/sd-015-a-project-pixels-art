@@ -55,7 +55,15 @@ function generateBoard() {
 // Create Color Palette Boxes
 const colorPaletteSection = document.getElementById('color-palette');
 
-const paletteColors = ['black', 'red', 'green', 'blue'];
+const paletteColors = ['black'];
+
+for (idx = 0; idx < 3; idx += 1) {
+    const rgb1 = Math.floor(Math.random() * 255)
+    const rgb2 = Math.floor(Math.random() * 255)
+    const rgb3 = Math.floor(Math.random() * 255)
+
+    paletteColors.push(`rgb(${rgb1}, ${rgb2}, ${rgb3})`)
+}
 
 function createPalette(colors) {
   for (const color of colors) {
