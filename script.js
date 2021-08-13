@@ -53,3 +53,17 @@ function selectColor() {
 }
 
 selectColor();
+
+// pinta o pixel selecionado
+function paintPixel() {
+  const pixels = document.querySelectorAll('.pixel');
+  pixels.forEach((pixel) => {
+    pixel.addEventListener('click', (evento) => {
+      const elementPixel = evento.target;
+      const colorSelected = document.getElementsByClassName('color selected')[0];
+      elementPixel.style.backgroundColor = colorSelected.id;
+    });
+  });
+}
+
+paintPixel();
