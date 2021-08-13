@@ -39,6 +39,7 @@
 .pixel {
     width: 100px;
     height: 98px;
+    background-color: white;
 }
 
 #c1 {
