@@ -33,3 +33,8 @@
   height: 40px;
   margin: 0px;
 }
+
+#clear-board{
+  margin-top: 20px;
+  width: 210px;
+}

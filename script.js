@@ -62,3 +62,15 @@ function colorir(evento){
 }
 
 pixelBoard.addEventListener('click', colorir);
+
+const botao = document.querySelector('#clear-board');
+
+function clear(evento){
+  const apagarPixel = document.querySelectorAll('.pixel')
+  for (let i = 0; i < apagarPixel.length; i += 1){
+    let aux = apagarPixel[i]
+    aux.style.backgroundColor = 'white';
+  }
+}
+
+botao.addEventListener('click', clear)
