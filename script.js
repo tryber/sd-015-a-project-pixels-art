@@ -32,7 +32,7 @@ function selectedF() {
 selectedF();
 
 function pintPixel() {
-  const pixelsBoardLines = document.querySelector('#pixel-board .pixelLine');
+  const pixelsBoardLines = document.querySelectorAll('#pixel-board .pixelLine');
 
   function paintClick(event) {
     const colorSelected = document.querySelector('.selected');
@@ -40,8 +40,9 @@ function pintPixel() {
     const evento = event.target;
     evento.style.backgroundColor = inkwell;
   }
-
-  pixelsBoardLines.addEventListener('click', paintClick);
+  for (let i = 0; i < pixelsBoardLines.length; i += 1) {
+    pixelsBoardLines[i].addEventListener('click', paintClick);
+  }
 }
 pintPixel();
 
@@ -111,8 +112,8 @@ function randomColors() {
   }
   const fraseRgb = 'rgb (';
   const fechaParentesis = ')';
-  let rgb = fraseRgb + rgbcolor + fechaParentesis;
-  return rgb
+  const rgb = fraseRgb + rgbcolor + fechaParentesis;
+  return rgb;
 }
 
 function aplyColors() {
@@ -123,4 +124,4 @@ function aplyColors() {
   laranja.style.backgroundColor = randomColors();
   amarelo.style.backgroundColor = randomColors();
 }
-window.onload = aplyColors();
+aplyColors();
