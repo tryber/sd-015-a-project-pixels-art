@@ -35,3 +35,15 @@ for (let y = 1; y <= boardSize; y += 1) {
   }
   pixelBoard.appendChild(line);
 }
+
+function reloadColorSelection() {
+  const blackColor = document.querySelector('#color0');
+  blackColor.classList.add('selected');
+
+  const fullPaletteLi = document.querySelectorAll('#color-palette ul li');
+  for (let li = 1; li < paletteSize; li += 1) {
+    fullPaletteLi[li].classList.remove('selected');
+  }
+}
+
+window.onload = reloadColorSelection;
