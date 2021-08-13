@@ -4,13 +4,13 @@ function selectBlack() {
 }
 selectBlack();
 
-let firstColor = document.getElementById('black');
-let secondColor = document.getElementById('red');
-let thirdColor = document.getElementById('blue');
-let fourthColor = document.getElementById('green');
+const firstColor = document.getElementById('black');
+const secondColor = document.getElementById('red');
+const thirdColor = document.getElementById('blue');
+const fourthColor = document.getElementById('green');
 
 function changeSelected(newColor) {
-  let changeColor = document.getElementsByClassName('selected')[0];
+  const changeColor = document.getElementsByClassName('selected')[0];
   changeColor.classList.remove('selected');
   newColor.target.classList.add('selected');
 }
@@ -20,3 +20,17 @@ secondColor.addEventListener('click', changeSelected);
 thirdColor.addEventListener('click', changeSelected);
 fourthColor.addEventListener('click', changeSelected);
 
+const pixelBox = document.getElementsByClassName('pixel');
+
+function paintBox(event) {
+  const selectColor = document.querySelector('.selected');
+  const pColor = window.getComputedStyle(selectColor, null).getPropertyValue('background-color');
+  event.target.style.backgroundColor = pColor;
+}
+
+function paintSelect() {
+  for (let index = 0; index < pixelBox.length; index += 1) {
+    pixelBox[index].addEventListener('click', paintBox);
+  }
+}
+paintSelect();
