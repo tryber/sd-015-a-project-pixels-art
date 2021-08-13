@@ -28,7 +28,7 @@
 }
 
 #pixel-board {
-    border-color: black;
+    border-width: 1px;
     border-style: solid;
     width: 504px;
     height: 500px;
@@ -37,8 +37,6 @@
 }
 
 .pixel {
-    border-style: solid;
-    border-width: 1px;
     width: 100px;
     height: 98px;
 }
