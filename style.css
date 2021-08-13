@@ -28,3 +28,12 @@
 #yellow {
 background-color: yellow;
 }
+
+.pixel {
+    display: inline-block;
+    background-color: white;
+    border: 1px solid black;
+    width: 40px;
+    height: 40px;
+}
+
