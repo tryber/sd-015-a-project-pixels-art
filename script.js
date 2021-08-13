@@ -22,7 +22,6 @@ const yellow = document.getElementById("yellow")
 
 function changeClass(event) {
     let elementClass = document.querySelector(".selected")
-
     elementClass.classList.remove("selected")
     event.target.classList.add("selected")
     
@@ -32,6 +31,15 @@ black.addEventListener("click", changeClass)
 blue.addEventListener("click", changeClass)
 red.addEventListener("click", changeClass)
 yellow.addEventListener("click", changeClass)
+
+let pixel = document.getElementById("pixel-board")
+
+pixel.addEventListener("click", changeColor)
+
+function changeColor(event) {
+    let selectedColor = document.getElementsByClassName("selected")[0]
+    event.target.style.backgroundColor = selectedColor.id
+}
 
 
 
