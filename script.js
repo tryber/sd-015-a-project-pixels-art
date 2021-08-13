@@ -14,8 +14,9 @@ window.onload = function () {
   cor1.className = 'selected color';
 }
 
+const colorPalette = document.querySelector('#color-palette');
+
 function criarPaleta() {
-  const colorPalette = document.querySelector('#color-palette');
   for (i = 1; i < 5; i += 1) {
     let colorir = `rgb(${r},${g},${b})`;
     const color = document.createElement('div');
@@ -40,3 +41,11 @@ function criarPixel() {
     }
   }
 }
+
+function selectedColor(evento) {
+  const corSelecionada = document.querySelector('.selected');
+  corSelecionada.className = 'color'
+  evento.target.className = 'selected color';
+}
+
+colorPalette.addEventListener('click', selectedColor);
