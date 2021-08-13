@@ -4,19 +4,16 @@ for (let index = 0; index < 4; index += 1) {
     paletaCores.className = "color";
 
     if (index === 0) {
-        paletaCores.style.backgroundColor = "green";
+        paletaCores.style.backgroundColor = "black"; 
     }
-    
     if (index === 1) {
-        paletaCores.style.backgroundColor = "red"; 
+        paletaCores.style.backgroundColor = "green";   
     }
-        
     if (index === 2) {
-        paletaCores.style.backgroundColor = "blue";
+        paletaCores.style.backgroundColor = "red";
     }   
-    
     if (index === 3) {
-        paletaCores.style.backgroundColor = "yellow";
+        paletaCores.style.backgroundColor = "blue"; 
     }
     document.body.appendChild(paletaCores);   
 }
