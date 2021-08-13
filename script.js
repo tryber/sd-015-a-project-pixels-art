@@ -20,26 +20,28 @@ criaCoresDaPaleta('red');
 criaCoresDaPaleta('yellow');
 let color = document.querySelector('.selected').style.backgroundColor;
 
-function criaLinhaQuadro(tamanho) {
+function criaLinhaQuadro(tamanho, largAlt) {
   for (let i = 0; i < tamanho; i += 1) {
     const elementoQuadro = document.createElement('div');
     elementoQuadro.classList.add('pixel');
     elementoQuadro.style.backgroundColor = 'white';
-    elementoQuadro.style.width = '40px';
-    elementoQuadro.style.height = '40px';
+    elementoQuadro.style.width = `${largAlt}px`;
+    elementoQuadro.style.height = `${largAlt}px`;
     elementoQuadro.style.border = '1px solid black';
+    elementoQuadro.style.display = 'inline-block';
     document.querySelector('#pixel-board').appendChild(elementoQuadro);
   }
 }
 
-function criaQuadro(tamanho) {
+function criaQuadro(tamanho, largAlt) {
   for (let i = 0; i < tamanho; i += 1) {
-    criaLinhaQuadro(tamanho);
+    criaLinhaQuadro(tamanho, largAlt);
   }
-  pixelBoard.style.width = `${42 * tamanho}px`;
+  pixelBoard.style.width = '0px';
+  pixelBoard.style.width = `${((largAlt + 2) * tamanho)}px`;
 }
 
-criaQuadro(5);
+criaQuadro(5, 40);
 
 function trocaSeletor(event) {
   if (!event.target.classList.contains('selected')) {
@@ -106,13 +108,17 @@ function mataQuadro() {
 function gerarBoard() {
   if (!parseInt(inputSize.value, 10)) {
     inputSize.value = '';
-    inputSize.placeholder = 'Apenas Numeros!!!!!';
+    alert('Board inválido!');
     return;
   }
-  if (parseInt(inputSize.value, 10) >= 1 && parseInt(inputSize.value, 10) <= 50) {
-    mataQuadro();
-    criaQuadro(inputSize.value);
+  let tamanho = parseInt(inputSize.value, 10);
+  if (tamanho > 5) {
+    tamanho = 50;
+  } else if (tamanho < 5) {
+    tamanho = 5;
   }
+  mataQuadro();
+  criaQuadro(5, tamanho);
 }
 
 GenerateBoard.addEventListener('click', gerarBoard);
