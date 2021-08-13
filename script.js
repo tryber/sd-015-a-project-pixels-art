@@ -82,11 +82,18 @@ function changeBoard() {
   console.log(inputSize);
   console.log(inputSize);
   if (inputSize > 0) {
-    removeBoard();
-    createBoard(inputSize);
+    if (inputSize < 5) {
+      removeBoard();
+      createBoard(5);
+    } else if (inputSize > 50) {
+      removeBoard();
+      createBoard(50);
+    } else {
+      removeBoard();
+      createBoard(inputSize);
+    }
   } else {
     alert('Board inválido!');
-    //window.location.reload();
   }
 }
 
