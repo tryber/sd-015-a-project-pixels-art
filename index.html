@@ -21,13 +21,16 @@
         body.appendChild(titulo)
         
         // requisito 2
-        let paletaDeCores = document.createElement('ul')
+        let paletaDeCores = document.createElement('div')
         paletaDeCores.id = 'color-palette'
         body.appendChild(paletaDeCores)
         paletaDeCores.style.listStyle = 'none'
         paletaDeCores.style.display = 'flex'
+        paletaDeCores.style.border = '2px solid grey'
+        paletaDeCores.style.width = '300px'
+        paletaDeCores.style.margin = 'auto'
         
-        let cor1 = document.createElement('li')
+        let cor1 = document.createElement('div')
         cor1.className = 'color'
         paletaDeCores.appendChild(cor1)
         cor1.style.backgroundColor = 'black'
@@ -36,7 +39,7 @@
         cor1.style.height = '50px'
         cor1.style.margin = '10px'
 
-        let cor2 = document.createElement('li')
+        let cor2 = document.createElement('div')
         cor2.className = 'color'
         paletaDeCores.appendChild(cor2)
         cor2.style.backgroundColor = 'green'
@@ -46,7 +49,7 @@
         cor2.style.margin = '10px'
 
         
-        let cor3 = document.createElement('li')
+        let cor3 = document.createElement('div')
         cor3.className = 'color'
         paletaDeCores.appendChild(cor3)
         cor3.style.backgroundColor = 'blue'
@@ -55,7 +58,7 @@
         cor3.style.height = '50px'
         cor3.style.margin = '10px'
         
-        let cor4 = document.createElement('li')
+        let cor4 = document.createElement('div')
         cor4.className = 'color'
         paletaDeCores.appendChild(cor4)
         cor4.style.backgroundColor = 'red'
@@ -64,8 +67,32 @@
         cor4.style.height = '50px'
         cor4.style.margin = '10px'
 
+        let quadro = document.createElement('table')
+        quadro.id = 'pixel-board'
+        body.appendChild(quadro)
+        quadro.style.width = '25px'
+        quadro.style.height = '25px'
 
         
+
+        for (let i = 0; i < 5; i += 1){
+            let linha = document.createElement('section')
+            linha.className = `linha ${i + 1}` 
+            quadro.appendChild(linha)
+            linha.style.display = 'flex'
+        }
+
+        let auxLinhas = document.querySelectorAll('.linha')
+        console.log(auxLinhas)
+        
+        for (let i = 0; i < auxLinhas.length; i++){
+            for (let j = 0; j < auxLinhas.length; j++){
+                let pixel = document.createElement('div')
+                pixel.className = 'pixel'
+                auxLinhas[i].appendChild(pixel)
+                pixel.style.backgroundColor = 'white'
+            }
+        }
         
         
 
