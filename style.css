@@ -9,12 +9,10 @@
   border: 1px solid black;
   display: inline-block;
   margin-right: 0px;
-  background-color: rgb(0, 0, 0);
 }
 
 #pixel-board{
   width: 210px;
-  height: 203px;
   margin: 0;
   margin-top: 20px;
   box-sizing: border-box;
@@ -34,7 +32,10 @@
   margin: 0px;
 }
 
+input{
+  width: 80px;
+}
+
 #clear-board{
   margin-top: 20px;
-  width: 210px;
 }
