@@ -4,7 +4,9 @@ const numberOfColums = 5;
 
 numberLines(numberOfLines);
 
-let lines = document.querySelectorAll('.line');
+const lines = document.querySelectorAll('.line');
+
+createBox(lines, numberOfColums);
 
 function numberLines(number) {       
   for (let index = 0; index < number; index += 1) {
@@ -14,11 +16,13 @@ function numberLines(number) {
   }
 }
 
-for (let index = 0; index < lines.length; index += 1) {
-  for (let j = 0; j < numberOfColums; j += 1) {
-    const positionLine = lines[index];
-    const divGrid = document.createElement('div');
-    divGrid.className = 'pixel';
-    positionLine.appendChild(divGrid);
+function createBox(lines,colunas){
+  for (let index = 0; index < lines.length; index += 1) {
+    for (let j = 0; j < colunas; j += 1) {
+      const positionLine = lines[index];
+      const divGrid = document.createElement('div');
+      divGrid.className = 'pixel';
+      positionLine.appendChild(divGrid);
+    }
   }
 }
