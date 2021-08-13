@@ -2,9 +2,21 @@
 let colocaClasse = document.querySelector('.selected');
 
 
+// Requisito 07 clicando na cor
+const clickColor = document.getElementById('color-palette');
 
-let selecionandoBlack = document.querySelector('.black');
+const selectedColor = document.getElementsByClassName('color');
 
-function targetColor (){
-  
+function removeSelect () {
+  for (let index = 0; index < selectedColor.length; index+= 1) {
+    selectedColor[index].classList.remove('selected')
+  }
 }
+
+function targetColor () {
+  removeSelect();
+  
+  event.target.classList.add('selected');
+
+}
+clickColor.addEventListener('click', targetColor)

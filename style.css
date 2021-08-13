@@ -5,6 +5,7 @@
 }
 
 .color {
+  margin-top: 10px;
   display: inline-block;
   border: black solid 1px;
   width: 50px;
@@ -32,6 +33,7 @@
  }
 
  #pixel-board {
+   margin-top: 10px;
    width: 250px;
    height:250px;
  }
