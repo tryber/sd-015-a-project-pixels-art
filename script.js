@@ -29,3 +29,11 @@ function selectColor(cor) {
   document.querySelector('.selected').classList.remove("selected");
   cor.target.classList.add('selected');
 }
+
+for (let i = 0; i < document.querySelectorAll('.pixel').length; i += 1) {
+  document.querySelectorAll('.pixel')[i].addEventListener('click', pintaPixel);
+}
+
+function pintaPixel(pixel) {
+  pixel.target.style.backgroundColor = document.querySelector('.selected').style.backgroundColor;
+}
