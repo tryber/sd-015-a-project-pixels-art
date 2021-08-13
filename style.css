@@ -1,7 +1,7 @@
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 20px;
-  margin: 0px;
+  margin: 0;
   background-color: rgb(0, 29, 61);
   color: white;
 }
@@ -16,7 +16,7 @@ body {
 }
 
 #color1 {
-  background-color: rgb(255, 255, 63);
+  background-color: rgb(0, 0, 0);
 }
 
 #color2 {
@@ -28,15 +28,7 @@ body {
 }
 
 #color4 {
-  background-color: rgb(96, 108, 56);
-}
-
-#color5 {
-  background-color: rgb(100, 182, 172);
-}
-
-#color6 {
-  background-color: rgb(93, 115, 126);
+  background-color: rgb(255, 255, 63);
 }
 
 .color {
