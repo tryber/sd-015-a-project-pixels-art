@@ -93,6 +93,8 @@ const GenerateBoard = document.querySelector('#generate-board');
 function criaInputSize() {
   const input = document.createElement('input');
   input.placeholder = 'Numero entre 5 e 50';
+  input.type = 'number';
+  input.min = '1';
   input.id = 'board-size';
   colorPalet.after(input);
 }
@@ -112,13 +114,14 @@ function gerarBoard() {
     return;
   }
   let tamanho = parseInt(inputSize.value, 10);
-  if (tamanho > 5) {
+  if (tamanho > 50) {
     tamanho = 50;
-  } else if (tamanho < 5) {
+  }
+  if (tamanho < 5) {
     tamanho = 5;
   }
   mataQuadro();
-  criaQuadro(5, tamanho);
+  criaQuadro(tamanho, tamanho);
 }
 
 GenerateBoard.addEventListener('click', gerarBoard);
