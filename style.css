@@ -11,6 +11,10 @@ body {
   background-size: cover;
 }
 
+section {
+  color: #a7a9be;
+}
+
 #header-container {
   font-size: 2rem;
   font-weight: 700;
@@ -45,7 +49,15 @@ body {
 #board-size-container {
   margin: auto;
   height: 90px;
+  font-size: 20px;
   color: #272727;
+}
+
+#board-size {
+  width: 75px;
+  font-weight: 300;
+  margin-right: 5px;
+  font-size: 20px;
 }
 
 input {
