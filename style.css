@@ -48,6 +48,26 @@ body {
   color: #272727;
 }
 
+input {
+  border: none;
+}
+
+#generate-board {
+  width: 100px;
+  background-color: #00ebc7;
+  color: #00214d;
+  padding: 5px 11px;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 18px;
+  transition: 0.3s ease-in;
+}
+
+#generate-board:hover {
+  background-color: #ff5470;
+  cursor: pointer;
+}
+
 #board-container {
   margin: auto;
   text-align: center;
@@ -55,8 +75,6 @@ body {
 
 #pixel-board {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  height: 210px;
-  width: 210px;
 }
 
 .white {
@@ -70,7 +88,7 @@ table {
 }
 
 .pixel {
-  height: 40px;
-  width: 40px;
+  height: 41px;
+  width: 41px;
   border: 1px solid black;
 }
