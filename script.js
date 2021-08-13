@@ -37,9 +37,20 @@ function turnToSelect() {
     event.target.classList.add('selected');
 
   });
-  console.log(paletteAll)
+}
+
+function fillPixel () {
+  
+  let boardFill = document.querySelector("#pixel-board")
+  
+  boardFill.addEventListener("click", function(event) {
+    let whoWillFill = document.querySelector(".selected")
+    event.target.style.backgroundColor = whoWillFill.style.backgroundColor
+  })
+
 }
 divColor();
 creatBoard();
 addClassToBlack();
 turnToSelect();
+fillPixel ()
