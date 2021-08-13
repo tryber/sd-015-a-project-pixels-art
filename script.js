@@ -62,6 +62,15 @@ function fillBoard(numberOfLines,numberOfColumns){
     fillLines(lines[index],numberOfColumns);
   }
 }
+function clearBoard(){
+  const bttn = document.getElementById("clear-board");
+  bttn.addEventListener('click',function(){
+    const pixels = document.getElementsByClassName('pixel');
+    for( let index = 0; index < pixels.length; index += 1){
+      pixels[index].style.backgroundColor = 'white';
+    }
+  })
+}
 
 // function createPixelLines(columns){
 //   const pixelBoard = document.getElementById('pixel-board');
@@ -78,3 +87,4 @@ createPalleteColor('#1abc9c');
 createPalleteColor('#3498db');
 createPalleteColor('#e74c3c');
 fillBoard(5,5)
+clearBoard();
