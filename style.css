@@ -7,22 +7,22 @@
     padding: 10px;
 }
 
-.blue {
+#blue {
     background-color: blue;
     left:10px;
 }
 
-.yellow {
+#yellow {
     background-color: yellow;
     left: 50px;
 }
 
-.red {
+#red {
     background-color: red;
     left: 90px;
 }
 
-.purple {
+#purple {
     background-color: purple;
     left: 130px;
 }
