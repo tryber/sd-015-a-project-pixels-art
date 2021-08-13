@@ -1,41 +1,41 @@
-#color-palette{
+#color-palette {
   width: 208px;
   height: 50px;
 }
 
-.color{
+.color {
   width: 50px;
   height: 50px;
   border: 1px solid black;
   display: inline-block;
-  margin-right: 0px;
+  margin-right: 0;
 }
 
-#pixel-board{
+#pixel-board {
   width: 210px;
   margin: 0;
   margin-top: 20px;
   box-sizing: border-box;
 }
 
-.pixel{
+.pixel {
   width: 40px;
   height: 40px;
   border: 1px solid black;
   display: inline-block;
-  margin: 0px;
+  margin: 0;
   background-color: white;
 }
 
-.line{
+.line {
   height: 40px;
-  margin: 0px;
+  margin: 0;
 }
 
-input{
+input {
   width: 80px;
 }
 
-#clear-board{
+#clear-board {
   margin-top: 20px;
 }

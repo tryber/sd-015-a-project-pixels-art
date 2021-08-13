@@ -3,15 +3,10 @@ let g = 0;
 let b = 0;
 let armazenaCor = `rgb(${r},${g},${b})`;
 
-
 window.onload = function () {
-
   criarPaleta();
   criarPixel(5);
-
   const cor1 = document.getElementById('cor1')
-  const cor2 = document.getElementById('cor2')
-  const cor3 = document.getElementById('cor3')
 
   cor1.className = 'selected color';
 }
@@ -45,10 +40,9 @@ function criarPixel(n) {
       linha.appendChild(pixel);
     }
     pixelBoard.appendChild(linha);
-    let tamanhoPixelBoard = n * 40 * 1.05; 
+    let tamanhoPixelBoard = n * 40 * 1.05;
     pixelBoard.style.width = `${tamanhoPixelBoard}px`
   }
-
 }
 
 function selectedColor(evento) {
@@ -83,15 +77,15 @@ const generateBoardButton = document.querySelector('#generate-board');
 
 generateBoardButton.addEventListener('click', function () {
   let tamanhoBoard = inputPizelSize.value;
-  
+
   if (tamanhoBoard === '') {
     alert('Board inválido!');
-  } 
+  }
   else {
-    if (tamanhoBoard < 5){
+    if (tamanhoBoard < 5) {
       tamanhoBoard = 5;
     }
-    if (tamanhoBoard > 50){
+    if (tamanhoBoard > 50) {
       tamanhoBoard = 50;
     }
     const apagarLine = document.querySelectorAll('.line')
@@ -102,4 +96,3 @@ generateBoardButton.addEventListener('click', function () {
     criarPixel(`${tamanhoBoard}`);
   }
 })
-
