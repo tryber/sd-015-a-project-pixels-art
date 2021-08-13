@@ -4,22 +4,22 @@ const arrayColors = ['black', 'red', 'yellow', 'orange'];
 
 function backgroundOfColors() {
   for (let i = 0; i < colors.length; i += 1) {
-    colors[i].style.backgroundColor = arrayColors[i];  
+    colors[i].style.backgroundColor = arrayColors[i];
   }
 }
 backgroundOfColors();
 
 const pixelBoard = document.getElementById('pixel-board');
-let heightPixelBoard = 5;
-let widthPixelBoard = 5;
+const heightPixelBoard = 5;
+const widthPixelBoard = 5;
 
 function createPixels(height, width) {
   for (let l = 1; l <= height; l += 1) {
-    let line = document.createElement('section');
+    const line = document.createElement('ul');
     line.className = 'line';
     pixelBoard.appendChild(line);
     for (let px = 1; px <= width; px += 1) {
-      let pixel = document.createElement('div');
+      const pixel = document.createElement('li');
       pixel.className = 'pixel';
       line.appendChild(pixel);
     }
@@ -49,18 +49,19 @@ function selectColor(event) {
 
 EvListenerInArrayOfElem(colors, 'click', selectColor);
 
-let pixels = document.querySelectorAll('.pixel');
+const pixels = document.querySelectorAll('.pixel');
 
 function changePixelColor(event) {
-  let color = selectedColor.style.backgroundColor;
-  event.target.style.backgroundColor = color;
+  const color = selectedColor.style.backgroundColor;
+  let pixelToChange = event.target;
+  pixelToChange.style.backgroundColor = color;
 }
 
 EvListenerInArrayOfElem(pixels, 'click', changePixelColor);
 
-let clearBoard = document.getElementById('clear-board');
+const clearBoard = document.getElementById('clear-board');
 
-function clearAllPixels () {
+function clearAllPixels() {
   for (let i = 0; i < pixels.length; i += 1) {
     pixels[i].style.backgroundColor = 'white';
   }
