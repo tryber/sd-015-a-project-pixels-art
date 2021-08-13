@@ -2,6 +2,8 @@
   border: black solid 1px;
   display: inline-block;
   background-color: white;
+  width: 48px;
+  height: 48px;
 }
 #black {
   background-color: black;
