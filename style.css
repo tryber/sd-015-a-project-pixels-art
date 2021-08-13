@@ -6,12 +6,11 @@ body {
 }
 
 #color-palette * {
-    width: 100px;
-    height: 100px;
+    width: 40px;
+    height: 40px;
     display: inline-block;
     border: black solid 1px;
-    margin: 5px;
-    
+    margin: 2px; 
 }
 
 .black {
@@ -32,4 +31,20 @@ body {
 
 .orange {
     background-color: orange;
+}
+
+#pixel-board {
+    list-style: none;
+    margin-left: 20px;
+}
+
+.LINHAS {
+    display: flex;
+}
+
+.pixel {
+  border: 1px black solid;
+  background-color: white;
+  width: 40px;
+  height: 40px;
 }
