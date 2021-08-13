@@ -1,9 +1,11 @@
+const black = document.querySelector('.color');
+black.className = 'color selected';
+black.style.backgroundColor = '#000000';
+
 function palletColor() {
   const color = document.querySelectorAll('.color');
   for (let index = 0; index < color.length; index += 1) {
-    if (color[index] === color[0]) {
-      color[index].style.backgroundColor = '#000000';
-    } else if (color[index] === color[1]) {
+    if (color[index] === color[1]) {
       color[index].style.backgroundColor = '#FFB703';
     } else if (color[index] === color[2]) {
       color[index].style.backgroundColor = '#219EBC';
