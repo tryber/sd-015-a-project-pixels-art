@@ -1,5 +1,5 @@
 #c1 {
-  background-color:blueviolet;
+  background-color: black;
   width: 50px;
   height: 50px;
   border: solid 1px black;
@@ -21,6 +21,13 @@
 
 #c4 {
   background-color: goldenrod;
+  width: 50px;
+  height: 50px;
+  border: solid 1px black;
+}
+
+#c5 {
+  background-color: palevioletred;
   width: 50px;
   height: 50px;
   border: solid 1px black;
