@@ -7,8 +7,8 @@ function createItemsPalette() {
     for (let color of colors) {
         let itemPalette = document.createElement('li');
         itemPalette.className = 'color';
-        itemPalette.style.width = '100px';
-        itemPalette.style.height = '100px';
+        itemPalette.style.width = '50px';
+        itemPalette.style.height = '50px';
         itemPalette.style.display = 'inline-block';
         itemPalette.style.borderWidth = '1px';
         itemPalette.style.borderStyle = 'solid';

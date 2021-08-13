@@ -1,7 +1,7 @@
 #color-palette {
     border: black solid 1px;
-    width: 408px;
-    height: 100px;
+    width: 208px;
+    height: 50px;
     list-style: none;
     padding: 0;
     margin:auto;
@@ -10,8 +10,8 @@
     text-align: center;
 }
 .pixel {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     background-color: white;
     display: inline-block;
     border: black solid 1px;
@@ -20,10 +20,10 @@
     margin: auto;
     margin-top: 20px;
     border: black solid 1px;
-    width: 500px;
-    height: 500px;
+    width: 210px;
+    height: 200px;
 
 }
 .lines {
-    height: 50px;
+    height: 40px;
 }
