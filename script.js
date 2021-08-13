@@ -1,3 +1,4 @@
 function corSelecionada(){
-  let selecionado = document.
+  let quadrado = document.getElementsByClassName('color')
+
 }
