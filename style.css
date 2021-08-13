@@ -1,5 +1,12 @@
 main {
   width: 940px;
-  height: auto;
   margin: auto;
+}
+
+.color {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  border: 1px solid black;
+  margin: 0 10px;
 }
