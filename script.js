@@ -42,16 +42,19 @@ function changeTagSelected(tagSelected) {
   });
 }
 
-
+// Capiturando todos os pixels da section "pixel-board"
 let whitePixels = document.querySelectorAll(".pixel");
 
-
+// Percorrendo todos os indeces do array "whitePixels"
 whitePixels.forEach(pixel =>{
 
+	// Adicionando um escutador de evento em cada "indice do array/ pixel"
 	pixel.addEventListener("click", () =>{
 
+		// Capiturando a paleta selecionada
 		let paletSelected = document.querySelector(".selected");
 		
+		// Verificando qual cor, terei que adicionar no pixel apos o click
 		if(paletSelected.classList.contains("black")){
 			pixel.style.backgroundColor = "black";
 		}
