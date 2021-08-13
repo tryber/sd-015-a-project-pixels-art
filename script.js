@@ -44,7 +44,7 @@ function createPixel() {
 generateBoard.addEventListener("click", function createBoard() {
   let selectedNumber = inputSize.value;
   pixelBoard.innerHTML = '';
-  
+
   if (selectedNumber === '') {
     alert('Board inválido!');
   } else if (selectedNumber < 5) {
@@ -73,3 +73,13 @@ clear.addEventListener('click', function clearBoard() {
     pixels[i].style.backgroundColor = 'white';
   }
 });
+
+// Highlight hover pixel
+pixelBoard.addEventListener('mouseover', function (event) {
+  /* Source do box shadow https://getcssscan.com/css-box-shadow-examples */
+  event.target.style.boxShadow = "rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset";
+});
+
+pixelBoard.addEventListener("mouseout", function(event) {
+  event.target.style.boxShadow = '';
+})
