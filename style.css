@@ -20,3 +20,8 @@
     border-width: 1px;
     border-color: black;
 }
+
+.pixel {
+    display: inline-block;
+    background-color: white;
+}
