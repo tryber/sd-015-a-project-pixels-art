@@ -1,0 +1,39 @@
+ .color{
+     border: solid black 1px;
+     width: 40px;
+     height: 40px;
+     display: inline-block;
+ }
+ .color-pallete{
+     margin-bottom: 10px;
+ }
+ .linha{
+     height:42px;
+     margin-right: 0px;
+ }
+ .pixel{
+     border: solid black 1px;
+     background-color: white;
+     width: 40px;
+     height: 40px;
+     display:inline-block;
+ }
+ #pixel-board{
+     border: solid black 1px;
+    
+     margin-top: 10px;
+ }
+ 
+ /* #first{
+    background-color: black;
+ }
+ #second{   
+    background-color: aqua;
+ }
+
+ #third{
+    background-color: red;
+ }
+ #fourth{
+    background-color: green;
+ } */
