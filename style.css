@@ -9,7 +9,6 @@
  }
  .linha{
      height:42px;
-     width: 210px;
      margin-right: 0px;
  }
  .pixel{
@@ -21,7 +20,7 @@
  }
  #pixel-board{
      border: solid black 1px;
-     width: 210px;
+    
      margin-top: 10px;
  }
  
