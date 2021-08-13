@@ -5,6 +5,10 @@
     display: inline-block;
 }
 
+.linhas {
+    height: 50px;
+}
+
 .black {
     background-color: black;
 }
