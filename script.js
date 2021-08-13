@@ -31,9 +31,25 @@ function createPixelBoard(size) {
 createPixelBoard(5);
 
 // inicia cor preta como selecionada
-function selectColor(color) {
+function startSelectedColor(color) {
   const colorSelected = document.getElementById(color);
   colorSelected.classList.add('selected');
 }
 
-selectColor('black');
+startSelectedColor('black');
+
+// seleciona apenas uma das cores ao clicar
+function selectColor() {
+  const colors = document.querySelectorAll('.color');
+  colors.forEach((color) => {
+    color.addEventListener('click', (evento) => {
+      const colorSelected = document.getElementsByClassName('color selected')[0];
+      if (colorSelected.id !== evento.target.id) {
+        colorSelected.className = 'color';
+        evento.target.classList.add('selected');
+      }
+    });
+  });
+}
+
+selectColor();
