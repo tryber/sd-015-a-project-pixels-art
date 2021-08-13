@@ -60,7 +60,8 @@ section {
   font-size: 20px;
 }
 
-input, button {
+input,
+button {
   border: none;
 }
 
@@ -81,6 +82,10 @@ input, button {
   margin-left: 10px;
 }
 
+#clear-board {
+  margin-bottom: 30px;
+}
+
 #generate-board:hover,
 #clear-board:hover {
   background-color: #ff5470;
@@ -92,11 +97,9 @@ input, button {
   text-align: center;
 }
 
-#clear-board {
-  margin-bottom: 30px;
-}
-
 #pixel-board {
+
+  /* Source do box shadow https://getcssscan.com/css-box-shadow-examples */
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 

@@ -44,8 +44,8 @@ function createPixel() {
 generateBoard.addEventListener("click", function createBoard() {
   let selectedNumber = inputSize.value;
   pixelBoard.innerHTML = '';
-
-  if (selectedNumber === "") {
+  
+  if (selectedNumber === '') {
     alert('Board inválido!');
   } else if (selectedNumber < 5) {
     selectedNumber = 5;
@@ -60,7 +60,6 @@ generateBoard.addEventListener("click", function createBoard() {
     }
     pixelBoard.appendChild(newLine);
   }
-
 });
 
 // Paints pixels with selected color
