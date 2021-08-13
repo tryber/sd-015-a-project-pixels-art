@@ -15,11 +15,14 @@ for (idx = 0; idx < 5; idx +=1){
   let eachPixel = document.querySelector('#pixel-board').appendChild(motherPixel)
   eachPixel.innerHTML = 'oi'
   eachPixel.className = 'pixel'
+  eachPixel.style.backgroundColor = 'white'
   for (idx2 = 0; idx2 < 4; idx2 +=1) {
-  let motherPixel2 = document.createElement('div')
-  let eachPixel2 = document.querySelector('#pixel-board').appendChild(motherPixel2)
-  eachPixel2.innerHTML = 'oi'
-  eachPixel2.className = 'pixel'
+    let motherPixel2 = document.createElement('div')
+    let eachPixel2 = document.querySelector('#pixel-board').appendChild(motherPixel2)
+    eachPixel2.innerHTML = 'oi'
+    eachPixel2.className = 'pixel'
+    eachPixel2.style.backgroundColor = 'white'
+
   }
 
 }
