@@ -30,3 +30,19 @@ function sizePixel() {
 }
 
 sizePixel();
+
+// Delete the class selected from the previous element and add it in the one clicked
+
+function resetSelected() {
+  const colors = document.getElementsByClassName('color');
+  for (let i = 0; i < colors.length; i += 1) {
+    colors[i].classList.remove('selected');
+  }
+}
+
+function newSelected(colorClicked) {
+  resetSelected();
+  colorClicked.target.classList.add('selected');
+}
+
+document.getElementById('color-palette').addEventListener('click', newSelected);
