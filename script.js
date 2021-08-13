@@ -62,6 +62,7 @@ function fillBoard(numberOfLines,numberOfColumns){
     fillLines(lines[index],numberOfColumns);
   }
 }
+
 function clearBoard(){
   const bttn = document.getElementById("clear-board");
   bttn.addEventListener('click',function(){
@@ -70,6 +71,14 @@ function clearBoard(){
       pixels[index].style.backgroundColor = 'white';
     }
   })
+}
+
+function RGBRamdon(){
+  let r = Math.floor(Math.random()*255);
+  let g = Math.floor(Math.random()*255);
+  let b = Math.floor(Math.random()*255);
+  return `rgb(${r}, ${g}, ${b})`;
+
 }
 
 // function createPixelLines(columns){
@@ -83,9 +92,9 @@ function clearBoard(){
 // }
 
 createPalleteColor('black');
-createPalleteColor('#1abc9c');
-createPalleteColor('#3498db');
-createPalleteColor('#e74c3c');
+createPalleteColor(RGBRamdon());
+createPalleteColor(RGBRamdon());
+createPalleteColor(RGBRamdon());
 fillBoard(5,5)
 document.getElementById('generate-board').addEventListener('click',function(){
   let numberOfLines = document.getElementById('board-size').value;
