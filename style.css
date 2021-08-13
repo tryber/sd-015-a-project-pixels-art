@@ -30,8 +30,8 @@
 #pixel-board {
     border-width: 1px;
     border-style: solid;
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     top:400px;
     position: absolute;
 }
