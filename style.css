@@ -1,7 +1,7 @@
 .color {
     display: inline-block;
-    width: 50px;
-    height: 50px;
+    width: 42px;
+    height: 42px;
     border: solid black 1px;
 }
 
@@ -35,4 +35,19 @@
 
 #violeta {
     background-color: purple;
+}
+
+.pixel {
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    border: solid black 1px;
+    display: inline-block;
+}
+
+.pixelLine {
+margin: 0;
+padding: 0%;
+border: 0c;
+height: 40px;
 }
