@@ -30,12 +30,10 @@
 #pixel-board {
     border-width: 1px;
     border-style: solid;
-    width: 200px;
-    height: 200px;
+    width: 202px;
+    height: 210px;
     top:400px;
     position: absolute;
-    padding-bottom: 10px;
-    padding-right: 2px;
 }
 
 .pixel {
