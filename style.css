@@ -1,0 +1,14 @@
+#title {
+    background-color: aqua;
+}
+
+#color-palette {
+    background-color:blueviolet;
+}
+
+.color {
+    border: solid;
+    border-color: black;
+    border-width: 1px;
+    display: inline;
+}
