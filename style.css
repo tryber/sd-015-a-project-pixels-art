@@ -61,13 +61,11 @@ section {
   font-size: 20px;
 }
 
-input,
-button {
+input, button {
   border: none;
 }
 
-#generate-board,
-#clear-board {
+#generate-board, #clear-board {
   width: 100px;
   height: 35px;
   background-color: #00ebc7;
@@ -87,8 +85,7 @@ button {
   margin-bottom: 30px;
 }
 
-#generate-board:hover,
-#clear-board:hover {
+#generate-board:hover, #clear-board:hover {
   background-color: #ff5470;
   cursor: pointer;
 }
