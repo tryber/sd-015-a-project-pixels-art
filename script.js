@@ -20,7 +20,7 @@ function paletaCores() {
 }
 paletaCores();
 
-function quadroPixels() {
+function linhaPixel() {
   const quadroPixels = document.createElement('div');
   quadroPixels.id = 'pixel-board';
   document.body.appendChild(quadroPixels);
@@ -32,9 +32,9 @@ function quadroPixels() {
   }
 }
 
-function linhaPixel() {
+function repetelinhaPixel() {
   for (let i = 0; i < 5; i += 1) {
-    quadroPixels();
+    linhaPixel();
   }
 }
-linhaPixel();
+repetelinhaPixel();
