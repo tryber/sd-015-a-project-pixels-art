@@ -1,4 +1,3 @@
-
 //Gerando a palleta de cor
 generateColorPallete()
 function generateColorPallete() {
@@ -33,7 +32,6 @@ function generatePixelBoard(size) {
   }
 }
 
-
 escolhendoCor()
 function escolhendoCor() {
   let parent = document.querySelector('#color-palette')
@@ -46,11 +44,6 @@ function escolhendoCor() {
   })
 }
 
-
-
-
-
-
 //Colorir a paleta
 colorir()
 function colorir() {
@@ -60,7 +53,6 @@ function colorir() {
   })
   
 }
-
 
 //clear box
 clear()
@@ -73,7 +65,6 @@ function clear() {
     }
   })
 }
-
 
 //mudar Tamanho
 changeSize()
@@ -95,5 +86,3 @@ function changeSize() {
   })
 
 }
-
-
