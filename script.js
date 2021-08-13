@@ -1,17 +1,27 @@
 // função para criar div com id e nome da cor
-function createElementColor(color) {
+function createElementColor(rgbColor) {
   const pallete = document.getElementById('color-palette');
+  const size = pallete.children.length;
   const colorCreated = document.createElement('div');
   colorCreated.className = 'color';
-  colorCreated.id = color;
-  colorCreated.style.backgroundColor = color;
+  colorCreated.id = 'box-color'.concat(size);
+  colorCreated.style.backgroundColor = rgbColor;
   pallete.appendChild(colorCreated);
 }
 
-// cores escolhidas para a paleta de cores
-const myColors = ['black', 'red', 'blue', 'green'];
-// aplicando fução de criar cores
-myColors.forEach(createElementColor);
+// criando cores aleatorias
+function createColors(lenOfColors) {
+  for (let index = 0; index < lenOfColors; index += 1) {
+    let color = [Math.random() * 255, Math.random() * 255, Math.random() * 255];
+    if (index === 0) {
+      color = [0, 0, 0];
+    }
+    const rgbColor = `rgb(${Math.round(color[0])},${Math.round(color[1])},${Math.round(color[2])})`;
+    createElementColor(rgbColor);
+  }
+}
+
+createColors(4);
 
 // criando grade de pixels
 function createPixelBoard(size) {
@@ -32,12 +42,12 @@ function createPixelBoard(size) {
 createPixelBoard(5);
 
 // inicia cor preta como selecionada
-function startSelectedColor(color) {
-  const colorSelected = document.getElementById(color);
+function startSelectedColor() {
+  const colorSelected = document.querySelector('.color');
   colorSelected.classList.add('selected');
 }
 
-startSelectedColor('black');
+startSelectedColor();
 
 // seleciona apenas uma das cores ao clicar
 function selectColor() {
@@ -62,7 +72,8 @@ function paintPixel() {
     pixel.addEventListener('click', (evento) => {
       const elementPixel = evento.target;
       const colorSelected = document.getElementsByClassName('color selected')[0];
-      elementPixel.style.backgroundColor = colorSelected.id;
+      const color = window.getComputedStyle(colorSelected).getPropertyValue('background-color');
+      elementPixel.style.backgroundColor = color;
     });
   });
 }
