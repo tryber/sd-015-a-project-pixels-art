@@ -1,5 +1,5 @@
 function numeroAleatorio() {
-  return Math.round(Math.random()*255);
+  return Math.round(Math.random() * 255);
 }
 
 function corAleatoria() {
