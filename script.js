@@ -15,11 +15,10 @@ function palletColor() {
 palletColor();
 
 const boxPixel = document.getElementById('pixel-board');
-const elementBox = document.createElement('li');
 
 for (let i = 1; i <= 25; i += 1) {
   const elementBox = document.createElement('li');
-  elementBox.classList = 'pixel';
   elementBox.style.backgroundColor = 'white';
+  elementBox.classList = 'pixel';
   boxPixel.appendChild(elementBox);
 }
