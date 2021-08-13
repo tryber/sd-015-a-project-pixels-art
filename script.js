@@ -44,7 +44,7 @@ function addListeners(targetElement, targetEvent, targetFunction) {
   }
 }
 
-// Selected Color
+// Select a Color
 
 function selectColor(color) {
   let colors = document.querySelectorAll('.color');
@@ -52,5 +52,8 @@ function selectColor(color) {
     colors[i].classList.remove('selected');
   }
   color.target.classList.add('selected');
-  console.log(color.target);
 }
+
+// Paint a Pixel
+
+function paintPixel(pixel) {}
