@@ -27,3 +27,14 @@ function changeColor(event) {
   let colorPaint = getComputedStyle(colorSelected);
   event.target.style.backgroundColor = colorPaint.backgroundColor
 }
+
+//ex 9
+
+let clear = document.getElementById("clear-board");
+clear.addEventListener("click", limparQuadro);
+
+function limparQuadro() {
+  for (element of paint) {
+    element.style.backgroundColor = "white"
+  }
+}
