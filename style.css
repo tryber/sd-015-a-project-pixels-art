@@ -4,6 +4,7 @@ body {
 #title {
     text-align: center;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: rgb(76, 109,78)
 }
 #color-palette {
     /* display: inline-block; */
@@ -16,17 +17,19 @@ body {
     background-color: darkgrey;
     width: 50px;
     height: 50px;
-    position: relative;
-    left: 41%;
+    /* position: relative;
+    left: 41%; */
 }
 
 #pixel-board {
     background-color: darksalmon;
 }
 
-#pixel-board {
+/* #pixel-board {
+    display: inline-block;
     background-color: white;
     border: 1px solid black;
-    width:250px;
-    height: 250px;
-} 
+    width:258px;
+    height: 258px;
+    padding: 30px;
+}  */
