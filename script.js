@@ -4,23 +4,23 @@ const generateBoard = document.getElementById('generate-board');
 
 // Selects color
 colors.addEventListener('click', function selectsColor(event) {
-  let selectedElement = document.querySelector('.selected');
+  const selectedElement = document.querySelector('.selected');
   selectedElement.classList.remove('selected');
   event.target.classList.add('selected');
 });
 
 // Generates random color(rgb)
 function generateRandomColor() {
-  let r;
-  let g;
-  let b;
+  const r;
+  const g;
+  const b;
 
   r = Math.floor(Math.random() * 254);
   g = Math.floor(Math.random() * 254);
   b = Math.floor(Math.random() * 254);
 
   return `rgb(${r}, ${g}, ${b})`;
-};
+}
 
 // Sets first color to black and randomizes the others
 window.onload = function setsColor() {
@@ -32,25 +32,25 @@ window.onload = function setsColor() {
 
 // Creates pixel board
 function createPixel() {
-  let newPixel = document.createElement('td');
+  const newPixel = document.createElement('td');
   newPixel.className = 'pixel';
   newPixel.classList.add('white');
   return newPixel;
-};
+}
 
 function createBoard() {
   for (let i = 0; i < 5; i += 1) {
-    let newLine = document.createElement('tr');
-    for (let j = 0; j < 5; j += 1){
+    const newLine = document.createElement('tr');
+    for (let j = 0; j < 5; j += 1) {
       newLine.appendChild(createPixel());
     }
     pixelBoard.appendChild(newLine);
   }
-};
+}
 
 createBoard();
 
-//Paints pixels with selected color
+// Paints pixels with selected color
 pixelBoard.addEventListener('click', function paintPixels(event) {
   event.target.style.backgroundColor = document.querySelector('.selected').style.backgroundColor;
 });
