@@ -8,4 +8,13 @@
 
 .black {
   background-color: black;
-} 
+}
+
+.pixel {
+  border: 1px solid black;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  background-color: white;
+}
