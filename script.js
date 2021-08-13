@@ -1,9 +1,13 @@
 // requisito 6 adicionando selected ao primeiro elemento
-let colocaClasse = document.querySelector('.selected');
+let colocaClasse = document.getElementsByClassName('color')[0];
+colocaClasse.classList.add('selected')
 
 
 // Requisito 07 clicando na cor
-const clickColor = document.getElementById('color-palette');
+const clickColor = document.querySelectorAll('.color');
+for(let index of clickColor) {
+  
+}
 
 const selectedColor = document.getElementsByClassName('color');
 
@@ -15,7 +19,6 @@ function removeSelect () {
 
 function targetColor () {
   removeSelect();
-  
   event.target.classList.add('selected');
 
 }
