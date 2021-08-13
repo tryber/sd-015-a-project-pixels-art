@@ -1,9 +1,11 @@
 let r = 0;
 let g = 0;
 let b = 0;
+let armazenaCor = `rgb(${r},${g},${b})`;
 
 
 window.onload = function () {
+  
   criarPaleta();
   criarPixel();
 
@@ -17,7 +19,7 @@ window.onload = function () {
 const colorPalette = document.querySelector('#color-palette');
 
 function criarPaleta() {
-  for (i = 1; i < 5; i += 1) {
+  for (let i = 1; i < 5; i += 1) {
     let colorir = `rgb(${r},${g},${b})`;
     const color = document.createElement('div');
     color.className = 'color'
@@ -30,15 +32,19 @@ function criarPaleta() {
   }
 }
 
+const pixelBoard = document.querySelector('#pixel-board');
+
 
 function criarPixel() {
-  const pixelBoard = document.querySelector('#pixel-board');
-  for (l = 1; l < 6; l += 1) {
-    for (c = 1; c < 6; c += 1) {
+  for (let l = 1; l < 6; l += 1) {
+    const linha = document.createElement('div');
+    linha.className = 'line';
+    for (let c = 1; c < 6; c += 1) {
       const pixel = document.createElement('div');
       pixel.className = 'pixel';
-      pixelBoard.appendChild(pixel);
+      linha.appendChild(pixel);
     }
+    pixelBoard.appendChild(linha);
   }
 }
 
@@ -46,6 +52,13 @@ function selectedColor(evento) {
   const corSelecionada = document.querySelector('.selected');
   corSelecionada.className = 'color'
   evento.target.className = 'selected color';
+  armazenaCor = evento.target.style.backgroundColor;
 }
 
 colorPalette.addEventListener('click', selectedColor);
+
+function colorir(evento){
+  evento.target.style.backgroundColor = armazenaCor;
+}
+
+pixelBoard.addEventListener('click', colorir);
