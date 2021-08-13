@@ -40,3 +40,21 @@ function createPixels() {
     }
 }
 createPixels()
+
+const color = document.getElementsByClassName('color');
+let colorBlack = color[0];
+colorBlack.classList.add('selected');
+window.onload = colorOnload;
+
+function colorOnload () {
+    let selectColor = document.getElementsByClassName('selected')[0];
+}
+colorOnload();
+
+palette.addEventListener('click', selecionaCor);
+function selecionaCor (event) {
+    let colorCurrent = document.getElementsByClassName('color selected')[0];
+    colorCurrent.classList.remove('selected');
+    event.target.classList.add('selected');
+    
+}
