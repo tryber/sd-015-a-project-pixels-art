@@ -1,5 +1,5 @@
 #title {
-    background-color: aqua;
+    background-color: blue;
 }
 
 #color-palette {
@@ -11,4 +11,6 @@
     border-color: black;
     border-width: 1px;
     display: inline;
+    padding: 15px 15px;
+    margin: 10px 10px;
 }
