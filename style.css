@@ -37,35 +37,40 @@
 }
 
 .pixel {
-    border-color: white;
     border-style: solid;
     border-width: 1px;
     width: 100px;
     height: 98px;
 }
 
-#c1 {}
+#c1 {
+    background-color: white;
+}
 
 #c2 {
     position: absolute;
     left: 101px;
     top: 0px;
+    background-color: white;
 }
 
 #c3 {
     position: absolute;
     left: 202px;
     top: 0px;
+    background-color: white;
 }
 
 #c4 {
     position: absolute;
     left: 303px;
     top: 0px;
+    background-color: white;
 }
 
 #c5 {
     position: absolute;
     left: 404px;
     top: 0px;
+    background-color: white;
 }
