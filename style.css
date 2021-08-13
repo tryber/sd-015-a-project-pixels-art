@@ -63,12 +63,12 @@ header ul li {
 }
 
 main {
-  border: green solid 5px;
   margin-top: 3%;
 }
 
 #pixel-board {
   border: #ff5555 solid 5px;
+  background-color: #50fa7b;
   display: block;
   width: 80%;
   margin-left: 10%;
@@ -86,7 +86,7 @@ main {
 }
 
 #primeiroDaLinha {
-  margin-left: 25%;
+  margin-left: 30%;
 }
 
 #ultimoDaLinha {
