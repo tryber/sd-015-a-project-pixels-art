@@ -26,8 +26,16 @@ function createLines(lines) {
 }
 
 function pixelBoard(size) {
-  const lines = size;
-  const columns = size;
+  let lines = size;
+  let columns = size;
+  if (size < 5) {
+    lines = 5;
+    columns = 5;
+  }
+  if (size > 50) {
+    lines = 50;
+    columns = 50;
+  }
   createLines(lines);
   createPixels(columns);
 }
