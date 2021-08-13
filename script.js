@@ -1,4 +1,10 @@
-//O Código de criação da Pixel Board foi baseado no código da dinâmica do fim do bloco 5
+window.onload = function () {
+  createPixelBoard(5, 5);
+  document.getElementById('black').classList.add('selected');
+  addListeners('.color', 'click', selectColor);
+};
+
+// O Código de criação da Pixel Board foi baseado no código da dinâmica do fim do bloco 5
 
 function createPixelBoard(height, width) {
   createLines(height);
@@ -29,4 +35,17 @@ function createPixels(pixLine, width) {
   }
 }
 
-createPixelBoard(5, 5);
+function addListeners(targetElement, targetEvent, targetFunction) {
+  let elementArray = document.querySelectorAll(targetElement);
+  for (let i = 0; i < elementArray.length; i += 1) {
+    document
+      .querySelectorAll(targetElement)
+      [i].addEventListener(targetEvent, targetFunction);
+  }
+}
+
+// Selected Color
+
+function selectColor(color) {
+  console.log(color.target);
+}
