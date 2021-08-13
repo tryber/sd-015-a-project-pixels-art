@@ -18,7 +18,7 @@ header {
 #color-palette {
   background-color: white;
   display: inline-block;
-  height: 50px;
+  height: 70px;
   padding: 10px 35px 30px;
   margin-bottom: 30px;
   margin: 0px auto 30px;
@@ -28,11 +28,15 @@ header {
   display: inline-block;
 }
 
+#color-palette h2{
+  display: block;
+}
+
 .color {
   height: 40px;
   width: 40px;
   border: 1px solid black;
-  margin-left: 20px;
+  margin: 0px 20px;
   font-size: 10px;
   display: inline-block;
 }

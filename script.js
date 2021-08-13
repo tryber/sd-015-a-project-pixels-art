@@ -1,4 +1,4 @@
-// CRIA 5 DIVS PARA CADA LINHA
+// CRIA N LINHAS COM N BLOCOS CADA
 
 function blockMaker(sideSize) {
   let board = document.getElementById('pixel-board');
@@ -21,3 +21,4 @@ function blockMaker(sideSize) {
 
 let sideSize = 5;
 blockMaker(sideSize);
+
