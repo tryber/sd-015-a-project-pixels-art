@@ -31,3 +31,19 @@ function pixelBoard(lines, columns) {
 }
 
 pixelBoard(5, 5);
+
+function colorPicker(event) {
+  const colorSelected = document.querySelector('.selected');
+  colorSelected.classList.remove('selected');
+  event.target.classList.add('selected');
+}
+
+function addEvent() {
+  const colorClass = document.getElementsByClassName('color');
+  for (let i = 0; i < colorClass.length; i += 1) {
+    const colorElement = colorClass[i];
+    colorElement.addEventListener('click', colorPicker);
+  }
+}
+
+addEvent();
