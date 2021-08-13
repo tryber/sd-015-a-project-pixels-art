@@ -1,4 +1,4 @@
-.color{
+.color {
   border-color: black;
   border-width: 1px;
   border-style: solid;
@@ -7,18 +7,31 @@
   display: inline-block;
 }
 
-.red{
- background-color: red;
+.red {
+  background-color: red;
 }
 
-.black{
- background-color: black;
+.black {
+  background-color: black;
 }
 
-.yellow{
- background-color: yellow;
+.yellow {
+  background-color: yellow;
 }
 
-.blue{
- background-color: blue;
+.blue {
+  background-color: blue;
+}
+
+.pixel {
+  background-color: white;
+  border-width: 1px;
+  border-style: solid;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+}
+.line {
+  width: 450px;
+  height: 50px;
 }
