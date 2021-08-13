@@ -1,10 +1,5 @@
 const colors = document.getElementById('color-palette')
 
-// Sets first color to black
-window.onload = function firstColorBlack() {
-  document.getElementById('black').style.backgroundColor = 'black';
-};
-
 //Selects color
 colors.addEventListener('click', function(event) {
   let selectedElement = document.querySelector('.selected');
@@ -23,9 +18,11 @@ function generateRandomColor() {
   b = Math.floor(Math.random() * 254);
 
   return `rgb(${r}, ${g}, ${b})`;
-}
+};
 
+// Sets first color to black and randomizes the rest
 window.onload = function() {
+  document.getElementById('black').style.backgroundColor = 'black';
   document.getElementById('second').style.backgroundColor = generateRandomColor();
   document.getElementById('third').style.backgroundColor = generateRandomColor();
   document.getElementById('forth').style.backgroundColor = generateRandomColor();
