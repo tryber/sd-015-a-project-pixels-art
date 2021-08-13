@@ -2,7 +2,16 @@
     border: 1px solid black;
     display: inline-block;
     font-size: 50px;
-    padding: 30px;
+    padding: 20px;
+    margin-bottom: 5px;
+}
+
+.pixel {
+    border: 1px solid black;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: white;
 }
 
 #preta {
@@ -19,4 +28,8 @@
 
 #verde {
     background-color: green;
+}
+
+#pixel-board {
+    width: 260px;
 }
