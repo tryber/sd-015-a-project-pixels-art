@@ -5,25 +5,27 @@
   width: 48px;
   height: 48px;
 }
+
 #black {
   background-color: black;
 }
+
 #red {
   background-color: red;
 }
+
 #green {
   background-color: green;
 }
+
 #blue {
   background-color: blue;
 }
+
 .pixel {
   background-color: white;
   border: black solid 1px;
   width: 40px;
   height: 40px;
   display: table-cell;
-}
-#pixel-board {
-  
 }
