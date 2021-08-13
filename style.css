@@ -1,8 +1,23 @@
+body {
+  margin: 0;
+  background-color: turquoise;
+}
+
 .color {
   height: 50px;
   width: 50px;
   display: inline-block;
   border: 1px solid black;
+}
+
+h1 {
+  text-align: center;
+  color: dimgrey;
+}
+
+main {
+  text-align: center;
+  margin-bottom: 70px;
 }
 
 .black {
@@ -45,6 +60,24 @@
   margin-bottom: 30px;
 }
 
-#clear-board {
+#generate-board {
   margin-right: 30px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  background-color: teal;
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+
+footer a {
+  text-decoration: none;
+  color: yellow;
+}
+
+footer a:hover {
+  font-weight: 600;
 }

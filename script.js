@@ -58,12 +58,14 @@ function randomColors() {
 
 function randomColorPicker() {
   const colorPickers = document.getElementsByClassName('color');
+  const titleColor = document.getElementById('title');
   for (let i = 0; i < colorPickers.length; i += 1) {
     const color = colorPickers[i];
     if (!(color.classList.contains('selected'))) {
       color.style.backgroundColor = randomColors();
     }
   }
+  titleColor.style.color = randomColors();
 }
 
 function colorPicker(event) {
