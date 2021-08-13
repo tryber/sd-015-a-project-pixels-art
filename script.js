@@ -25,3 +25,19 @@ function createPixel(parent) {
     newDiv.appendChild(newLi);
   }
 }
+
+function defineColor() {
+  const blackBg = document.querySelector('.color');
+  blackBg.classList.add('selected');
+}
+
+function selectColor() {
+  const palette = document.getElementById('color-palette');
+  palette.addEventListener('dblclick', (event) => {
+    const selectedColor = document.querySelector('.selected');
+    const newColor = event.target;
+
+    selectedColor.classList.remove('selected');
+    newColor.classList.add('selected');
+  });
+}
