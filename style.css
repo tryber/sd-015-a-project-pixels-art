@@ -50,13 +50,24 @@ header {
 #c3 {
   background-color: #82D173;
   color: black;
-
 }
 
 #c4 {
   background-color: #FFB8D1;
   color: black;
 }
+
+#pixel-board div div {
+  display: inline-block;
+}
+
+
+
+
+
+
+
+
 
 footer {
   bottom: 0%;
