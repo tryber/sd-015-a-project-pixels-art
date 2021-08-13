@@ -10,7 +10,11 @@
     border: solid;
     border-color: black;
     border-width: 1px;
-    display: inline;
+    display: inline-flex;
     padding: 15px 15px;
     margin: 10px 10px;
+}
+
+.pixel {
+    background-color: white;
 }
