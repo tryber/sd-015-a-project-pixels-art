@@ -1,6 +1,9 @@
 const pixelBoard = document.getElementById('pixel-board');
 const pixelSize = '40px';
 const boardSize = 5;
+const colorPalette = document.getElementById('color-palette');
+const colors = colorPalette.children;
+const colorBlack = document.getElementById('black');
 
 function createPixels() {
   const pixel = document.createElement('div');
@@ -23,8 +26,20 @@ function createBoard(numberOfLines) {
     pixelBoard.appendChild(line);
   }
 }
+function addClassSelected(event) {
+  document.querySelector('.selected').className = 'color';
+  const color = event.target;
+  color.className += ' selected';
+}
+function clickPalette() {
+  for (let i = 0; i < colors.length; i += 1) {
+    colors[i].addEventListener('click', addClassSelected);
+  }
+}
 
 function windowInit() {
   createBoard(boardSize);
+  colorBlack.className += ' selected';
+  clickPalette();
 }
 window.onload = windowInit;
