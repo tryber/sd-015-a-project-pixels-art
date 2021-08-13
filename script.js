@@ -6,16 +6,19 @@ function criaCoresDaPaleta(cor, classe) {
   corDiv.style.backgroundColor = cor;
   console.log(classe);
   corDiv.classList.add(cor);
+  corDiv.classList.add('color');
   if (typeof classe !== 'undefined')corDiv.classList.add(classe);
   corDiv.style.width = '40px';
   corDiv.style.height = '40px';
-  corDiv.style.border = '1px solid black';
+  corDiv.style.border = '1px solid rgb(0, 0, 0)';
   colorPalet.appendChild(corDiv);
 }
 
 criaCoresDaPaleta('black', 'selected');
 criaCoresDaPaleta('blue');
 criaCoresDaPaleta('red');
+criaCoresDaPaleta('yellow');
+let color = document.querySelector('.selected').style.backgroundColor;
 
 function criaLinhaQuadro(tamanho) {
   for (let i = 0; i < tamanho; i += 1) {
@@ -33,8 +36,83 @@ function criaQuadro(tamanho) {
   for (let i = 0; i < tamanho; i += 1) {
     criaLinhaQuadro(tamanho);
   }
+  pixelBoard.style.width = `${42 * tamanho}px`;
 }
 
 criaQuadro(5);
 
+function trocaSeletor(event) {
+  if (!event.target.classList.contains('selected')) {
+    document.querySelector('.selected').classList.remove('selected');
+    event.target.classList.add('selected');
+    color = event.target.style.backgroundColor;
+  }
+}
 
+colorPalet.addEventListener('click', trocaSeletor);
+
+function pintaQuadro(event) {
+  const bloco = event.target;
+  bloco.style.backgroundColor = color;
+}
+
+pixelBoard.addEventListener('click', pintaQuadro);
+
+function criaBotaoClear() {
+  const button = document.createElement('BUTTON');
+  button.innerHTML = 'Limpar';
+  button.id = 'clear-board';
+  colorPalet.after(button);
+}
+
+criaBotaoClear();
+const clearBoard = document.querySelector('#clear-board');
+
+function limpaQuadro() {
+  const quadros = pixelBoard.children;
+  for (let i = 0; i < quadros.length; i += 1) {
+    const quadro = quadros[i];
+    quadro.style.backgroundColor = 'white';
+  }
+}
+
+clearBoard.addEventListener('click', limpaQuadro);
+
+function criaBotaoSize() {
+  const button = document.createElement('BUTTON');
+  button.innerHTML = 'VQV';
+  button.id = 'generate-board';
+  colorPalet.after(button);
+}
+
+criaBotaoSize();
+const GenerateBoard = document.querySelector('#generate-board');
+
+function criaInputSize() {
+  const input = document.createElement('input');
+  input.placeholder = 'Numero entre 5 e 50';
+  input.id = 'board-size';
+  colorPalet.after(input);
+}
+
+criaInputSize();
+const inputSize = document.querySelector('#board-size');
+
+function mataQuadro() {
+  while (pixelBoard.lastElementChild) {
+    pixelBoard.removeChild(pixelBoard.lastElementChild);
+  }
+}
+function gerarBoard() {
+  if (!parseInt(inputSize.value, 10)) {
+    inputSize.value = '';
+    inputSize.placeholder = 'Apenas Numeros!!!!!';
+    return;
+  }
+  if (parseInt(inputSize.value, 10) >= 1 && parseInt(inputSize.value, 10) <= 50) {
+    mataQuadro();
+    criaQuadro(inputSize.value);
+  }
+}
+
+GenerateBoard.addEventListener('click', gerarBoard);

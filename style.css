@@ -1,3 +1,15 @@
-.pixel-board {
+#color-palette div {
   display: inline-block;
+}
+
+#pixel-board div {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+}
+
+#pixel-board {
+  margin: 0;
+  padding: 0;
+  font-size: 0;
 }
