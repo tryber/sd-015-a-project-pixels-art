@@ -28,4 +28,12 @@ function mudarCorPaleta(evento) {
   evento.target.classList.add('selected');
 }
 
+function pintarPixels(evento) {
+  let cor = document.querySelector('.selected').style.backgroundColor;
+  evento.target.style.backgroundColor = cor;
+}
+
+const pixels = document.getElementsByClassName('pixel');
+
 adicionarEventos(colorSlot, 'click', mudarCorPaleta);
+adicionarEventos(pixels, 'click', pintarPixels);
