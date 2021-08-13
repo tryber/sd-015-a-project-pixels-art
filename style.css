@@ -10,16 +10,15 @@
 /* Source: https://www.w3schools.com/css/css_grid.asp */
 #pixel-board {
   display: grid;
-  grid-template-columns: auto auto auto auto auto;
-  background-color: black;
-  padding: 1px;
-  width: 500px;
-  height: 500px;
+  grid-template-columns: auto auto auto auto auto; 
+  width: 200px;
 }
 
 .pixel {
   background-color: white;
   border: 1px solid black;
+  width: 40px;
+  height: 40px;
 }
 
 .preto {
