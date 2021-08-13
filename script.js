@@ -32,3 +32,17 @@ function selectColor(event) {
 }
 
 colorPaletteSection.addEventListener('click', selectColor);
+
+function paintPixels(event) {
+  const elem = event;
+  const selectedColor = document.querySelector('.selected');
+  const selectedObj = getComputedStyle(selectedColor);
+  const selectedObjColor = selectedObj.backgroundColor;
+  elem.target.style.backgroundColor = selectedObjColor;
+}
+
+const td = document.querySelectorAll('.pixel');
+
+for (let x = 0; x < td.length; x += 1) {
+  td[x].addEventListener('click', paintPixels);
+}
