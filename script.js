@@ -6,16 +6,26 @@ for (let i=0; i < coresDaPaleta.length; i += 1) {
 function criaQuadro() {
   let pixelBoard = document.createElement("div");
   pixelBoard.id = 'pixel-board';
-  document.getElementsByTagName("body")[0].appendChild(pixelBoard);
+  document.querySelector('body').appendChild(pixelBoard);
   let numeroDeLinhas = 5;
-   let numeroDePixels = 5;
-   for (let linha = 0; linha < numeroDeLinhas; linha += 1) {
-     for (let i = 0; i < numeroDePixels; i += 1) {
-       let pixel = document.createElement("div");
-       pixel.className = "pixel";
-       pixelBoard.appendChild(pixel);
-     }
-   }
+  let numeroDePixels = 5;
+  for (let linha = 0; linha < numeroDeLinhas; linha += 1) {
+    for (let i = 0; i < numeroDePixels; i += 1) {
+      let pixel = document.createElement("div");
+      pixel.className = "pixel";
+      pixelBoard.appendChild(pixel);
+    }
+    pixelBoard.appendChild(document.createElement("br"));
+  }
  }
 
 criaQuadro();
+
+for (let i = 0; i < document.querySelectorAll('.color').length; i += 1) {
+  document.querySelectorAll('.color')[i].addEventListener('click', selectColor);
+}
+
+function selectColor(cor) {
+  document.querySelector('.selected').classList.remove("selected");
+  cor.target.classList.add('selected');
+}
