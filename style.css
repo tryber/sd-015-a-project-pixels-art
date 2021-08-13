@@ -42,6 +42,12 @@ body {
   border-radius: 50px;
 }
 
+#board-size-container {
+  margin: auto;
+  height: 90px;
+  color: #272727;
+}
+
 #board-container {
   margin: auto;
   text-align: center;
