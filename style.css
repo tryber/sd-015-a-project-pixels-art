@@ -1,0 +1,22 @@
+.color {
+    border: 1px solid black;
+    display: inline-block;
+    font-size: 50px;
+    padding: 30px;
+}
+
+#preta {
+    background-color: black;
+}
+
+#vermelha {
+    background-color: red;
+}
+
+#amarela {
+    background-color: yellow;
+}
+
+#verde {
+    background-color: green;
+}
