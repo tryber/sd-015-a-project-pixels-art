@@ -4,22 +4,6 @@
   border: 3px solid black;
 }
 
-#red{
-  background: red;
-}
-
-#green{
-  background-color: green;
-}
-
-#blue{
-  background: blue;
-}
-
-#black{
-  background-color: black;
-}
-
 #pixel-board{
   border: 1px solid black;
   margin-top: 25px;
@@ -44,4 +28,17 @@
   display: inline-block;
   margin-left: 15px;
   margin-top: 15px;
+  padding-top: 10px;
+}
+
+button{
+  width: 300px;
+  height: 10px;
+  margin-top: 20px;
+  margin-left: 2px;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: bolder;
+  line-height: 5px;
+  background-color: #eee;
 }
