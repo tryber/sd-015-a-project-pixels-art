@@ -1,19 +1,24 @@
+const cores = document.getElementsByClassName('color');
+cores[0].style.background = 'black';
+cores[1].style.background = 'red';
+cores[2].style.background = 'blue';
+cores[3].style.background = 'green';
+
 const quadroPixel = document.getElementById('pixel-board');
 const corSelected = document.querySelector('.selected');
 const numberOfLines = 5;
 const numberOfColums = 5;
-
-const red = document.getElementById('red');
-const green = document.getElementById('green');
-const blue = document.getElementById('blue');
-const black = document.getElementById('black');
 
 numberLines(numberOfLines);
 
 const lines = document.querySelectorAll('.line');
 
 createBox(lines, numberOfColums);
-//corSelected.addEventListener('click', trocaClass);
+
+cores[0].addEventListener('click', trocaCor);
+cores[1].addEventListener('click', trocaCor);
+cores[2].addEventListener('click', trocaCor);
+cores[3].addEventListener('click', trocaCor);
 
 function numberLines(number) {
   for (let index = 0; index < number; index += 1) {
@@ -34,21 +39,21 @@ function createBox(lines, colunas) {
   }
 }
 
-function trocaClass() {
-  if (corSelected.className === 'color') {
-    corSelected.className = 'color selected';
-  } else {
-    corSelected.className = 'color';
-  }
-}
-
-function trocaSelecionaDay(event) {
+function trocaCor(event) {
   const techElement = document.querySelector('.selected');
   techElement.classList.remove('selected');
-  event.target.classList.add('selected');  
+  event.target.classList.add('selected');
 }
 
-red.addEventListener('click', trocaSelecionaDay);
-green.addEventListener('click', trocaSelecionaDay);
-blue.addEventListener('click', trocaSelecionaDay);
-black.addEventListener('click', trocaSelecionaDay);
+quadroPixel.addEventListener('click',pintaGrid);
+
+function pintaGrid(){
+  let taskDiv = document.querySelectorAll('.color');  
+  for (let index = 0; index < taskDiv.length; index += 1) {
+    if (taskDiv[index].className == 'color selected') {
+      let taskColor = taskDiv[index].style.background;
+      event.target.style.background = taskColor;
+    }
+  }
+  
+}
