@@ -1,0 +1,28 @@
+.pink {
+    border: 1px solid black;
+    display: inline-block;
+    width: 55px;
+    height: 55px;
+    background-color: pink;
+}
+.purple {
+    border: 1px solid black;
+    display: inline-block;
+    width: 55px;
+    height: 55px;
+    background-color: purple;
+}
+.black {
+    border: 1px solid black;
+    display: inline-block;
+    width: 55px;
+    height: 55px;
+    background-color: black;
+}
+.green {
+    border: 1px solid black;
+    display: inline-block;
+    width: 55px;
+    height: 55px;
+    background-color: green;
+}
