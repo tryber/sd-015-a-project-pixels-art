@@ -87,4 +87,20 @@ createPalleteColor('#1abc9c');
 createPalleteColor('#3498db');
 createPalleteColor('#e74c3c');
 fillBoard(5,5)
+document.getElementById('generate-board').addEventListener('click',function(){
+  let numberOfLines = document.getElementById('board-size').value;
+  if(numberOfLines == ""){
+    window.alert('Board inválido!');
+  }
+  if(numberOfLines < 5){
+    numberOfLines = 5;
+  }
+  if(numberOfLines > 50){
+    numberOfLines = 50;
+  }
+  document.getElementById("pixel-board").innerHTML = "";
+  fillBoard(numberOfLines,numberOfLines);
+  console.log(numberOfLines)
+})
+//fillBoard(5,5)
 clearBoard();
