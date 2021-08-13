@@ -41,6 +41,10 @@
   border-spacing: 0;
 }
 
-#button-section {
+#options-section {
   margin-bottom: 30px;
+}
+
+#clear-board {
+  margin-right: 30px;
 }
