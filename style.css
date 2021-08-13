@@ -34,9 +34,15 @@
     background-color: white;
     margin: 2px 2px 2px 5px;
 }
+#color-palette {
+    font-size: 0px;
+    width: 228px;
+    height: 58px;
+}
 .color {
-    margin-bottom: 15px;
+    display: inline-block;
 }
 #pixel-board {
+    margin-top: 10px;
     width: 250px;
 }
