@@ -7,9 +7,9 @@ function fillWithColor(evt) {
 function changeSelectedColor(evt) {
   sessionStorage.setItem('selectedColor', evt.target.style.backgroundColor);
 
-  let paletteColors = document.getElementsByClassName('color');
+  const paletteColorsDiv = document.getElementsByClassName('color');
 
-  for (color of paletteColors) {
+  for (const color of paletteColorsDiv) {
     if (color.classList.contains('selected')) {
       color.classList.remove('selected');
     }
@@ -22,8 +22,8 @@ function changeSelectedColor(evt) {
 // Function to clear board
 function clearBoard() {
   const pixelLines = document.getElementsByClassName('line');
-  for (line of pixelLines) {
-    for (pixel of line.children) {
+  for (let line of pixelLines) {
+    for (const pixel of line.children) {
       pixel.style.backgroundColor = 'white';
     }
   }
@@ -32,10 +32,10 @@ function clearBoard() {
 // Create Color Palette Boxes
 const colorPaletteSection = document.getElementById('color-palette');
 
-let paletteColors = ['black', 'red', 'green', 'blue'];
+const paletteColors = ['black', 'red', 'green', 'blue'];
 
 function createPalette(colors) {
-  for (color of colors) {
+  for (const color of colors) {
     let colorBox = document.createElement('div');
     colorBox.className = 'color';
     colorBox.style.backgroundColor = color;
@@ -57,11 +57,11 @@ const pixelBoardSection = document.getElementById('pixel-board');
 
 function fillPixelBoard(lines, boxesPerLine) {
   for (let idx = 0; idx < lines; idx += 1) {
-    let lineDiv = document.createElement('div');
+    const lineDiv = document.createElement('div');
     lineDiv.className = 'line';
 
     for (let innerIdx = 0; innerIdx < boxesPerLine; innerIdx += 1) {
-      let pixelBox = document.createElement('div');
+      const pixelBox = document.createElement('div');
 
       pixelBox.className = 'pixel';
       pixelBox.style.border = '1px solid black';
@@ -77,9 +77,9 @@ fillPixelBoard(5, 5);
 
 // Set initial selected color to black (default)
 window.onload = () => {
-  let paletteColors = document.getElementsByClassName('color');
+  const paletteColorsDiv = document.getElementsByClassName('color');
 
-  for (color of paletteColors) {
+  for (const color of paletteColorsDiv) {
     if (color.classList.contains('selected')) {
       sessionStorage.selectedColor = color.style.backgroundColor;
     }

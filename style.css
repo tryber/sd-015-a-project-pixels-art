@@ -4,6 +4,20 @@
   height: 40px;
 }
 
+.color {
+  margin-left: 5px;
+  margin-bottom: 10px;
+  border-radius: 1px;
+}
+
+#clear-board {
+  margin-bottom: 10px;
+}
+
+.line {
+  margin-bottom: -5px;
+}
+
 .pixel {
   background-color: white;
 }
