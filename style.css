@@ -1,0 +1,42 @@
+#blue{
+  background-color: blue;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  margin-right: 10px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+}
+#red{
+  background-color: red;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  margin-right: 10px;
+  margin-left: 10px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+}
+#green {
+  background-color: green;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  margin-right: 10px;
+  margin-left: 10px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+}
+#yellow {
+  background-color: yellow;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  margin-left: 10px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+}
