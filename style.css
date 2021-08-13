@@ -1,0 +1,33 @@
+.color {
+  display: inline-block;
+  border-style: solid;
+  border-width: 1px;
+  height: 40px;
+  width: 40px;
+}
+
+#color1 {
+  background-color: black;
+  
+}
+
+#color2 {
+  background-color: chartreuse;
+}
+
+#color3 {
+  background-color: red;
+}
+
+#color4 {
+  background-color: blue;
+}
+
+.pixel {
+  border-style: solid;
+  border-width: 1px;
+  height: 40px;
+  width: 40px;
+  background-color: white;
+  display: inline-block;
+}
