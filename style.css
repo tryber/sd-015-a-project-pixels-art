@@ -1,0 +1,12 @@
+#title {
+  display: block;
+}
+
+#color-palette {}
+
+.color {
+  border: 1px solid black;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+}
