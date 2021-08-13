@@ -1,0 +1,47 @@
+#color-palette {
+  display: inline-block;
+}
+
+#red{
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 10%;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  background-color: red;
+}
+
+#blue{
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 10%;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  background-color: blue;
+}
+
+#green{
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 10%;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  background-color: green;
+}
+
+#yellow{
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 10%;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  background-color: yellow;
+}
