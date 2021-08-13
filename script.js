@@ -10,3 +10,13 @@ function criaCoresPaleta() {
   }
 }
 criaCoresPaleta();
+
+function criaQuadroDePixels() {
+  const quadro = document.getElementById('pixel-board');
+  for (let index = 0; index < 25; index += 1) {
+    const quadroIndividuais = document.createElement('div');
+    quadroIndividuais.className = 'pixel';
+    quadro.appendChild(quadroIndividuais);
+  }
+}
+criaQuadroDePixels();
