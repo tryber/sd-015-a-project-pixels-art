@@ -1,8 +1,12 @@
+#color-palette {
+  left: 100px;
+}
 .color {
   border: 1px solid black;
   width: 40px;
   height: 40px;
   display: inline-block;
+  top: 100px;
 }
 .black {
   background-color: black;
@@ -10,7 +14,7 @@
 }
 .red {
   background-color: red;
-  left: 85px;
+  left: 90px;
 }
 .blue {
   background-color: blue;
@@ -19,4 +23,14 @@
 .green {
   background-color: green;
   left: 125px;
+}
+.pixel {
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+  display: inline-block;
+  background-color: white;
+}
+#pixel-board {
+  font-size: 0px;
 }
