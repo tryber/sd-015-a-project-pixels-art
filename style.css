@@ -1,20 +1,23 @@
 div {
-    height: 80px;
-    width: 80px;
-    border: 1px solid black;
-    display: inline-block;
+  height: 80px;
+  width: 80px;
+  border: 1px solid black;
+  display: inline-block;
 }
 
-#red { 
-    background-color: red
+#black{ 
+  background-color: black;
 }
+
 #blue {
-    background-color: blue;
+  background-color: blue;
 }
-#black {
-    background-color: black;
+
+#red {
+  background-color: red;
 }
+
 #yellow {
-    background-color: yellow;
+  background-color: yellow;
 }
 
