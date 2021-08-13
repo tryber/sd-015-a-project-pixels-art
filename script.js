@@ -48,3 +48,19 @@ function criarOQuadroDeArt() {
   }
 }
 criarOQuadroDeArt();
+
+function pegarEstilo(event) {
+  const pegarOEstiloSelecionado = document.querySelector('.selected');
+  const estilo = window.getComputedStyle(pegarOEstiloSelecionado, null)
+  .getPropertyValue("background-color");
+  event.target.style.backgroundColor = estilo;
+}
+
+function pintarPixel() {
+  const pegarPixel = document.querySelectorAll('.pixel');
+  for (let index = 0; index < pegarPixel.length; index +=1) {
+    let odia = pegarPixel[index]
+    odia.addEventListener('click', pegarEstilo);
+  }
+}
+pintarPixel();
