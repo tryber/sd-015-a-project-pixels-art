@@ -1,0 +1,37 @@
+#title {
+ color: brown;
+ text-align: center;
+ font-size: 50px;
+}
+
+#color{
+    width: 20px;
+    border: 1px solid black;
+    padding: 20px;
+    margin: 1px;
+}
+
+.pink{
+    color: rgb(235, 21, 164);
+    border: 1px black solid;
+}
+
+.yellow{
+    color: yellow;
+    border: 1px black solid;
+}
+
+.green{
+    color: green;
+    border: 1px black solid;
+}
+
+.red{
+    color: red;
+    border: 1px black solid;
+}
+
+.black{
+    color: black;
+    border: 1px black solid;
+}
