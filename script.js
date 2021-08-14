@@ -70,3 +70,12 @@ function colorPaintB() {
   }
 }
 colorPaintB();
+
+function createButton() {
+  const sectionColorPalette = document.querySelector('.color-palette');
+  const buttonClearTag = document.createElement('button');
+  sectionColorPalette.appendChild(buttonClearTag);
+  buttonClearTag.id = 'clear-board';
+  buttonClearTag.innerText = 'Limpar';
+}
+createButton();

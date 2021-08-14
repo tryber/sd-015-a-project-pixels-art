@@ -31,3 +31,10 @@ body {
   border: solid black 1px;
   background-color: white;
 }
+
+#clear-board {
+  background-color: lightgray;
+  width: 20px;
+  height: 20px;
+  border: 2px;
+}
