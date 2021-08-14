@@ -1,6 +1,6 @@
 console.log('hello world');
 
-function CriarCoresAleatorias() { // finção de cores aleatorias
+function CriarCoresAleatorias() { // função de cores aleatorias
   const red = Math.floor(Math.random() * 256);
   const green = Math.floor(Math.random() * 256);
   const blue = Math.floor(Math.random() * 256);
@@ -52,17 +52,17 @@ color4.addEventListener('click', trocarClasseSelected);
 
 function criarOQuadroDeArt() {
   const divDoQuadro = document.querySelector('#pixel-board');
-
-  for (let index = 0; index < 5; index += 1) {
-    for (let index2 = 0; index2 < 5; index2 += 1) {
+  for (let index = 0; index < 25; index += 1) {
       const quadroPixel = document.createElement('div');
       quadroPixel.classList = 'pixel';
       divDoQuadro.appendChild(quadroPixel);
-    }
   }
 }
 criarOQuadroDeArt();
 
+// funções que serão responsaveis para pintar cada pixel do quadro
+// função que recupera a classe e pega a cor que está com ela e atribui a cor de fundo nos pixels com o event
+// target, que é responsavel por pintar cada quadradinho
 function pegarEstilo(event) {
   const evento = event.target;
   const pegarOEstiloSelecionado = document.querySelector('.selected');
@@ -70,7 +70,11 @@ function pegarEstilo(event) {
     .getPropertyValue('background-color');
   evento.style.backgroundColor = estilo;
 }
+// função getComputedStyle pega o estilo que tem dentro de uma classe, id ou elemento e guarda dentro de si
+// para fazer a manipulação. A fonte está abaixo.
+// fonte: https://www.w3schools.com/jsref/jsref_getcomputedstyle.asp
 
+// adiciona o evento nos quadradinhos
 function pintarPixel() {
   const pegarPixel = document.querySelectorAll('.pixel');
   for (let index = 0; index < pegarPixel.length; index += 1) {
@@ -82,7 +86,7 @@ pintarPixel();
 
 // aqui vamos criar um botão para colocar branco em todas as divs do quadro de pixels
 
-function criarBotaoClareador(limpar) {
+function criarBotaoClareador(limpar) { // criar botão de limpeza dinamicamente
   const divDoBotao = document.querySelector('#div-button');
   const botaoLimpar = document.createElement('button');
   botaoLimpar.innerHTML = limpar;
@@ -92,7 +96,7 @@ function criarBotaoClareador(limpar) {
 criarBotaoClareador('Limpar');
 // agora vamos adicionar um evento que quando ouver um click o quadro de pixels será limpo
 
-function limpezaPixels() {
+function limpezaPixels() { // coloca estilo branco nos pixels e será acinado pelo botão
   const pixelsBoard = document.querySelectorAll('.pixel');
   for (let index = 0; index < pixelsBoard.length; index += 1) {
     const osPixels = pixelsBoard[index];
@@ -101,4 +105,4 @@ function limpezaPixels() {
 }
 
 const botaoLimpeza = document.querySelector('#clear-board');
-botaoLimpeza.addEventListener('click', limpezaPixels);
+botaoLimpeza.addEventListener('click', limpezaPixels); // botão que faz que adicione a cor branca nos quadrados
