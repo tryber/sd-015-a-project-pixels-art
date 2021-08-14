@@ -10,6 +10,7 @@ const newPalletBlock = (location, qttOfBlocks) => {
 }
 
 const newPixel = (location, basePixel) => {
+  basePixel < 5 ? basePixel = 5: basePixel;
   let qttOfPixels = basePixel * basePixel;
   console.log()
   for (let count = 0; count < qttOfPixels; count += 1){
