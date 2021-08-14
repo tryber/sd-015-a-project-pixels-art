@@ -38,3 +38,13 @@
 #pixel-board {
     width: 250px;
 }
+
+#clear-board {
+    border: 1px solid black;
+    display: inline-block;
+    width: 50px;
+    height: 20px;
+    background-color: rgba(rgb(124, 124, 124), 0.3);
+    margin-right: 2px; 
+    margin-bottom: 5px;
+}

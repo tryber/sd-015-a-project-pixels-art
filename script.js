@@ -33,8 +33,27 @@ for (let i = 0; i < mudaCor.length; i += 1){
 
 function funcCor (event) {
     let clicar = document.querySelector('.selected');
-    let pixelBoard = document.querySelectorAll('.pixel');
     let cor = getComputedStyle(clicar); 
         event.target.style.backgroundColor = cor.backgroundColor;
 };
 
+function criatButton(string){
+    let buttonReset = document.querySelector('#color-palette');
+    let btn = document.createElement('button');
+    btn.id = 'clear-board';
+    btn.innerHTML = string;
+    buttonReset.appendChild(btn);
+  };
+  criatButton('Reset');
+
+  const back = document.getElementById('clear-board');
+  back.addEventListener('click', backoriginal)
+  
+  function backoriginal(event){
+  let pixelOriginal = document.getElementsByClassName('pixel');
+    
+    for (index = 0; index < pixelOriginal.length; index += 1){
+      let color = pixelOriginal[index];
+        color.style.backgroundColor = 'white';
+    }
+  }
