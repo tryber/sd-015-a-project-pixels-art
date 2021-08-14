@@ -42,3 +42,14 @@
   display: inline-block;
   
 }
+#white {
+ background-color: white;
+}
+#button{
+  margin-top: 40px;
+  border: 1px black solid;
+  background-color: lightgray;
+  width: 50px;
+  
+
+}

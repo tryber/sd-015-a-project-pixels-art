@@ -17,30 +17,40 @@ window.onload = function() {
 
 }
 
+
 function createPixel(className) {
   
   let pixel = document.createElement("div");
   pixel.className = className;
+  pixel.addEventListener("click", setColor);
   return pixel;
 }
-
 let pClick = document.getElementsByClassName("color");
 
 pClick[0].classList.add("selected");
 
 for(let index = 0 ; index < pClick.length ; index +=1 ) {
-   pClick[index].addEventListener("click", mudaCor);
+   pClick[index].addEventListener("click", a = getColor);
   
   
 }
 
-function mudaCor(evento){
+function getColor(evento){
  
   for(let index = 0 ; index < pClick.length; index += 1){
     pClick[index].classList.remove("selected");
   }
   evento.target.classList.add("selected");
+  return evento.id;
  
 }
+function setColor(evento){
+ 
+  let set = document.querySelectorAll(".selected");
+ 
+ evento.target.id = set[0].id
+
+}
+
 
 }
