@@ -1,5 +1,4 @@
 const clickButton = document.getElementById('color-palette');
-clickButton.addEventListener('click', color);
 
 function color(event) {
   const colorsAdd = document.querySelectorAll('.color');
@@ -8,6 +7,7 @@ function color(event) {
   }
   event.target.classList.add('selected');
 }
+clickButton.addEventListener('click', color);
 
 const changeColor = document.getElementsByClassName('pixel');
 
