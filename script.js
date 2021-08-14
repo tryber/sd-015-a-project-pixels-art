@@ -45,16 +45,18 @@ window.onload = function abrir() {
 };
 
 function selectedColor(event) {
+  const aux = event;
   const corSelecionada = document.querySelector('.selected');
   corSelecionada.className = 'color';
-  event.target.className = 'selected color';
-  armazenaCor = event.target.style.backgroundColor;
+  aux.target.className = 'selected color';
+  armazenaCor = aux.target.style.backgroundColor;
 }
 
 colorPalette.addEventListener('click', selectedColor);
 
 function colorirPixeis(event) {
-  event.target.style.backgroundColor = armazenaCor;
+  const aux = event;
+  aux.target.style.backgroundColor = armazenaCor;
 }
 
 pixelBoard.addEventListener('click', colorirPixeis);
@@ -73,23 +75,33 @@ botao.addEventListener('click', clear);
 
 const inputPizelSize = document.querySelector('#board-size');
 const generateBoardButton = document.querySelector('#generate-board');
+let tamanhoBoard = inputPizelSize.value;
+
+function apagarBoard() {
+  const apagarLine = document.querySelectorAll('.line');
+  for (let i = 0; i < apagarLine.length; i += 1) {
+    const aux = apagarLine[i];
+    aux.remove();
+  }
+}
+
+function alterarTamanho() {
+  tamanhoBoard = inputPizelSize.value;
+  if (tamanhoBoard < 5) {
+    tamanhoBoard = 5;
+  }
+  if (tamanhoBoard > 50) {
+    tamanhoBoard = 50;
+  }
+}
 
 function alterarTamanhoBoard() {
-  let tamanhoBoard = inputPizelSize.value;
+  tamanhoBoard = inputPizelSize.value;
   if (tamanhoBoard === '') {
     alert('Board inválido!');
   } else {
-    if (tamanhoBoard < 5) {
-      tamanhoBoard = 5;
-    }
-    if (tamanhoBoard > 50) {
-      tamanhoBoard = 50;
-    }
-    const apagarLine = document.querySelectorAll('.line');
-    for (let i = 0; i < apagarLine.length; i += 1) {
-      const aux = apagarLine[i];
-      aux.remove();
-    }
+    alterarTamanho();
+    apagarBoard();
     criarPixel(`${tamanhoBoard}`);
   }
 }
