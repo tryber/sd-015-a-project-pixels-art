@@ -44,9 +44,9 @@ h1 , #color-palette {
   background-color: black;
 }
 
-#color-palette div:nth-of-type( 2 ) {
+/* #color-palette div:nth-of-type( 2 ) {
   background-color: olivedrab;
-}
+} */
 
 #color-palette div:nth-of-type( 3 ) {
   background-color: aquamarine;
