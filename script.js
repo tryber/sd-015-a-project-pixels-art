@@ -1,4 +1,13 @@
+window.onload = function() {
+        let black = document.getElementsByClassName("black")[0]
+        black.className = black.className + " selected"
+}
+
+
+
 const quadro = document.querySelector("#pixel-board");
+let colors = document.getElementById("cores")
+let selectedColor = document.getElementsByClassName("black")[0]
 
 
 createSpans();
@@ -14,4 +23,14 @@ function createSpans() {
             quadro.appendChild(span);
         }
     }
+}
+
+
+
+colors.addEventListener("click", getColor);
+
+function getColor (event) {
+    selectedColor.classList.remove("selected")
+    selectedColor = event.target;
+    selectedColor.className = selectedColor.className + " selected";
 }
