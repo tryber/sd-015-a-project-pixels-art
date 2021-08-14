@@ -69,3 +69,19 @@ whitePixels.forEach(pixel => {
 
   });
 });
+
+//  Capiturando o botao
+let clearButton = document.querySelector("#clear-board");
+
+// Adicionando um evento de click no botao
+clearButton.addEventListener("click", () => {
+
+  // Percorrendo todos os pixels e verificando se eles possuem um estilo inline, caso tenham, o "removeAttribute" tira
+  
+  whitePixels.forEach(pixel => {
+
+    if (pixel.style.backgroundColor) {
+      pixel.removeAttribute("style");
+    } 
+  });
+});

@@ -1,3 +1,8 @@
+body{
+   font-family: sans-serif;
+   color: black;
+}
+
 /*
    Estilizando o header
 */
@@ -51,6 +56,23 @@ main{
 .green{
    background-color: green;
 }
+
+/*
+   Estilizando o botao
+*/
+
+#clear-board{
+   font-size: 20px;
+   color: white;
+   background-color: black;
+   padding: 10px;
+   width: 250px;
+   border-style: none;
+   border-radius: 10px;
+   margin: 0 auto;
+   display: block;
+}
+
 /*
    Estilizando a section/conteiner dos pixels
 */
@@ -61,7 +83,8 @@ main{
    height: 250px;
    border: 2px solid black;
    text-align: center;
-   padding: 10px;
+   padding: 1px;
+  margin-top: 30px;
 }
 .pixel{
    margin-top: 4px;
