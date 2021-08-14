@@ -1,6 +1,28 @@
+@font-face {
+  font-family: 'debora';
+  src: url(./font/04B_30__.TTF);
+}
+
 * {
   margin: 0px;
 }
+
+body, #title, #color-palette, #settings {
+  text-align: center;
+  margin: 30px;
+  font-family: 'debora', arial;
+  font-weight: normal;
+}
+
+body {
+  background-image: url(./image/background2.jpg);
+}
+
+#title {
+  font-size: 3.1em;
+  color: #CED3DC;
+}
+
 
 #color-palette div{
   display: inline-block;
@@ -10,4 +32,42 @@
   height: 50px;
   border: 1px solid black;
 }
+
+#board-size {
+  width: 50px;
+}
+
+#input:focus {
+  outline: 3px solid transparent;
+}
+
+#generate-board {
+  background-color: #9FD149;
+  border: 2px solid #3c4e1c;
+  border-radius: 5px;
+}
+
+#generate-board:hover {
+  background-color: #3c4e1c;
+  border: 2px solid #9FD149;
+  border-radius: 5px;
+}
+
+#clear-board {
+  display: block;
+  margin: 20px auto;
+  background-color: #ABA9C3;
+  border: 2px solid #FCF7F8;
+  border-radius: 5px;
+}
+
+#clear-board:hover {
+  background-color: #FCF7F8;
+  border: 2px solid #ABA9C3;
+  border-radius: 5px;
+}
+
+
+
+
 
