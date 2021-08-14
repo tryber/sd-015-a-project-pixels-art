@@ -5,22 +5,27 @@
 
 #pixel-board {
   display: block;
-  width: 240px;
+  border-collapse:collapse;
 }
 
+input {
+ 
+}
 #color-palette div {
   display: inline-block;
   width: 50px;
   height: 50px;
   border: 1px solid black;
+  border-collapse: collapse;
   border-radius: 50%;
 }
 #pixel-board .pixel {
   display: inline-block;
   width: 40px;
   height: 40px;
-  margin-right: 3px;
-  margin-left: 3px;
+  margin-top: 0px;
+  margin-bottom: -4px;
+  border-collapse: collapse;
   border: 1px solid black;
   background-color: white;
 }
