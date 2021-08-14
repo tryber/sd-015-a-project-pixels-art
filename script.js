@@ -4,7 +4,7 @@ for (let i = 1; i < coresDaPaleta.length; i += 1) {
   const r = Math.random() * 255;
   const g = Math.random() * 255;
   const b = Math.random() * 255;
-  const corAleatoria = 'rgb(' + r + ', ' + g + ', ' + b + ')';
+  const corAleatoria = `rgb(${r}, ${g}, ${b})`;
   coresDaPaleta[i].style.backgroundColor = corAleatoria;
 }
 
@@ -18,7 +18,7 @@ function criaQuadro(valor) {
   if (filtro > 49) {
     filtro = 50;
   } else if (filtro < 6) {
-    filtro = 5
+    filtro = 5;
   }
   const pixelBoard = document.createElement('div');
   pixelBoard.id = 'pixel-board';
