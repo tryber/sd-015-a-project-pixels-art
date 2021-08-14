@@ -2,7 +2,7 @@
     display: inline-block;
 }
 
-.vermelho {
+#vermelho {
     background-color: red;
     width: 40px;
     height: 40px;
@@ -14,7 +14,7 @@
     margin: 2px;
 }
 
-.verde {
+#verde {
     background-color: green;
     width: 40px;
     height: 40px;
@@ -27,7 +27,7 @@
 
 }
 
-.color {
+#preto {
     background-color: black;
     width: 40px;
     height: 40px;
@@ -40,7 +40,7 @@
 
 }
 
-.azul {
+#azul {
     background-color: blue;
     width: 40px;
     height: 40px;
@@ -53,16 +53,16 @@
 
 }
 
-.cinza {
-    background-color: #D3D3D3;
+#cinza {
+    background-color: white;
     width: 40px;
     height: 40px;
     align-items: center;   
-    display: inline-block;    
-    border-width: 1px;
-    border-color: black;    
-    border-style: solid;
-    margin: 2px;
+    display: inline-block;
+    border-radius: 1px;
+    border-color: black;
+    margin: -1px; 
+  
 }
 
 #color-palete {
