@@ -1,7 +1,14 @@
+#title{
+  color: red;
+  text-align: center;
+  width: 100%;
+  margin: 20px;
+
+}
 #black{
-  background-color: black;
-  width: 100px;
-  height: 100px;
+  background-color:black;
+  width: 40px;
+  height: 40px;
   display: inline-block;
   margin-right: 10px;
   border-width: 1px;
@@ -10,8 +17,8 @@
 }
 #red{
   background-color: red;
-  width: 100px;
-  height: 100px;
+  width: 40px;
+  height: 40px;
   display: inline-block;
   margin-right: 10px;
   margin-left: 10px;
@@ -21,8 +28,8 @@
 }
 #green {
   background-color: green;
-  width: 100px;
-  height: 100px;
+  width: 40px;
+  height: 40px;
   display: inline-block;
   margin-right: 10px;
   margin-left: 10px;
@@ -32,11 +39,32 @@
 }
 #yellow {
   background-color: yellow;
-  width: 100px;
-  height: 100px;
+  width: 40px;
+  height: 40px;
   display: inline-block;
   margin-left: 10px;
   border-width: 1px;
   border-style: solid;
   border-color: black;
 }
+#pixel-board {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-right: 50px;
+  width: 250px;
+  height:250px;
+  text-align: center;
+  border: black solid 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 20px;
+  padding-bottom: 0px;
+ }
+ .pixel {
+  background-color: #fff;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  border-width: 1px solid black;
+  border: black solid 1px;
+ }
