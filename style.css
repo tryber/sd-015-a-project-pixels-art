@@ -1,0 +1,45 @@
+h1 {
+  text-align: center;
+  font-family: Trebuchet MS, Lucida Sans Unicode, sans-serif;
+
+}
+
+
+.color {
+  border: solid 1px black;
+  display: inline;
+  padding: 20px;
+
+}
+
+h1 , #color-palette {
+  text-align: center;
+
+}
+
+#pixel-board {
+  max-width: 200px;
+  max-height: 200px;
+  margin: 0 auto;
+  margin-top: 50px;
+  line-height: 0px;
+
+}
+
+#clear-board {
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-family: Verdana, sans-serif;
+  width: 80px;
+  height: 30px;
+  background-color: blue;
+  color: white;
+  display: block;
+
+}
+
+body {
+  text-align: center;
+
+}
