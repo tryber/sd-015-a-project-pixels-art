@@ -20,8 +20,8 @@ createTable();
 // Seleciona cor
 const allColors = document.querySelectorAll('.color');
 for (let index = 0; index < allColors.length; index += 1) {
-  let selectedColor = document.querySelectorAll('.color')[index]                 
-  selectedColor.addEventListener('click', selectColor);                          
+  const selectedColor = document.querySelectorAll('.color')[index];                
+  selectedColor.addEventListener('click', selectColor);             
 }
 
 function selectColor(event) {
