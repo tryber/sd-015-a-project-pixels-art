@@ -1,4 +1,4 @@
-const paletaPixel = document.querySelector('section');
+const paletaPixel = document.querySelector('#color-palette');
 let qtePixelPaleta = 4;
 for (let index = 0; index < qtePixelPaleta; index += 1) {
   let paletadiv = document.createElement('div');
@@ -19,12 +19,21 @@ for (let index = 0; index < qtePixelPaleta; index += 1) {
      paletadiv.id = "red";        
      paletadiv.style.backgroundColor = 'red'
    }    
-  /*if (index === 4) {
-     paletadiv.id = "red";       
-     paletadiv.style.backgroundColor = 'red'
-   } */
+ 
   paletadiv.style.border = '1px solid black';
   paletadiv.style.width = '50px';
   paletadiv.style.height = '50px';
   paletaPixel.appendChild(paletadiv);     
-};    
+};
+
+let pixels = document.querySelector("#pixel-board");
+let qtePixel = 25;
+for (let index = 0; index < qtePixel; index += 1) {
+    let paletadiv = document.createElement('div');
+    paletadiv.className = 'pixel';
+    paletadiv.style.border = '1px solid black';
+    paletadiv.style.width = '50px';
+    paletadiv.style.height = '50px';
+    paletadiv.style.backgroundColor = 'white';
+    pixels.appendChild(paletadiv);  
+}
