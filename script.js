@@ -9,6 +9,7 @@ window.onload = function() {
     
     for (let i = 0; i < size ; i += 1 ) {
       for (let j = 0; j < size ; j += 1 ) {
+        
         let pixel = createPixel("pixel");
         pixelboard.appendChild(pixel);
         document.getElementById("pixel-board").style.width =(42*size)+'px';
@@ -20,6 +21,7 @@ window.onload = function() {
 }
 
 function deletePixelBoard(){
+ 
   let si = size * size;
   console.log(si);
   let pixelboard = document.querySelector("#pixel-board");
@@ -51,6 +53,7 @@ function getColor(evento){
   for(let index = 0 ; index < pClick.length; index += 1){
     pClick[index].classList.remove("selected");
   }
+  
   evento.target.classList.add("selected");
   return evento.id;
  
@@ -63,8 +66,11 @@ function setColor(evento){
 
 }
 let button = document.getElementById("clear-board");
+
 button.addEventListener("click", clear);
+
 function clear(evento){
+
   let pix = document.querySelectorAll(".pixel");
 
   for(let index =0 ;index < pix.length; index += 1  ){
@@ -78,17 +84,25 @@ let expected = document.getElementById("generate-board")
   expected.addEventListener("click",changeBoard);
 
 function changeBoard(even){
+  
   let input = document.getElementById("board-size");
   let conp = parseInt(input.value);
+  
   if (conp < 5 || conp > 50 ){
     alert("Board inválido!");
     
-  }else if(conp === 0){
-  
+    if (conp >50){
+   
+      deletePixelBoard();
+      size = 50;
+      fillPixelboard();
+      }
+  }else if(conp === 0) {
+    
     alert("Board inválido!");
   
+  }else {
   
-}else{
   deletePixelBoard();
   size = parseInt(input.value);
   console.log(size)
