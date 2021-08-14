@@ -1,3 +1,24 @@
+const paletteColorClass = document.querySelector('#color-palette');
+
+// function classSelected() {
+//   let classNow = document.querySelectorAll('.color');
+//   const classTechElement = document.querySelector('.selected');
+//   for (let index = 0; index < classNow.length; index += 1) {
+//     if (classNow[index] === classTechElement) {
+//       let selClass = document.querySelectorAll('.color')[index];
+//     }
+//   }
+//   selectedClass(selClass);
+// }
+
+function selectedClass(event) {
+  const classTechElement = document.querySelector('.selected');
+  classTechElement.classList.remove('selected');
+  event.target.classList.add('selected');
+}
+
+paletteColorClass.addEventListener('click', selectedClass);
+
 function className() {
   const nameClassBlack = document.querySelector('.color');
   nameClassBlack.classList.add('selected');
@@ -13,7 +34,7 @@ function createPixel() {
       divPixelLine[indexLine].appendChild(divPixel);
     }
   }
-  className()
+  className();
 }
 function createLinePixel() {
   for (let indexLine = 0; indexLine < 5; indexLine += 1) {
