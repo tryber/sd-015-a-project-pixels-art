@@ -43,52 +43,19 @@ greenButton.addEventListener('click', clickGreenSelect);
 redButton.addEventListener('click', clickRedSelect);
 yellowButton.addEventListener('click', clickYellowSelect);
 
-// function paintPixel() {
-//   document.querySelectorAll('.pixel')[0].style.backgroundColor =
-// }
-
-// let pixelBoard = document.querySelectorAll('.pixel');
-// for (let index in pixelBoard) {
-//   document.querySelectorAll('.pixel')[index].addEventListener('click', paintPixel)
-// }
-
-// Pintar uma unidade de cada
+// Desafio 8
 document.getElementById('black').style.backgroundColor = 'black';     // por algum motivo precisei definir background color atraves do DOM pois o class .selected nao esta interpretando que a cor do back é definita pelo id com nome da cor em cada elemento
 document.getElementById('green').style.backgroundColor = 'green';     // por algum motivo precisei definir background color atraves do DOM pois o class .selected nao esta interpretando que a cor do back é definita pelo id com nome da cor em cada elemento
 document.getElementById('red').style.backgroundColor = 'red';         // por algum motivo precisei definir background color atraves do DOM pois o class .selected nao esta interpretando que a cor do back é definita pelo id com nome da cor em cada elemento
 document.getElementById('yellow').style.backgroundColor = 'yellow';   // por algum motivo precisei definir background color atraves do DOM pois o class .selected nao esta interpretando que a cor do back é definita pelo id com nome da cor em cada elemento
 
-function paintPixel01(){
-  document.querySelectorAll('.pixel')[0].style.backgroundColor = document.querySelector('.selected').style.backgroundColor
+  let pixelBoard = document.querySelector('#pixel-board');
 
-}
-document.querySelectorAll('.pixel')[0].addEventListener('click', paintPixel01);
-
-function paintPixel02(){
-  document.querySelectorAll('.pixel')[1].style.backgroundColor = document.querySelector('.selected').style.backgroundColor
-}
-document.querySelectorAll('.pixel')[1].addEventListener('click', paintPixel02);
-
-function paintPixel03(){
-  document.querySelectorAll('.pixel')[2].style.backgroundColor = document.querySelector('.selected').style.backgroundColor
-}
-document.querySelectorAll('.pixel')[2].addEventListener('click', paintPixel03);
-
-function paintPixel04(){
-  document.querySelectorAll('.pixel')[3].style.backgroundColor = document.querySelector('.selected').style.backgroundColor
-}
-document.querySelectorAll('.pixel')[3].addEventListener('click', paintPixel04);
-
-function paintPixel05(){
-  document.querySelectorAll('.pixel')[4].style.backgroundColor = document.querySelector('.selected').style.backgroundColor
-}
-document.querySelectorAll('.pixel')[4].addEventListener('click', paintPixel05);
-
-function paintPixel06(){
-  document.querySelectorAll('.pixel')[5].style.backgroundColor = document.querySelector('.selected').style.backgroundColor
-}
-document.querySelectorAll('.pixel')[5].addEventListener('click', paintPixel06);
-
-
+  pixelBoard.addEventListener('click', function(event) {
+      let pixelAdress = event.target
+      let selectorColor = document.querySelector('.selected').style.backgroundColor
+      pixelAdress.style.backgroundColor = selectorColor
+  });
+  
 
 
