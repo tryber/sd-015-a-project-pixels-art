@@ -20,7 +20,7 @@
     const inColors = document.querySelector('.selected');
     const change = getComputedStyle(inColors)
     event.target.style.backgroundColor = change.backgroundColor;
-  }
+  };
 
     const resetButton = document.getElementById('clear-board')
     

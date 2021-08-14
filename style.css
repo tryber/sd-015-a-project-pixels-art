@@ -32,7 +32,7 @@
 .pixel {
   display: inline-block;
   width: 40px;
-  height: 50px;
+  height: 40px;
   background-color: white;
   border: 1px solid black;
 }
