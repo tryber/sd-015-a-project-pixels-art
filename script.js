@@ -8,3 +8,12 @@ for (let i = 0; i < 5; i += 1) {
     divLinha.appendChild(divPixel);
   }
 }
+
+function pinta(event) {
+  event.target.style.backgroundColor = 'black';
+}
+let pixels = document.querySelectorAll('.pixel');
+
+for (let k in pixels) {
+  pixels[k].addEventListener('click', pinta);
+}
