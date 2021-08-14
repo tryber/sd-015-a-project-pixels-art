@@ -36,3 +36,13 @@ const cores1 = document.querySelectorAll('.color')
     let background1 = window.getComputedStyle(getColor).getPropertyValue('background-color');
     event.target.style.backgroundColor = background1;
 } 
+let chamarEl = document.querySelector('#local-button')
+let botao = document.createElement('button')
+botao.id = 'clear-board'
+botao.innerHTML = 'Limpar'
+chamarEl.appendChild(botao)
+
+const button = document.getElementById('clear-board')
+button.addEventListener('click', removeAll)
+function removeAll (event) {
+}
