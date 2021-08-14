@@ -1,4 +1,4 @@
-let linesPixel = document.querySelectorAll('.line');
+const linesPixel = document.querySelectorAll('.line');
 
 for (let i = 0; i < 5; i += 1) {
   let divLinha = linesPixel[i];
@@ -12,7 +12,8 @@ for (let i = 0; i < 5; i += 1) {
 function pinta(event) {
   event.target.style.backgroundColor = 'black';
 }
-let pixels = document.querySelectorAll('.pixel');
+
+const pixels = document.querySelectorAll('.pixel');
 
 for (let k in pixels) {
   pixels[k].addEventListener('click', pinta);
