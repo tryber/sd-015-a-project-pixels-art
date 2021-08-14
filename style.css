@@ -32,3 +32,8 @@
 .line .pixel {
   display: inline-block;
 }
+
+#clear-board {
+  margin-bottom: 15px;
+  width: 60px;
+}
