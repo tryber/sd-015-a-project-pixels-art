@@ -18,9 +18,11 @@ function fillColorPalette() {
       
     if (i === 0 ) {
       colors[i].style.backgroundColor = 'black';
-      colors[i].className += ' selected';
+      colors[i].classList.add('selected');
+      colors[i].addEventListener('click', colorPaletteSelection);
     } else {
       colors[i].style.backgroundColor = allColors[colorNum].name;
+      colors[i].addEventListener('click', colorPaletteSelection);
       }
 
     }
@@ -35,6 +37,14 @@ function generatePixels() {
     div.className = 'pixel';
     board.appendChild(div);
   }
+}
+
+function colorPaletteSelection(event) {
+  const colors = document.getElementsByClassName('color');
+  for (let value of colors) {
+    value.classList.remove('selected');
+  }
+  event.target.classList.add('selected');
 }
 /*
   É possível pegar todas as cores de forma manual para gerar
