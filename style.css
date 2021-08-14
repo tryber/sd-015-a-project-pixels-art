@@ -4,18 +4,6 @@
   width: 40px;
   display: inline-block;
 }
-.black {
-  background-color: black;
-}
-.green {
-  background-color: greenyellow;
-}
-.blue {
-  background-color: cyan;
-}
-.pink {
-  background-color: pink;
-}
 #pixel-board {
   border-spacing: 0px;
   border: black solid 1px;
@@ -27,4 +15,16 @@
   display: inline-block;
   background-color: white;
   margin: 0px;  
+}
+.black {
+  background-color: black;
+}
+.green {
+  background-color: greenyellow;
+}
+.blue {
+  background-color: cyan;
+}
+.pink {
+  background-color: pink;
 }
