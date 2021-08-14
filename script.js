@@ -106,3 +106,12 @@ const pixel = document.querySelectorAll('.pixel'); // pega os pixel
 for (let i = 0; i < pixel.length; i += 1) {
   pixel[i].addEventListener('click', pintaPixel); // add em cada um o addEventListener com a função pintaPixel
 }
+
+function limpaQuadro() {
+  for (let i = 0; i < pixel.length; i += 1) {
+    pixel[i].style.backgroundColor = 'white';
+  }
+}
+
+const btnLimpar = document.querySelector('#clear-board');
+btnLimpar.addEventListener('click', limpaQuadro);
