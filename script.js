@@ -11,6 +11,7 @@ const newPalletBlock = (location, qttOfBlocks) => {
 
 const newPixel = (location, basePixel) => {
   basePixel < 5 ? basePixel = 5: basePixel;
+  basePixel > 50 ? basePixel = 50: basePixel;
   let qttOfPixels = basePixel * basePixel;
   console.log()
   for (let count = 0; count < qttOfPixels; count += 1){
@@ -101,20 +102,34 @@ const eventCheckInputValue = (location, inputLocation)  => {
   })
 }
 
-window.onload = () =>{
-  firstPalletBlock.className = 'color selected'
+const changePaletteBlockCollor = (palletBlocks) => {
+  for (let index = 1;  index < palletBlocks.length; index += 1){
+    palletBlocks[index].style.backgroundColor = generateRandomRgb();
+  }
 }
 
-const sectionPalletCollor = document.getElementById('color-palette');
-newPalletBlock(sectionPalletCollor, 4)
+const generateRandomRgb = () => {
+  let red = parseInt(Math.random() * 255);
+  let blue = parseInt(Math.random() * 255);
+  let green = parseInt(Math.random() * 255);
+  return 'rgb('+ red + ', ' + blue + ', ' + green + ')'; 
+}
+window.onload = () =>{
+  firstPaletteBlock.className = 'color selected';
+  changePaletteBlockCollor(allPaletteBlocks)
+  
+}
+
+const sectionPaletteCollor = document.getElementById('color-palette');
+newPalletBlock(sectionPaletteCollor, 4)
 
 const sectionPixelBoard = document.getElementById('pixel-board');
 newPixel(sectionPixelBoard, 5);
 
-const firstPalletBlock = document.querySelector('.color');
+const firstPaletteBlock = document.querySelector('.color');
+const allPaletteBlocks = document.getElementsByClassName('color');
 
-
-eventGetPaletteclass('click', sectionPalletCollor)
+eventGetPaletteclass('click', sectionPaletteCollor)
 changePixelClass(sectionPixelBoard)
 const divButton = document.getElementById('button')
 createNewElement('button', 'Limpar', divButton, 1, 'id', 'clear-board')
