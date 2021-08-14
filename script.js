@@ -1,7 +1,21 @@
 console.log('hello world');
 
-// criar quatro div's e elas devem conter a classe color
+function CriarCoresAleatorias() { // finção de cores aleatorias
+  const red = Math.floor(Math.random() * 256);
+  const green = Math.floor(Math.random() * 256);
+  const blue = Math.floor(Math.random() * 256);
+  // rgb(red, green, blue);
+  const corCompleta = `rgb(${red}, ${green}, ${blue})`;
+  return corCompleta;
+}
 
+// para gerar as cores aleatorias pesquisei no google e achei o site abaixo:
+// https://wallacemaxters.com.br/blog/2021/02/20/como-gerar-cores-aleatorias-no-javascript
+// o Math.random é um metodo que pega numeros aleatorios e o floor arredonda eles para baixo
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/random
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/floor
+
+// criar quatro div's e elas devem conter a classe color
 function criarDivsDasCores() {
   const divDasPaletas = document.querySelector('#color-palette');
   for (let index = 0; index < 4; index += 1) {
@@ -16,11 +30,11 @@ const color1 = document.querySelectorAll('.color')[0];
 color1.style.backgroundColor = 'black';
 color1.classList.add('selected');
 const color2 = document.querySelectorAll('.color')[1];
-color2.style.backgroundColor = 'red';
+color2.style.backgroundColor = CriarCoresAleatorias();
 const color3 = document.querySelectorAll('.color')[2];
-color3.style.backgroundColor = 'blue';
+color3.style.backgroundColor = CriarCoresAleatorias();
 const color4 = document.querySelectorAll('.color')[3];
-color4.style.backgroundColor = 'green';
+color4.style.backgroundColor = CriarCoresAleatorias();
 
 // remove e adiciona classe nas cores da paleta.
 function trocarClasseSelected(event) {
