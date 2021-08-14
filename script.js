@@ -52,8 +52,8 @@ criarOQuadroDeArt();
 function pegarEstilo(event) {
   const evento = event.target;
   const pegarOEstiloSelecionado = document.querySelector('.selected');
-  const estilo = window.getComputedStyle(pegarOEstiloSelecionado, null).
-  getPropertyValue('background-color');
+  const estilo = window.getComputedStyle(pegarOEstiloSelecionado, null)
+    .getPropertyValue('background-color');
   evento.style.backgroundColor = estilo;
 }
 
