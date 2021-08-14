@@ -5,14 +5,39 @@
   display: inline-block;
 }
 
-.pixels {
-  width: 25px;
-  height: 25px;
+h1 , #color-palette {
+  text-align: center;
+  align-items: center;
 }
 
-.pixel-board {
-  width: 150px;
-  height: 150px;
+#clear-board {
+  display: block;
+  margin: auto;
+}
+
+#generate-board {
+  display: inline;
+  margin: 25px auto;
+}
+
+.container {
+  text-align: center;
+}
+
+.pixel {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  display: inline-block;
+  border: 1px solid black;
+}
+
+#pixel-board {
+  border: 1px solid black;
+  text-align: center;
+  width: max-content;
+  padding: 0;
+  margin: 25px auto;
 }
 
 #color-palette div:nth-of-type( 1 ) {
