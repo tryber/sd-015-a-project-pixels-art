@@ -11,10 +11,22 @@
     border-color: black;
     border-width: 1px;
     display: inline-flex;
-    padding: 15px 15px;
-    margin: 10px 10px;
+    padding: 15px;
+    margin: 10px;
+}
+
+#pixel-board{
+    width: 200px;
 }
 
 .pixel {
     background-color: white;
+    box-sizing: border-box;
+    width:40px;
+    height:40px;
+    border: solid;
+    border-color: black;
+    border-width: 1px;
+    list-style: none;
+    display: inline-flex;
 }
