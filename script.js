@@ -61,7 +61,8 @@ const pixelBoxEmpty = document.getElementsByClassName('pixel');
 function colorPaint(event) {
   const colorSelectedNow = document.querySelector('.selected');
   const colorSpecs = colorSelectedNow.style.backgroundColor;
-  event.target.style.backgroundColor = colorSpecs;
+  const alvo = event.target;
+  alvo.style.backgroundColor = colorSpecs;
 }
 
 function colorPaintB() {
