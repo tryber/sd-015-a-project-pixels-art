@@ -17,6 +17,15 @@ for (index = 1; index <= numeroDeQuadrados; index += 1) {
   criarQuadrado.classList.add('pixel');
 }
 
+function pixelBranco(){
+  let quadrado = document.querySelectorAll('.pixel')
+  for(index = 0; index < quadrado.length; index +=1){
+    quadrado[index].style.backgroundColor = 'white';
+  }
+}
+
+pixelBranco()
+
 function pretoPrimeiro() {
   let estiloPreto = document.querySelector('.color');
   window.onload = function () {
@@ -41,9 +50,11 @@ function cliqueConsole(event) {
 cliqueConsole();
 
 function cor() {
-  let corSelecionada =
-    document.querySelectorAll('.color')[0].style.backgroundColor;
-  console.log(corSelecionada);
+  let quadrado = document.querySelectorAll('.pixel');
+  for(index = 0; index < quadrado.length; index +=1)
+  quadrado[index].addEventListener('click', function(event){
+    event.target.style.backgroundColor = document.querySelector('.selected').style.backgroundColor;
+  })
 }
 
 cor();
