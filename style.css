@@ -1,9 +1,10 @@
 #title{
   color: red;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 40px;
   text-align: center;
   width: 100%;
   margin: 20px;
-
 }
 #black{
   background-color:black;
@@ -14,6 +15,8 @@
   border-width: 1px;
   border-style: solid;
   border-color: black;
+  margin-left: auto;
+  margin-right: auto;
 }
 #red{
   background-color: red;
@@ -25,6 +28,8 @@
   border-width: 1px;
   border-style: solid;
   border-color: black;
+  margin-left: auto;
+  margin-right: auto;
 }
 #green {
   background-color: green;
@@ -36,6 +41,8 @@
   border-width: 1px;
   border-style: solid;
   border-color: black;
+  margin-left: auto;
+  margin-right: auto;
 }
 #yellow {
   background-color: yellow;
@@ -46,6 +53,8 @@
   border-width: 1px;
   border-style: solid;
   border-color: black;
+  margin-left: auto;
+  margin-right: auto;
 }
 #pixel-board {
   margin-top: 15px;
@@ -59,6 +68,9 @@
   padding-right: 10px;
   padding-top: 20px;
   padding-bottom: 0px;
+  margin-left: auto;
+  margin-right: auto;
+
  }
  .pixel {
   background-color: #fff;
@@ -67,4 +79,6 @@
   display: inline-block;
   border-width: 1px solid black;
   border: black solid 1px;
+  margin-left: auto;
+  margin-right: auto;
  }
