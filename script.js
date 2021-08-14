@@ -18,7 +18,7 @@ function sizePixel() {
   const eachPixel = document.querySelectorAll('.pixel');
   const newPixelSize = 40;
   const pixelBoard = document.getElementById('pixel-board');
-  const pixelBoardSize = 5 * newPixelSize +10;
+  const pixelBoardSize = 5 * newPixelSize + 10;
   pixelBoard.style.width = pixelBoardSize + 'px';
   pixelBoard.style.height = pixelBoardSize + 'px';
 
@@ -59,3 +59,15 @@ function paint(pixelTrigger) {
 }
 
 document.getElementById('pixel-board').addEventListener('click', paint);
+
+// Cleaning the board
+
+function cleanBoard() {
+  const allPixels = document.getElementsByClassName('pixel');
+  
+  for (i = 0; i < allPixels.length; i += 1) {
+    allPixels[i].style.backgroundColor = 'white';
+  }
+}
+
+document.getElementById('clear-board').addEventListener('click', cleanBoard);
