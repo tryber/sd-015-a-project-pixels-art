@@ -1,10 +1,9 @@
 let size = 5;
-let board = document.querySelector('#pixel-board');
-let pixelPalett = document.querySelector('#color-palette');
-let colors = document.querySelectorAll('.color');
-let boardPixels = document.getElementsByClassName('board-pixels');
-let body = document.querySelector('#body');
-let pixels = document.getElementsByClassName('pixel');
+const board = document.querySelector('#pixel-board');
+const pixelPalett = document.querySelector('#color-palette');
+const colors = document.querySelectorAll('.color');
+const body = document.querySelector('#body');
+const generateBoard = document.querySelector('#generate-board');
 
 function createLines(size) {
   for (let line = 1; line <= size; line += 1) {
@@ -23,6 +22,7 @@ function createLines(size) {
 } 
 createLines(size);
 
+const boardPixels = document.getElementsByClassName('board-pixels');
 
 window.onload = function() {
   document.querySelector('.color').classList.add('selected');
@@ -34,16 +34,27 @@ pixelPalett.addEventListener('click', function(event) {
   event.target.classList.add('selected');
 })
 
-
-board.addEventListener('click', function(event) {
+const pixels = document.querySelectorAll('.pixel');
+pixels.forEach(function(element) {
+  element.addEventListener('click', function(event) {
   event.target.style.backgroundColor = document.querySelector('.selected').style.backgroundColor;
-
+  })
 })
 
+const buttonID = document.querySelector('#clear-board');
 function clearButton() {
   let createButton = document.createElement('button');
-  createButton.id = 'clear-board';
   createButton.innerText = 'Limpar';
-  body.appendChild(createButton);
+  buttonID.appendChild(createButton);  
 }
 clearButton();
+
+function clearBoard() {
+  
+}
+
+function createInput() {
+  let input = document.createElement('input');
+  input.id = 'board-size';
+  generateBoard.appendChild(input);
+}

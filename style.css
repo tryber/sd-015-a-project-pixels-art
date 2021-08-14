@@ -23,3 +23,11 @@
 #pixel-board {
   font-size: 0;
 }
+
+#clear-board {
+  padding: 15px;
+}
+
+#generate-board {
+  padding: 30px;
+}
