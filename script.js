@@ -19,9 +19,11 @@ const newPixel = (location, qttOfPixels) => {
 
 const newSelector = (qttOfSelector, element, selector, selectorName) => {
     for (let index = 0; index < qttOfSelector; index += 1) {
+      
       switch (selector) {
         case 'id':
-          element[index].setAttribute(selector, selectorName); 
+          element.length !== 'undefined' ? element = element : element = element[index];
+          element.setAttribute(selector, selectorName); 
           break;
   
         case 'class':
@@ -32,9 +34,9 @@ const newSelector = (qttOfSelector, element, selector, selectorName) => {
           return 0;
           break;
       } 
-    }
+    } 
 }
-const eventGetElementColor = (event, location) =>{
+const eventGetPaletteclass = (event, location) =>{
   location.addEventListener(event, (eventTrigger) => {
     // console.log(eventTrigger)
     if(eventTrigger.target.classList.contains('color')){
@@ -57,7 +59,33 @@ const eventGetElementColor = (event, location) =>{
   //   }) 
   // }
 }
+const changePixelClass = (location) => {
+  location.addEventListener('click', (event) => {
+    if(event.target.classList.contains('pixel') ){
+      const selectedPixel = event.target;
+      const selectedPalette = document.querySelector('.selected');
+      const selectedColor = window.getComputedStyle(selectedPalette).backgroundColor
+      selectedPixel.style.backgroundColor = selectedColor;
+    }
+  })
+}
 
+const createNewElement = (element, elementContent, location, qttOfElements, selector, selectorName) =>{
+  for(let index = 0; index < qttOfElements; index += 1){
+    const newElement = document.createElement(element);
+    newElement.innerHTML = elementContent;
+    location.appendChild(newElement);
+    // console.log(typeof location.appendChild(newElement)) 
+    newSelector(qttOfElements, location.appendChild(newElement), selector, selectorName);
+  }
+}
+const pixelBoardDefaultColor = () =>{
+  location.reload()
+  return false;
+}
+const resetToDefaultColor = (location) =>{
+  location.addEventListener('click', pixelBoardDefaultColor)
+} 
 const sectionPalletCollor = document.getElementById('color-palette');
 newPalletBlock(sectionPalletCollor, 4)
 
@@ -69,4 +97,9 @@ window.onload = () =>{
   firstPalletBlock.className = 'color selected'
 }
 
-eventGetElementColor('click', sectionPalletCollor)
+eventGetPaletteclass('click', sectionPalletCollor)
+changePixelClass(sectionPixelBoard)
+const divButton = document.getElementById('button')
+createNewElement('button', 'Limpar', divButton, 1, 'id', 'clear-board')
+const clearButton = document.getElementById('clear-board');
+resetToDefaultColor(clearButton)

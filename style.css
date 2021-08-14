@@ -8,6 +8,8 @@ body {
   height: 100px;
   display: inline-block;
   margin: 5px;
+  background-color: rgb(255, 255, 255);
+
 }
 .color:nth-child(1){
   background-color: black;
@@ -36,4 +38,8 @@ body {
   display: inline-block;
   font-size: 0;
   background-color: rgb(255, 255, 255);
+}
+button {
+  margin: 5px;
+  display: block;
 }
