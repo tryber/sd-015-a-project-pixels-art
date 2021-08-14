@@ -2,6 +2,7 @@ const div = document.createElement("div");
 div.className = 'pixel';
 
 let divs = 5;
+let totalDivs = divs * divs
 
 let fatherDiv = document.getElementById("pixel-board");
 
@@ -41,8 +42,16 @@ function changeColor(event) {
     event.target.style.backgroundColor = selectedColor.id
 }
 
+const button = document.getElementById("clear-board")
 
+function clearPixels() {
+    for (i = 0; i < totalDivs; i += 1) {
+    let teste = document.querySelectorAll(".pixel")[i]
+    teste.style.backgroundColor = "white"
+    }
+}
 
+button.addEventListener("click", clearPixels)
 
         
     
