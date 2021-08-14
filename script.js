@@ -50,9 +50,11 @@ function criarOQuadroDeArt() {
 criarOQuadroDeArt();
 
 function pegarEstilo(event) {
+  const evento = event.target
   const pegarOEstiloSelecionado = document.querySelector('.selected');
-  const estilo = window.getComputedStyle(pegarOEstiloSelecionado, null).getPropertyValue("background-color");
-    event.target.style.backgroundColor = estilo;
+  const estilo = window.getComputedStyle(pegarOEstiloSelecionado, null).
+  getPropertyValue("background-color");
+  evento.target.style.backgroundColor = estilo;
 }
 
 function pintarPixel() {
