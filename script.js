@@ -63,7 +63,7 @@ function paintPixel(event) {
 botao.addEventListener("click", limpaQuadro);
 
 function limpaQuadro(event) {
-    for (let index = 1; index < spans.length; index += 1) {
+    for (let index = 0; index < spans.length; index += 1) {
         let pixelAtual = spans[index];
         pixelAtual.style.backgroundColor = "white";
     }
