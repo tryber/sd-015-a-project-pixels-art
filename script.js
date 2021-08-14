@@ -31,21 +31,6 @@ function selectedF() {
 }
 selectedF();
 
-function pintPixel() {
-  const pixelsBoardLines = document.querySelectorAll('#pixel-board .pixelLine');
-
-  function paintClick(event) {
-    const colorSelected = document.querySelector('.selected');
-    const inkwell = window.getComputedStyle(colorSelected).backgroundColor;
-    const evento = event.target;
-    evento.style.backgroundColor = inkwell;
-  }
-  for (let i = 0; i < pixelsBoardLines.length; i += 1) {
-    pixelsBoardLines[i].addEventListener('click', paintClick);
-  }
-}
-pintPixel();
-
 function clear() {
   const clearButton = document.querySelector('#clear-board');
   const pixels = document.querySelectorAll('.pixel');
@@ -59,9 +44,10 @@ function clear() {
 }
 clear();
 
+const vqvButton = document.querySelector('#generate-board');
+const sizeInput = document.querySelector('#board-size');
+
 function boardSize() {
-  const vqvButton = document.querySelector('#generate-board');
-  const sizeInput = document.querySelector('#board-size');
   const boardPx = document.querySelector('#pixel-board');
   function onClick() {
     if (sizeInput.value === '') {
@@ -82,9 +68,7 @@ function boardSize() {
 boardSize();
 
 function alerts() {
-  const vqvButton = document.querySelector('#generate-board');
   function onClickTwo() {
-    const sizeInput = document.querySelector('#board-size');
     if (sizeInput.value > 50) {
       alert('Valor Máximo de 50px');
     } else if (sizeInput.value < 5) {
@@ -95,33 +79,85 @@ function alerts() {
 }
 alerts();
 
-// function randomColors() {
-//   const r = Math.random() * 255;
-//   const g = Math.random() * 255;
-//   const b = Math.random() * 255;
-//   const rgbArray = [r, g, b];
-//   const virgula = ', ';
-//   let rgbcolor = '';
-//   for (let i = 0; i < rgbArray.length; i += 1) {
-//     const inteiro = Math.round((rgbArray[i]));
-//     if (i < 2) {
-//       rgbcolor = rgbcolor + inteiro + virgula;
-//     } else {
-//       rgbcolor += inteiro;
-//     }
-//   }
-//   const fraseRgb = 'rgb (';
-//   const fechaParentesis = ')';
-//   const rgb = fraseRgb + rgbcolor + fechaParentesis;
-//   return rgb;
-// }
+function boxFixed() {
+  const boardCountainer = document.querySelector('#board-countainer');
+  const px = 'px';
+  function onClick() {
+    if (sizeInput.value === '') {
+      boardCountainer.style.minWidth = (5 * 43) + px;
+    } else {
+      boardCountainer.style.minWidth = (sizeInput.value * 43) + px;
+    }
+  }
+  // eslint-disable-next-line sonarjs/no-use-of-empty-return-value
+  window.onload = onClick();
+  vqvButton.addEventListener('click', onClick);
+}
+boxFixed();
 
-// function aplyColors() {
-//   const vermelho = document.querySelector('#vermelho');
-//   const laranja = document.querySelector('#laranja');
-//   const amarelo = document.querySelector('#amarelo');
-//   vermelho.style.backgroundColor = randomColors();
-//   laranja.style.backgroundColor = randomColors();
-//   amarelo.style.backgroundColor = randomColors();
-// }
-// aplyColors();
+function lineFixed() {
+  const linePixel = document.querySelector('#board-countainer');
+  const px = 'px';
+  function onClick() {
+    if (sizeInput.value === '') {
+      linePixel.style.maxWidth = (5 * 43) + px;
+    } else {
+      linePixel.style.maxWidth = (sizeInput.value * 43) + px;
+    }
+  }
+  // eslint-disable-next-line sonarjs/no-use-of-empty-return-value
+  window.onload = onClick();
+  vqvButton.addEventListener('click', onClick);
+}
+lineFixed();
+
+function pintPixel() {
+  const pixelsBoardLines = document.querySelectorAll('#pixel-board .pixelLine');
+
+  function paintClick(event) {
+    const colorSelected = document.querySelector('.selected');
+    const inkwell = window.getComputedStyle(colorSelected).backgroundColor;
+    const evento = event.target;
+    evento.style.backgroundColor = inkwell;
+  }
+  for (let i = 0; i < pixelsBoardLines.length; i += 1) {
+    pixelsBoardLines[i].addEventListener('click', paintClick);
+  }
+}
+pintPixel();
+vqvButton.addEventListener('click', pintPixel);
+
+function randomColors() {
+  const r = Math.random() * 255;
+  const g = Math.random() * 255;
+  const b = Math.random() * 255;
+  const rgbArray = [r, g, b];
+  const virgula = ', ';
+  let rgbcolor = '';
+  for (let i = 0; i < rgbArray.length; i += 1) {
+    const inteiro = Math.round((rgbArray[i]));
+    if (i < 2) {
+      rgbcolor = rgbcolor + inteiro + virgula;
+    } else {
+      rgbcolor += inteiro;
+    }
+  }
+  const fraseRgb = 'rgb(';
+  const fechaParentesis = ')';
+  const rgb = fraseRgb + rgbcolor + fechaParentesis;
+  return rgb;
+}
+
+function aplyColors(x) {
+  const meuX = x;
+  meuX.style.backgroundColor = randomColors();
+}
+const vermelho = document.querySelector('#vermelho');
+const laranja = document.querySelector('#laranja');
+const amarelo = document.querySelector('#amarelo');
+// eslint-disable-next-line sonarjs/no-use-of-empty-return-value
+window.onload = aplyColors(vermelho);
+// eslint-disable-next-line sonarjs/no-use-of-empty-return-value
+window.onload = aplyColors(laranja);
+// eslint-disable-next-line sonarjs/no-use-of-empty-return-value
+window.onload = aplyColors(amarelo);
