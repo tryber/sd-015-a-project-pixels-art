@@ -5,8 +5,8 @@ colocaClasse.classList.add('selected')
 
 // Requisito 07 clicando na cor
 const clickColor = document.querySelectorAll('.color');
-for(let index of clickColor) {
-  
+for (let index = 0; index < clickColor.length; index += 1) {
+  clickColor[index].addEventListener('click', targetColor);
 }
 
 const selectedColor = document.getElementsByClassName('color');
@@ -20,6 +20,6 @@ function removeSelect () {
 function targetColor () {
   removeSelect();
   event.target.classList.add('selected');
-
 }
-clickColor.addEventListener('click', targetColor)
+
+// Requisito 8 
