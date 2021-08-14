@@ -20,11 +20,25 @@ for (index = 1; index <= numeroDeQuadrados; index +=1){
 
 
 function pretoPrimeiro(){
-let estiloPreto = document.querySelector('.color');
-window.onload = function(){
-    if(estiloPreto.style.backgroundColor === 'black'){
-        estiloPreto.classList.add('selected')
+    let estiloPreto = document.querySelector('.color');
+    window.onload = function(){
+        if(estiloPreto.style.backgroundColor === 'black'){
+            estiloPreto.classList.add('selected')
     }
 }
 }
+
 pretoPrimeiro();
+
+function cliqueConsole(event){
+    let paletaDeCores = document.querySelectorAll('.color');
+    for (index = 0; index < paletaDeCores.length; index +=1){
+        paletaDeCores[index].addEventListener('click', function(event){
+            let classeSelected = document.querySelector('.selected')
+            classeSelected.classList.remove('selected');
+            event.target.classList.add('selected');
+        })
+    }
+}
+
+cliqueConsole();
