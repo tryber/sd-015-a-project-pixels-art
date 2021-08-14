@@ -40,7 +40,7 @@ function putColor(event) {
 const createButton = document.createElement("button");
 function cleanButton() {
 createButton.id = "clear-board";
-createButton.innerText = "Limpar essa merda";
+createButton.innerText = "Limpar";
 const colorPalette = document.getElementById("color-palette");
 colorPalette.appendChild(createButton);
 createButton.style.display = "block";
@@ -49,6 +49,7 @@ createButton.style.margin = "10px 0px 0px 110px";
 
 createButton.addEventListener("click", allPixelsWhite);
 function allPixelsWhite() {
-for(let index of allPixels)
+for(let index of allPixels) {
 index.style.backgroundColor = "white";
+}
 }
