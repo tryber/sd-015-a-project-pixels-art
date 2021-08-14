@@ -1,0 +1,27 @@
+ul {
+    list-style: none;
+   
+}
+li{
+    
+    display: inline-block;
+}
+.color {
+    width: 100px;
+    height: 100px;
+    margin-left: 5px;
+    border: 1px solid black;
+}
+#black{
+    background-color: black;
+}
+#blue {
+    background-color: blue;
+    
+}
+#pink {
+    background-color: pink;
+}
+#red {
+    background-color: red;
+}
