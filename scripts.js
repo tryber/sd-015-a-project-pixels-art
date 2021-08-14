@@ -3,7 +3,7 @@ clickButton.addEventListener('click', color);
 
 function color(event) {
   const colorsAdd = document.querySelectorAll('.color');
-  for (let index = 0; index < colorsAdd.length; index += 1){
+  for (let index = 0; index < colorsAdd.length; index += 1) {
     colorsAdd[index].classList.remove('selected');
   }
   event.target.classList.add('selected');
@@ -11,19 +11,22 @@ function color(event) {
 
 const changeColor = document.getElementsByClassName('pixel');
 
-for (let index = 0; index < changeColor.length; index += 1) {
-  changeColor[index].addEventListener('click', selectColor);
-}
 function selectColor(event) {
+  const evento = event;
   const inColors = document.querySelector('.selected');
   const change = getComputedStyle(inColors);
-  event.target.style.backgroundColor = change.backgroundColor;
+  evento.target.style.backgroundColor = change.backgroundColor;
+}
+
+for (let index = 0; index < changeColor.length; index += 1) {
+  changeColor[index].addEventListener('click', selectColor);
 }
 
 const resetButton = document.getElementById('clear-board');
 
 function makePixelsWhite(pixel) {
-  pixel.style.backgroundColor = 'white';
+  const white = pixel;
+  white.style.backgroundColor = 'white';
 }
 
 function selectPaintPixel() {
