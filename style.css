@@ -8,19 +8,19 @@
 }
 
 
-/* #black {
+.pixel {
+  display:inline-block; 
+  border: solid black 1px;
+  width: 40px ;
+  height: 40px;
+}
 
-    background: black;
-  }
-  
-  #blue{
-    background: blue;
-  }
-  
-  #blueviolet {
-    background: blueviolet;
-  }
-  
-  #hotpink {
-    background:hotpink;
-  } */
+#pixel-board{
+ display: inline-block;
+ border: solid black 1px;
+ width: 210px;
+ height: 225px; 
+
+
+    
+}

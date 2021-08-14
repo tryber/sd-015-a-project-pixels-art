@@ -9,8 +9,21 @@ function myPalette(){
     pixelPalette.classList.add('color');  
     pixelPalette.style.backgroundColor = colorsPalette;
     divPalette.appendChild(pixelPalette);
-
   }
 }
 myPalette ();
 
+
+function pixelBoard(){
+  const divBoard = document.querySelector('#pixel-board');
+  for (i=0; i < 5; i += 1){
+  for (i2 =0; i2 < 5; i2 += 1){
+  const pixel = document.createElement('div')
+  pixel.classList.add('pixel')
+  pixel.style.backgroundColor = 'white';
+  divBoard.appendChild(pixel);
+   }
+ }
+}
+
+pixelBoard();
