@@ -30,3 +30,7 @@
     list-style: none;
     display: inline-flex;
 }
+
+#pixel-board {
+    background-color: blueviolet;
+}
