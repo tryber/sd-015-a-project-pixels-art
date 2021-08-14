@@ -5,7 +5,8 @@
   height: 40px;
 }
 
-#color1 {
+ #color1 {
+  position: relative;
   border: 1px solid black;
   background-color: black;
 }
@@ -24,3 +25,40 @@
    border: 1px solid black;
    background-color: yellow;
 }
+
+.pixel{
+  display: inline-block;
+  border:1px, black, solid;
+  width: 40px;
+  height: 40px;
+}
+
+#square1{
+  border: 1px solid black;
+  background-color:white;
+}
+
+#square2{
+  border: 1px solid black;
+  background-color:white;
+}
+
+
+#square3{
+  border: 1px solid black;
+  background-color:white;
+}
+
+
+#square4{
+  border: 1px solid black;
+  background-color:white;
+}
+
+
+#square5{
+  border: 1px solid black;
+  background-color:white;
+}
+
+
