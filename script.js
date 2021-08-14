@@ -3,10 +3,6 @@ const input = document.getElementById('board-size');
 const minumum = 5;
 const maximum = 50;
 const rgb = 'rgb(255,255,255)';
-cores[0].style.background = 'black';
-cores[1].style.background = 'red';
-cores[2].style.background = 'blue';
-cores[3].style.background = 'green';
 
 const quadroPixel = document.getElementById('pixel-board');
 const btn = document.querySelector('#clear-board');
@@ -111,3 +107,16 @@ cores[3].addEventListener('click', trocaCor);
 quadroPixel.addEventListener('click', pintaGrid);
 
 btn.addEventListener('click', clearQuadro);
+
+function gerarCor(opacidade = 1) {
+  const r = Math.random() * 255;
+  const g = Math.random() * 255;
+  const b = Math.random() * 255;
+  
+  return `rgba(${r}, ${g}, ${b}, ${opacidade})`;
+}
+
+cores[0].style.background = 'black';
+cores[1].style.background = gerarCor();
+cores[2].style.background = gerarCor();
+cores[3].style.background = gerarCor();
