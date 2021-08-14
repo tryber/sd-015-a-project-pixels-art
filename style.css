@@ -1,9 +1,18 @@
+body {
+  text-align: center;
+  background-image: linear-gradient(rgb(248, 249, 250), rgb(222, 226, 230), rgb(173, 181, 189));
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+}
+
 .color {
   display: inline-block;
   border-style: solid;
   border-width: 1px;
   height: 40px;
   width: 40px;
+  margin: 7px;
+  border-radius: 10%;
 }
 
 #color1 {
@@ -29,9 +38,19 @@
   width: 40px;
   background-color: white;
   display: inline-block;
+  margin: auto;
 }
 
 tr {
   width: auto;
   height: auto;
 }
+
+table {
+  margin: auto;
+}
+
+#meio {
+  margin: 10px;
+}
+

@@ -1,9 +1,9 @@
-// ex 6 // 
+// requisito 6 // 
 
 const corInicial = document.querySelector('.color');
 corInicial.classList += ' selected';
 
-//ex 7 //
+//requisito 7 //
 
 const tdColor = document.querySelectorAll('.color');
 for (const element of tdColor) {
@@ -15,12 +15,15 @@ function changeSelected(event) {
   event.target.className = 'color selected';
 }
 
-//ex 8 //
-const paint = document.querySelectorAll('.pixel');
+//requisito 8 //
 
-for (const element of paint) {
-  element.addEventListener('click', changeColor);
+function changeColor2() {
+  let paint = document.querySelectorAll('.pixel');
+  for (const element of paint) {
+    element.addEventListener('click', changeColor);
+  }
 }
+changeColor2()
 
 function changeColor(event) {
   const colorSelected = document.getElementsByClassName('selected')[0];
@@ -28,18 +31,19 @@ function changeColor(event) {
   event.target.style.backgroundColor = colorPaint.backgroundColor;
 }
 
-//ex 9 //
+//requisito 9 //
 
 const clear = document.getElementById('clear-board');
 clear.addEventListener('click', limparQuadro);
 
 function limparQuadro() {
+  let paint = document.querySelectorAll('.pixel');
   for (element of paint) {
     element.style.backgroundColor = 'white';
   }
 }
 
-// ex10 e 11//
+// requisito10 e 11//
 
 let box = document.getElementById('board-size');
 let botao = document.getElementById('generate-board');
@@ -59,7 +63,7 @@ function callFunction() {
 }
 
 function funcaoLessFive() {
-  pixelBoard.innerText = '';
+  pixelBoard.innerTrequisitot = '';
   for (let linha = 1; linha <= 5; linha += 1) {
     let tr = document.createElement('tr');
     pixelBoard.appendChild(tr);
@@ -67,7 +71,7 @@ function funcaoLessFive() {
       let td = document.createElement('td');
       td.className = 'pixel'
       tr.appendChild(td);
-      td.addEventListener('click', changeColor);
+      td.addEventListener('click', changeColor2);
     }
   }
 }
@@ -82,7 +86,7 @@ function valorValido() {
       const td = document.createElement('td');
       td.className = 'pixel';
       tr.appendChild(td);
-      td.addEventListener('click', changeColor);
+      td.addEventListener('click', changeColor2);
     }
   }
 }
@@ -116,4 +120,4 @@ function randomColors() {
   let random = `rgb(${blue}, ${red}, ${green})`;
   return (random);
 }
-window.onload = changeRandomColor()
+window.onload = changeRandomColor();
