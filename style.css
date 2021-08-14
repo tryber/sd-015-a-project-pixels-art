@@ -84,3 +84,8 @@ body {
     border: 2px solid black;
 }
 
+.generate {
+    text-align: center;
+    margin-top: 15px;
+}
+
