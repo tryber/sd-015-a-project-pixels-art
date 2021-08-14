@@ -93,7 +93,7 @@ const eventCheckInputValue = (location, inputLocation)  => {
   location.addEventListener('click', () =>{
     let boardSizeValue = parseInt(inputLocation.value)
     if (boardSizeValue < 1 ||  isNaN(boardSizeValue)){
-      alert("Board inválido")
+      alert("Board inválido!")
     }else{
       newPixel(sectionPixelBoard, inputLocation.value)
     }
