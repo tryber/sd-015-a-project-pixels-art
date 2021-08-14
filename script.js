@@ -14,15 +14,15 @@ function randomColors() {
     color9: 'Darkslategray',
     color10: 'Lightsalmon',
     color11: 'Tan',
-    color12: 'Darkgoldenrod'
+    color12: 'Darkgoldenrod',
   };
 
-  const paletteColorsArray = document.getElementById ('color-palette').children; 
+  const paletteColorsArray = document.getElementById('color-palette').children; 
 
   for (let index = 1; index < paletteColorsArray.length; index += 1) {
     const randomId = colorsPaletteArray[Math.floor(Math.random()*colorsPaletteArray.length)]; // https://css-tricks.com/snippets/javascript/select-random-item-array/
-    paletteColorsArray[index].id = randomId
-    paletteColorsArray[index].innerText = colorsPaletteObject[randomId]
+    paletteColorsArray[index].id = randomId;
+    paletteColorsArray[index].innerText = colorsPaletteObject[randomId];
   }
 }
 
@@ -30,14 +30,14 @@ function randomColors() {
 function selectPaletteColor() {
   const paletteColorsArray = document.getElementById('color-palette').children;
 
-  for (let element of paletteColorsArray) {
+  for (const element of paletteColorsArray) {
     element.addEventListener('click', function () {
-      let currentSelectedElement = document.querySelector('.selected');
+      const currentSelectedElement = document.querySelector('.selected');
       currentSelectedElement.classList.remove('selected');
       currentSelectedElement.style.fontSize = '1.5em';
       element.classList.add('selected');
       element.style.fontSize = '2em';
-    })
+    });
   }
 }
 
@@ -45,11 +45,11 @@ function selectPaletteColor() {
 function coloring() {
   const pixelsArray = document.getElementById('pixel-board').children;
 
-  for (let pixel of pixelsArray) {
+  for (const pixel of pixelsArray) {
     pixel.addEventListener('click', function () {
-      let currentSelectedElement = document.querySelector('.selected');
+      const currentSelectedElement = document.querySelector('.selected');
       pixel.style.backgroundColor = currentSelectedElement.innerText;
-    })
+    });
   }
 }
 
@@ -60,10 +60,10 @@ function cleanPixels() {
   getCleanButton.addEventListener('click', function () {
     const pixelsArray = document.getElementById('pixel-board').children;
 
-    for (let pixel of pixelsArray) {
+    for (const pixel of pixelsArray) {
       pixel.style.backgroundColor = 'white';
     }
-  })
+  });
 }
 
 window.onload = function () {
@@ -74,4 +74,4 @@ window.onload = function () {
   selectPaletteColor();
   coloring();
   cleanPixels();
-}
+};
