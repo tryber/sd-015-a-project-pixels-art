@@ -23,6 +23,8 @@ function randomColors() {
     const randomId = colorsPaletteArray[Math.floor(Math.random() * colorsPaletteArray.length)]; // https://css-tricks.com/snippets/javascript/select-random-item-array/
     paletteColorsArray[index].id = randomId;
     paletteColorsArray[index].innerText = colorsPaletteObject[randomId];
+    const indexOfRandomID = colorsPaletteArray.indexOf(randomId);
+    colorsPaletteArray.splice(indexOfRandomID,1);
   }
 }
 
