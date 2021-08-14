@@ -19,9 +19,11 @@ function changeTagSelected(tagSelected) {
 }
 
 let tagSelected = '';
+
 colorSelected.forEach((color) => {
   if (color.classList.contains('selected')) {
     tagSelected = color;
+
     changeTagSelected(tagSelected);
   }
 });
@@ -31,7 +33,9 @@ const whitePixels = document.querySelectorAll('.pixel');
 whitePixels.forEach((pixel) => {
   pixel.addEventListener('click', () => {
     const paletSelected = document.querySelector('.selected');
+
     const pixelWhite = pixel;
+
     if (paletSelected.classList.contains('black')) {
       pixelWhite.style.backgroundColor = 'black';
     }
