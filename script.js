@@ -12,10 +12,9 @@ function createPixelBoard(n) {
   }
 }
 createPixelBoard(5);
-//Function create Pixel Board:
-//a sequência de ação de um for dentro de outro é simultaneamente, neste caso, preencher
-//vertical ehorizontalmente com pixels até n-1 unidades.
-window.onload = function () {
-  let addClassName = document.getElementById('black');
-  addClassName.classList.add('selected');
-};
+
+function addClassName(color) {
+  const newClass = document.getElementById(color);
+  newClass.classList.add('selected');
+}
+addClassName('black');
