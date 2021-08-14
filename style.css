@@ -56,6 +56,7 @@ header {
    padding: 10px;
    box-shadow: 5px 5px 5px;
  }
+ 
  .pixel {
   display: inline-block;
   border: black solid 1px;

@@ -17,9 +17,26 @@ function removeSelect () {
   }
 }
 
-function targetColor () {
+function targetColor (event) {
   removeSelect();
   event.target.classList.add('selected');
 }
 
-// Requisito 8 
+// Requisito 8 colorindo as caixas
+const setBox = document.querySelectorAll('.pixel');
+
+for (let index = 0; index < setBox.length; index += 1) {
+  setBox[index].addEventListener('click', fillBoxPixel);
+}
+
+function fillBoxPixel (event) {
+  const boxPixel = event.target;
+  const selectedColor = document.querySelector('.selected')
+  const style = getComputedStyle(selectedColor)
+  boxPixel.style.backgroundColor = style.backgroundColor;
+}
+
+// Requisito 9 
+
+
+
