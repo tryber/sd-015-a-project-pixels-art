@@ -58,6 +58,11 @@ document.getElementById('yellow').style.backgroundColor = 'yellow';   // por alg
   });
 
 // Desafio 9 
+
+let resetButton = document.getElementById('clear-board');
+resetButton.addEventListener('click', function() {
+  window.location.reload()
+})
   
 
 

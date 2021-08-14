@@ -31,11 +31,13 @@
     height: 40px;
     display: inline-block;
     background-color: white;
+
 }
 
 #pixel-board {
     width: 235px;
     height: 235px;                /*para corrigir alteração de cor do fundo do board*/
+    margin-top: 5px;                /*espaco entre a pixel-board e o botao limpar*/
 }
 
 .selected {
