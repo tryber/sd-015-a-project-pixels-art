@@ -8,7 +8,7 @@ window.onload = function() {
 const quadro = document.querySelector("#pixel-board");
 let colors = document.getElementById("cores")
 let selectedColor = document.getElementsByClassName("black")[0]
-
+const pixels = document.getElementById("pixel-board");
 
 createSpans();
 
@@ -33,4 +33,23 @@ function getColor (event) {
     selectedColor.classList.remove("selected")
     selectedColor = event.target;
     selectedColor.className = selectedColor.className + " selected";
+}
+
+
+
+pixels.addEventListener("click", paintPixel);
+
+function paintPixel(event) {
+    let pixel = event.target;
+    let selecionado = document.getElementsByClassName("selected")[0]
+    
+    if (selecionado.className === "color black selected") {
+        pixel.style.backgroundColor = "black";
+    } else if (selecionado.className === "color yellow selected") {
+        pixel.style.backgroundColor = "yellow";
+    } else if (selecionado.className === "color red selected") {
+        pixel.style.backgroundColor = "red";
+    } else if (selecionado.className === "color purple selected") {
+        pixel.style.backgroundColor = "purple";
+    }
 }
