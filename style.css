@@ -3,31 +3,31 @@
   width: 50px;
   height: 50px;
   border: 1px black solid;
+  background-color: pink;
 }
-.black{
-  background-color: black;
+.black {
+ background-color: black;
 }
-.red{
-  background-color: red;
+.red {
+ background-color: red;
 }
-.blue{
-  background-color: blue;
+.blue {
+ background-color: blue;
 }
-.green{
-  background-color: green;
+.green {
+ background-color: green;
 }
-#pixel-board{
-  display: table;
-  margin-top: 7px;
-  width: 275px;
-  border: 12px rgb(15, 80, 117) solid;
-    
+#pixel-board {
+ display: table;
+ margin-top: 7px;
+ width: 275px;
+ border: 12px rgb(15, 80, 117) solid;
 }
-.pixel{
-  display: inline-block;
-  margin: 6px;
-  width: 40px;
-  height: 40px;
-  border: 1px black solid;
-  background-color: white;
+.pixel {
+ display: inline-block;
+ margin: 6px;
+ width: 40px;
+ height: 40px;
+ border: 1px black solid;
+ background-color: white;
 }
