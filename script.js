@@ -21,18 +21,21 @@ const selector = document.querySelectorAll('#color-palette div');
 
 selector.forEach((elemen) => elemen.classList.add('color'));
 
-for (let index = 1; index < selector.length; index += 1) {
-  selector[index].id = `color${index}`;
+for (let index = 0; index < selector.length; index += 1) {
+  selector[index].id = `color${index + 1}`;
 }
 
-const color2 = document.getElementById('color1');
-const color3 = document.getElementById('color2');
-const color4 = document.getElementById('color3');
+const color1 = document.getElementById('color1');
+const color2 = document.getElementById('color2');
+const color3 = document.getElementById('color3');
+const color4 = document.getElementById('color4');
 
 window.onload = function carregamento() {
   color2.style.backgroundColor = generateRandomColor();
   color3.style.backgroundColor = generateRandomColor();
   color4.style.backgroundColor = generateRandomColor();
+
+  color1.classList.add('selected');
 };
 
 const board = document.getElementById('pixel-board');
@@ -65,6 +68,4 @@ function generateBoard(size) {
 
 generateBoard(5);
 
-// const pixels = document.querySelectorAll('#pixel-board div');
 
-// pixels.forEach((elemen) => elemen.classList.add('pixels'));
