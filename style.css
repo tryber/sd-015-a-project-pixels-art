@@ -25,3 +25,12 @@ body {
   display:inline-flex;
   height: auto  
 }
+#pixel-board {
+  
+  width:fit-content;
+  display:flexbox;
+  height:auto; 
+  margin-left:auto;
+  margin-right: auto;
+  
+}

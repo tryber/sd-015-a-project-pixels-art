@@ -1,23 +1,21 @@
 const paletteColorClass = document.querySelector('#color-palette');
-
-// function classSelected() {
-//   let classNow = document.querySelectorAll('.color');
-//   const classTechElement = document.querySelector('.selected');
-//   for (let index = 0; index < classNow.length; index += 1) {
-//     if (classNow[index] === classTechElement) {
-//       let selClass = document.querySelectorAll('.color')[index];
-//     }
-//   }
-//   selectedClass(selClass);
-// }
+const pixelBoardClass = document.querySelector('#pixel-board');
 
 function selectedClass(event) {
-  const classTechElement = document.querySelector('.selected');
-  classTechElement.classList.remove('selected');
+  const classElement = document.querySelector('.selected');
+  classElement.classList.remove('selected');
   event.target.classList.add('selected');
 }
 
 paletteColorClass.addEventListener('click', selectedClass);
+
+function selectedColor(event) {  
+  const styleElement = document.querySelector('.selected');
+  const style = getComputedStyle(styleElement);
+  event.target.style.background = style.backgroundColor;
+}
+
+pixelBoardClass.addEventListener('click', selectedColor);
 
 function className() {
   const nameClassBlack = document.querySelector('.color');
