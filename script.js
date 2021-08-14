@@ -39,15 +39,15 @@ function limparQuadro() {
   }
 }
 
-// ex10 //
+// ex10 e 11//
 
-let box = document.getElementById("board-size");
-let botao = document.getElementById("generate-board");
-let pixelBoard = document.getElementById("pixel-board");
-botao.addEventListener ("click", callFunction);
+let box = document.getElementById('board-size');
+let botao = document.getElementById('generate-board');
+let pixelBoard = document.getElementById('pixel-board');
+botao.addEventListener('click', callFunction);
 
-function callFunction(){
-  if (box.value === ''){
+function callFunction() {
+  if (box.value === '') {
     alert('Board inválido!')
   } else if (box.value < 5) {
     funcaoLessFive();
@@ -58,16 +58,16 @@ function callFunction(){
   }
 }
 
-function funcaoLessFive(){
+function funcaoLessFive() {
   pixelBoard.innerText = '';
-  for(let linha = 1; linha <=5; linha += 1 ) {
-    let tr = document.createElement("tr");
+  for (let linha = 1; linha <= 5; linha += 1) {
+    let tr = document.createElement('tr');
     pixelBoard.appendChild(tr);
-    for ( let coluna = 0; coluna < 5; coluna += 1){
-      let td = document.createElement("td");
-      td.className = "pixel"
+    for (let coluna = 0; coluna < 5; coluna += 1) {
+      let td = document.createElement('td');
+      td.className = 'pixel'
       tr.appendChild(td);
-      td.addEventListener("click", changeColor)
+      td.addEventListener('click', changeColor);
     }
   }
 }
@@ -82,7 +82,7 @@ function valorValido() {
       const td = document.createElement('td');
       td.className = 'pixel';
       tr.appendChild(td);
-      td.addEventListener("click", changeColor)
+      td.addEventListener('click', changeColor);
     }
   }
 }
@@ -96,10 +96,24 @@ function funcaoMoreFifity() {
       const td = document.createElement('td');
       td.className = 'pixel';
       tr.appendChild(td);
-      td.addEventListener("click", changeColor)
+      td.addEventListener('click', changeColor);
     }
   }
 }
 
+// requisito 13 //
 
+function changeRandomColor() {
+  for (let i = 1; i < tdColor.length; i += 1) {
+    tdColor[i].style.backgroundColor = randomColors();
+  }
+}
 
+function randomColors() {
+  let blue = Math.floor(Math.random() * 255);
+  let red = Math.floor(Math.random() * 255);
+  let green = Math.floor(Math.random() * 255);
+  let random = `rgb(${blue}, ${red}, ${green})`;
+  return (random);
+}
+window.onload = changeRandomColor()
