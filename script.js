@@ -1,11 +1,14 @@
-function divColor() {
+function blackDiv () {
   const colorBlack = 'black';
 
-  let blackDivColor = document.createElement('div');
+  const blackDivColor = document.createElement('div');
   blackDivColor.className = 'color';
 
   blackDivColor.style.backgroundColor = colorBlack;
   document.querySelector('#color-palette').appendChild(blackDivColor);
+}
+
+function divColor() {
 
   const color = [, 'red', 'blue', 'yellow'];
   for (let index in color) {
@@ -101,6 +104,7 @@ function generateBoard() {
   });
 }
 
+blackDiv ()
 divColor();
 creatBoard(5);
 addClassToBlack();
