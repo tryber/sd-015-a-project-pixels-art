@@ -34,3 +34,13 @@ function paintSelect() {
   }
 }
 paintSelect();
+
+const clear = document.getElementById('clear-board');
+const pixels = document.getElementsByClassName('pixel');
+
+function whitePixels() {
+  for (let pixel = 0; pixel < pixels.length; pixel += 1) {
+    pixels[pixel].style.backgroundColor = 'white';
+  }
+}
+clear.addEventListener('click', whitePixels);
