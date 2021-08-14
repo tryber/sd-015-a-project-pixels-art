@@ -2,13 +2,22 @@ const h1 = document.createElement('h1');
 const sectionCollorPalette = document.createElement('section');
 sectionCollorPalette.id = 'color-palette';
 const quadroPixel = document.createElement('div');
-const pixelsBox = document.querySelectorAll('.pixel'); 
 const altura = 5;
 const largura = 5;
 
 quadroPixel.id = 'pixel-board';
 h1.innerText = 'Paleta de Cores';
 h1.id = 'title';
+
+window.onload = function selectedElement() {
+  let elementSelected = document.querySelectorAll('.color')[0];
+  elementSelected.classList.add('selected');
+  return elementSelected;
+ }
+
+function elementClick() {
+  
+}
 
 function bodyChildren(elemento) { 
   document.body.appendChild(elemento);
