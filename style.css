@@ -8,12 +8,12 @@
   display: inline-block;
   }
 
-.grid-container{
-  display:grid;
-  grid-template-columns:40px 40px 40px 40px 40px;
-  grid-template-rows:40px,40px,40px,40px,40px;
-  margin-top:30px;
-  position:relative;
-  margin-left:50px;
-  left:50%;
+.grid-container {
+  display: grid;
+  grid-template-columns: 40px 40px 40px 40px 40px;
+  grid-template-rows: 40px,40px,40px,40px,40px;
+  margin-top: 30px;
+  position: relative;
+  margin-left: 50px;
+  left: 50%;
 }
