@@ -21,33 +21,33 @@ function divGenerator(e) {
 }
 
 // Exercício 12 - Cores aleatórias sendo geradas
-function randomColor(){
-  let x = Math.floor(Math.random() * 255)
-  let y = Math.floor(Math.random() * 255)
-  let z = Math.floor(Math.random() * 255)
-  let colorRandom = 'rgb(' + x +', ' + y + ', ' + z + ')'
+function randomColor() {
+  const x = Math.floor(Math.random() * 255);
+  const y = Math.floor(Math.random() * 255);
+  const z = Math.floor(Math.random() * 255);
+  const colorRandom = `rgb(${x}, ${y}, ${z})`;
   return colorRandom;
 }
 // Aplicação da função 'divGenerator' para criar as divs com cores, sendo a primeira 'preto' e proibindo a criação de 'div's com a cor 'branco'.
-let arreyPalette = ['black', randomColor(), randomColor(), randomColor()];
+const arreyPalette = ['black', randomColor(), randomColor(), randomColor()];
 for (let index = 0; index < arreyPalette.length; index += 1) {
   if (arreyPalette[index] !== 'white') {
-    divGenerator(arreyPalette[index]);  
+    divGenerator(arreyPalette[index]);
   }
 }
 
 // Exercício 4 - Criação do quadro de pixels para pintar. //
 
-let pixelBoardArea = document.getElementById('pixel-board');
+const pixelBoardArea = document.getElementById('pixel-board');
 // Função responsavel por criar as linhas e colunas do pixel-board.
 function boardGenerator(n) {
   for (let index = 1; index <= n; index += 1) {
-    let pixelLine = document.createElement('div');
-    pixelLine.className = 'pixelLine'
+    const pixelLine = document.createElement('div');
+    pixelLine.className = 'pixelLine';
     pixelBoardArea.appendChild(pixelLine);
-    //Criação dos pixels de cada linha
+    // Criação dos pixels de cada linha.
     for (let index2 = 1; index2 <= n; index2 += 1) {
-      let pixel = document.createElement('div');
+      const pixel = document.createElement('div');
       pixel.className = 'pixel';
       pixelLine.appendChild(pixel);
     }
@@ -56,32 +56,32 @@ function boardGenerator(n) {
 boardGenerator(5);
 
 // Exercício 7 - Criação da função que muda o dono da classe 'selected'.
-let seletedTarget = document.getElementById('color-palette');
-seletedTarget.addEventListener('click', selected);
+const seletedTarget = document.getElementById('color-palette');
 function selected(e) {
-  let alvo = e.target;
-  let alvoInicial = document.getElementsByClassName('color selected')[0];
+  const alvo = e.target;
+  const alvoInicial = document.getElementsByClassName('color selected')[0];
   if (alvo.className === 'color') {
     alvoInicial.className = 'color';
     alvo.className = 'color selected';
-    }
+  }
 }
+seletedTarget.addEventListener('click', selected);
 
-//Exercício 8 - Cria uma função que pinta os pixels com a cor de classe 'selected'
-pixelBoardArea.addEventListener('click', pixelColor)
-function pixelColor (e) {
-  let corSelecionada = document.getElementsByClassName('selected')[0];
-  if (e.target.className !== 'pixelLine' && e.target.id !== 'pixel-board'){
-  e.target.style.backgroundColor = corSelecionada.style.backgroundColor;
+// Exercício 8 - Cria uma função que pinta os pixels com a cor de classe 'selected'.
+function pixelColor(e) {
+  const corSelecionada = document.getElementsByClassName('selected')[0];
+  if (e.target.className !== 'pixelLine' && e.target.id !== 'pixel-board') {
+    e.target.style.backgroundColor = corSelecionada.style.backgroundColor;
   }
 }
 
+pixelBoardArea.addEventListener('click', pixelColor);
 // Exercício 9 - Função do botão 'limpar', que reseta as cores do board para branco.
-let buttonLimpar = document.getElementById('clear-board');
-buttonLimpar.addEventListener('click', resetColors);
+const buttonLimpar = document.getElementById('clear-board');
 function resetColors() {
-  let allPixels = document.getElementsByClassName('pixel');
+  const allPixels = document.getElementsByClassName('pixel');
   for (let index = 0; index < allPixels.length; index += 1) {
-    allPixels[index].style.backgroundColor = 'white'
+    allPixels[index].style.backgroundColor = 'white';
   }
 }
+buttonLimpar.addEventListener('click', resetColors);
