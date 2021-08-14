@@ -38,13 +38,13 @@ function funcCor (event) {
 };
 
 function criatButton(string){
-    let buttonReset = document.querySelector('#color-palette');
+    let buttonReset = document.querySelector('#butao');
     let btn = document.createElement('button');
     btn.id = 'clear-board';
     btn.innerHTML = string;
     buttonReset.appendChild(btn);
   };
-  criatButton('Reset');
+  criatButton('Limpar');
 
   const back = document.getElementById('clear-board');
   back.addEventListener('click', backoriginal)
