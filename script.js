@@ -16,6 +16,9 @@ function makePixels(lines) {
 }
 makePixels(5);
 
+const vqvButton = document.querySelector('#generate-board');
+const sizeInput = document.querySelector('#board-size');
+
 function selectedF() {
   function toSelect(event) {
     const colors = document.querySelector('#color-palette').children;
@@ -30,22 +33,6 @@ function selectedF() {
   paleta.addEventListener('click', toSelect);
 }
 selectedF();
-
-function clear() {
-  const clearButton = document.querySelector('#clear-board');
-  const pixels = document.querySelectorAll('.pixel');
-
-  function btClear() {
-    for (let i = 0; i < pixels.length; i += 1) {
-      pixels[i].style.backgroundColor = 'white';
-    }
-  }
-  clearButton.addEventListener('click', btClear);
-}
-clear();
-
-const vqvButton = document.querySelector('#generate-board');
-const sizeInput = document.querySelector('#board-size');
 
 function boardSize() {
   const boardPx = document.querySelector('#pixel-board');
@@ -67,11 +54,25 @@ function boardSize() {
 }
 boardSize();
 
+function clear() {
+  const clearButton = document.querySelector('#clear-board');
+  const pixels = document.querySelectorAll('.pixel');
+
+  function btClear() {
+    for (let i = 0; i < pixels.length; i += 1) {
+      pixels[i].style.backgroundColor = 'white';
+    }
+  }
+  clearButton.addEventListener('click', btClear);
+}
+clear();
+vqvButton.addEventListener('click', clear);
+
 function alerts() {
   function onClickTwo() {
-    if (sizeInput.value > 50) {
+    if (sizeInput.value > 50 && sizeInput.value !== '') {
       alert('Valor Máximo de 50px');
-    } else if (sizeInput.value < 5) {
+    } else if (sizeInput.value < 5 && sizeInput.value !== '') {
       alert('Valor Mínimo de 5px');
     }
   }
@@ -85,6 +86,10 @@ function boxFixed() {
   function onClick() {
     if (sizeInput.value === '') {
       boardCountainer.style.minWidth = (5 * 43) + px;
+    } else if (sizeInput.value < 5) {
+      boardCountainer.style.minWidth = (5 * 43) + px;
+    } else if (sizeInput.value > 50) {
+      boardCountainer.style.minWidth = (50 * 43) + px;
     } else {
       boardCountainer.style.minWidth = (sizeInput.value * 43) + px;
     }
