@@ -13,4 +13,13 @@ function PixelBoardBox() {
   }
 }
 
+function selecionado() {
+  const color = document.querySelectorAll('.color');
+  for (let i = 0; i < color.length; i += 1) {
+    color[i].addEventListener('click', () => {
+      color[i].classList.toggle('selected');
+    });
+  }
+}
+selecionado();
 PixelBoardBox();

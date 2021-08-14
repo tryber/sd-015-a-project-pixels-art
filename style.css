@@ -9,24 +9,23 @@
   cursor: pointer;
 }
 
-.color:nth-child( 1 ) {
+.color:nth-child(1) {
   background-color: black;
 }
 
-.color:nth-child( 2 ) {
+.color:nth-child(2) {
   background-color: red;
 }
 
-.color:nth-child( 3 ) {
+.color:nth-child(3) {
   background-color: green;
 }
 
-.color:nth-child( 4 ) {
+.color:nth-child(4) {
   background-color: blue;
 }
 
 #pixel-board {
-  /*display: inline;*/
   max-width: 250px;
   padding-left: 7px;
   text-align: center;
