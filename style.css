@@ -1,6 +1,6 @@
 .color {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border: solid 1px black;
     display: inline-block;
 }
@@ -10,7 +10,7 @@
 }
 
 #red {
-   background-color: red;
+   background-color: green;
 }
 
 #purple {
@@ -19,4 +19,12 @@
 
 #blue {
    background-color: blue; 
+}
+
+.pixel {
+   width: 40px;
+   height: 40px;
+   border: solid 1px black;
+   background-color: white;
+   display: inline-block;
 }
