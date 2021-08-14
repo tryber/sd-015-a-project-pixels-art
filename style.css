@@ -14,7 +14,7 @@ header h1 {
   color: #61f586;
   width: 28%;
   text-align: center;
-  margin: 0% 36% 2.5% 36%;
+  margin: 0% 36% 2.5%;
   padding-top: 1.5%;
 }
 
@@ -149,7 +149,7 @@ main {
   color: cornflowerblue;
   width: 15%;
   font-size: 2em;
-  margin: 3% 42.5% 3% 42.5%;
+  margin: 3% 42.5% 3%;
 }
 
 footer {
