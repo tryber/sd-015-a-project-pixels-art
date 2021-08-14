@@ -24,7 +24,7 @@ function randomColors() {
     paletteColorsArray[index].id = randomId;
     paletteColorsArray[index].innerText = colorsPaletteObject[randomId];
     const indexOfRandomID = colorsPaletteArray.indexOf(randomId);
-    colorsPaletteArray.splice(indexOfRandomID,1);
+    colorsPaletteArray.splice(indexOfRandomID, 1);
   }
 }
 
