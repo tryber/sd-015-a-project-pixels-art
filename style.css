@@ -1,43 +1,43 @@
 body {
-    margin: 0px;
+  margin: 0px;
 }
 
 #title {
-    text-align: center;
-    background-color: blue;
+  text-align: center;
+  background-color: blue;
 }
 
 #color-palette {
-    text-align: center;
-    background-color:blueviolet;
+  text-align: center;
+  background-color: blueviolet;
 }
 
 .color {
-    border: solid;
-    border-color: black;
-    border-width: 1px;
-    display: inline-flex;
-    padding: 15px;
-    margin: 10px;
-}
-
-#pixel-board{
-    text-align: center;
-    width: 210px;
-}
-
-.pixel {
-    background-color: white;
-    width:40px;
-    height:40px;
-    border: solid;
-    border-color: black;
-    border-width: 1px;
-    list-style: none;
-    display: inline-flex;
+  border: solid;
+  border-color: black;
+  border-width: 1px;
+  display: inline-flex;
+  padding: 15px;
+  margin: 10px;
 }
 
 #pixel-board {
-    background-color: blueviolet;
-    text-align: center;
+  text-align: center;
+  width: 210px;
+}
+
+.pixel {
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  border: solid;
+  border-color: black;
+  border-width: 1px;
+  list-style: none;
+  display: inline-flex;
+}
+
+#pixel-board {
+  background-color: blueviolet;
+  text-align: center;
 }
