@@ -5,19 +5,19 @@
 //   firstBlock.style.padding = '25px 25px 25px 25px'
 //   firstBlock.style.display = 'inline-block'
 // }
-// firstBlock()
+// firstBlock();
 
 // Cria tabela de pixels
 function createTable() {
   const pixelBoard = document.querySelector('#pixel-board');
-  for (let i = 1; i < 6; i += 1) {
-    let pixelColumn = document.createElement('div')
+  for (let index = 1; index < 6; index += 1) {
+    const pixelColumn = document.createElement('div');
     pixelBoard.appendChild(pixelColumn);
-    for (let i = 1; i < 6; i += 1) {
-      let pixelLine = document.createElement('div')
+    for (let index2 = 1; index2 < 6; index2 += 1) {
+      const pixelLine = document.createElement('div');
       pixelColumn.appendChild(pixelLine);
       pixelLine.className = 'pixel';
     }
   }
 }
-createTable()
+createTable();
