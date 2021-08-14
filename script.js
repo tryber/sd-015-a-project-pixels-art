@@ -19,8 +19,17 @@ function divGenerator(e) {
     colorPallete.appendChild(newDiv);
   }
 }
+
+// Exercício 12 - Cores aleatórias sendo geradas
+function randomColor(){
+  let x = Math.floor(Math.random() * 255)
+  let y = Math.floor(Math.random() * 255)
+  let z = Math.floor(Math.random() * 255)
+  let colorRandom = 'rgb(' + x +', ' + y + ', ' + z + ')'
+  return colorRandom;
+}
 // Aplicação da função 'divGenerator' para criar as divs com cores, sendo a primeira 'preto' e proibindo a criação de 'div's com a cor 'branco'.
-let arreyPalette = ['black', 'red', 'green', 'blue'];
+let arreyPalette = ['black', randomColor(), randomColor(), randomColor()];
 for (let index = 0; index < arreyPalette.length; index += 1) {
   if (arreyPalette[index] !== 'white') {
     divGenerator(arreyPalette[index]);  
@@ -71,7 +80,7 @@ function pixelColor (e) {
 let buttonLimpar = document.getElementById('clear-board');
 buttonLimpar.addEventListener('click', resetColors);
 function resetColors() {
-  allPixels = document.getElementsByClassName('pixel');
+  let allPixels = document.getElementsByClassName('pixel');
   for (let index = 0; index < allPixels.length; index += 1) {
     allPixels[index].style.backgroundColor = 'white'
   }
