@@ -44,33 +44,8 @@
     border-width: 1px;
 }
 
-/* #c1 {
-    left: 0px;
-}
-
-#c2 {
-    position: absolute;
-    left: 40px;
-    top: 0px;
-}
-
-#c3 {
-    position: absolute;
-    left: 80px;
-    top: 0px;
-}
-
-#c4 {
-    position: absolute;
-    left: 120px;
-    top: 0px;
-}
-
-#c5 {
-    position: absolute;
-    left: 160px;
-    top: 0px;
-} */
-
-.teste {
+button {
+    position:absolute;
+    top: 370px;
+    left: 115px;
 }

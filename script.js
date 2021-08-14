@@ -9,6 +9,8 @@ const quadro = document.querySelector("#pixel-board");
 let colors = document.getElementById("cores")
 let selectedColor = document.getElementsByClassName("black")[0]
 const pixels = document.getElementById("pixel-board");
+const spans = document.getElementsByTagName("span")
+const botao = document.getElementsByTagName("button")[0];
 
 createSpans();
 
@@ -43,13 +45,26 @@ function paintPixel(event) {
     let pixel = event.target;
     let selecionado = document.getElementsByClassName("selected")[0]
     
-    if (selecionado.className === "color black selected") {
-        pixel.style.backgroundColor = "black";
-    } else if (selecionado.className === "color yellow selected") {
-        pixel.style.backgroundColor = "yellow";
-    } else if (selecionado.className === "color red selected") {
-        pixel.style.backgroundColor = "red";
-    } else if (selecionado.className === "color purple selected") {
-        pixel.style.backgroundColor = "purple";
+    if (pixel.id === "pixel-board") {
+        pixel.style.backgroundColor = "white";
+    } else {
+        if (selecionado.className === "color black selected") {
+            pixel.style.backgroundColor = "black";
+        } else if (selecionado.className === "color yellow selected") {
+            pixel.style.backgroundColor = "yellow";
+        } else if (selecionado.className === "color red selected") {
+            pixel.style.backgroundColor = "red";
+        } else if (selecionado.className === "color purple selected") {
+            pixel.style.backgroundColor = "purple";
+        }
+}
+}
+
+botao.addEventListener("click", limpaQuadro);
+
+function limpaQuadro(event) {
+    for (let index = 1; index < spans.length; index += 1) {
+        let pixelAtual = spans[index];
+        pixelAtual.style.backgroundColor = "white";
     }
 }
