@@ -18,3 +18,9 @@ for (index = 1; index <= numeroDeQuadrados; index +=1){
     criarQuadrado.classList.add('pixel')
 }
 
+let estiloPreto = document.querySelector('.color');
+window.onload = function(){
+    if(estiloPreto.style.backgroundColor === 'black'){
+        estiloPreto.classList.add('selected')
+    }
+}
