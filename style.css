@@ -1,4 +1,4 @@
-body{
+body {
    font-family: sans-serif;
    color: black;
 }
@@ -6,7 +6,7 @@ body{
 /*
    Estilizando o header
 */
-#header{
+#header {
    width: 100%;
    text-align: center;
    font-size: 25px;
@@ -16,21 +16,20 @@ body{
    Estilizando o main
 */
 
-main{
+main {
    width: 80%;
    margin: 0 auto;
    text-align: center;
 }
 
-
 /*
    Estilizando paleta de cores
 */
 
-#color-palette{
+#color-palette {
    margin-bottom: 50px;
 }
-.color{
+.color {
    border: 1px solid black;
    width: 100px;
    height: 100px;
@@ -41,19 +40,19 @@ main{
    Adicionando cores a cada paleta de cor 
 */
 
-.black{
+.black {
    background-color: black;
 }
 
-.red{
+.red {
    background-color: red;
 }
 
-.blue{
+.blue {
    background-color: blue;
 }
 
-.green{
+.green {
    background-color: green;
 }
 
@@ -61,7 +60,7 @@ main{
    Estilizando o botao
 */
 
-#clear-board{
+#clear-board {
    font-size: 20px;
    font-weight: bold;
    color: white;
@@ -78,7 +77,7 @@ main{
    Estilizando a section/conteiner dos pixels
 */
 
-#pixel-board{
+#pixel-board {
    display: inline-block;
    width: 250px;
    height: 250px;
@@ -87,7 +86,8 @@ main{
    padding: 1px;
   margin-top: 30px;
 }
-.pixel{
+
+.pixel {
    margin-top: 4px;
    background: white;
    display: inline-block;

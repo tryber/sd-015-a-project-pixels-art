@@ -1,5 +1,7 @@
 const colorSelected = document.querySelectorAll('.color');
 
+// Mudando a tag selecionada
+
 function changeTagSelected(tagSelected) {
   let oldTagSelected = '';
 
@@ -17,18 +19,20 @@ function changeTagSelected(tagSelected) {
     });
   });
 }
-
-let tagSelected = '';
+// Descobrindo a tag selecionada
+let selected = '';
 
 colorSelected.forEach((color) => {
   if (color.classList.contains('selected')) {
-    tagSelected = color;
+    selected = color;
 
-    changeTagSelected(tagSelected);
+    changeTagSelected(selected);
   }
 });
 
 const whitePixels = document.querySelectorAll('.pixel');
+
+// Adicionando o escutador de eventos em cada pixel, descobrindo a paleta de cor que está selecionada, aplicando o estilo no pixel clicado
 
 whitePixels.forEach((pixel) => {
   pixel.addEventListener('click', () => {
