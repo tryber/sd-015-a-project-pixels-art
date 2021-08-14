@@ -1,0 +1,14 @@
+.color {
+  display: inline-block;
+  margin: 3px;
+}
+
+.pixel {
+  display: inline-block;
+  margin: 0;
+}
+
+#pixel-board {
+  font-size: 0;
+  margin-top: 20px;
+}
