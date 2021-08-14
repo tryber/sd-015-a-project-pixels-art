@@ -7,14 +7,18 @@ window.addEventListener('load', function(){
   funcao usada para preenchimento da paleta de cores
   de acordo com o array de objetos allColors.
 */
+function randomColorNumber() {
+  return Math.floor(Math.random() * 148 + 1);
+}
+
 function fillColorPalette() {
   const colors = document.getElementsByClassName('color');
-    
   for (let i = 0; i < colors.length; i += 1) {
-    let colorNum = randomColorNumber();
+    const colorNum = randomColorNumber();
       
     if (i === 0 ) {
       colors[i].style.backgroundColor = 'black';
+      colors[i].className += ' selected';
     } else {
       colors[i].style.backgroundColor = allColors[colorNum].name;
       }
@@ -22,20 +26,15 @@ function fillColorPalette() {
     }
   }
 
-function randomColorNumber() {
-  return Math.floor(Math.random() * 148 + 1);
-}
-
 function generatePixels() {
   const pixels = 5;
   const board = document.getElementById('pixel-board');
   
-  for (let i = 0; i < pixels**2; i += 1) {
-    let div = document.createElement('div');
+  for (let i = 0; i < pixels ** 2; i += 1) {
+    const div = document.createElement('div');
     div.className = 'pixel';
     board.appendChild(div);
   }
-
 }
 /*
   É possível pegar todas as cores de forma manual para gerar
@@ -47,7 +46,6 @@ function generatePixels() {
   Modifiquei cada elemento para se encaixar as minhas necessidades ,por conta disso, esta totalmente 
   diferente do repositorio que usei como referencia.
 */
-
 const allColors = [
   { name: 'aliceblue' },
   { name: 'antiquewhite' },
