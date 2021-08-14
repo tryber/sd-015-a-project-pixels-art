@@ -7,7 +7,7 @@ body {
   border: 1px solid black;
 }
 
-#main-block {
+#block-one {
   background-color: black;
   padding: 25px;
   display: inline-block;
