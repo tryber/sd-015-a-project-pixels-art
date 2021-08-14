@@ -1,0 +1,42 @@
+body {
+  margin: 0px;
+}
+
+#title {
+  text-align: center;
+  background-color: blue;
+}
+
+#color-palette {
+  text-align: center;
+  background-color: blueviolet;
+}
+
+.color {
+  border: solid;
+  border-color: black;
+  border-width: 1px;
+  display: inline-flex;
+  padding: 15px;
+  margin: 10px;
+}
+
+#pixel-board {
+  text-align: center;
+  width: 210px;
+}
+
+.pixel {
+  width: 40px;
+  height: 40px;
+  border: solid;
+  border-color: black;
+  border-width: 1px;
+  list-style: none;
+  display: inline-flex;
+}
+
+#pixel-board {
+  background-color: blueviolet;
+  text-align: center;
+}
