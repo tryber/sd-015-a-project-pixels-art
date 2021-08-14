@@ -54,8 +54,10 @@ document.getElementById('yellow').style.backgroundColor = 'yellow';   // por alg
   pixelBoard.addEventListener('click', function(event) {
       let pixelAdress = event.target
       let selectorColor = document.querySelector('.selected').style.backgroundColor
-      pixelAdress.style.backgroundColor = selectorColor
+      pixelAdress.style.backgroundColor = selectorColor;
   });
+
+// Desafio 9 
   
 
 
