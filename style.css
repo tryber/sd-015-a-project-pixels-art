@@ -62,3 +62,9 @@
     border-style: solid;
     border-width: 1px;
 }
+
+#clear-board {
+    margin-left: 75px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
