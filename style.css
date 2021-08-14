@@ -24,8 +24,6 @@ body , html {
 }
 
 #pixel-board {
-  width: 240px;
-  height: 240px;
   text-align: center;
   margin-right: auto;
   margin-left: auto;
@@ -51,10 +49,16 @@ body , html {
 }
 
 .options {
+  padding: 12px;
   text-align: center;
   margin: auto auto;
 }
 
-#clear-board {
-  padding: 10px;
+.btn {
+  padding: 5px;
+}
+
+#board-size {
+  width: 40px;
+  padding: 5px;
 }

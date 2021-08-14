@@ -1,8 +1,12 @@
 window.addEventListener('load', function(){
   fillColorPalette();
-  generatePixels();
+  generatePixels(5);
+
   const clearBtn = document.getElementById('clear-board');
   clearBtn.addEventListener('click', clearBoard);
+
+  const generateNewBoard = document.getElementById('generate-board');
+  generateNewBoard.addEventListener('click', customBoard);
 });
 
 /* 
@@ -30,17 +34,22 @@ function fillColorPalette() {
     }
   }
 
-function generatePixels() {
-  const pixels = 5;
+function generatePixels(pixel) {
+  const pixels = pixel;
+  const pixelSize = 40;
+  const contentSize = (pixelSize * pixels) + pixelSize ;
   const board = document.getElementById('pixel-board');
-  
+  board.style.width = `${contentSize}px`;
+
   for (let i = 0; i < pixels ** 2; i += 1) {
     const div = document.createElement('div');
     div.className = 'pixel';
+    div.style.backgroundColor = 'white';
     div.addEventListener('click', fillPixel);
     div.addEventListener('dblclick', clearPixel);
     board.appendChild(div);
   }
+
 }
 
 function colorPaletteSelection(event) {
@@ -67,6 +76,26 @@ function clearBoard() {
 function clearPixel(event) {
   const rgb = 'rgb(255,255,255)';
   event.target.style.backgroundColor = rgb;
+}
+
+function customBoard() {
+  const board = document.getElementById('pixel-board');
+  const inputValue = document.getElementById('board-size');
+  let value = parseInt(inputValue.value);
+  
+  if (isNaN(value)) {
+    alert('Board inválido!');
+    return
+  }
+
+  if (value < 5) {
+    value = 5;
+  } else if (value > 50) {
+    value = 50;
+  }
+
+  board.innerHTML = '';
+  generatePixels(value);
 }
 /*
   É possível pegar todas as cores de forma manual para gerar
