@@ -36,7 +36,27 @@ function fillBoxPixel (event) {
   boxPixel.style.backgroundColor = style.backgroundColor;
 }
 
-// Requisito 9 
+// Requisito 9 Criar botao 
+const colorPalette = document.querySelector('#color-palette')
+const creatResetButon = document.createElement('button');
+creatResetButon.className = 'buttonReset'
+creatResetButon.id = 'clear-board'
+creatResetButon.innerHTML = 'Limpar'
+colorPalette.appendChild(creatResetButon);
+creatResetButon.style.display = 'block'
+creatResetButon.style.marginLeft = '20%'
+creatResetButon.style.backgroundColor = 'gray'
+creatResetButon.style.color = 'white';
+creatResetButon.style.height = '30px'
+creatResetButon.style.width = '50px'
+creatResetButon.style.borderRadius = '10px'
+
+creatResetButon.addEventListener('click', paintBoxPixels)
+function paintBoxPixels () {
+  for(let index of setBox)
+  index.style.backgroundColor = "white"
+}
+
 
 
 

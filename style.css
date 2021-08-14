@@ -56,7 +56,7 @@ header {
    padding: 10px;
    box-shadow: 5px 5px 5px;
  }
- 
+
  .pixel {
   display: inline-block;
   border: black solid 1px;
@@ -64,4 +64,9 @@ header {
   height: 40px;
   background-color: rgb(255, 255, 255);
  }
+
+ /* .buttonReset {
+   display: block;
+    margin: auto;
+ } */
 
