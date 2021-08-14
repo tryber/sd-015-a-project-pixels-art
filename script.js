@@ -15,7 +15,7 @@ function pinta(event) {
 
 const pixels = document.querySelectorAll('.pixel');
 
-for (let k in pixels) {
+for (let k of pixels) {
   let cadaPixel = k;
   cadaPixel.addEventListener('click', pinta);
 }
