@@ -1,5 +1,16 @@
 const paletteColorClass = document.querySelector('#color-palette');
 const pixelBoardClass = document.querySelector('#pixel-board');
+const buttonClear = document.querySelector('#clear-board');
+
+function clearPixel() {
+  const pixelElement = document.querySelectorAll('.pixel');
+
+  for (let index = 0; index < pixelElement.length; index += 1) {
+    pixelElement[index].style.background = 'rgb(255,255,255)';
+  }
+}
+
+buttonClear.addEventListener('click', clearPixel);
 
 function selectedClass(event) {
   const classElement = document.querySelector('.selected');
@@ -9,7 +20,7 @@ function selectedClass(event) {
 
 paletteColorClass.addEventListener('click', selectedClass);
 
-function selectedColor(event) {  
+function selectedColor(event) {
   const styleElement = document.querySelector('.selected');
   const style = getComputedStyle(styleElement);
   event.target.style.background = style.backgroundColor;
