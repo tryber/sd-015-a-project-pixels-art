@@ -1,10 +1,12 @@
 function makeSelected(element) {
-  element.className = `${element.className} selected`;
+  const selectedElement = element;
+  selectedElement.className = `${element.className} selected`;
 }
 
 function clearSelectedClass(elements) {
+  const allElements = elements;
   for (let index = 0; index < elements.length; index += 1) {
-    elements[index].className = elements[index].className.replace(' selected', '');
+    allElements[index].className = elements[index].className.replace(' selected', '');
   }
 }
 
@@ -45,7 +47,8 @@ function createPixel(line) {
   pixel.style.height = '40px';
   pixel.addEventListener('click', (event) => {
     const selectedColor = document.getElementsByClassName('selected')[0].style.backgroundColor;
-    event.target.style.backgroundColor = selectedColor;
+    const domEvent = event;
+    domEvent.target.style.backgroundColor = selectedColor;
     console.log(document.getElementsByClassName('color selected')[0]);
   });
   line.appendChild(pixel);
