@@ -20,6 +20,7 @@ body {
   padding: 30px;
   display: inline-block;
   border: solid black 1px;
+  margin-bottom: 15px;
 }
 
 .pixel {
@@ -34,7 +35,10 @@ body {
 
 #clear-board {
   background-color: lightgray;
-  width: 20px;
+  width: 60px;
   height: 20px;
   border: 2px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }

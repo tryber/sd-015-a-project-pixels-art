@@ -73,10 +73,21 @@ function colorPaintB() {
 colorPaintB();
 
 function createButton() {
-  const sectionColorPalette = document.querySelector('.color-palette');
+  const sectionColorPalette = document.querySelector('#color-palette');
   const buttonClearTag = document.createElement('button');
   sectionColorPalette.appendChild(buttonClearTag);
   buttonClearTag.id = 'clear-board';
   buttonClearTag.innerText = 'Limpar';
 }
 createButton();
+
+const clearButtonTag = document.querySelector('#clear-board');
+function clearButton() {
+  for (let i = 0; i < pixelBoxEmpty.length; i += 0) {
+    if (pixelBoxEmpty[i].style.backgroundColor !== 'white') {
+      pixelBoxEmpty[i].style.backgroundColor = 'white';
+    }
+  }
+}
+clearButton();
+clearButtonTag.addEventListener('click', clearButton);
