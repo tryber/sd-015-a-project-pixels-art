@@ -1,0 +1,22 @@
+.color {
+    border: 1px solid black;
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+  }
+
+  #cor2 {
+    background-color: blue;
+  }
+  
+  #cor3 {
+    background-color: green;
+  }
+  
+  #cor4 {
+    background-color: yellow;
+  }
+
+  #preto {
+    background-color: black;
+  }
