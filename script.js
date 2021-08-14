@@ -8,16 +8,6 @@ const quadroPixel = document.getElementById('pixel-board');
 const btn = document.querySelector('#clear-board');
 const btnGerar = document.querySelector('#generate-board');
 
-function inpuValue() {
-  let numberOfLines = input.value;
-  if (numberOfLines < minumum) {
-    numberOfLines = minumum;
-  } else if (numberOfLines > maximum) {
-    numberOfLines = maximum;
-  }
-  return numberOfLines;
-}
-
 function createBox(linhas, colunas) {
   for (let index = 0; index < linhas.length; index += 1) {
     for (let j = 0; j < colunas; j += 1) {
@@ -47,22 +37,31 @@ function numberLines(number) {
   createBox(lines, number);
 }
 
-function capturaInput() {
-  const numberOfLines = inpuValue();
-  if (!parseInt(input.value, 10)) {
-    input.value = '';
+function verificaInput() {
+  if (input.value === '') {
+    return minumum;
+  }
+  return input.value;
+}
+
+numberLines(minumum);
+
+btnGerar.addEventListener('click', () => {
+  let numberOfLines = input.value;
+  if (numberOfLines === '') {
     alert('Board inválido!');
-    return;
+  }
+  if (numberOfLines < minumum) {
+    numberOfLines = minumum;
+    input.value = minumum;
+  }
+  if (numberOfLines > maximum) {
+    numberOfLines = maximum;
+    input.value = maximum;
   }
   numberLines(numberOfLines);
-}
-
-if (input.value === '') {
-  input.value = minumum;
-  capturaInput();
-}
-
-btnGerar.addEventListener('click', capturaInput);
+  console.log(numberOfLines);
+});
 
 function trocaCor(event) {
   const techElement = document.querySelector('.selected');
@@ -83,7 +82,7 @@ function pintaGrid(event) {
 
 function boxClear() {
   const lines = document.querySelectorAll('.line');
-  const pixelTotal = inpuValue() * inpuValue();
+  const pixelTotal = verificaInput() * verificaInput();
   for (let index = 0; index < lines.length; index += 1) {
     const clearDiv = document.querySelectorAll('.line');
     clearDiv[index].style.background = rgb;
@@ -112,7 +111,7 @@ function gerarCor(opacidade = 1) {
   const r = Math.random() * 255;
   const g = Math.random() * 255;
   const b = Math.random() * 255;
-  
+
   return `rgba(${r}, ${g}, ${b}, ${opacidade})`;
 }
 
