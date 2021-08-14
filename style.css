@@ -24,6 +24,7 @@ header ul {
   width: 80%;
   margin-left: 10%;
   margin-right: 10%;
+  margin-bottom: 3%;
   padding-left: 0%;
   padding-right: 0%;
 }
@@ -37,6 +38,12 @@ header ul li {
   margin-left: 4%;
   padding-left: 2%;
   padding-right: 2%;
+}
+
+header span {
+  color: #ff79c6;
+  font-size: 1.4em;
+  margin-left: 31%;
 }
 
 #color1 {
