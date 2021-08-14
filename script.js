@@ -13,8 +13,22 @@ function createPixelBoard(n) {
 }
 createPixelBoard(5);
 
-function addClassName(color) {
+function addClassSelected(color) {
   const newClass = document.getElementById(color);
   newClass.classList.add('selected');
 }
-addClassName('black');
+addClassSelected('black');
+
+const colorList = document.getElementsByClassName('color');
+const allColors = document.getElementById('color-palette');
+
+function clearSelected() {
+  for (let i = 0; i < colorList.length; i += 1) {
+    colorList[i].classList.remove('selected');
+  }
+}
+
+allColors.addEventListener('click', (color) => {
+  clearSelected();
+  color.target.classList.add('selected');
+});
