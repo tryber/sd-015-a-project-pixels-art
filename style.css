@@ -1,0 +1,28 @@
+.color {
+  list-style-type: none;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+  margin: 0;
+  padding: 0;
+}
+
+
+#pixel-board {
+  margin: 0;
+  padding: 0;
+  width: 240px;
+  list-style: inside;
+  padding-bottom: 20px;
+}
+
+.pixel {
+  list-style-type: none;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+  margin: 0;
+  padding: 0;
+}
