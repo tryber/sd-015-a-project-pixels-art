@@ -12,6 +12,7 @@
   width: 40px;
   height: 40px;
   border: 1px solid black;
+  margin: -3px -1px;
 }
 
 #board-size {

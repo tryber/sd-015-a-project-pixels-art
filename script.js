@@ -4,7 +4,8 @@ for (let i = 1; i < coresDaPaleta.length; i += 1) {
   const r = Math.random() * 255;
   const g = Math.random() * 255;
   const b = Math.random() * 255;
-  coresDaPaleta[i].style.backgroundColor = 'rgb(' + r + ', ' + g + ', ' + b + ')';
+  const corAleatoria = 'rgb(' + r + ', ' + g + ', ' + b + ')';
+  coresDaPaleta[i].style.backgroundColor = corAleatoria;
 }
 
 function pintaPixel(pixel) {
