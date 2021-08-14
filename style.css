@@ -10,6 +10,7 @@
   border: 1px solid black;
   margin: 1px;
   display: inline-block;
+  
 }
 
 #pixel-board {
@@ -21,11 +22,8 @@
 }
 
 .pixel {
-  width: 15px;
-  padding: 15px;
   border: 1px solid black;
-  margin: 1px;
-  display: inline-block;
+  background-color: white;
 }
 
 .black {
