@@ -1,16 +1,15 @@
 // Exercício 2 e 3- Gerador de 'divs' com background color igual ao da cor escolhida. //
 
 // Função de criação de divs com cores.
+const colorPallete = document.getElementById('color-palette');
 function divGenerator(e) {
   if (e !== 'black') {
-    const colorPallete = document.getElementById('color-palette');
     const newDiv = document.createElement('div');
     newDiv.className = 'color';
     newDiv.id = e;
     newDiv.style.backgroundColor = e;
     colorPallete.appendChild(newDiv);
   } else {
-    const colorPallete = document.getElementById('color-palette');
     const newDiv = document.createElement('div');
     // Exercício 6 - classe inicial da paleta preta precisa iniciar como 'selected'
     newDiv.className = 'color selected';
