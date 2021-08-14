@@ -6,6 +6,7 @@ const colorPalette = {
   color3: '#0000FF', // blue
 };
 const boardSize = 5; // Board size n x n
+const currentColorText = document.querySelector('#currentColor');
 
 // Populate palette with colors defined above
 const paletteSize = Object.keys(colorPalette).length;
@@ -52,6 +53,7 @@ window.onload = function resetBlackSelection() {
   clearColorSelection();
   const blackColor = document.querySelector('#color0');
   blackColor.classList.add('selected');
+  currentColorText.innerHTML = `selected: ${blackColor.id}`;
 };
 
 // verificar se uma cor foi clicada usado a referência de event bubbling de https://flaviocopes.com/how-to-add-event-listener-multiple-elements-javascript/
@@ -61,6 +63,7 @@ document.querySelectorAll('.color').forEach((colorOnPalette) => {
     if (!thisColorClasses.contains('selected')) {
       clearColorSelection();
       thisColorClasses.add('selected');
+      currentColorText.innerHTML = `selected: ${color.target.id}`;
       alert(`${color.target.id} selected`);
     }
   });
