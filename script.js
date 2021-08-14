@@ -85,3 +85,24 @@ function changeColor (event) {
 }
 
 // Requisito 9 - Crie um botão que, ao ser clicado, limpa o quadro preenchendo a cor de todos seus pixels com branco.
+function createButton() {
+  const newButton = document.createElement('button');
+  const getPixelBoard = document.getElementById('pixel-board');
+  const divPai = getPixelBoard.parentNode;
+  divPai.insertBefore(newButton, getPixelBoard);
+  newButton.id = 'clear-board';
+  newButton.innerHTML = 'Limpar'
+  
+}
+createButton();
+
+function clearPixels () {
+  const getPixels = document.querySelectorAll('.pixel');
+  const getButton = document.querySelector('#clear-board');
+  getButton.addEventListener('click', function(event) {
+    for (let index = 0; index < getPixels.length; index += 1) {
+      getPixels[index].style.backgroundColor = 'white';
+    }
+  })
+}
+clearPixels();

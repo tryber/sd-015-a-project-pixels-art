@@ -1,5 +1,6 @@
 body {
   background-color: rgb(214, 224, 223);
+  text-align: center;
 }
 /* Estilização do REQUISITO 2 */
 .color {
@@ -19,11 +20,13 @@ body {
   height: 40px;
   background-color: white;
 }
-
-body {
-  text-align: center;
+#color-palette{
+  line-height: 0;
 }
-
 .columns {
   line-height: 0;
+}
+
+#clear-board {
+  margin: 10px;
 }
