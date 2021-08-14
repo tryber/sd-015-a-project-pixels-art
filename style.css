@@ -1,8 +1,8 @@
-.color {
+.color, .pixel {
   border: 1px solid black;
   display: inline-block; 
   width:40px;
-  height:40px
+  height:40px;
 }
 #black {
   background-color: black;
@@ -15,4 +15,10 @@
 }
 #green {
   background-color: green;
+}
+#pixel-board {
+  width: 250px;
+  height: 250px;
+  display: inline-block;
+  
 }
