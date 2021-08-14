@@ -13,7 +13,8 @@ for (let i = 0; i < colorsPallet.length; i += 1) {
     const valueGreen = Math.random() * 255;
     const valueYellow = Math.random() * 255;
     const colorPalletRandon = colorsPallet[i];
-    const colorNow = `rgb( ${valueRed}! , ${valueGreen}! , ${valueYellow}!`;
+    const colorNow = `rgb(${valueRed}, ${valueGreen}, ${valueYellow})`;
+    console.log(colorNow);
     colorPalletRandon.style.backgroundColor = colorNow;
 
     colorPalletRandon.id = colorNow;
