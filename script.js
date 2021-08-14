@@ -1,87 +1,58 @@
-// Capiturando as paletas de cor, da classe  "color"
-let colorSelected = document.querySelectorAll(".color");
-
-let tagSelected = "";
-// Percorrendo o array "colorSelecteded" 
-colorSelected.forEach(element => {
-
-
-  if (element.classList.contains("selected")) {
-
-    tagSelected = element;
-    changeTagSelected(tagSelected);
-  }
-});
+const colorSelected = document.querySelectorAll('.color');
 
 function changeTagSelected(tagSelected) {
+  let oldTagSelected = '';
 
-  let oldTagSelected = "";
+  let newTagSelected = tagSelected;
 
-  //Percorrendo novamente o array "colorSelecteded"
-  colorSelected.forEach(paletColor => {
+  colorSelected.forEach((paletColor) => {
+    paletColor.addEventListener('click', (event) => {
+      oldTagSelected = newTagSelected;
 
-    // Adicionando um escutador de evento em cada elemento do array "colorSelecteded"
-    paletColor.addEventListener("click", event => {
+      newTagSelected = event.target;
 
-      // Guardando a tag antiga
-      oldTagSelected = tagSelected;
+      oldTagSelected.classList.remove('selected');
 
-      // Guardando a nova tag a ser selecionada
-      tagSelected = event.target;
-
-      // Removendo a classe da tag antiga
-      oldTagSelected.classList.remove("selected");
-
-      // Adicionando a classe na tag nova
-      tagSelected.classList.add("selected");
-
+      newTagSelected.classList.add('selected');
     });
   });
 }
 
-// Capiturando todos os pixels da section "pixel-board"
-let whitePixels = document.querySelectorAll(".pixel");
+let tagSelected = '';
+colorSelected.forEach((color) => {
+  if (color.classList.contains('selected')) {
+    tagSelected = color;
+    changeTagSelected(tagSelected);
+  }
+});
 
-// Percorrendo todos os indeces do array "whitePixels"
-whitePixels.forEach(pixel => {
+const whitePixels = document.querySelectorAll('.pixel');
 
-  // Adicionando um escutador de evento em cada "indice do array/ pixel"
-  pixel.addEventListener("click", () => {
-
-    // Capiturando a paleta selecionada
-    let paletSelected = document.querySelector(".selected");
-
-    // Verificando qual cor, terei que adicionar no pixel apos o click
-
-    if (paletSelected.classList.contains("black")) {
-      pixel.style.backgroundColor = "black";
+whitePixels.forEach((pixel) => {
+  pixel.addEventListener('click', () => {
+    const paletSelected = document.querySelector('.selected');
+    const pixelWhite = pixel;
+    if (paletSelected.classList.contains('black')) {
+      pixelWhite.style.backgroundColor = 'black';
     }
-    if (paletSelected.classList.contains("red")) {
-      pixel.style.backgroundColor = "red";
+    if (paletSelected.classList.contains('red')) {
+      pixelWhite.style.backgroundColor = 'red';
     }
-    if (paletSelected.classList.contains("blue")) {
-      pixel.style.backgroundColor = "blue";
+    if (paletSelected.classList.contains('blue')) {
+      pixelWhite.style.backgroundColor = 'blue';
     }
-    if (paletSelected.classList.contains("green")) {
-      pixel.style.backgroundColor = "green";
-
+    if (paletSelected.classList.contains('green')) {
+      pixelWhite.style.backgroundColor = 'green';
     }
-
   });
 });
 
-//  Capiturando o botao
-let clearButton = document.querySelector("#clear-board");
+const clearButton = document.querySelector('#clear-board');
 
-// Adicionando um evento de click no botao
-clearButton.addEventListener("click", () => {
-
-  // Percorrendo todos os pixels e verificando se eles possuem um estilo inline, caso tenham, o "removeAttribute" tira
-  
-  whitePixels.forEach(pixel => {
-
+clearButton.addEventListener('click', () => {
+  whitePixels.forEach((pixel) => {
     if (pixel.style.backgroundColor) {
-      pixel.removeAttribute("style");
-    } 
+      pixel.removeAttribute('style');
+    }
   });
 });
