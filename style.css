@@ -16,6 +16,7 @@ body , html {
   border: 1px solid black;
   width: 50px;
   height: 50px;
+  cursor: pointer;
 }
 
 .board-container {
@@ -29,6 +30,7 @@ body , html {
   margin-right: auto;
   margin-left: auto;
   margin-top: 25px;
+  line-height: 0;
 }
 
 .pixel {
@@ -37,6 +39,7 @@ body , html {
   height: 40px;
   border: 1px solid black;
   display: inline-block;
+  cursor: pointer;
 }
 
 .selected {

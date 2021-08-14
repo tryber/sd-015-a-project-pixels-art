@@ -35,16 +35,21 @@ function generatePixels() {
   for (let i = 0; i < pixels ** 2; i += 1) {
     const div = document.createElement('div');
     div.className = 'pixel';
+    div.addEventListener('click', fillPixel);
     board.appendChild(div);
   }
 }
 
 function colorPaletteSelection(event) {
-  const colors = document.getElementsByClassName('color');
-  for (let value of colors) {
-    value.classList.remove('selected');
-  }
+  const selected = document.querySelector('.selected');
+  selected.classList.remove('selected');
   event.target.classList.add('selected');
+}
+
+function fillPixel(event) {
+  const selected = document.querySelector('.selected');
+  const color = selected.style.backgroundColor;
+  event.target.style.backgroundColor = color;
 }
 /*
   É possível pegar todas as cores de forma manual para gerar
