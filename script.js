@@ -5,6 +5,7 @@ document.getElementById('blue').style.backgroundColor = 'blue';
 
 const color = document.getElementsByClassName('color');
 const pixel = document.getElementsByClassName('pixel');
+const clearB = document.getElementById('clear-board');
 
 function selectColor() {
   for (let i = 0; i < color.length; i += 1) {
@@ -31,3 +32,11 @@ function colorPixel() {
 }
 
 colorPixel();
+
+function clearBoard() {
+  for (let i = 0; i < pixel.length; i += 1) {
+    pixel[i].style.backgroundColor = 'white';
+  }
+}
+
+clearB.addEventListener('click', clearBoard);
