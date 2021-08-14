@@ -7,8 +7,15 @@
 #pixel-board{
   border: 1px solid black;
   margin-top: 25px;
-  width: 300px;
   padding-bottom: 10px;
+}
+
+#board-size{
+  height: 37px;
+  width: 50px;
+  display: inline-block;
+  padding: 4px;
+  text-align: center;
 }
 
 .pixel{
@@ -41,4 +48,10 @@ button{
   font-weight: bolder;
   line-height: 5px;
   background-color: #eee;
+  display: block;
+}
+
+button#generate-board{
+  display: inline-block;
+  width: 235px;
 }
