@@ -1,0 +1,181 @@
+body {
+  background-color: #7043ae;
+  font-size: 20px;
+  font-family: Verdana, sans-serif;
+}
+
+header {
+  background-color: #282a36;
+  margin-top: 0%;
+  padding-bottom: 2%;
+}
+
+header h1 {
+  color: #61f586;
+  width: 28%;
+  text-align: center;
+  margin: 0% 36% 2.5%;
+  padding-top: 1.5%;
+}
+
+header ul {
+  text-align: center;
+  list-style: none;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 3%;
+  padding-left: 0%;
+  padding-right: 0%;
+}
+
+header ul li {
+  border: 1px solid black;
+  display: inline-block;
+  font-size: 1.3em;
+  font-weight: 500;
+  margin-right: 4%;
+  margin-left: 4%;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+header span {
+  color: #ff79c6;
+  font-size: 1.4em;
+  margin-left: 31%;
+}
+
+#color1 {
+  background-color: black;
+  color: ghostwhite;
+}
+
+#color2 {
+  background-color: yellow;
+  color: #282a36;
+}
+
+#color3 {
+  background-color: cyan;
+  color: #282a36;
+}
+
+#color4 {
+  background-color: orangered;
+  color: ghostwhite;
+}
+
+#color5 {
+  background-color: darkviolet;
+  color: black;
+}
+
+#color6 {
+  background-color: coral;
+  color: black;
+}
+
+#color7 {
+  background-color: dodgerblue;
+  color: black;
+}
+
+#color8 {
+  background-color: deeppink;
+  color: ghostwhite;
+}
+
+#color9 {
+  background-color: darkslategray;
+  color: ghostwhite;
+}
+
+#color10 {
+  background-color: lightsalmon;
+  color: black;
+}
+
+#color11 {
+  background-color: tan;
+  color: black;
+}
+
+#color12 {
+  background-color: darkgoldenrod;
+  color: black;
+}
+
+.color:hover {
+  font-weight: 600;
+}
+
+main {
+  margin-top: 3%;
+}
+
+#pixel-board {
+  border: #f33a3a solid 5px;
+  border-radius: 25%;
+  background-color: #50fa7b;
+  display: block;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 5%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+.pixel {
+  border: #282a36 solid 1px;
+  background-color: white;
+  display: inline-block;
+  width: 8%;
+  padding-bottom: 8%;
+}
+
+#primeiroDaLinha {
+  margin-left: 30%;
+}
+
+#ultimoDaLinha {
+  margin-right: 25%;
+}
+
+#clear-board {
+  border-radius: 15%;
+  background-color: wheat;
+  color: cornflowerblue;
+  width: 15%;
+  font-size: 2em;
+  margin: 3% 42.5%;
+}
+
+footer {
+  background-color: #282a36;
+  padding-bottom: 5%;
+  padding-top: 5%;
+}
+
+footer span {
+  display: block;
+  font-size: 1em;
+  text-align: center;
+  color: ghostwhite;
+}
+
+footer span a {
+  color: #50fa7b;
+  text-decoration: none;
+}
+
+#heart {
+  color: #ff5555;
+  display: inline;
+}
+
+footer span a:hover {
+  color: #ec6948;
+  font-size: 0.95em;
+}
