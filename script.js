@@ -51,6 +51,15 @@ function setColor(evento){
  evento.target.id = set[0].id
 
 }
+let button = document.getElementById("clear-board");
+button.addEventListener("click", clear);
+function clear(evento){
+  let pix = document.querySelectorAll(".pixel");
 
+  for(let index =0 ;index < pix.length; index += 1  ){
+    pix[index].id = "#white" 
+  }
+
+}
 
 }
