@@ -63,7 +63,7 @@ function callFunction() {
 }
 
 function funcaoLessFive() {
-  pixelBoard.innerTrequisitot = '';
+  pixelBoard.innerHTML = '';
   for (let linha = 1; linha <= 5; linha += 1) {
     let tr = document.createElement('tr');
     pixelBoard.appendChild(tr);
@@ -100,7 +100,7 @@ function funcaoMoreFifity() {
       const td = document.createElement('td');
       td.className = 'pixel';
       tr.appendChild(td);
-      td.addEventListener('click', changeColor);
+      td.addEventListener('click', changeColor2);
     }
   }
 }
