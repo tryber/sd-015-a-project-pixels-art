@@ -28,18 +28,20 @@
 }
 
 #pixel-board {
-    position: absolute;
     left: 40px;
     top: 400px;
-    background-color:red;
+    padding: auto;
+    background-color:white;
+    position: absolute;
 }
 
 .pixel {
-    background-color:cyan;
+    background-color:white;
     width: 40px;
     height: 40px;
     display: inline-block;
     border-style: solid;
+    border-width: 1px;
 }
 
 /* #c1 {
