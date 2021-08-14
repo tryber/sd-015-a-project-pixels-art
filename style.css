@@ -18,21 +18,26 @@ h1 , #color-palette {
 }
 
 #pixel-board {
-  max-width: 210px;
-  max-height: 210px;
+  max-width: 200px;
+  max-height: 200px;
   margin: 0 auto;
   margin-top: 50px;
   line-height: 0px;
+  
 
 }
 
 #clear-board {
-  margin-top: 50px;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
   font-family: Verdana;
   width: 80px;
   height: 30px;
   background-color: blue;
   color: white;
+  display: block;
+  
 
 }
 
