@@ -1,4 +1,4 @@
-body, html {
+body , html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -16,4 +16,13 @@ body, html {
   border: 1px solid black;
   width: 30px;
   padding: 30px;
+}
+
+.board-container {
+  width: 100%;
+}
+
+.pixel {
+  background-color: white;
+  padding: 20px;
 }

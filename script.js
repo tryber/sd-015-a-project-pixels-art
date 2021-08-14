@@ -1,5 +1,6 @@
 window.addEventListener('load', function(){
   fillColorPalette();
+  generatePixels();
 });
 
 /* 
@@ -10,7 +11,7 @@ function fillColorPalette() {
   const colors = document.getElementsByClassName('color');
     
   for (let i = 0; i < colors.length; i += 1) {
-    let colorNum = coresAleatorias();
+    let colorNum = randomColorNumber();
       
     if (i === 0 ) {
       colors[i].style.backgroundColor = 'black';
@@ -21,10 +22,21 @@ function fillColorPalette() {
     }
   }
 
-function coresAleatorias() {
+function randomColorNumber() {
   return Math.floor(Math.random() * 148 + 1);
 }
 
+function generatePixels() {
+  const pixels = 5;
+  const board = document.getElementById('pixel-board');
+  
+  for (let i = 0; i < pixels**2; i += 1) {
+    let div = document.createElement('div');
+    div.className = 'pixel';
+    board.appendChild(div);
+  }
+
+}
 /*
   É possível pegar todas as cores de forma manual para gerar
   esse objeto, mas nesse caso puxei de um repositório no github e coloquei dentro da const e modifiquei todo o conteudo.
