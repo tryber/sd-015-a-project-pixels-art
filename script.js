@@ -42,18 +42,26 @@ function limparQuadro () {
 let btnGenerate = document.querySelector('#generate-board');
 // Resgata o valor do input
 btnGenerate.addEventListener('click', value);
+
+
 function value () {
-    if (document.querySelector('#board-size').value <= 0 || document.querySelector('#board-size').value === '') {
+    let valueBoard = document.querySelector('#board-size').value;
+    if (valueBoard <= 0 || valueBoard  === '') {
         alert('Board inválido!');
-    } else { 
-        generate();
     }
+    else generate();
 }
 
 // Gera o quadro novo
 function generate () {
-    let valueBoard = document.querySelector('#board-size').value
-
+    let valueBoard = document.querySelector('#board-size').value;
+    if (valueBoard > 50) {
+        valueBoard = 50;
+    }
+    if (valueBoard < 5) {
+        valueBoard = 5
+    }
+    console.log(valueBoard)
     //Apaga todo o quadro
     let pixelBoard = document.querySelector('#pixel-board')
     let borderPixel = document.querySelector('.border-pixel-board');
