@@ -4,44 +4,65 @@ function initialSelect() {
 }
 initialSelect();
 
-let blackButton = document.getElementsByClassName ('color')[0];
-let greenButton = document.getElementsByClassName ('color')[1];
-let redButton = document.getElementsByClassName ('color')[2];
-let yellowButton = document.getElementsByClassName ('color')[3];
+const blackButton = document.getElementsByClassName('color')[0];
+const greenButton = document.getElementsByClassName('color')[1];
+const redButton = document.getElementsByClassName('color')[2];
+const yellowButton = document.getElementsByClassName('color')[3];
 
 function clickBlackSelect() {
-    blackButton.className = 'color selected';
-    greenButton.className = 'color';
-    redButton.className = 'color';
-    yellowButton.className = 'color';
-    console.log(document.querySelectorAll('.selected'))  //teste
-
+  blackButton.className = 'color selected';
+  greenButton.className = 'color';
+  redButton.className = 'color';
+  yellowButton.className = 'color';
+  console.log(document.querySelectorAll('.selected')); // teste
 }
 function clickGreenSelect() {
-    blackButton.className = 'color';
-    greenButton.className = 'color selected';
-    redButton.className = 'color';
-    yellowButton.className = 'color';
-    console.log(document.querySelectorAll('.selected'))  //teste
-
+  blackButton.className = 'color';
+  greenButton.className = 'color selected';
+  redButton.className = 'color';
+  yellowButton.className = 'color';
+  console.log(document.querySelectorAll('.selected')); // teste
 }
 function clickRedSelect() {
-    blackButton.className = 'color';
-    greenButton.className = 'color';
-    redButton.className = 'color selected';
-    yellowButton.className = 'color';
-    console.log(document.querySelectorAll('.selected'))  //teste
-
+  blackButton.className = 'color';
+  greenButton.className = 'color';
+  redButton.className = 'color selected';
+  yellowButton.className = 'color';
+  console.log(document.querySelectorAll('.selected')); // teste
 }
 function clickYellowSelect() {
-    blackButton.className = 'color';
-    greenButton.className = 'color';
-    redButton.className = 'color';
-    yellowButton.className = 'color selected';
-    console.log(document.querySelector('.selected'))  //teste
+  blackButton.className = 'color';
+  greenButton.className = 'color';
+  redButton.className = 'color';
+  yellowButton.className = 'color selected';
+  console.log(document.querySelector('.selected')); // teste
 }
 
 blackButton.addEventListener('click', clickBlackSelect);
 greenButton.addEventListener('click', clickGreenSelect);
 redButton.addEventListener('click', clickRedSelect);
 yellowButton.addEventListener('click', clickYellowSelect);
+
+// function paintPixel() {
+//   document.querySelectorAll('.pixel')[0].style.backgroundColor =
+// }
+
+// let pixelBoard = document.querySelectorAll('.pixel');
+// for (let index in pixelBoard) {
+//   document.querySelectorAll('.pixel')[index].addEventListener('click', paintPixel)
+// }
+
+// Pintar uma unidade
+document.getElementById('black').style.backgroundColor = 'black';     // por algum motivo precisei definir background color atraves do DOM pois o class .selected nao esta interpretando que a cor do back é definita pelo id com nome da cor em cada elemento
+document.getElementById('green').style.backgroundColor = 'green';     // por algum motivo precisei definir background color atraves do DOM pois o class .selected nao esta interpretando que a cor do back é definita pelo id com nome da cor em cada elemento
+document.getElementById('red').style.backgroundColor = 'red';         // por algum motivo precisei definir background color atraves do DOM pois o class .selected nao esta interpretando que a cor do back é definita pelo id com nome da cor em cada elemento
+document.getElementById('yellow').style.backgroundColor = 'yellow';   // por algum motivo precisei definir background color atraves do DOM pois o class .selected nao esta interpretando que a cor do back é definita pelo id com nome da cor em cada elemento
+
+
+function paintPixel(){
+  
+  document.querySelectorAll('.pixel')[0].style.backgroundColor = document.querySelector('.selected').style.backgroundColor
+  
+}
+let Pixel = document.querySelectorAll('.pixel')[0];
+Pixel.addEventListener('click', paintPixel);
