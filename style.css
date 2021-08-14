@@ -1,0 +1,33 @@
+#c1 {
+    background-color: black;
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+
+    border: solid;
+}
+
+#c2 {
+    background-color: chartreuse;
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+
+    border: solid;
+}
+#c3 {
+    background-color: crimson;
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+
+    border: solid;
+}
+#c4 {
+    background-color: deepskyblue;
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+
+    border: solid;
+}
