@@ -42,24 +42,64 @@ header ul li {
   padding-right: 2%;
 }
 
-#color-1 {
+#color1 {
   background-color: black;
   color: ghostwhite;
 }
 
-#color-2 {
+#color2 {
   background-color: yellow;
   color: #282a36;
 }
 
-#color-3 {
+#color3 {
   background-color: cyan;
   color: #282a36;
 }
 
-#color-4 {
+#color4 {
   background-color: orangered;
   color: ghostwhite;
+}
+
+#color5 {
+  background-color: darkviolet;
+  color: black;
+}
+
+#color6 {
+  background-color: coral;
+  color: black;
+}
+
+#color7 {
+  background-color: dodgerblue;
+  color: black;
+}
+
+#color8 {
+  background-color: deeppink;
+  color: ghostwhite;
+}
+
+#color9 {
+  background-color: darkslategray;
+  color: ghostwhite;
+}
+
+#color10 {
+  background-color: lightsalmon;
+  color: black;
+}
+
+#color11 {
+  background-color: tan;
+  color: black;
+}
+
+#color12 {
+  background-color: darkgoldenrod;
+  color: black;
 }
 
 main {
