@@ -5,12 +5,12 @@
     height: 55px;
     background-color: black;
 }
-.purple {
+.red {
     border: 1px solid black;
     display: inline-block;
     width: 55px;
     height: 55px;
-    background-color: purple;
+    background-color: rgb(170, 14, 14);
 }
 .blue {
     border: 1px solid black;
@@ -44,7 +44,7 @@
     margin-left: 15px;
 }
 #pixel-board {
-    margin-top: 10px;
+    margin-top: 50px;
     margin-left: 35px;
     width: 250px;
 }
