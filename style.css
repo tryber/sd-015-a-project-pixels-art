@@ -1,14 +1,12 @@
 body{
     
 }
-
 #title {
  color: brown;
  text-align: center;
  font-size: 50px;
 }
-
-#color1, #color2, #color3, #color4, #color5{
+.color{
     width: 20px;
     padding: 20px;
     border: 1px solid black;
@@ -22,29 +20,16 @@ body{
     margin: 1px;
     display: inline-block;
 }
-
-
 .black{
     background-color: black;
-    border: 1px black solid;
 }
-
 .green{
     background-color: green;
-    border: 1px black solid;
 }
-
 .red{
-    background-color: red;
-    border: 1px black solid;
+    background-color: red;  
 }
-
 .yellow{
     background-color: yellow;
-    border: 1px black solid;
 }
 
-.pink {
-    background-color: pink;
-    border: 1px black solid;
-}
