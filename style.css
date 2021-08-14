@@ -12,7 +12,15 @@
   display: inline-block;
 }
 
-.printUser {
+#pixel-board {
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: repeat(5, 40px);
+  grid-template-rows: repeat(5, 40px);
+  grid-auto-flow: column;
+}
+
+.pixel {
   width: 15px;
   padding: 15px;
   border: 1px solid black;
