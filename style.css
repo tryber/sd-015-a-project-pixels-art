@@ -16,17 +16,17 @@ li.color {
 }
 
 li.color:nth-child(1) {
-    background-color: aqua;
+    background-color: black;
 }
 
 li.color:nth-child(2) {
-    background-color: rgb(15, 247, 53);
+    background-color: blue;
 }
 
 li.color:nth-child(3) {
-    background-color: rgb(213, 241, 53);
+    background-color: yellow;
 }
 
 li.color:nth-child(4) {
-    background-color: rgb(241, 91, 91);
+    background-color: red;
 }
