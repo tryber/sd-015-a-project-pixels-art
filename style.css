@@ -31,8 +31,12 @@
 
 .pixel {
   display: inline-block;
-  width: 40px ;
-  height: 40px;
+  width: 40px;
+  height: 50px;
   background-color: white;
   border: 1px solid black;
+}
+
+button {
+  margin-bottom: 10px;
 }

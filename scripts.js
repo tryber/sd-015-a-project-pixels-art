@@ -21,3 +21,18 @@
     const change = getComputedStyle(inColors)
     event.target.style.backgroundColor = change.backgroundColor;
   }
+
+    const resetButton = document.getElementById('clear-board')
+    
+    resetButton.addEventListener('click', selectPaintPixel)
+    
+    function selectPaintPixel() {
+    let pixels = document.querySelectorAll('.pixel')
+    for (const pixel of pixels) {
+    makePixelsWhite(pixel)  
+    }
+    };
+
+    function makePixelsWhite(pixel) {
+    pixel.style.backgroundColor = 'white'
+    };
