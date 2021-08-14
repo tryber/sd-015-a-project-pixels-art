@@ -15,7 +15,7 @@
 // function colorForChange () {
 //  const color1 = document.getElementsById('color-palette')
 
-//  for (let index = 0; index < color1.length; index += 1) {
+//  for (let index = 0; index < 26; index += 1) {
 //      let inColor = color1[index]
 //      const divColor = document.createElement('div')
 //      if (inColor = inColor[0])
@@ -23,9 +23,16 @@
 //      divColor.innerHTML = inColor
 //      color1.appendChild(divColor)
 //  }
-// }
-// colorForChange(color1)
+
+const cont = ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']; 
+function criarQ () {
 const divs = document.getElementById('pixel-board')
-const div25 = document.createElement('div')
-div25.className = 'color'
-divs.appendChild(div25)
+for (let i = 0; i < cont.length; i += 1) {
+    let linha = cont[i];
+    const div25 = document.createElement('div')
+    div25.className = 'color'
+    div25.innerHTML = linha
+    divs.appendChild(div25)
+}
+}
+criarQ()
