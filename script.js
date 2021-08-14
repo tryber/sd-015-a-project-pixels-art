@@ -1,6 +1,8 @@
 window.addEventListener('load', function(){
   fillColorPalette();
   generatePixels();
+  const clearBtn = document.getElementById('clear-board');
+  clearBtn.addEventListener('click', clearBoard);
 });
 
 /* 
@@ -36,6 +38,7 @@ function generatePixels() {
     const div = document.createElement('div');
     div.className = 'pixel';
     div.addEventListener('click', fillPixel);
+    div.addEventListener('dblclick', clearPixel);
     board.appendChild(div);
   }
 }
@@ -50,6 +53,20 @@ function fillPixel(event) {
   const selected = document.querySelector('.selected');
   const color = selected.style.backgroundColor;
   event.target.style.backgroundColor = color;
+}
+
+function clearBoard() {
+  const rgb = 'rgb(255,255,255)';
+  const pixels = document.getElementsByClassName('pixel');
+
+  for (const value of pixels) {
+    value.style.backgroundColor = rgb;
+  }
+}
+
+function clearPixel(event) {
+  const rgb = 'rgb(255,255,255)';
+  event.target.style.backgroundColor = rgb;
 }
 /*
   É possível pegar todas as cores de forma manual para gerar
