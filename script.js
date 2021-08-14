@@ -53,9 +53,9 @@ color4.addEventListener('click', trocarClasseSelected);
 function criarOQuadroDeArt() {
   const divDoQuadro = document.querySelector('#pixel-board');
   for (let index = 0; index < 25; index += 1) {
-      const quadroPixel = document.createElement('div');
-      quadroPixel.classList = 'pixel';
-      divDoQuadro.appendChild(quadroPixel);
+    const quadroPixel = document.createElement('div');
+    quadroPixel.classList = 'pixel';
+    divDoQuadro.appendChild(quadroPixel);
   }
 }
 criarOQuadroDeArt();
