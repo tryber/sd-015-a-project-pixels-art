@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
-const boardPixel = 'pixel-board';
-
+const BOARDPIXEL = 'pixel-board';
+let NUMOFPIXELS = 25;
 function createBox(parent) {
   const colors = ['black', 'blue', 'green', 'yellow'];
   for (let i = 0; i < colors.length; i += 1) {
@@ -15,8 +15,8 @@ function createBox(parent) {
   }
 }
 
-function createPixel(parent) {
-  for (let i = 0; i < 25; i += 1) {
+function createPixel(parent, value) {
+  for (let i = 0; i < value; i += 1) {
     const newDiv = document.createElement('div');
     const newLi = document.createElement('li');
     const parentElement = document.getElementById(parent);
@@ -25,6 +25,14 @@ function createPixel(parent) {
     newDiv.style.backgroundColor = 'white';
     parentElement.appendChild(newDiv);
     newDiv.appendChild(newLi);
+  }
+}
+
+function removePixel(value) {
+  for (let i = 0; i < value; i += 1) {
+    const selectAllPixel = document.getElementsByClassName('pixel');
+
+    selectAllPixel[0].remove();
   }
 }
 
@@ -45,7 +53,7 @@ function selectColor() {
 }
 
 function fillPixel() {
-  const pixel = document.getElementById(boardPixel);
+  const pixel = document.getElementById(BOARDPIXEL);
 
   pixel.addEventListener('click', (event) => {
     const selectedColor = document.querySelector('.selected').style.backgroundColor;
@@ -67,28 +75,45 @@ function clearBoard() {
     }
   });
 }
+function checkInput(element) {
+  if (element > 0) {
+    const numOfPixels = element * element;
+    if (numOfPixels > NUMOFPIXELS) {
+      createPixel(BOARDPIXEL, (numOfPixels - NUMOFPIXELS));
+      NUMOFPIXELS = numOfPixels;
+    } else if (numOfPixels < NUMOFPIXELS) {
+      removePixel((NUMOFPIXELS - numOfPixels));
+      NUMOFPIXELS = numOfPixels;
+    }
+    return true;
+  }
+  return false;
+}
 
+function changePixelBoard(input) {
+  const pixelBoard = document.getElementById(BOARDPIXEL);
+  const valueInput = Number(input.value);
+
+  console.log(valueInput);
+
+  pixelBoard.style.width = `${(valueInput * 42)}px`;
+}
 function definePixelSize() {
   const input = document.querySelector('input');
   const vqvBtn = document.getElementById('generate-board');
 
-  input.id = 'board-size';
-
   vqvBtn.addEventListener('click', () => {
-    const valueInput = Number(input.value);
-    const pixelBoard = document.getElementById(boardPixel);
-    const allPixels = document.querySelectorAll('.pixel');
-
-    pixelBoard.style.width = `${((valueInput) + 2) * 5}px`;
-    for (let i = 0; i < allPixels.length; i += 1) {
-      allPixels[i].style.width = `${valueInput}px`;
-      allPixels[i].style.height = `${valueInput}px`;
+    const inputCheck = checkInput(input.value);
+    if (inputCheck) {
+      changePixelBoard(input);
+    } else {
+      window.alert('Board inválido!');
     }
   });
 }
 
 createBox('color-palette');
-createPixel(boardPixel);
+createPixel(BOARDPIXEL, 25);
 defineColor();
 selectColor();
 fillPixel();
