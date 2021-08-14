@@ -65,3 +65,26 @@ function pintarPixel() {
   }
 }
 pintarPixel();
+
+// aqui vamos criar um botão para colocar branco em todas as divs do quadro de pixels
+
+function criarBotaoClareador(limpar) {
+  const divDoBotao = document.querySelector('#div-button');
+  const botaoLimpar = document.createElement('button');
+  botaoLimpar.innerHTML = limpar;
+  botaoLimpar.id = 'clear-board';
+  divDoBotao.appendChild(botaoLimpar);
+}
+criarBotaoClareador('Limpar');
+// agora vamos adicionar um evento que quando ouver um click o quadro de pixels será limpo
+
+function limpezaPixels() {
+  const pixelsBoard = document.querySelectorAll('.pixel');
+  for (let index = 0; index < pixelsBoard.length; index += 1) {
+    const osPixels = pixelsBoard[index];
+    osPixels.style.backgroundColor = 'white';
+  }
+}
+
+const botaoLimpeza = document.querySelector('#clear-board');
+botaoLimpeza.addEventListener('click', limpezaPixels);
