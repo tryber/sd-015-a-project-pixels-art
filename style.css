@@ -1,12 +1,12 @@
 .color {
   border: 1px solid black;
   display: inline-block;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
 }
 
 .color:nth-of-type(1) {
-  background-color: rgb(0, 0, 0);
+  background-color: black;
 }
 
 .color:nth-of-type(2) {
@@ -19,4 +19,17 @@
 
 .color:nth-of-type(4) {
   background-color: #e996b7;
+}
+
+#pixel-board {
+  height: 210px;
+  width: 210px;
+  border: 1px solid black;
+}
+
+.pixel {
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  float: left;
 }
