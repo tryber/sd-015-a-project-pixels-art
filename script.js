@@ -2,7 +2,7 @@ window.onload = function() {
   let size = 5;
  
   fillPixelboard();
-  
+}
   function fillPixelboard() {
     
     let pixelboard = document.querySelector("#pixel-board");
@@ -20,6 +20,7 @@ window.onload = function() {
 
 }
 
+let size = 5;
 function deletePixelBoard(){
  
   let si = size * size;
@@ -110,4 +111,4 @@ function changeBoard(even){
   }
 }
 
-}
+
