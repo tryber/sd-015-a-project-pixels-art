@@ -20,11 +20,7 @@ body {
 
   }
 
-#pixel-board{
-  width: 210px;
-  height: 210px;
-  border-collapse: collapse;
-}
+
 
   .pixel {
     display: inline-block;
@@ -32,7 +28,7 @@ body {
     height: 40px;
     border: 1px solid black;
     border-collapse:inherit;
-    margin-top: -5px;
+     margin-top: -5px;
     
   }
 
@@ -41,5 +37,6 @@ body {
   
 }
 #board-size{
+  width: 55px;
   
 }

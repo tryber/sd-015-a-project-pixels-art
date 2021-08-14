@@ -8,7 +8,7 @@
   <title>Project Pixels Art!</title>
 </head>
 <body>
-  <header></header>
+  <header>
       <h1 id="title">Paleta de Cores</h1>
   </header>
   
@@ -16,7 +16,7 @@
   <section>
     <section>
       <label>How many pixels do you want?</label><br>
-      <input type="number" min="5" id="board-size" placeholder="5 to 50" maxlength="2" min="5" max="50">
+      <input type="number" value='' id="board-size" placeholder="5 to 50" min="1" max="51" oninput="validity.valid||(value='');">
       <button id='generate-board'>VQV</button>
     </section>
     <button id="clear-board">Limpar</button>
