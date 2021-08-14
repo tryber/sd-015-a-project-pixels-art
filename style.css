@@ -34,7 +34,8 @@
 }
 
 #pixel-board {
-    width: 250px;
+    width: 235px;
+    height: 0px;                /*para corrigir alteração de cor do fundo do board*/
 }
 
 .selected {
