@@ -2,9 +2,11 @@ let size = 5;
 let board = document.querySelector('#pixel-board');
 let pixelPalett = document.querySelector('#color-palette');
 let colors = document.querySelectorAll('.color');
-let boardPixels = document.querySelectorAll('.board-pixels');
+let boardPixels = document.getElementsByClassName('board-pixels');
+let body = document.querySelector('#body');
+let pixels = document.getElementsByClassName('pixel');
 
-function createLine(size) {
+function createLines(size) {
   for (let line = 1; line <= size; line += 1) {
     let createBoardLines = document.createElement('div');
     createBoardLines.className = 'board-pixels';
@@ -19,7 +21,7 @@ function createLine(size) {
     }
   }
 } 
-createLine(size);
+createLines(size);
 
 
 window.onload = function() {
@@ -37,3 +39,11 @@ board.addEventListener('click', function(event) {
   event.target.style.backgroundColor = document.querySelector('.selected').style.backgroundColor;
 
 })
+
+function clearButton() {
+  let createButton = document.createElement('button');
+  createButton.id = 'clear-board';
+  createButton.innerText = 'Limpar';
+  body.appendChild(createButton);
+}
+clearButton();
