@@ -54,12 +54,14 @@ window.onload = function resetBlackSelection() {
   blackColor.classList.add('selected');
 };
 
-// verificar se uma cor foi clicada usado a referência de event bubbling de https://gomakethings.com/attaching-multiple-elements-to-a-single-event-listener-in-vanilla-js/
-document.addEventListener('click', function selectColor(event) {
-  const thisColorClasses = event.target.classList;
-  if (thisColorClasses.contains('color') && !thisColorClasses.contains('selected')) {
-    clearColorSelection();
-    thisColorClasses.add('selected');
-    alert(`${event.target.id} selected`);
-  }
+// verificar se uma cor foi clicada usado a referência de event bubbling de https://flaviocopes.com/how-to-add-event-listener-multiple-elements-javascript/
+document.querySelectorAll('.color').forEach((colorOnPalette) => {
+  colorOnPalette.addEventListener('click', (color) => {
+    const thisColorClasses = color.target.classList;
+    if (!thisColorClasses.contains('selected')) {
+      clearColorSelection();
+      thisColorClasses.add('selected');
+      alert(`${color.target.id} selected`);
+    }
+  });
 });
