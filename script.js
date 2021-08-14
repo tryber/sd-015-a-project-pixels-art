@@ -37,5 +37,58 @@ quadradoDeCor()
 
 // chamarQuadrado()
 
-let corPreta = document.querySelector("#black")
-corPreta.className = "color selected"
+function classeSelect () {
+  let paletaDeCores = document.querySelector(".selected")
+  let purple = document.querySelector("#purple")
+  let green = document.querySelector("#green")
+  let black = document.querySelector("#black")
+  let red = document.querySelector("#red")
+  purple.addEventListener("click", function() {
+  purple.className = "color selected"
+  green.className = "color"
+  black.className = "color"
+  red.className = "color"
+})
+}
+
+classeSelect()
+
+
+function classeSelect () {
+  let paletaDeCores = document.querySelector(".selected")
+  let purple = document.querySelector("#purple")
+  let green = document.querySelector("#green")
+  let black = document.querySelector("#black")
+  let red = document.querySelector("#red")
+
+  purple.addEventListener("click", function() {
+    purple.className = "color selected"
+    green.className = "color"
+    black.className = "color"
+    red.className = "color"
+})
+
+  green.addEventListener("click", function() {
+    purple.className = "color"
+    green.className = "color selected"
+    black.className = "color"
+    red.className = "color"
+})
+
+  red.addEventListener("click", function() {
+    purple.className = "color"
+    green.className = "color"
+    black.className = "color"
+    red.className = "color  selected"
+})
+
+  black.addEventListener("click", function() {
+    purple.className = "color"
+    green.className = "color"
+    black.className = "color selected"
+    red.className = "color"
+})
+}
+
+classeSelect()
+
