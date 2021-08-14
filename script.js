@@ -77,35 +77,48 @@ function clearBoard() {
 }
 function checkInput(element) {
   if (element > 0) {
-    const numOfPixels = element * element;
-    if (numOfPixels > NUMOFPIXELS) {
-      createPixel(BOARDPIXEL, (numOfPixels - NUMOFPIXELS));
-      NUMOFPIXELS = numOfPixels;
-    } else if (numOfPixels < NUMOFPIXELS) {
-      removePixel((NUMOFPIXELS - numOfPixels));
-      NUMOFPIXELS = numOfPixels;
-    }
     return true;
   }
   return false;
 }
 
+function adjustingNumOfPixels(value) {
+  const numOfPixels = value * value;
+  if (numOfPixels > NUMOFPIXELS) {
+    createPixel(BOARDPIXEL, (numOfPixels - NUMOFPIXELS));
+    NUMOFPIXELS = numOfPixels;
+  } else if (numOfPixels < NUMOFPIXELS) {
+    removePixel((NUMOFPIXELS - numOfPixels));
+    NUMOFPIXELS = numOfPixels;
+  }
+}
+
 function changePixelBoard(input) {
   const pixelBoard = document.getElementById(BOARDPIXEL);
-  const valueInput = Number(input.value);
-
-  console.log(valueInput);
+  const valueInput = Number(input);
 
   pixelBoard.style.width = `${(valueInput * 42)}px`;
+}
+
+function minAndMaxLength(value) {
+  let newValue = Number(value);
+  // actual value >= 5
+  newValue = Math.max(newValue, 5);
+  // actual value <= 50
+  newValue = Math.min(newValue, 50);
+  return newValue;
 }
 function definePixelSize() {
   const input = document.querySelector('input');
   const vqvBtn = document.getElementById('generate-board');
 
   vqvBtn.addEventListener('click', () => {
-    const inputCheck = checkInput(input.value);
+    let valueInput = input.value;
+    const inputCheck = checkInput(valueInput);
     if (inputCheck) {
-      changePixelBoard(input);
+      valueInput = minAndMaxLength(valueInput);
+      adjustingNumOfPixels(valueInput);
+      changePixelBoard(valueInput);
     } else {
       window.alert('Board inválido!');
     }
