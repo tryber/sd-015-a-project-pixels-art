@@ -9,6 +9,7 @@ body {
 #color-palette {
     /* display: inline-block; */
     padding: 30px;
+    text-align: center;
 }
 
 .color {
@@ -21,10 +22,9 @@ body {
 }
 
 #pixel-board {
-    background-color: antiquewhite;
-    border: 1px solid black;
     width: 210px;
-    height: 2px;
+    height: 230px;
+    margin: auto;
 }
 .pixel {
     display: inline-block;
@@ -33,6 +33,6 @@ body {
     width: 40px;
     height: 40px;
 }
-/* .selected {
-    background-color: black;
-} */
+#local-button {
+    text-align: center;
+}

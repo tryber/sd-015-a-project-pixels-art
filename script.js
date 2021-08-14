@@ -44,5 +44,10 @@ chamarEl.appendChild(botao)
 
 const button = document.getElementById('clear-board')
 button.addEventListener('click', removeAll)
-function removeAll (event) {
+
+function removeAll () {
+    let changeEl = document.querySelectorAll('.pixel')
+    for (let i = 0; i < changeEl.length; i += 1) {
+        changeEl[i].style.backgroundColor = 'white'
+    }
 }
