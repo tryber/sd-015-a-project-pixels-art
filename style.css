@@ -1,0 +1,35 @@
+.color {
+  border: 1px solid black;
+}
+
+#title {
+  text-align: center;
+}
+
+#color-palette {
+  text-align: center;
+}
+
+#color-one {
+  background-color: black;
+  padding: 25px 25px 25px 25px;
+  display: inline-block;
+}
+
+#color-two {
+  background-color: red;
+  padding: 25px 25px 25px 25px;
+  display: inline-block;
+}
+
+#color-three {
+  background-color: blue;
+  padding: 25px 25px 25px 25px;
+  display: inline-block;
+}
+
+#color-four {
+  background-color: green;
+  padding: 25px 25px 25px 25px;
+  display: inline-block;
+}
