@@ -1,4 +1,4 @@
-function blackDiv () {
+function blackDiv (){
   const colorBlack = 'black';
 
   const blackDivColor = document.createElement('div');
@@ -9,14 +9,13 @@ function blackDiv () {
 }
 
 function divColor() {
-
   const color = [, 'red', 'blue', 'yellow'];
   for (let index in color) {
-    let newDivColor = document.createElement('div');
+    const newDivColor = document.createElement('div');
     newDivColor.className = 'color';
-    let color1 = Math.floor(Math.random() * 255) + 1;
-    let color2 = Math.floor(Math.random() * 255) + 1;
-    let color3 = Math.floor(Math.random() * 255) + 1;
+    const color1 = Math.floor(Math.random() * 255) + 1;
+    const color2 = Math.floor(Math.random() * 255) + 1;
+    const color3 = Math.floor(Math.random() * 255) + 1;
     newDivColor.style.backgroundColor =
       'rgb(' + color1 + ',' + color2 + ',' + color3 + ')';
 
