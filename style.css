@@ -1,28 +1,28 @@
 body {
-    background-color: rgb(231, 221, 222);
+  background-color: rgb(231, 221, 222);
 }
 
 #centralize {
-    display: block;
-font-family: 'Courier New', Courier, monospace;
-margin: 0 auto;
-width: 400px;
-text-align: center;
+  display: block;
+  font-family: 'Courier New', Courier, monospace;
+  margin: 0 auto;
+  width: 400px;
+  text-align: center;
 }
 
 #button-countainer{
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
 .color {
-    display: inline-block;
-    width: 42px;
-    height: 42px;
-    border: solid black 1px;
+  display: inline-block;
+  width: 42px;
+  height: 42px;
+  border: solid black 1px;
 }
 
 #preto {
-    background-color: black;
+  background-color: black;
 }
 
 /* #vermelho {
@@ -38,38 +38,38 @@ text-align: center;
 } */
 
 #verde {
-    background-color: lawngreen;
+  background-color: lawngreen;
 }
 
 #azul {
-    background-color: cyan;
+  background-color: cyan;
 }
 
 #anil {
-    background-color: darkblue;
+  background-color: darkblue;
 }
 
 #violeta {
-    background-color: purple;
+  background-color: purple;
 }
 
 .pixel {
-    background-color: white;
-    width: 40px;
-    height: 40px;
-    border: solid black 1px;
-    display: inline-block;
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  border: solid black 1px;
+  display: inline-block;
 }
 
 .pixelLine {
-margin: 0;
-padding: 0%;
-border: 0;
-height: 40px;
+  margin: 0;
+  padding: 0%;
+  border: 0;
+  height: 40px;
 }
 
 #clear-board {
-  margin: 5px 0 7px 0;
+  margin: 5px 0 7px;
 }
 
 #title {
@@ -81,8 +81,8 @@ height: 40px;
 
 #title-countainer {
   text-align: center;
-    width: 400px;
-    margin: 0 0 15px 0;
+  width: 400px;
+  margin: 0 0 15px;
 }
 
 #board-countainer {
