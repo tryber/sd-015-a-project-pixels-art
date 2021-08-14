@@ -24,17 +24,15 @@ const cores1 = document.querySelectorAll('.color')
             primQ.classList.remove('selected')
             event.target.classList.add('selected')
         }
-
-
-let getColor = document.querySelector('.selected');
-let background1 = window.getComputedStyle(getColor, null).getPropertyValue('background-color');
-
-const colors = document.getElementsByClassName('pixel');
-
-for (let index = 0; index < colors.length; index += 1) {
-colors[index].addEventListener('click', changeColor)
-}
-
-function changeColor (event) {
-event.target.style.backgroundColor = background1;
+        
+        const colors = document.getElementsByClassName('pixel');
+        
+        for (let index = 0; index < colors.length; index += 1) {
+            colors[index].addEventListener('click', changeColor)
+        }
+        
+        function changeColor (event) {
+    let getColor = document.querySelector('.selected');
+    let background1 = window.getComputedStyle(getColor).getPropertyValue('background-color');
+    event.target.style.backgroundColor = background1;
 } 
