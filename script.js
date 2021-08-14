@@ -1,11 +1,10 @@
 // Requisito 3
-// function firstBlock() {
-//   const firstBlock = document.getElementsByClassName('color')[0]
-//   firstBlock.style.backgroundColor = 'black'
-//   firstBlock.style.padding = '25px 25px 25px 25px'
-//   firstBlock.style.display = 'inline-block'
-// }
-// firstBlock();
+function firstBlock() {
+  const mainBlock = document.getElementsByClassName('color')[0]
+  mainBlock.id = 'main-block'
+  mainBlock.classList.add('selected')
+}
+firstBlock();
 
 // Cria tabela de pixels
 function createTable() {
@@ -21,3 +20,13 @@ function createTable() {
   }
 }
 createTable();
+
+// Escolhe cor
+const palette = document.querySelector('#color-palette')
+palette.addEventListener('click', selectColor)
+
+function selectColor(event) {
+  let selected = document.querySelector('.selected')
+  selected.classList.remove('selected')
+  event.target.classList.add('selected')
+}
