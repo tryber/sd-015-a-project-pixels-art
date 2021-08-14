@@ -28,3 +28,10 @@
 .pink {
   background-color: pink;
 }
+#clear-board {
+  margin: 10px;
+  background-color: rgb(247, 70, 70);
+  color: white;
+  text-transform: uppercase;
+  border-color: whitesmoke;
+}

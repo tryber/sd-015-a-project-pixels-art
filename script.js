@@ -31,3 +31,12 @@ for (let pixel of selectedPixel) {
   });
 }
 
+let clearButton = document.getElementById('clear-board');
+clearButton.addEventListener('click', clearBoard);
+
+function clearBoard() {
+  for (let pixel of selectedPixel) {
+    pixel.classList.remove('black', 'pink', 'blue', 'green');
+  }
+}
+
