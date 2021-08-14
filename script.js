@@ -20,5 +20,11 @@ createLine(size);
 
 
 window.onload = function() {
-  let black = document.querySelector('.color').classList.add('selected');
+  document.querySelector('.color').classList.add('selected');
 }
+
+pixelPalett.addEventListener('click', function(event) {
+  let selectedColor = document.querySelector('.selected');
+  selectedColor.classList.remove('selected');
+  event.target.classList.add('selected');
+})

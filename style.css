@@ -1,10 +1,11 @@
 #body {
-  background-color: cyan;
+  background-color: rgb(54, 54, 54);
   text-align: center;
 }
 
 #title {
   font-size: 45px;
+  background-color: white;
 }
 
 .color {
