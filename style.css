@@ -1,3 +1,6 @@
+body {
+  background-color: rgb(214, 224, 223);
+}
 /* Estilização do REQUISITO 2 */
 .color {
   border: solid black 1px;
