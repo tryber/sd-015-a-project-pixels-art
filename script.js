@@ -20,7 +20,7 @@ function randomColors() {
   const paletteColorsArray = document.getElementById('color-palette').children; 
 
   for (let index = 1; index < paletteColorsArray.length; index += 1) {
-    const randomId = colorsPaletteArray[Math.floor(Math.random()*colorsPaletteArray.length)]; // https://css-tricks.com/snippets/javascript/select-random-item-array/
+    const randomId = colorsPaletteArray[Math.floor(Math.random() * colorsPaletteArray.length)]; // https://css-tricks.com/snippets/javascript/select-random-item-array/
     paletteColorsArray[index].id = randomId;
     paletteColorsArray[index].innerText = colorsPaletteObject[randomId];
   }
