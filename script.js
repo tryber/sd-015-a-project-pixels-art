@@ -13,7 +13,8 @@ function pintaPixel(pixel) {
   pixelPintado.style.backgroundColor = document.querySelector('.selected').style.backgroundColor;
 }
 
-const pixelBoard = document.createElement('div');
+const calaBocaLint = 'pixel-board';
+
 function criaQuadro(valor) {
   let filtro = valor;
   if (filtro > 49) {
@@ -21,7 +22,8 @@ function criaQuadro(valor) {
   } else if (filtro < 6) {
     filtro = 5;
   }
-  pixelBoard.id = 'pixel-board';
+  const pixelBoard = document.createElement('div');
+  pixelBoard.id = calaBocaLint;
   document.querySelector('body').appendChild(pixelBoard);
   for (let linha = 0; linha < filtro; linha += 1) {
     for (let i = 0; i < filtro; i += 1) {
@@ -49,7 +51,7 @@ const botao = document.createElement('button');
 botao.innerText = 'Limpar';
 botao.id = 'clear-board';
 botao.style.marginBottom = '10px';
-document.querySelector('body').insertBefore(botao, pixelBoard);
+document.querySelector('body').insertBefore(botao, document.getElementById(calaBocaLint));
 botao.onclick = function limpaQuadro() {
   for (let i = 0; i < document.getElementsByClassName('pixel').length; i += 1) {
     document.getElementsByClassName('pixel')[i].style.backgroundColor = 'white';
@@ -68,9 +70,10 @@ resizeBoard.onclick = function limpaQuadro() {
   if (tamanho.value < 1) {
     alert('Board inválido!');
   } else {
+    const pixelBoard = document.querySelector('#pixel-board');
     pixelBoard.parentNode.removeChild(pixelBoard);
     criaQuadro(tamanho.value);
   }
 };
-document.querySelector('body').insertBefore(tamanho, pixelBoard);
-document.querySelector('body').insertBefore(resizeBoard, pixelBoard);
+document.querySelector('body').insertBefore(tamanho, document.getElementById(calaBocaLint));
+document.querySelector('body').insertBefore(resizeBoard, document.getElementById(calaBocaLint));
