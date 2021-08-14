@@ -35,14 +35,16 @@
     margin: 2px 2px 2px 5px;
 }
 #color-palette {
-    font-size: 0px;
-    width: 228px;
+    width: 500px;
     height: 58px;
+    margin-left: 5px
 }
 .color {
     display: inline-block;
+    margin-left: 15px;
 }
 #pixel-board {
     margin-top: 10px;
+    margin-left: 35px;
     width: 250px;
 }
