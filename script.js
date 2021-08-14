@@ -34,6 +34,29 @@ const newSelector = (qttOfSelector, element, selector, selectorName) => {
       } 
     }
 }
+const eventGetElementColor = (event, location) =>{
+  location.addEventListener(event, (eventTrigger) => {
+    // console.log(eventTrigger)
+    if(eventTrigger.target.classList.contains('color')){
+      if(!eventTrigger.target.classList.contains('selected')){
+        console.log(document.querySelector('.selected').classList.remove('selected'));
+        eventTrigger.target.className = 'color selected';
+      }
+    }
+  })
+  // for(let index = 0; index < location.length; index += 1){
+  //   location[index].addEventListener(event, (eventLocation) =>{
+  //     for(let indexx = 0; indexx < location.length; indexx += 1){
+  //       if(location[indexx].className === 'color selected'){
+  //         location[indexx].className = 'color';
+  //         console.log(index, indexx)
+  //       }else{
+  //         eventLocation.target.className = 'color selected';
+  //       }
+  //     }
+  //   }) 
+  // }
+}
 
 const sectionPalletCollor = document.getElementById('color-palette');
 newPalletBlock(sectionPalletCollor, 4)
@@ -41,7 +64,9 @@ newPalletBlock(sectionPalletCollor, 4)
 const sectionPixelBoard = document.getElementById('pixel-board');
 newPixel(sectionPixelBoard, 25);
 
-const palletBlock = document.querySelector('.color');
+const firstPalletBlock = document.querySelector('.color');
 window.onload = () =>{
-  palletBlock.className = 'color selected'
+  firstPalletBlock.className = 'color selected'
 }
+
+eventGetElementColor('click', sectionPalletCollor)
