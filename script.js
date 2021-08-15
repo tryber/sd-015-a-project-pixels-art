@@ -1,10 +1,10 @@
 const h1 = document.createElement('h1');
 const sectionCollorPalette = document.createElement('section');
-sectionCollorPalette.id = 'color-palette';
 const quadroPixel = document.createElement('div');
 const altura = 5;
 const largura = 5;
 
+sectionCollorPalette.id = 'color-palette';
 quadroPixel.id = 'pixel-board';
 h1.innerText = 'Paleta de Cores';
 h1.id = 'title';
@@ -12,12 +12,24 @@ h1.id = 'title';
 window.onload = function selectedElement() {
   let elementSelected = document.querySelectorAll('.color')[0];
   elementSelected.classList.add('selected');
-  return elementSelected;
  }
 
-function elementClick() {
-  
+ function elementClick() {
+  let paletaCores = document.querySelectorAll('.color');
+  for (let i = 0; i < paletaCores.length; i += 1) {
+    paletaCores[i].addEventListener('click', function(event) {
+    elementoClicado = paletaCores[i].classList.add('selected');
+    })
+  }
 }
+
+// function removeSelected(lista) { 
+//   let v = document.querySelectorAll('.color'); // recebe lista da classe color
+
+//   for (let i = 0; i < v.length; i += 1) {
+//     if (v != lenght - 1
+//   }
+// }
 
 function bodyChildren(elemento) { 
   document.body.appendChild(elemento);
@@ -54,3 +66,4 @@ bodyChildren(h1);
 bodyChildren(sectionCollorPalette);
 bodyChildren(quadroPixel);
 fillBoard();
+elementClick();
