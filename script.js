@@ -92,6 +92,13 @@ const changePaletteBlockCollor = (block) => {
 createNewElement('div', '', sectionPaletteCollor, 4, 'class', 'color');
 // REQ 4 E 5
 newPixel(sectionPixelBoard, 5);
+// REQ 6
+window.onload = () => {
+  const firstPaletteBlock = document.querySelector('.color');
+  const allPaletteBlocks = document.getElementsByClassName('color');
+  firstPaletteBlock.className = 'color selected';
+  changePaletteBlockCollor(allPaletteBlocks);
+};
 // REQ 7 E 8
 eventGetPaletteclass('click', sectionPaletteCollor);
 eventChangePixelColor(sectionPixelBoard);
@@ -111,11 +118,3 @@ newSelector(1, inputBoardSize, 'type', 'number');
 newSelector(1, inputBoardSize, 'min', '1');
 newSelector(1, inputBoardSize, 'max', '50');
 
-
-// REQ 6
-window.onload = () => {
-  const firstPaletteBlock = document.querySelector('.color');
-  const allPaletteBlocks = document.getElementsByClassName('color');
-  firstPaletteBlock.className = 'color selected';
-  changePaletteBlockCollor(allPaletteBlocks);
-};
