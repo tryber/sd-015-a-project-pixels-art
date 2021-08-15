@@ -6,6 +6,10 @@ ul.title {
     list-style: none;
 }
 
+body {
+    background-color: white;
+}
+
 li.color {
     display: inline-block;
     padding: 5px;
@@ -32,7 +36,6 @@ li.color:nth-child(4) {
 }
 
 li.pixel {
-    background-color: white;
     display: inline-block;
     padding: 5px;
     margin: 0px;
