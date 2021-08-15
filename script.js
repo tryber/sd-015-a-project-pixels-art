@@ -1,19 +1,9 @@
 /* eslint-disable*/
 
-const newPalletBlock = (location, qttOfBlocks) => {
-  
-  for(let count = 0; count < qttOfBlocks; count += 1){
-    location.appendChild(document.createElement('div'));
-  }
-  const palletBlock = document.querySelectorAll('#color-palette div')
-  newSelector(qttOfBlocks, palletBlock, 'class', 'color')
-}
-
 const newPixel = (location, basePixel) => {
   basePixel < 5 ? basePixel = 5: basePixel;
   basePixel > 50 ? basePixel = 50: basePixel;
   let qttOfPixels = basePixel * basePixel;
-  console.log()
   for (let count = 0; count < qttOfPixels; count += 1){
     location.appendChild(document.createElement('div'))
   }
@@ -23,48 +13,27 @@ const newPixel = (location, basePixel) => {
 }
 
 const newSelector = (qttOfSelector, element, selector, selectorName) => {
-    for (let index = 0; index < qttOfSelector; index += 1) {
-      
-      switch (selector) {
-        case 'id':
-          element.length !== 'undefined' ? element = element : element = element[index];
-          element.setAttribute(selector, selectorName); 
-          break;
-  
-        case 'class':
-          element[index].classList.add(selectorName);
-          break;
-  
-        default:
-          element.setAttribute(selector, selectorName);
-          break;
-      } 
+  for (let index = 0; index < qttOfSelector; index += 1) {
+    if(typeof (element.length) !== 'undefined' ){
+      element[index].setAttribute(selector, selectorName)
+    }else{
+      element.setAttribute(selector, selectorName)
+    }
+      // typeof (element.length) !== 'undefined' ? element[index].setAttribute(selector, selectorName) : element.setAttribute(selector, selectorName);
     } 
 }
 const eventGetPaletteclass = (event, location) =>{
   location.addEventListener(event, (eventTrigger) => {
-    // console.log(eventTrigger)
+
     if(eventTrigger.target.classList.contains('color')){
       if(!eventTrigger.target.classList.contains('selected')){
-        console.log(document.querySelector('.selected').classList.remove('selected'));
+        document.querySelector('.selected').classList.remove('selected');
         eventTrigger.target.className = 'color selected';
       }
     }
   })
-  // for(let index = 0; index < location.length; index += 1){
-  //   location[index].addEventListener(event, (eventLocation) =>{
-  //     for(let indexx = 0; indexx < location.length; indexx += 1){
-  //       if(location[indexx].className === 'color selected'){
-  //         location[indexx].className = 'color';
-  //         console.log(index, indexx)
-  //       }else{
-  //         eventLocation.target.className = 'color selected';
-  //       }
-  //     }
-  //   }) 
-  // }
 }
-const changePixelClass = (location) => {
+const eventChangePixelColor = (location) => {
   location.addEventListener('click', (event) => {
     if(event.target.classList.contains('pixel') ){
       const selectedPixel = event.target;
@@ -79,8 +48,7 @@ const createNewElement = (element, elementContent, location, qttOfElements, sele
   for(let index = 0; index < qttOfElements; index += 1){
     const newElement = document.createElement(element);
     newElement.innerHTML = elementContent;
-    location.appendChild(newElement);
-    // console.log(typeof location.appendChild(newElement)) 
+    location.appendChild(newElement); 
     newSelector(qttOfElements, location.appendChild(newElement), selector, selectorName);
   }
 }
@@ -116,12 +84,11 @@ const generateRandomRgb = () => {
 }
 window.onload = () =>{
   firstPaletteBlock.className = 'color selected';
-  changePaletteBlockCollor(allPaletteBlocks)
-  
+  changePaletteBlockCollor(allPaletteBlocks)  
 }
 
 const sectionPaletteCollor = document.getElementById('color-palette');
-newPalletBlock(sectionPaletteCollor, 4)
+createNewElement('div', '', sectionPaletteCollor, 4, 'class', 'color')
 
 const sectionPixelBoard = document.getElementById('pixel-board');
 newPixel(sectionPixelBoard, 5);
@@ -130,7 +97,7 @@ const firstPaletteBlock = document.querySelector('.color');
 const allPaletteBlocks = document.getElementsByClassName('color');
 
 eventGetPaletteclass('click', sectionPaletteCollor)
-changePixelClass(sectionPixelBoard)
+eventChangePixelColor(sectionPixelBoard)
 const divButton = document.getElementById('button')
 createNewElement('button', 'Limpar', divButton, 1, 'id', 'clear-board')
 createNewElement('input', '', divButton, 1, 'id', 'board-size')
