@@ -1,0 +1,37 @@
+body {
+  background-color: rgb(12, 4, 82);
+}
+
+.color {
+  border: 1px black solid;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  margin: 5px;
+  background-color: white;
+}
+
+.color:first-child {
+  background-color: black;
+}
+
+#pixel-board {
+  width: 250px;
+  height: 200px;
+  margin: 5px;
+  font-size: 0;
+  display: inline-block;
+}
+
+.pixel {
+  border: 1px black solid;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  font-size: 0;
+  background-color: white;
+}
+
+button {
+  margin: 5px;
+}
