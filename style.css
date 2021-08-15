@@ -1,3 +1,7 @@
+header {
+    
+    
+}
 #color-palette {
     border: black solid 1px;
     width: 208px;
@@ -8,6 +12,9 @@
 }
 #title {
     text-align: center;
+    font-family: 'Festive', cursive;
+    font-size: 50px;
+    font-weight: lighter
 }
 .color {
     width: 50px;
@@ -26,11 +33,13 @@
 }
 #pixel-board {
     margin: auto;
-    margin-top: 40px;
+    margin-top: 50px;
     text-align: center;
     clear: both;
-    max-height: 2000px;
-    width: 2100px;
+    overflow: hidden;
+    width: fit-content;
+    height: fit-content;
+    border: black solid;
 }
 .lines {
     height: 40px;
@@ -40,13 +49,13 @@
     margin-bottom: 20px;
     float: right;
     display: inline-block;
-    margin-right: 40%;
+    margin-right: 45%;
 }
 #input-button {
     margin-top: 20px;
     margin-bottom: 20px;
     float: left;
     display: inline-block;
-    margin-left: 40%;
+    margin-left: 45%;
 
 }
