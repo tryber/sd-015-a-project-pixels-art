@@ -20,19 +20,17 @@ function createClassColor() {
 createClassColor();
 
 // Adicionando cor de fundo à cada elemento da paleta. RESOLVE TAMBÈM REQUISITO 3 (Que pede que a primeira cor da paleta de cores seja PRETA).
-const background = ['black'];
-
 function addBackgroundColor() {
   const getClassColor = document.getElementsByClassName('color');
   for (let index = 0; index < getClassColor.length; index += 1) {
-    if (index !== 0) {
-      getClassColor[index].style.backgroundColor = '#' + Math.floor(Math.random() * 0x1000000).toString(16).padStart(6, '0');
+    if (index === 0) {
+      getClassColor[index].style.backgroundColor = 'black'
     } else {
-      getClassColor[index].style.backgroundColor = background[index];
+      getClassColor[index].style.backgroundColor = '#' + Math.floor(Math.random() * 0x1000000).toString(16).padStart(6, '0');
     }
   }
 }
-addBackgroundColor(background);
+addBackgroundColor();
 
 // Requisito 4 - Adicione à página um quadro de pixels, com 25 pixels. Requisito 5 - Resolve também a primeira especificação do requisito 5(Verifica se o quadro de pixels tem altura e comprimento de 5 elementos).
 const newSection = document.createElement('section');
