@@ -1,6 +1,50 @@
 const paletteColorClass = document.querySelector('#color-palette');
 const pixelBoardClass = document.querySelector('#pixel-board');
 const buttonClear = document.querySelector('#clear-board');
+const inputNumber = document.querySelector('#board-size');
+const generateBoard = document.querySelector('#generate-board');
+
+function checkImput() {
+  let input = inputNumber.value;
+
+  if (input < 5 || input > 50 || input === '') {
+    window.alert('Board inválido!');
+
+    if (input < 5) {
+      input = 5;
+      const elementsPixels = document.querySelectorAll('.pixel');
+      for (var element of elementsPixels) {
+        element.parentNode.removeChild(element);
+      }
+      const elementsLine = document.querySelectorAll('.line');
+      for (var element of elementsLine) {
+        element.parentNode.removeChild(element);
+      }
+    } else if (input > 50) {
+      input = 50;
+      const elementsPixels = document.querySelectorAll('.pixel');
+      for (var element of elementsPixels) {
+        element.parentNode.removeChild(element);
+      }
+      const elementsLine = document.querySelectorAll('.line');
+      for (var element of elementsLine) {
+        element.parentNode.removeChild(element);
+      }
+    }
+  } else {
+    const elementsPixels = document.querySelectorAll('.pixel');
+    for (var element of elementsPixels) {
+      element.parentNode.removeChild(element);
+    }
+    const elementsLine = document.querySelectorAll('.line');
+    for (var element of elementsLine) {
+      element.parentNode.removeChild(element);
+    }
+  }
+  createPixel(input);
+}
+
+generateBoard.addEventListener('click', checkImput);
 
 function clearPixel() {
   const pixelElement = document.querySelectorAll('.pixel');
@@ -33,9 +77,17 @@ function className() {
   nameClassBlack.classList.add('selected');
 }
 
-function createPixel() {
-  for (let indexLine = 0; indexLine < 5; indexLine += 1) {
-    for (let index = 0; index < 5; index += 1) {
+function createPixel(number) {
+  const numberPixel = number;
+
+  for (let indexLine = 0; indexLine < numberPixel; indexLine += 1) {
+    const divPixelBoard = document.querySelector('#pixel-board');
+    const divLine = document.createElement('div');
+    divLine.className = 'line';
+    divPixelBoard.appendChild(divLine);
+  }
+  for (let indexLine = 0; indexLine < numberPixel; indexLine += 1) {
+    for (let index = 0; index < numberPixel; index += 1) {
       const divPixelLine = document.querySelectorAll('.line');
       const divPixel = document.createElement('div');
       divPixel.style.background = 'rgb(255,255,255)';
@@ -44,15 +96,6 @@ function createPixel() {
     }
   }
   className();
-}
-function createLinePixel() {
-  for (let indexLine = 0; indexLine < 5; indexLine += 1) {
-    const divPixelBoard = document.querySelector('#pixel-board');
-    const divLine = document.createElement('div');
-    divLine.className = 'line';
-    divPixelBoard.appendChild(divLine);
-  }
-  createPixel();
 }
 
 // Base da Função utilizada do site https://stackoverflow.com/questions/11162664/generate-color-palette-using-javascript.
@@ -85,6 +128,6 @@ function createColorPalette() {
     g = Math.floor(Math.random() * 255);
     r = Math.floor(Math.random() * 255);
   }
-  createLinePixel();
+  createPixel(5);
 }
 createColorPalette();
