@@ -1,24 +1,23 @@
 .color, .pixel {
-  border: 1px solid black;
-  display: inline-block; 
+  border:1px solid black;
+  display:inline-block;
   width:40px;
   height:40px;
 }
 #black {
-  background-color: black;
+  background-color:black;
 }
 #red {
-  background-color: red;
+  background-color:red;
 }
 #blue {
-  background-color: blue;
+  background-color:blue;
 }
 #green {
-  background-color: green;
+  background-color:green;
 }
 #pixel-board {
-  width: 250px;
-  height: 250px;
-  display: inline-block;
-  
+  width:250px;
+  height:250px;
+  display:inline-block;
 }
