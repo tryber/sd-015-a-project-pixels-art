@@ -18,18 +18,27 @@
 }
 #pixel-board {
     margin: auto;
-    margin-top: 20px;
-    border: black solid 1px;
-    width: 210px;
-    height: 200px;
-
+    margin-top: 40px;
+    text-align: center;
+    clear: both;
+    border: black solid;
+    size: inherit;
 }
 .lines {
     height: 40px;
 }
 #clear-board {
-    width: 210px;
-    margin: auto;
     margin-top: 20px;
-    text-align: center;
+    margin-bottom: 20px;
+    float: right;
+    display: inline-block;
+    margin-right: 40%;
+}
+#input-button {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    float: left;
+    display: inline-block;
+    margin-left: 40%;
+
 }
