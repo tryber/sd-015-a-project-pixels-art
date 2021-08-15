@@ -2,6 +2,32 @@
     display: inline-block;
 }
 
+.pixel {
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    align-items: center;   
+    display: inline-block;    
+    border-width: 1px;
+    border-color: black;    
+    border-style: solid;
+    margin: -1px;  
+    margin-bottom: -4;
+      
+}
+.firstPixelScreen {
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    align-items: center;   
+    display:inline-table;    
+    border-width: 1px;
+    border-color: black;    
+    border-style: solid;
+    margin: -1px;    
+    margin-top: -1;
+}
+
 #vermelho {
     background-color: red;
     width: 40px;
@@ -53,7 +79,7 @@
 
 }
 
-#cinza {
+#white {
     background-color: white;
     width: 40px;
     height: 40px;
@@ -86,6 +112,6 @@ body {
     justify-content: center;
     margin: 0;
     padding: 0;
-    width: 100vw;    
+    width: 100vw;
   }
   
