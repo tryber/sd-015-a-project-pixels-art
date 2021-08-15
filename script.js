@@ -32,6 +32,21 @@ function makePaletteColor() {
   }
 }
 
+function changeSelectedClass(element, event, func) {
+  if (element.length !== 0) {
+    for (let index = 0; index < element.length; index += 1) {
+      element[index].addEventListener(event, func);
+    }
+  } else {
+    element.addEventListener(event, func);
+  }
+}
+
+function changeColor(event) {
+  document.querySelector('.selected').classList.remove('selected');
+  event.target.classList.add('selected');
+}
+
 function makeSelected() {
   const blackElement = document.querySelector('.color');
   if (blackElement.style.backgroundColor === 'black') {
@@ -42,3 +57,4 @@ function makeSelected() {
 createColorPalette(4);
 makePaletteColor();
 makeSelected();
+changeSelectedClass(paletteDiv, 'click', changeColor);
