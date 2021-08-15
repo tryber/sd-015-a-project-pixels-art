@@ -21,7 +21,7 @@ createTable();
 const allColors = document.querySelectorAll('.color');
 
 function selectColor(event) {
-  let selected = document.querySelector('.selected');
+  const selected = document.querySelector('.selected');
   selected.classList.remove('selected');
   event.target.classList.add('selected');
 }
@@ -34,13 +34,13 @@ for (let index = 0; index < allColors.length; index += 1) {
 // Define cor
 let definedColor = 'black';
 
-const palette = document.querySelector('#color-palette');
-palette.addEventListener('click', defineColor);
-
 function defineColor() {
   const selectedColor = document.querySelector('.selected');
   definedColor = window.getComputedStyle(selectedColor).getPropertyValue('background-color');
 }
+
+const palette = document.querySelector('#color-palette');
+palette.addEventListener('click', defineColor);
 
 // Pinta os pixels
 const allPixels = document.querySelectorAll('.pixel');
