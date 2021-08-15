@@ -53,7 +53,7 @@ for (let i = 0; i < document.querySelectorAll('.pixel').length; i += 1) {
 }
 
 window.onload = function () {
-  let btn = document.getElementById('btn');
+  let btn = document.getElementById('clear-board');
 
   btn.addEventListener('click', function() {
     for (let i = 0; i < pixels.length; i += 1) {
