@@ -4,29 +4,6 @@ window.onload = function () {
 }
 
 
-//Seleciona a cor
-let cor = document.querySelectorAll('.color');
-let selected = document.querySelector('.selected')
-for (let i = 0; i < cor.length; i++) {
-    cor[i].addEventListener('click', trocaCor)
-    function trocaCor () {
-        selected.classList.remove('selected');
-        cor[i].classList.add('selected');
-        selected = cor[i];
-    }
-}
-
-//Pinta o pixel com a cor selecionada
-function paintPixel () {
-let pixel = document.querySelectorAll('.pixel')
-for (let i = 0; i < pixel.length; i++){
-    pixel[i].addEventListener('click', pintar)
-    function pintar (){
-        pixel[i].style.backgroundColor = selected.classList[1]
-    }
-}
-}
-
 //Botão para limpar o quadro
 let btnClear = document.getElementById('clear-board')
 btnClear.addEventListener('click', limparQuadro);
@@ -88,3 +65,48 @@ function generate () {
     // Chama a função para atualizar a lista de pixel
     paintPixel();
 }
+
+
+// Gerador de cores aleatórias
+let borderColor = document.querySelector('.border')
+let color = document.createElement('li')
+
+borderColor.appendChild(color).className = 'color selected'
+color.style.backgroundColor = 'black';
+for (let i = 0; i < 3; i++){
+    let color = document.createElement('li')
+    borderColor.appendChild(color).className = 'color'
+    let a = Math.random() * 255 + 1
+    let b = Math.random() * 255 + 1;
+    let c = Math.random() * 255 + 1;
+    color.style.backgroundColor = 'rgb' + '(' + a + ',' + b + ',' + c + ')';
+}
+
+
+
+
+
+//Seleciona a cor
+let cor = document.querySelectorAll('.color');
+let selected = document.querySelector('.selected')
+for (let i = 0; i < cor.length; i++) {
+    cor[i].addEventListener('click', trocaCor)
+    function trocaCor () {
+        selected.classList.remove('selected');
+        cor[i].classList.add('selected');
+        selected = cor[i];
+    }
+}
+
+//Pinta o pixel com a cor selecionada
+function paintPixel () {
+    let pixel = document.querySelectorAll('.pixel')
+    for (let i = 0; i < pixel.length; i++){
+        pixel[i].addEventListener('click', pintar)
+        function pintar (){
+            console.log(selected.style.backgroundColor)
+            pixel[i].style.backgroundColor = selected.style.backgroundColor
+        }
+    }
+    }
+
