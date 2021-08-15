@@ -88,28 +88,34 @@ const changePaletteBlockCollor = (block) => {
   }
 };
 
+// REQ 2 E 3
 createNewElement('div', '', sectionPaletteCollor, 4, 'class', 'color');
-
+// REQ 4 E 5
 newPixel(sectionPixelBoard, 5);
-
-const firstPaletteBlock = document.querySelector('.color');
-const allPaletteBlocks = document.getElementsByClassName('color');
-
+// REQ 7 E 8
 eventGetPaletteclass('click', sectionPaletteCollor);
 eventChangePixelColor(sectionPixelBoard);
+// REQ 9
 createNewElement('button', 'Limpar', painelSection, 1, 'id', 'clear-board');
+const clearButton = document.getElementById('clear-board');
+resetToDefaultColor(clearButton);
+// REQ 10
 createNewElement('input', '', painelSection, 1, 'id', 'board-size');
-createNewElement('button', 'VQV', painelSection, 1, 'id', 'generate-board');
 const inputBoardSize = document.getElementById('board-size');
+createNewElement('button', 'VQV', painelSection, 1, 'id', 'generate-board');
+// REQ 11
 const buttonGenerateBoard = document.getElementById('generate-board');
+eventCheckInputValue(buttonGenerateBoard, inputBoardSize);
+// REQ 12
 newSelector(1, inputBoardSize, 'type', 'number');
 newSelector(1, inputBoardSize, 'min', '1');
 newSelector(1, inputBoardSize, 'max', '50');
-const clearButton = document.getElementById('clear-board');
-resetToDefaultColor(clearButton);
-eventCheckInputValue(buttonGenerateBoard, inputBoardSize);
 
+
+// REQ 6
 window.onload = () => {
+  const firstPaletteBlock = document.querySelector('.color');
+  const allPaletteBlocks = document.getElementsByClassName('color');
   firstPaletteBlock.className = 'color selected';
   changePaletteBlockCollor(allPaletteBlocks);
 };
