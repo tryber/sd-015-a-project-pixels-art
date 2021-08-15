@@ -4,6 +4,7 @@ const colorPalette = {
   color1: '#FF0000', // red
   color2: '#00FF00', // green
   color3: '#0000FF', // blue
+  // color4: `#${Math.floor(Math.random()*16777215).toString(16)}`, // ref https://css-tricks.com/snippets/javascript/random-hex-color/
 };
 const boardSizeField = document.querySelector('#board-size').value;
 const boardSize = parseInt(boardSizeField); // Board size n x n
@@ -27,15 +28,16 @@ const fullPaletteLi = document.querySelectorAll('#color-palette ul li');
 
 // Create the pixel board
 const pixelBoard = document.querySelector('#pixel-board');
-function createPixelBoard() {
+function createPixelBoard(boardSizeVar) {
+  const totalSize = boardSizeVar;
   pixelBoard.innerHTML = '';
-  for (let y = 1; y <= boardSize; y += 1) {
+  for (let y = 1; y <= totalSize; y += 1) {
     const line = document.createElement('div');
     const lineName = `line ${y}`;
     line.id = lineName;
     line.className = 'line';
 
-    for (let x = 1; x <= boardSize; x += 1) {
+    for (let x = 1; x <= totalSize; x += 1) {
       const pixel = document.createElement('div');
       pixel.className = 'pixel';
       const pixelId = `pixel${y}${x}`;
@@ -44,6 +46,7 @@ function createPixelBoard() {
     }
     pixelBoard.appendChild(line);
   }
+  colorizePixel();
 }
 
 // Create a function to reset the selected color to the first (black) one.
@@ -60,8 +63,8 @@ document.querySelectorAll('.color').forEach((colorOnPalette) => {
     if (!thisColorClasses.contains('selected')) {
       clearColorSelection();
       thisColorClasses.add('selected');
-      currentColorText.innerHTML = `selected: ${color.target.id}`;
-      currentColorText.style.color = colorPalette[color.target.id];
+      currentColorText.innerHTML = `selected: &#128396 ${color.target.id}`;
+      currentColorText.style.color = colorPalette[color.target.id]
       // alert(`${color.target.id} selected`);
     }
   });
@@ -89,12 +92,21 @@ document.querySelector('#clear-board').addEventListener('click', () => {
 function resetBlackSelection() {
   const blackColor = document.querySelector('#color0');
   blackColor.classList.add('selected');
-  currentColorText.innerHTML = `selected: ${blackColor.id}`;
+  currentColorText.innerHTML = `selected: &#128396 ${blackColor.id}`;
 }
 
+document.querySelector('#generate-board').addEventListener('click', () => {
+  const newFieldSize = document.querySelector('#board-size').value;
+  if (newFieldSize !== '') {
+    createPixelBoard(newFieldSize);
+  } else {
+    alert('Board inválido!');
+    // document.location.reload(); // ref https://www.w3schools.com/jsref/met_loc_reload.asp
+  }
+})
+
 window.onload = function startAllection() {
-  createPixelBoard();
+  createPixelBoard(boardSize);
   clearColorSelection();
   resetBlackSelection();
-  colorizePixel();
 };
