@@ -1,12 +1,10 @@
 // Requisito 2 -Adicione à página uma paleta de quatro cores distintas. E Requisito 3 - Adicione a cor preta como a primeira cor da paleta de cores.
 // Cria elemento Paleta de Cores com id color-palette
 function createColorPalette() {
-
   let colorPalette = document.createElement('div');
   let getSection = document.querySelector('#section-colors');
   colorPalette.id = 'color-palette';
   getSection.appendChild(colorPalette);
-
 };
 
 createColorPalette();
