@@ -7,23 +7,16 @@
   float: left;
 }
 
-#black-color {
-  background-color: black;
-}
-
-#red-color {
-  background-color: red;
-}
-
-#blue-color {
-  background-color: blue;
-}
-
-#green-color {
-  background-color: green;
-}
-
 #color-palette {
   width: 400px;
   height: 100px;
+}
+
+.pixel{
+  background-color: white;
+  border-color: black;
+  width: 40px;
+  height: 44px;
+  border: 1px;
+  border-style: solid;
 }
