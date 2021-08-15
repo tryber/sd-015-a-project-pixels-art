@@ -1,3 +1,7 @@
+const corInicial = document.querySelector('.color');
+corInicial.className = 'color selected';
+corInicial.style.backgroundColor = '#000000';
+
 const divs = document.querySelectorAll('.color');
 for (let i = 0; i < divs.length; i += 1) {
   if (divs[i] === divs[0]) {
@@ -13,9 +17,9 @@ for (let i = 0; i < divs.length; i += 1) {
 
 const pixelsId = document.getElementById('pixel-board');
 
-for(let i = 0; i < 25; i += 1){
+for (let i = 0; i < 25; i += 1) {
   const pixels = document.createElement('li');
   pixels.classList = 'pixel';
-  pixels.style.backgroundColor = 'white'
+  pixels.style.backgroundColor = 'white';
   pixelsId.appendChild(pixels);
-};
+}
