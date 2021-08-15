@@ -12,39 +12,27 @@ function checkImput() {
 
     if (input < 5) {
       input = 5;
-      const elementsPixels = document.querySelectorAll('.pixel');
-      for (var element of elementsPixels) {
-        element.parentNode.removeChild(element);
-      }
-      const elementsLine = document.querySelectorAll('.line');
-      for (var element of elementsLine) {
-        element.parentNode.removeChild(element);
-      }
+      clearContainerPixels(input);
     } else if (input > 50) {
       input = 50;
-      const elementsPixels = document.querySelectorAll('.pixel');
-      for (var element of elementsPixels) {
-        element.parentNode.removeChild(element);
-      }
-      const elementsLine = document.querySelectorAll('.line');
-      for (var element of elementsLine) {
-        element.parentNode.removeChild(element);
-      }
-    }
-  } else {
-    const elementsPixels = document.querySelectorAll('.pixel');
-    for (var element of elementsPixels) {
-      element.parentNode.removeChild(element);
-    }
-    const elementsLine = document.querySelectorAll('.line');
-    for (var element of elementsLine) {
-      element.parentNode.removeChild(element);
+      clearContainerPixels(input);
+    } else {
+      clearContainerPixels(input);
     }
   }
-  createPixel(input);
+  clearContainerPixels(input);
 }
 
 generateBoard.addEventListener('click', checkImput);
+
+function clearContainerPixels(number) {
+  const elementsPixels = document.querySelectorAll('.pixel');
+  const elementsLine = document.querySelectorAll('.line');
+  for (const element of elementsPixels && elementsLine) {
+    element.parentNode.removeChild(element);
+  }
+  createPixel(number);
+}
 
 function clearPixel() {
   const pixelElement = document.querySelectorAll('.pixel');
