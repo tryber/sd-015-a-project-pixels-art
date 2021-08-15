@@ -16,15 +16,15 @@ function cores() {
     }
     if (index === 1) {
       cores.id = 'green';
-      cores.style.backgroundColor = 'green';
+      cores.style.backgroundColor = corAleatoria();
     }
     if (index === 2) {
       cores.id = 'red';
-      cores.style.backgroundColor = 'red';
+      cores.style.backgroundColor = corAleatoria();
     }
     if (index === 3) {
       cores.id = 'blue';
-      cores.style.backgroundColor = 'blue';
+      cores.style.backgroundColor = corAleatoria();
     }
     paletaCores.appendChild(cores);
   }
@@ -135,3 +135,11 @@ function novoQuadroPixel() {
 }
 const btnVQV = document.querySelector('#generate-board');
 btnVQV.addEventListener('click', novoQuadroPixel);
+
+function corAleatoria() {
+  const r = parseInt(Math.random() * 255);
+  const g = parseInt(Math.random() * 255);
+  const b = parseInt(Math.random() * 255);
+
+  return `rgba(${r}, ${g}, ${b})`;
+}
