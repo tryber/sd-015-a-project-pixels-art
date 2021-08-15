@@ -59,6 +59,7 @@ document.querySelectorAll('.color').forEach((colorOnPalette) => {
       clearColorSelection();
       thisColorClasses.add('selected');
       currentColorText.innerHTML = `selected: ${color.target.id}`;
+      currentColorText.style.color = colorPalette[color.target.id];
       // alert(`${color.target.id} selected`);
     }
   });
