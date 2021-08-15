@@ -46,7 +46,6 @@ divPalette.addEventListener('click', changeSelected);
 
 function fillColor(event) {
   const eventTarget = event.target;
-  eventTarget.style.backgroundColor = document.getElementsByClassName('selected').style.backgroundColor;
-
-divBoard.addEventListener('click', fillColor);
+  eventTarget.style.backgroundColor = document.querySelector('.selected').style.backgroundColor;
 }
+divBoard.addEventListener('click', fillColor);
