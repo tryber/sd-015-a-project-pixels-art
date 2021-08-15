@@ -52,8 +52,13 @@ const createNewElement = (element, elementContent, location, qttOfElements, sele
   for (let index = 0; index < qttOfElements; index += 1) {
     const newElement = document.createElement(element);
     newElement.innerHTML = elementContent;
-    location.appendChild(newElement);
-    newSelector(qttOfElements, location.appendChild(newElement), selector, selectorName);
+    if (typeof (location.length) === 'undefined') {
+      location.appendChild(newElement);
+      newSelector(qttOfElements, location.appendChild(newElement), selector, selectorName);
+    } else {
+      location[index].appendChild(newElement);
+      newSelector(qttOfElements, location[index].appendChild(newElement), selector, selectorName);
+    }
   }
 };
 
@@ -81,21 +86,35 @@ const generateRandomRgb = () => {
   return `rgb(${red}, ${blue}, ${green})`;
 };
 
-const changePaletteBlockCollor = (block) => {
+const changePaletteBlockCollor = (block, color = 'none') => {
   const palletBlocks = block;
-  for (let index = 1; index < palletBlocks.length; index += 1) {
-    palletBlocks[index].style.backgroundColor = generateRandomRgb();
+  const defaultColor = color;
+  if (defaultColor === 'none') {
+    for (let index = 1; index < palletBlocks.length; index += 1) {
+      palletBlocks[index].style.backgroundColor = generateRandomRgb();
+    }
+  } else {
+    console.log(palletBlocks);
+    palletBlocks.style.backgroundColor = color;
   }
 };
 
+const eventGetInputColorValue = (location) => {
+  for (let index = 0; index < location.length; index += 1) {
+    location[index].addEventListener('input', () => {
+      console.log();
+      changePaletteBlockCollor(document.querySelectorAll('.color')[index], location[index].value);
+    });
+  }
+};
 // REQ 2 E 3
 createNewElement('div', '', sectionPaletteCollor, 4, 'class', 'color');
 // REQ 4 E 5
 newPixel(sectionPixelBoard, 5);
 // REQ 6
+const allPaletteBlocks = document.getElementsByClassName('color');
 window.onload = () => {
   const firstPaletteBlock = document.querySelector('.color');
-  const allPaletteBlocks = document.getElementsByClassName('color');
   firstPaletteBlock.className = 'color selected';
   changePaletteBlockCollor(allPaletteBlocks);
 };
@@ -117,4 +136,8 @@ eventCheckInputValue(buttonGenerateBoard, inputBoardSize);
 newSelector(1, inputBoardSize, 'type', 'number');
 newSelector(1, inputBoardSize, 'min', '1');
 newSelector(1, inputBoardSize, 'max', '50');
+// BONUS DO BONUS
 
+createNewElement('input', '', allPaletteBlocks, 4, 'type', 'color');
+const palletBlocksInputColor = document.querySelectorAll('input[type="color"]');
+eventGetInputColorValue(palletBlocksInputColor);
