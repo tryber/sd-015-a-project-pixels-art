@@ -1,0 +1,93 @@
+body {
+  background-color: rgb(231, 221, 222);
+}
+
+#centralize {
+  display: block;
+  font-family: "Courier New", Courier, monospace;
+  margin: 0 auto;
+  width: 400px;
+  text-align: center;
+}
+
+#button-countainer {
+  margin: 0 auto;
+}
+
+.color {
+  display: inline-block;
+  width: 42px;
+  height: 42px;
+  border: solid black 1px;
+}
+
+#preto {
+  background-color: black;
+}
+
+/* #vermelho {
+    background-color: red;
+}
+
+#laranja {
+    background-color: orangered;
+}
+
+#amarelo {
+    background-color: yellow;
+} */
+
+#verde {
+  background-color: lawngreen;
+}
+
+#azul {
+  background-color: cyan;
+}
+
+#anil {
+  background-color: darkblue;
+}
+
+#violeta {
+  background-color: purple;
+}
+
+.pixel {
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  border: solid black 1px;
+  display: inline-block;
+}
+
+.pixelLine {
+  margin: 0;
+  padding: 0%;
+  border: 0;
+  height: 40px;
+}
+
+#clear-board {
+  margin: 5px 0 7px;
+}
+
+#title {
+  display: block;
+  margin: 0 auto;
+  background-color: rgb(235, 187, 187);
+  width: 300px;
+}
+
+#title-countainer {
+  text-align: center;
+  width: 400px;
+  margin: 0 0 15px;
+}
+
+#board-countainer {
+  text-align: center;
+  max-width: 3000px;
+  margin: 0 auto;
+}
+
