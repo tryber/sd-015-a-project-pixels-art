@@ -10,6 +10,11 @@ function changeColor(event) {
   event.target.style.background = color;
 }
 
+function clear() {
+  for (const colorpixel of document.querySelectorAll('.pixel')) {
+    colorpixel.style.background = 'white'; 
+  }
+}
 window.onload = function () {
   for (const color of document.querySelectorAll('.color')) {
     color.addEventListener('click', selectColor);
@@ -17,4 +22,5 @@ window.onload = function () {
   for (const pixel of document.querySelectorAll('.pixel')) {
     pixel.addEventListener('click', changeColor);
   }
+  document.querySelector('#clear-board').addEventListener('click', clear);
 };
