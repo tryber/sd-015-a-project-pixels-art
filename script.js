@@ -1,13 +1,22 @@
 let colorDiv = document.querySelectorAll('.color');
-let styleColor = ['black', 'red', 'pink', 'purple'];
 let pixelBord = document.getElementById('pixel-board');
 let colorSelected = document.getElementsByTagName('div')[0];
 let columnDiv = 5;
 let lineDiv = 5;
 
+
+function randomColor() {
+   let r = Math.floor(Math.random() * 256);
+   let g = Math.floor(Math.random() * 256);
+   let b = Math.floor(Math.random() * 256);
+   
+   return `rgb(${r}, ${g}, ${b})`; //https://wallacemaxters.com.br/blog/2021/02/20/como-gerar-cores-aleatorias-no-javascript
+}
+
+
 function changeColorDiv() {
-  for (let index = 0; index < colorDiv.length; index += 1) {
-    colorDiv[index].style.backgroundColor = styleColor[index];
+  for (let index = 1; index < colorDiv.length; index += 1) {
+    colorDiv[index].style.backgroundColor = randomColor();
     console.log(colorDiv[index]);
   }
 }
@@ -27,11 +36,9 @@ function creatPixelBord() {
 }
 creatPixelBord();
 
-let palleteColor = document.querySelectorAll('.color');
-
 function selectColor() {
-  for (let index = 0; index < palleteColor.length; index += 1) {
-    palleteColor[index].addEventListener('click', function (evt) {
+  for (let index = 0; index < colorDiv.length; index += 1) {
+    colorDiv[index].addEventListener('click', function (evt) {
       document.querySelector('.selected').classList.remove('selected');
       evt.target.classList.add('selected');
     });
