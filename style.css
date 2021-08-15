@@ -1,3 +1,7 @@
+.colorPalette {
+  align-content: center;
+}
+
 .color {
   border: 1px solid black;
   width: 30px;
@@ -22,4 +26,14 @@
 
 #pixel-board {
   width: max-content;
+}
+
+.over {
+  width: 40px;
+  height: 40px;
+}
+
+.zoom {
+  width: 40px;
+  height: 40px;
 }
