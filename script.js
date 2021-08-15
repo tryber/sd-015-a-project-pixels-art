@@ -1,8 +1,10 @@
 function selecionaCor(cor) {
- document.getElementsByClassName('selected').classlist.remove('selected');
- cor.target.classlist.add('selected'); 
+    document.querySelector('.selected').classList.remove('selected');
+    cor.target.classList.add('selected'); 
 }
 
-for (let cor = 0; cor < document.getElementsByClassName('color').length; cor += 1) {
-    document.getElementsByClassName('color')[cor].addEventListener('click', selecionaCor);
-}
+// for (let cor = 0; cor < document.querySelectorAll('.color').length; cor += 1) {
+//     document.querySelectorAll('.color')[cor].addEventListener('click', selecionaCor);
+// }
+
+document.querySelector('#color-palette').addEventListener('click', selecionaCor);
