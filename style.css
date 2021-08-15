@@ -1,8 +1,8 @@
 .color
 {
   display: inline-block;
-  width: 100px;
-  height: 100px;
+  width: 40px;
+  height: 40px;
   border: 1px solid;
   margin: 1px; 
 }
@@ -10,7 +10,7 @@
 {
   display: inline-block;
   width: 226px;
-  height: 226px;
+  height: 300px;
   border: 1px solid;
   margin: 1px;
 }
@@ -19,7 +19,8 @@
   display: inline-block;
   width: 40px;
   height: 40px;
-  border: 1px solid;  
+  border: 1px solid; 
+  margin: 1px; 
   background-color: white;
 }
 #black
@@ -36,5 +37,5 @@
 }
 #green
 {
-  background-color: rgb(0, 255, 0);
+  background-color: lime;
 }
