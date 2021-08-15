@@ -88,7 +88,7 @@ const changePaletteBlockCollor = (block) => {
   }
 };
 
-createNewElement('div', '', sectionPaletteCollor, 6, 'class', 'color');
+createNewElement('div', '', sectionPaletteCollor, 4, 'class', 'color');
 
 newPixel(sectionPixelBoard, 5);
 
