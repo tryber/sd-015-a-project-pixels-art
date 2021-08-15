@@ -6,7 +6,7 @@ const colorPalette = {
   color3: '#0000FF', // blue
 };
 const boardSize = 5; // Board size n x n
-const currentColorText = document.querySelector('#currentColor');
+const currentColorText = document.querySelector('#currentColorField');
 
 // Populate palette with colors defined above
 const paletteSize = Object.keys(colorPalette).length;
@@ -56,7 +56,7 @@ window.onload = function resetBlackSelection() {
   currentColorText.innerHTML = `selected: ${blackColor.id}`;
 };
 
-// verificar se uma cor foi clicada usado a referência de event bubbling de https://flaviocopes.com/how-to-add-event-listener-multiple-elements-javascript/
+// check clicked color with event bubbling ref: https://flaviocopes.com/how-to-add-event-listener-multiple-elements-javascript/
 document.querySelectorAll('.color').forEach((colorOnPalette) => {
   colorOnPalette.addEventListener('click', (color) => {
     const thisColorClasses = color.target.classList;
@@ -64,7 +64,24 @@ document.querySelectorAll('.color').forEach((colorOnPalette) => {
       clearColorSelection();
       thisColorClasses.add('selected');
       currentColorText.innerHTML = `selected: ${color.target.id}`;
-      alert(`${color.target.id} selected`);
+      // alert(`${color.target.id} selected`);
     }
+  });
+});
+
+// Colorize clicked pixel
+document.querySelectorAll('.pixel').forEach((pixelOnGrid) => {
+  pixelOnGrid.addEventListener('click', (eventPixel) => {
+    const whichColorSelected = document.querySelector('.color.selected').id;
+    const thisPixel = eventPixel;
+    thisPixel.target.style.backgroundColor = colorPalette[whichColorSelected];
+  });
+});
+
+// Clear board
+document.querySelector('#clear-board').addEventListener('click', () => {
+  document.querySelectorAll('.pixel').forEach((eventClearPixel) => {
+    const pixelToClear = eventClearPixel;
+    pixelToClear.style.backgroundColor = 'white';
   });
 });

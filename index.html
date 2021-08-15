@@ -9,11 +9,14 @@
   </head>
   <body>
     <h1 id="title">Paleta de Cores</h1>
+    <textarea name="currentColorField" id="currentColorField" readonly="true" disabled="true"></textarea>
     <section id="color-palette">
       <ul></ul>
     </section>
     <main>
-      <textarea name="currentColor" id="currentColor" disabled="true" cols="30" rows="1"></textarea>
+      <section id="controls">
+        <button id="clear-board">Limpar</button>
+      </section>
       <section id="pixel-board"></section>
     </main>
     <script src="script.js"></script>

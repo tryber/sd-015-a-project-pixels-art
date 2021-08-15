@@ -39,3 +39,29 @@ main {
   border: 1px solid black;
   margin: 0;
 }
+
+#controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  margin-bottom: 10px;
+  width: fit-content;
+  height: 25px;
+  line-height: 25px;
+}
+
+#controls button {
+  margin: 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#currentColorField {
+  display: inline-block;
+  font-size: 12px;
+  height: 15px;
+  line-height: 15px;
+  width: fit-content;
+  resize: none;
+}
