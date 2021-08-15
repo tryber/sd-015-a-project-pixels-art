@@ -1,16 +1,12 @@
-window.onload = function(){
-}
+let coluna = 5;
+let linha = 5;
+let caixa = coluna * linha;
 
-function criadorCaixa(){
- let criador = document.querySelector( "#pixel-board");
- for (let cont = 1; cont < 6; cont +=1 ){
-    let coluna = document.createElement("div");
-    criador.appendChild(coluna);
- for (let i = 1; i < 6;i +=1 ){
-    let linha = document.createElement("div");
-    coluna.appendChild(linha);
-    linha.className = 'pixel';
-
-  }
+function criadorCaixa (){
+for (let cont = 0; i < caixa; cont += 1){
+ let CaixaP = document.createElement('div');
+ let anexado = document.querySelector('#pixel-board');
+   CaixaP.className= 'pixel';
+    anexado.appendChild(CaixaP); 
  }
 }

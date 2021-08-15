@@ -47,13 +47,17 @@ background-color: #ffffff;
     margin: 2px;
 
 }
-#pixel-board{
-
-}
 .pixel{
     border: 1px solid black;
-    width: 100px;
-    height: 100px;
+    width: 40px;
+    height: 40px;
     background-color: white;
     display: inline-block;
+    margin: 0px;
+    padding: 0px;
+    }
+#pixel-board{
+    max-width: 250px;
+    margin: 0px;
+    border: 1px solid black;
 }
