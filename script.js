@@ -1,23 +1,25 @@
-const palette = document.getElementById('color-palette');
-const colors = ['rgb(0, 0, 0)', 'rgb(142, 35, 107)', 'rgb(255, 127, 0)', 'rgb(33, 94, 33)'];
+function randomColors () {
+    let randomOne = (Math.round(Math.random()*255));
+    let randomTwo = (Math.round(Math.random()*255));
+    let randomThree = (Math.round(Math.random()*255));
+    let randomRGB = 'rgb('+randomOne+', '+randomTwo+', '+randomThree+')';
+    return randomRGB;
+}
 
-
-
-function createItemsPalette() {
-    for (let color of colors) {
+function createItemsPalette(n) {
+    const palette = document.querySelectorAll('#color-palette');
+    for (let i = 0; i < n; i +=1) {
         let itemPalette = document.createElement('li');
         itemPalette.className = 'color';
-        itemPalette.style.width = '50px';
-        itemPalette.style.height = '50px';
-        itemPalette.style.display = 'inline-block';
-        itemPalette.style.borderWidth = '1px';
-        itemPalette.style.borderStyle = 'solid';
-        itemPalette.style.borderColor = 'black';
-        itemPalette.style.backgroundColor = color;
-        palette.appendChild(itemPalette);
+        palette[0].appendChild(itemPalette);
+        if (i === 0) {
+            itemPalette.style.backgroundColor = 'rgb(0, 0, 0)';
+        } else {
+            itemPalette.style.backgroundColor = randomColors();
+        }
     }
 }
-createItemsPalette();
+createItemsPalette(4);
 
 function removeLines () {
     let parent = document.getElementById('pixel-board');
@@ -35,7 +37,18 @@ function resizeBoard () {
     } else {
         removeLines();
         let numberValue = parseInt(inputValue, 10);
-        createDiv(numberValue);
+        if (numberValue < 5) {
+            numberValue = 5;
+            createDiv(numberValue);
+            alert("5 é o valor mínimo!");
+        } else if (numberValue > 50) {
+            numberValue = 50;
+            createDiv(numberValue);
+            alert("50 é o valor máximo!");
+        } else {
+            createDiv(numberValue);
+        }
+        
     }
 }
 
@@ -79,6 +92,7 @@ function colorOnload () {
 }
 colorOnload();
 
+const palette = document.querySelector('#color-palette');
 palette.addEventListener('click', selecionaCor);
 function selecionaCor (event) {
     let colorCurrent = document.querySelector('.selected');
