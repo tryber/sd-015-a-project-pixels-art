@@ -19,8 +19,8 @@ let initialColors = document.getElementsByClassName("color");
 for (let index of initialColors) {
     index.addEventListener("click", selectColor);
 }
+const colors = document.querySelectorAll(".color");
 function selectColor(event) {
-    let colors = document.querySelectorAll(".color");
     for (let index of colors) {
         index.classList.remove("selected");
         event.target.classList.add("selected");
@@ -101,4 +101,17 @@ function adicionaPixels() {
             pixelsBoard.appendChild(createNewPixel);
         }
     }
-}
+    let createNewPixel = document.querySelectorAll(".pixel");
+    for(let index of createNewPixel) {
+        index.addEventListener("click", putColor);
+    }
+    }
+    function generateRandomColor() {
+       for(let index = 1; index < colors.length; index += 1) {
+        let r = Math.random() * 255;
+        let g = Math.random() * 255;
+        let b = Math.random() * 255;
+           colors[index].style.backgroundColor =`rgb(${r}, ${g}, ${b})`; 
+       }
+    } window.onload = generateRandomColor();
+
