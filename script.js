@@ -8,6 +8,7 @@ function randomColor() {
 }
 
 window.onload = function makeRandom() {
+  document.getElementById('black').style.backgroundColor = 'black';
   document.getElementById('secondColor').style.backgroundColor = randomColor();
   document.getElementById('thirdColor').style.backgroundColor = randomColor();
   document.getElementById('fourthColor').style.backgroundColor = randomColor();
@@ -32,3 +33,18 @@ function fillBoard() {
   }
 }
 fillBoard();
+
+// Adiciona a classe selected ao elemento selecionado e remove do anterior
+const firstColor = document.getElementById('black');
+firstColor.classList.add('selected');
+
+function newSelected(color) {
+  const selected = document.querySelector('.selected');
+  selected.classList.remove('selected');
+  color.target.classList.add('selected');
+};
+
+black.addEventListener('click', newSelected);
+secondColor.addEventListener('click', newSelected);
+thirdColor.addEventListener('click', newSelected);
+fourthColor.addEventListener('click', newSelected);

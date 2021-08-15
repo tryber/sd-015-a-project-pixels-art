@@ -6,10 +6,6 @@
   cursor: pointer;
 }
 
-.black {
-  background-color: black;
-}
-
 .pixel {
   border: 1px solid black;
   display: inline-block;
