@@ -3,8 +3,9 @@
     height: 40px;
     width: 40px;
     display: inline-block;
-
     border: solid;
+    border-width: 1px;
+    margin-left: 5px;
 }
 
 #c2 {
@@ -12,22 +13,38 @@
     height: 40px;
     width: 40px;
     display: inline-block;
-
     border: solid;
+    border-width: 1px;
+    margin-left: 5px;
 }
 #c3 {
     background-color: crimson;
     height: 40px;
     width: 40px;
     display: inline-block;
-
     border: solid;
+    border-width: 1px;
+    margin-left: 5px;
 }
 #c4 {
     background-color: deepskyblue;
     height: 40px;
     width: 40px;
     display: inline-block;
-
     border: solid;
+    border-width: 1px;
+    margin-left: 5px;
+}
+
+.pixel {
+    background-color: white;
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+    border: solid;
+    border-width: 1px;
+}
+
+.line {
+    line-height: 0px;
 }
