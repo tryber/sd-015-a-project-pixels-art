@@ -7,9 +7,8 @@ function limparQuadro() {
   }
 }
 btnClear.addEventListener('click', limparQuadro);
-
 // Gera o quadro novo//
-function generate()) {
+function generate() {
   let valueBoard = document.querySelector('#board-size').value;
   if (valueBoard > 50) {
     valueBoard = 50;
@@ -17,22 +16,18 @@ function generate()) {
   if (valueBoard < 5) {
     valueBoard = 5;
   }
-
 //Apaga todo o quadro//
 let pixelBoard = document.querySelector('#pixel-board')
 let borderPixel = document.querySelector('.border-pixel-board');
 pixelBoard.removeChild(borderPixel);
-
 //Cria um novo quadro//
 let createBorderPixel = document.createElement('div')
 pixelBoard.appendChild(createBorderPixel).className = 'border-pixel-board';
-
 //Cria as linhas//
 for (let i = 0; i < valueBoard; i++){
   let createLine = document.createElement('div');
     createBorderPixel.appendChild(createLine).className = 'linha';
 }
-
 // Cria os pixels//
 let lines = document.querySelectorAll('.linha')
   for (let i = 0; i < lines.length; i++) {
