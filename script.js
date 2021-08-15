@@ -49,6 +49,12 @@ principal.appendChild(newSection);
 
 function createFramePixels(param1) {
 
+  if (param1 < 5) {
+    param1 = 5;
+  } else if (param1 > 50) {
+    param1 = 50;
+  };
+
   for (let index = 1; index <= param1; index += 1) {
 
     let newColumn = document.createElement('div');
