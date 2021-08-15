@@ -1,0 +1,73 @@
+body {
+  background-image: url('img/back.gif');
+  background-attachment: fixed;
+  text-align: center;
+  background-size: 300%;
+  animation: moveback alternate 25s infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes moveback {
+
+  0% {
+    background-position: 0% 95%;
+  }
+
+  100% {
+    background-position: 100% 95%;
+  }
+}
+
+#color-palette div {
+  display: inline-block;
+}
+
+#pixel-board div {
+  padding: 0;
+}
+
+#pixel-board {
+  padding: 0;
+  font-size: 0;
+  margin: auto;
+}
+
+.estrelinha {
+  background-image: url(img/star.png);
+  background-size: 95%;
+  position: absolute;
+  top: 80%;
+  left: 47%;
+  border: none ! important;
+  transform: rotateY(360deg);
+  animation: rotation 2s linear infinite;
+}
+
+@keyframes rotation {
+
+  from {
+    transform: rotateY(0deg);
+  }
+
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+.estrelinha-louca {
+  background: linear-gradient(-45deg, red, red, orange, yellow, green, blue, indigo, violet, indigo, blue, green, yellow, orange, red, red);
+  background-size: 700% 700%;
+  animation: estrela 1s  infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes estrela {
+
+  0% {
+    background-position: 0% 0%;
+  }
+
+  100% {
+    background-position: 100% 100%;
+  }
+}
