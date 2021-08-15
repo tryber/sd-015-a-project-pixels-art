@@ -24,7 +24,7 @@ function addBackgroundColor() {
   const getClassColor = document.getElementsByClassName('color');
   for (let index = 0; index < getClassColor.length; index += 1) {
     if (index === 0) {
-      getClassColor[index].style.backgroundColor = 'black'
+      getClassColor[index].style.backgroundColor = 'black';
     } else {
       getClassColor[index].style.backgroundColor = '#' + Math.floor(Math.random() * 0x1000000).toString(16).padStart(6, '0');
     }
@@ -108,7 +108,7 @@ createButton();
 
 const getButton = document.querySelector('#clear-board');
 
-function dinamicPixel () {
+function dinamicPixel() {
   const getPixels = document.querySelectorAll('.pixel');
   for (let index = 0; index < getPixels.length; index += 1) {
     getPixels[index].style.backgroundColor = 'white';
