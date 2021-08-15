@@ -28,7 +28,7 @@ function generate() {
     const createLine = document.createElement('div');
     createBorderPixel.appendChild(createLine).className = 'linha';
   }
-  // Cria os pixels//  
+  // Cria os pixels
   const lines = document.querySelectorAll('.linha');
   for (let i = 0; i < lines.length; i += 1) {
     for (let i2 = 0; i2 < lines.length; i2 += 1) {
@@ -36,7 +36,7 @@ function generate() {
       lines[i2].appendChild(createPixel).className = 'pixel';
     }
   }
-// Chama a função para atualizar a lista de pixel 
+// Chama a função para atualizar a lista de pixel
 }
 // Defini o número de pixels
 const btnGenerate = document.querySelector('#generate-board');
@@ -44,9 +44,8 @@ const btnGenerate = document.querySelector('#generate-board');
 function value() {
   const valueBoard = document.querySelector('#board-size').value;
   if (valueBoard <= 0 || valueBoard === '') {
-    alert('Board inválido!'); 
-  }
-  else generate();
+    alert('Board inválido!');
+  } else generate();
 }
 btnGenerate.addEventListener('click', value);
 // Gerador de cores aleatórias
