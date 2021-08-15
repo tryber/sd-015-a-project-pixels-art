@@ -39,7 +39,7 @@ function clearBoard() {
 clearB.addEventListener('click', clearBoard);
 
 function randomColor() {
-  const genColor = '#' + Math.floor(Math.random() * 16777216).toString(16).slice(-6);
+  const genColor = '#' + Math.floor(Math.random()*16777216).toString(16).slice(-6);
   return genColor;
 } // Copyright: function made using sugestions and ideas from the content and comments posted at this link: https://dev.to/akhil_001/generating-random-color-with-single-line-of-js-code-fhj
 
