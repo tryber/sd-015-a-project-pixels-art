@@ -38,8 +38,7 @@ function paintPixel() {
   pixels.forEach((pixel) => {
     pixel.addEventListener('click', (evento) => {
       const elementPixel = evento.target;
-      const colorSelected =
-        document.getElementsByClassName('color selected')[0];
+      const colorSelected = document.getElementsByClassName('color selected')[0];
       elementPixel.style.backgroundColor = colorSelected.id;
     });
   });
