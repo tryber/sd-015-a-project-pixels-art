@@ -26,20 +26,22 @@ const fullPaletteLi = document.querySelectorAll('#color-palette ul li');
 
 // Create the pixel board
 const pixelBoard = document.querySelector('#pixel-board');
-for (let y = 1; y <= boardSize; y += 1) {
-  const line = document.createElement('div');
-  const lineName = `line ${y}`;
-  line.id = lineName;
-  line.className = 'line';
+function createPixelBoard() {
+  for (let y = 1; y <= boardSize; y += 1) {
+    const line = document.createElement('div');
+    const lineName = `line ${y}`;
+    line.id = lineName;
+    line.className = 'line';
 
-  for (let x = 1; x <= boardSize; x += 1) {
-    const pixel = document.createElement('div');
-    pixel.className = 'pixel';
-    const pixelId = `pixel${y}${x}`;
-    pixel.id = pixelId;
-    line.appendChild(pixel);
+    for (let x = 1; x <= boardSize; x += 1) {
+      const pixel = document.createElement('div');
+      pixel.className = 'pixel';
+      const pixelId = `pixel${y}${x}`;
+      pixel.id = pixelId;
+      line.appendChild(pixel);
+    }
+    pixelBoard.appendChild(line);
   }
-  pixelBoard.appendChild(line);
 }
 
 // Create a function to reset the selected color to the first (black) one.
@@ -48,13 +50,6 @@ function clearColorSelection() {
     fullPaletteLi[li].classList.remove('selected');
   }
 }
-
-window.onload = function resetBlackSelection() {
-  clearColorSelection();
-  const blackColor = document.querySelector('#color0');
-  blackColor.classList.add('selected');
-  currentColorText.innerHTML = `selected: ${blackColor.id}`;
-};
 
 // check clicked color with event bubbling ref: https://flaviocopes.com/how-to-add-event-listener-multiple-elements-javascript/
 document.querySelectorAll('.color').forEach((colorOnPalette) => {
@@ -70,13 +65,15 @@ document.querySelectorAll('.color').forEach((colorOnPalette) => {
 });
 
 // Colorize clicked pixel
-document.querySelectorAll('.pixel').forEach((pixelOnGrid) => {
-  pixelOnGrid.addEventListener('click', (eventPixel) => {
-    const whichColorSelected = document.querySelector('.color.selected').id;
-    const thisPixel = eventPixel;
-    thisPixel.target.style.backgroundColor = colorPalette[whichColorSelected];
+function colorizePixel() {
+  document.querySelectorAll('.pixel').forEach((pixelOnGrid) => {
+    pixelOnGrid.addEventListener('click', (eventPixel) => {
+      const whichColorSelected = document.querySelector('.color.selected').id;
+      const thisPixel = eventPixel;
+      thisPixel.target.style.backgroundColor = colorPalette[whichColorSelected];
+    });
   });
-});
+}
 
 // Clear board
 document.querySelector('#clear-board').addEventListener('click', () => {
@@ -85,3 +82,16 @@ document.querySelector('#clear-board').addEventListener('click', () => {
     pixelToClear.style.backgroundColor = 'white';
   });
 });
+
+function resetBlackSelection() {
+  const blackColor = document.querySelector('#color0');
+  blackColor.classList.add('selected');
+  currentColorText.innerHTML = `selected: ${blackColor.id}`;
+}
+
+window.onload = function startAllection() {
+  createPixelBoard();
+  clearColorSelection();
+  resetBlackSelection();
+  colorizePixel();
+};
