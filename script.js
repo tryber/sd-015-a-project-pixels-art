@@ -150,12 +150,12 @@ function setGrid() {
     alert('Board inválido!');
   } else {
     const callPixelBoard = document.querySelector('#pixel-board');
-        const size = callPixelBoard.childNodes.length;
-      for (let index = 0; index < size; index += 1) {
-        callPixelBoard.childNodes[0].remove();
-      }
-      const inputValue = getInput.value;
-      createFramePixels(inputValue);
+    const size = callPixelBoard.childNodes.length;
+    for (let index = 0; index < size; index += 1) {
+      callPixelBoard.childNodes[0].remove();
+    }
+    const inputValue = getInput.value;
+    createFramePixels(inputValue);
   }
 }
 getAddButton.addEventListener('click', setGrid);
