@@ -24,14 +24,35 @@ for (let i = 0; i < 25; i += 1) {
   pixelsId.appendChild(pixels);
 }
 
-function clicaCor(event) {
-  let coresSelecionadas = document.querySelectorAll('.color');
-  for(let i = 0; i < coresSelecionadas.length; i += 1) {
-    coresSelecionadas[i].addEventListener('click',function(event) {
-      let classeSelected = document.querySelector('.selected');
-      classeSelected.classList.remove('selected');
-      event.target.classList.add('selected');
-    });
+// Requisito 7: clicar na cor 
+const clicaNaCor = document.querySelectorAll('.color');
+for (let i = 0; i < clicaNaCor.length; i += 1) {
+  clicaNaCor[i].addEventListener('click', alvoCor);
+}
+
+const selecionarCor = document.getElementsByClassName('color');
+
+function removeSelected() {
+  for (let i = 0; i < selecionarCor.length; i += 1) {
+    selecionarCor[i].classList.remove('selected')
   }
 }
-clicaCor();
+
+function alvoCor(event) {
+  removeSelected();
+  event.target.classList.add('selected')
+}
+
+// Requisito 8 : colorir pixels
+const corPixel = document.querySelectorAll('.pixel');
+
+for (let i = 0; i < corPixel.length; i += 1) {
+  corPixel[i].addEventListener('click', pintarCor);
+}
+
+function pintarCor(event) {
+  const boxPixel = event.target;
+  const pegarPixel = document.querySelector('.selected')
+  const estilo = getComputedStyle(pegarPixel)
+  boxPixel.style.backgroundColor = estilo.backgroundColor;
+}
