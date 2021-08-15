@@ -17,3 +17,7 @@ body {
   height: 40px;
   display: table-cell;
 }
+
+button {
+  margin-bottom: 5px;
+}
