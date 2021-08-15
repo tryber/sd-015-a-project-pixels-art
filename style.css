@@ -1,0 +1,64 @@
+body , html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: sans-serif;
+}
+
+.palette-container {
+  width: 100%;
+  text-align: center;
+}
+
+.color {
+  display: inline-block;
+  border: 1px solid black;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.board-container {
+  width: 100%;
+}
+
+#pixel-board {
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 5px;
+  line-height: 0;
+}
+
+.pixel {
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.selected {
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.7);
+}
+
+.options-container {
+  width: 100%;
+}
+
+.options {
+  padding: 12px;
+  text-align: center;
+  margin: auto auto;
+}
+
+.btn {
+  padding: 5px;
+}
+
+#board-size {
+  width: 35px;
+  padding: 5px;
+}
