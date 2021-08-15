@@ -1,6 +1,10 @@
 const colorPalet = document.querySelector('#color-palette');
 const pixelBoard = document.querySelector('#pixel-board');
 
+function tocamusica() {
+  document.querySelector('#musica').play();
+}
+
 function randomColorGenerator() {
   const red = Math.floor(Math.random() * 256);
   const green = Math.floor(Math.random() * 256);
@@ -12,7 +16,6 @@ function randomColorGenerator() {
 function criaCoresDaPaleta(cor, classe) {
   const corDiv = document.createElement('div');
   corDiv.style.backgroundColor = cor;
-  console.log(classe);
   corDiv.classList.add('color');
   if (typeof classe !== 'undefined')corDiv.classList.add(classe);
   corDiv.style.width = '40px';
@@ -25,6 +28,7 @@ criaCoresDaPaleta('black', 'selected');
 criaCoresDaPaleta(randomColorGenerator());
 criaCoresDaPaleta(randomColorGenerator());
 criaCoresDaPaleta(randomColorGenerator());
+criaCoresDaPaleta('','estrelinha');
 let color = document.querySelector('.selected').style.backgroundColor;
 
 function criaLinhaQuadro(tamanho, largAlt) {
@@ -49,8 +53,11 @@ function criaQuadro(tamanho, largAlt) {
 criaQuadro(5, 40);
 
 function trocaSeletor(event) {
-  if (!event.target.classList.contains('selected')) {
+  if (!event.target.classList.contains('selected') && event.target.classList.contains('color')) {
     document.querySelector('.selected').classList.remove('selected');
+    if (event.target.classList.contains('estrelinha')) {
+      tocamusica();
+    }
     event.target.classList.add('selected');
     color = event.target.style.backgroundColor;
   }
@@ -60,6 +67,10 @@ colorPalet.addEventListener('click', trocaSeletor);
 
 function pintaQuadro(event) {
   const bloco = event.target;
+  if (document.querySelector('.selected').classList.contains('estrelinha')) {
+    bloco.classList.add('estrelinha-louca');
+    return;
+  }
   bloco.style.backgroundColor = color;
 }
 
@@ -80,6 +91,9 @@ function limpaQuadro() {
   for (let i = 0; i < quadros.length; i += 1) {
     const quadro = quadros[i];
     quadro.style.backgroundColor = 'white';
+    if (quadro.classList.contains('estrelinha-louca')) {
+      quadro.classList.remove('estrelinha-louca');
+    }
   }
 }
 
