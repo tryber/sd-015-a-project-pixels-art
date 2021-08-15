@@ -26,6 +26,7 @@ function randomColor() {
 const paletteOfColors = ['black', randomColor(), randomColor(), randomColor()];
 const paletteDiv = document.getElementById('color-palette').children;
 const pixels = document.getElementsByClassName('pixel');
+const clearButtom = document.querySelector('#clear-board');
 
 function makePaletteColor() {
   for (let index = 0; index < paletteOfColors.length; index += 1) {
@@ -34,7 +35,7 @@ function makePaletteColor() {
 }
 
 function addEvent(element, event, func) {
-  if (element.length !== 0) {
+  if (element.length > 0) {
     for (let index = 0; index < element.length; index += 1) {
       element[index].addEventListener(event, func);
     }
@@ -60,8 +61,15 @@ function changeColor(event) {
   event.target.style.backgroundColor = color;
 }
 
+function clearBoard() {
+  for (let index = 0; index < pixels.length; index += 1) {
+    pixels[index].style.backgroundColor = 'white';
+  }
+}
+
 createColorPalette(4);
 makePaletteColor();
 makeSelected();
 addEvent(paletteDiv, 'click', changeSelectedColor);
 addEvent(pixels, 'click', changeColor);
+addEvent(clearButtom, 'click', clearBoard);

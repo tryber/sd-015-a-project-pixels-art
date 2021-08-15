@@ -2,12 +2,6 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-ul li{
-  list-style: none;
-  display: inline-block;
-  margin-right: 10px;
-}
-
 .color {
   width: 40px;
   height: 40px;
@@ -30,4 +24,18 @@ ul li{
   display: table-cell;
   background-color: white;
   border: solid 1px black;
+}
+
+#clear-board {
+  background-color: #06D6A0;
+  border: solid 0.5px #7c7878;
+  margin-bottom: 5px;
+  text-align: center;
+  font-size: 12px;
+}
+
+#clear-board:hover {
+  background-color: #3d6e4e;
+  color: white;
+  transition: 0.25s;
 }
