@@ -5,10 +5,10 @@
     height: 50px;
 }
 
-#color-palette {
-    width: 220px;
+ #color-palette {
+    width: 300px;
     height: 52px;
-}
+} 
 
 #pixel-board {
     display: inline-block;

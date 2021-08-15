@@ -27,4 +27,23 @@ function creatPixelBord() {
 }
 creatPixelBord();
 
-colorSelected.className = 'color black selected';
+let palleteColor = document.querySelectorAll('.color');
+
+function selectColor() {
+  for (let index = 0; index < palleteColor.length; index += 1) {
+    palleteColor[index].addEventListener('click', function (evt) {
+      document.querySelector('.selected').classList.remove('selected');
+      evt.target.classList.add('selected');
+    });
+  }
+}
+selectColor(); // 7 ok
+
+// let palleteColor = document.getElementById('color-palette');
+
+// palleteColor.addEventListener('click', function (evt) {
+//   if(evt.target.className.includes('color')){
+//     document.querySelector('.selected').classList.remove('selected');
+//     evt.target.classList.add('selected');
+//   }
+// }); outra forma de fazer o requisto 7 .
