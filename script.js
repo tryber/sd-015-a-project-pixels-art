@@ -5,7 +5,8 @@ const colorPalette = {
   color2: '#00FF00', // green
   color3: '#0000FF', // blue
 };
-const boardSize = 5; // Board size n x n
+const boardSizeField = document.querySelector('#board-size').value;
+const boardSize = parseInt(boardSizeField); // Board size n x n
 const currentColorText = document.querySelector('#currentColorField');
 
 // Populate palette with colors defined above
@@ -27,6 +28,7 @@ const fullPaletteLi = document.querySelectorAll('#color-palette ul li');
 // Create the pixel board
 const pixelBoard = document.querySelector('#pixel-board');
 function createPixelBoard() {
+  pixelBoard.innerHTML = '';
   for (let y = 1; y <= boardSize; y += 1) {
     const line = document.createElement('div');
     const lineName = `line ${y}`;
