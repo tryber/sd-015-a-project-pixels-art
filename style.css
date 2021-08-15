@@ -1,0 +1,27 @@
+#color-palette{
+
+}
+#color-one{
+    background-color: black;
+    padding: 30px;
+    display: inline-block;
+    border: 1px solid black;
+}
+#color-two{
+    background-color: red;
+    padding: 30px;
+    display: inline-block;
+    border: 1px solid black;
+}
+#color-three{
+    background-color: green;
+    padding: 30px;
+    display: inline-block;
+    border: 1px solid black;
+}
+#color-four{
+    background-color:brown;
+    padding: 30px;
+    display: inline-block;
+    border: 1px solid black;
+}
