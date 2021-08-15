@@ -23,3 +23,15 @@ for (let i = 0; i < 25; i += 1) {
   pixels.style.backgroundColor = 'white';
   pixelsId.appendChild(pixels);
 }
+
+function clicaCor(event) {
+  let coresSelecionadas = document.querySelectorAll('.color');
+  for(let i = 0; i < coresSelecionadas.length; i += 1) {
+    coresSelecionadas[i].addEventListener('click',function(event) {
+      let classeSelected = document.querySelector('.selected');
+      classeSelected.classList.remove('selected');
+      event.target.classList.add('selected');
+    });
+  }
+}
+clicaCor();
