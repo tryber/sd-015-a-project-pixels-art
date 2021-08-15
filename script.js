@@ -95,6 +95,14 @@ function defineTamanho() {
   console.log(tamanho);
 }
 
+function resetaCanvas() {
+  for (let i = 0; i < linha.length; i += 0) {
+    linha[i].remove();
+  }
+  createLine(canvas);
+  preencheBox(linha);
+}
+
 function defineCanvas() {
   if (!boardSize.value) {
     alert('Board inválido!');
@@ -102,13 +110,6 @@ function defineCanvas() {
     defineTamanho();
     resetaCanvas();
   }
-}
-function resetaCanvas() {
-  for (let i = 0; i < linha.length; i += 0) {
-    linha[i].remove();
-  }
-  createLine(canvas);
-  preencheBox(linha);
 }
 
 function montaPagina() {
