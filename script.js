@@ -110,15 +110,14 @@ createButton();
 
 const getButton = document.querySelector('#clear-board');
 
-function clearPixels() {
-  getButton.addEventListener('click', function () {
-    const getPixels = document.querySelectorAll('.pixel');
-    for (let index = 0; index < getPixels.length; index += 1) {
-      getPixels[index].style.backgroundColor = 'white';
-    }
-  });
+function dinamicPixel () {
+  const getPixels = document.querySelectorAll('.pixel');
+  for (let index = 0; index < getPixels.length; index += 1) {
+    getPixels[index].style.backgroundColor = 'white';
+  }
 }
-clearPixels();
+
+getButton.addEventListener('click', dinamicPixel);
 
 // Requisito 10 - Faça o quadro de pixels ter seu tamanho definido pela pessoa usuária.
 // Função para criar input e botão
