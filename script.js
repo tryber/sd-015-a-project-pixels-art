@@ -56,6 +56,21 @@ function setSelectedColor() {
   clickedBlock.style.backgroundColor = toPaint;
 }
 
+function createButton() {
+  const buttonClear = document.querySelector('#clear-board');
+  buttonClear.innerText = 'Limpar';
+  buttonClear.addEventListener('click', clearColors);
+}
+
+function clearColors() {
+  for (let i = 0; i < gridSize; i += 1) {
+    const grid = document.querySelectorAll('.pixel')[i];
+    grid.style.backgroundColor = 'white';
+  }
+}
+
+createButton();
+
 for (let i = 0; i < colors.length; i += 1) {
   const blockColors = document.querySelectorAll('.color')[i];
   blockColors.addEventListener('click', setSelected);
