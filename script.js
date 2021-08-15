@@ -1,9 +1,3 @@
-window.onload = function () {
-    paintPixel();
-
-}
-
-
 //Botão para limpar o quadro
 let btnClear = document.getElementById('clear-board')
 btnClear.addEventListener('click', limparQuadro);
@@ -110,3 +104,6 @@ function paintPixel () {
     }
     }
 
+window.onload = function () {
+  paintPixel();
+}
