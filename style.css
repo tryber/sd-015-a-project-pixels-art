@@ -1,9 +1,49 @@
-#color-palette{     
-    display: flex;
+body{   
+ background: rgb(185, 86, 209) 
 }
+
+.pixel{ 
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border: solid black;
+    border-width: 01px;
+
+}
+
 .color{ 
     
 }
+
+#l1{   
+    
+
+}
+
+#l2{    
+      
+}
+
+#l3{    
+     
+}
+
+#l4{    
+      
+}
+
+#l5{    
+        
+}
+
+#color-palette{     
+      display: flex
+}
+
+#pixel-board{   display: flex;
+
+}
+
 #color-1{   
     width: 100px;
     height: 100px;
@@ -34,14 +74,7 @@
        background-color: royalblue;
        border:solid black;
        border-width: 01px;
-      
-       
-       
+        
 }
-#color-5{ 
-    width: 100px;    
-       height: 100px;
-       background-color: green;
-       border: solid black;
-       border-width: 01px
-}
+
+ 
