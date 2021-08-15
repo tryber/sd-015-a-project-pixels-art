@@ -1,4 +1,4 @@
-//Botão para limpar o quadro//
+//Botão para limpar o quadro
 const btnClear = document.getElementById('clear-board');
 function limparQuadro() {
   const todosPixel = document.querySelectorAll('.pixel');
@@ -40,7 +40,7 @@ function generate() {
 }
 //Defini o número de pixels// 
 const btnGenerate = document.querySelector('#generate-board');
-//Resgata o valor do input//  
+//Resgata o valor do input
 function value() {
   const valueBoard = document.querySelector('#board-size').value;
   if (valueBoard <= 0 || valueBoard === '') {
