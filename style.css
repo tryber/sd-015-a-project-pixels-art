@@ -20,4 +20,9 @@ body {
 
 button {
   margin-bottom: 5px;
+  margin-right: 50px;
+}
+
+input {
+  width: 40px;
 }
