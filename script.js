@@ -10,26 +10,33 @@ h1.innerText = 'Paleta de Cores';
 h1.id = 'title';
 
 window.onload = function selectedElement() {
-  let elementSelected = document.querySelectorAll('.color')[0];
+  const elementSelected = document.querySelectorAll('.color')[0];
   elementSelected.classList.add('selected');
- }
+}
 
  function elementClick() {
   let paletaCores = document.querySelectorAll('.color');
-  for (let i = 0; i < paletaCores.length; i += 1) {
-    paletaCores[i].addEventListener('click', function(event) {
-    elementoClicado = paletaCores[i].classList.add('selected');
-    })
-  }
+  let elementoClicado = document.querySelector('.selected');
+  const paletaDeCores = document.querySelector('#color-palette');
+
+  paletaDeCores.addEventListener('click', function(event) {
+    removeSelected(elementoClicado);
+    for (let i = 0; i < paletaCores.length; i += 1) {
+      elementoClicado = event.target.classList.add('selected');
+    }
+  })
+  return elementoClicado;
 }
 
-// function removeSelected(lista) { 
-//   let v = document.querySelectorAll('.color'); // recebe lista da classe color
+function removeSelected(elemento) {
+  let remocaoLista = document.querySelectorAll('.selected');
 
-//   for (let i = 0; i < v.length; i += 1) {
-//     if (v != lenght - 1
-//   }
-// }
+  for (let i = 0; i < remocaoLista.length; i += 1) {
+    if (remocaoLista[i] !== elemento) {
+      remocaoLista[i].classList.remove('selected');
+    } return remocaoLista[i];
+  }
+}
 
 function bodyChildren(elemento) { 
   document.body.appendChild(elemento);
