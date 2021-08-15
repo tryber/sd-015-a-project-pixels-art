@@ -1,0 +1,21 @@
+.estlTitle {
+    text-align: center;
+}
+
+.estlBody {
+    background-color: LightGrey;
+}
+
+.estilizaPaleta {
+    border-color: rgb(238, 8, 123);
+    border-style: solid;
+}
+
+.color {
+    margin-left: 20px;
+    display: inline-block;
+    border-style: solid;
+    border-width: 1px;
+    width: 140px;
+    height: 140px;
+}
