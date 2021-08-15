@@ -1,43 +1,38 @@
 // Requisito 2 -Adicione à página uma paleta de quatro cores distintas. E Requisito 3 - Adicione a cor preta como a primeira cor da paleta de cores.
 // Cria elemento Paleta de Cores com id color-palette
 function createColorPalette() {
-  let colorPalette = document.createElement('div');
-  let getSection = document.querySelector('#section-colors');
+  const colorPalette = document.createElement('div');
+  const getSection = document.querySelector('#section-colors');
   colorPalette.id = 'color-palette';
   getSection.appendChild(colorPalette);
 };
-
 createColorPalette();
 
 // Cria classe color para cada cor individual da paleta de cores
 function createClassColor() {
-
   for (let index = 1; index <= 4; index += 1) {
-
     let getColor = document.getElementById('color-palette');
     let newColor = document.createElement('div');
     getColor.appendChild(newColor);
     newColor.className = 'color';
-
   }
-
 };
-
 createClassColor();
 
 // Adicionando cor de fundo à cada elemento da paleta. RESOLVE TAMBÈM REQUISITO 3 (Que pede que a primeira cor da paleta de cores seja PRETA).
 let background = ['black', 'red', 'blue', 'green'];
 
-function addBackgroundColor(backgroundColors) {
-  
+function addBackgroundColor(backgroundColors) {  
   let getClassColor = document.getElementsByClassName('color');
-
   for (let index = 0; index < getClassColor.length; index += 1) {
-    getClassColor[index].style.backgroundColor = background[index];
+    console.log(getClassColor[index])
+    if (index !== 0) {
+      getClassColor[index].style.backgroundColor = '#' + Math.floor(Math.random() * 0x1000000).toString(16).padStart(6, '0');
+    } else {
+      getClassColor[index].style.backgroundColor = background[index];
+    }
   }
-  
 };
-
 addBackgroundColor(background);
 
 // Requisito 4 - Adicione à página um quadro de pixels, com 25 pixels. Requisito 5 - Resolve também a primeira especificação do requisito 5(Verifica se o quadro de pixels tem altura e comprimento de 5 elementos).
@@ -46,32 +41,25 @@ newSection.id = 'pixel-board';
 principal.appendChild(newSection);
 
 function createFramePixels(param1) {
-
   if (param1 < 5) {
+    alert('Board inválido! Mínimo 5 e máximo 50.')
     param1 = 5;
   } else if (param1 > 50) {
+    alert('Board inválido! Mínimo 5 e máximo 50.')
     param1 = 50;
   };
-
   for (let index = 1; index <= param1; index += 1) {
-
     let newColumn = document.createElement('div');
     newColumn.className = 'columns'
     newSection.appendChild(newColumn);
-
     for (let index2 = 1; index2 <= param1; index2 += 1) {
-
       let createPixels = document.createElement('div');
       createPixels.className = 'pixel';
       newColumn.appendChild(createPixels);
-
     }
   }
-
   newColor();
-
 }
-
 createFramePixels(5);
 
 // Requisito 6 e 7 - Defina a cor preta como cor inicial. Ao carregar a página, a cor preta já deve estar selecionada para pintar os pixels
@@ -86,17 +74,14 @@ for (let index = 0; index < getClassColor.length; index += 1) {
 };
 
 function setColor(event) {
-
   let colorSelected = document.querySelector('.selected');
   colorSelected.classList.remove('selected');
   event.target.classList.add('selected');
-
 };
 
 // Requisito 8 - Clicar em um pixel dentro do quadro após selecionar uma cor na paleta faz com que o pixel seja preenchido com a cor selecionada.
 function newColor() {
   const getPixel = document.getElementsByClassName('pixel');
-
   for (let index = 0; index < getPixel.length; index += 1) {
     getPixel[index].addEventListener('click', changeColor)
   }
@@ -115,14 +100,10 @@ const getPixelBoard = document.getElementById('pixel-board');
 const divPai = getPixelBoard.parentNode;
 
 function createButton() {
-
   divPai.insertBefore(newButton, getPixelBoard);
-
   newButton.id = 'clear-board';
-  newButton.innerHTML = 'Limpar';
-  
+  newButton.innerHTML = 'Limpar';  
 };
-
 createButton();
 
 //Adiciona função de limpar o quadro ao botão
@@ -130,19 +111,13 @@ createButton();
 const getButton = document.querySelector('#clear-board');
 
 function clearPixels() {  
-
-  getButton.addEventListener('click', function(event) {
-    
+  getButton.addEventListener('click', function(event) {    
     const getPixels = document.querySelectorAll('.pixel');
-
     for (let index = 0; index < getPixels.length; index += 1) {
       getPixels[index].style.backgroundColor = 'white';
     }
-
   });
-
 };
-
 clearPixels();
 
 // Requisito 10 - Faça o quadro de pixels ter seu tamanho definido pela pessoa usuária.
@@ -161,10 +136,8 @@ addButton.id = 'generate-board';
 addButton.innerHTML = 'VQV';
 
 function createInputAndButton() {
-
   callParent.insertBefore(newInput, callButton);
   callParent.insertBefore(addButton, callButton);
-
 };
 createInputAndButton();
 
@@ -173,25 +146,16 @@ const getAddButton = document.getElementById('generate-board');
 const getInput = document.getElementById('board-size');
 
 function setGrid() {
-
   if (getInput.value <= 0 || getInput.value === '') {
-    alert('Board inválido!')
+    alert('Board inválido!');
   } else {
     const callPixelBoard = document.querySelector('#pixel-board');
   let size = callPixelBoard.childNodes.length;
-
-  for (let index = 0; index < size; index += 1) {
-    
+  for (let index = 0; index < size; index += 1) {    
     callPixelBoard.childNodes[0].remove();
-
   }
-
   let inputValue = getInput.value
-
   createFramePixels(inputValue);
-
   }
-
 };
-
 getAddButton.addEventListener('click', setGrid)

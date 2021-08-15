@@ -27,16 +27,14 @@ body {
 
 .columns {
   line-height: 0;
-  display: block;
 }
 
 #clear-board {
   margin: auto;
   display: block;
-  text-align: center;
 }
 
-#board-size, #generate-board {
+#board-size {
   margin: 20px;
 }
 
