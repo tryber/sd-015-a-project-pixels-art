@@ -1,18 +1,18 @@
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 #title {
-    text-align: center;
+  text-align: center;
 }
 
 #color-palette {
-    display: inline-block;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    text-align: center;
+  display: inline-block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
 
 .border {
@@ -60,7 +60,7 @@ body {
     padding: 3px;
     border-radius: 5px;
     display: inline-block;
-    font-size: 0
+    font-size: 0;
 }
 
 .pixel {
