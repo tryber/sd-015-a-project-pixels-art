@@ -20,13 +20,26 @@ body {
   height: 40px;
   background-color: white;
 }
+
 #color-palette{
   line-height: 0;
 }
+
 .columns {
   line-height: 0;
+  display: block;
 }
 
 #clear-board {
-  margin: 10px;
+  margin: auto;
+  display: block;
+  text-align: center;
+}
+
+#board-size, #generate-board {
+  margin: 20px;
+}
+
+#pixel-board {
+  line-height: 0;
 }
