@@ -4,14 +4,15 @@ header {
 #color-pallet {
   display: inline-block;
   width: 100%;
-  height:50px;
+  height: 50px;
   align-items: center;
 }
 .color{
+  background-color: white;
   display: inline-block;
   border: 1px solid black;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
 }
 #color1 {
   background-color: black;
@@ -25,6 +26,14 @@ header {
 #color4 {
   background-color: blue;
 }
+#pixel-board {
+  width: 250px;
 
-
-
+}
+.pixel {
+  border: 1px solid black;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  background-color:white;
+}
