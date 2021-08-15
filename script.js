@@ -56,10 +56,7 @@ const createNewElement = (element, elementContent, location, qttOfElements, sele
     newSelector(qttOfElements, location.appendChild(newElement), selector, selectorName);
   }
 };
-// const pixelBoardDefaultColor = () => {
-//   location.reload();
-//   return false;
-// };
+
 const resetToDefaultColor = (location) => {
   location.addEventListener('click', () => {
     for (let index = 0; index < sectionPixelBoard.children.length; index += 1) {
@@ -91,7 +88,7 @@ const changePaletteBlockCollor = (block) => {
   }
 };
 
-createNewElement('div', '', sectionPaletteCollor, 4, 'class', 'color');
+createNewElement('div', '', sectionPaletteCollor, 6, 'class', 'color');
 
 newPixel(sectionPixelBoard, 5);
 
