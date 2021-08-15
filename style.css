@@ -4,7 +4,7 @@ body {
 
 #centralize {
   display: block;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   margin: 0 auto;
   width: 400px;
   text-align: center;
