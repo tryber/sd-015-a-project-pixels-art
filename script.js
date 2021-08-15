@@ -25,6 +25,7 @@ function randomColor() {
 
 const paletteOfColors = ['black', randomColor(), randomColor(), randomColor()];
 const paletteDiv = document.getElementById('color-palette').children;
+const pixels = document.getElementsByClassName('pixel');
 
 function makePaletteColor() {
   for (let index = 0; index < paletteOfColors.length; index += 1) {
@@ -32,7 +33,7 @@ function makePaletteColor() {
   }
 }
 
-function changeSelectedClass(element, event, func) {
+function addEvent(element, event, func) {
   if (element.length !== 0) {
     for (let index = 0; index < element.length; index += 1) {
       element[index].addEventListener(event, func);
@@ -42,7 +43,7 @@ function changeSelectedClass(element, event, func) {
   }
 }
 
-function changeColor(event) {
+function changeSelectedColor(event) {
   document.querySelector('.selected').classList.remove('selected');
   event.target.classList.add('selected');
 }
@@ -54,7 +55,13 @@ function makeSelected() {
   }
 }
 
+function changeColor(event) {
+  const color = document.querySelector('.selected').style.backgroundColor;
+  event.target.style.backgroundColor = color;
+}
+
 createColorPalette(4);
 makePaletteColor();
 makeSelected();
-changeSelectedClass(paletteDiv, 'click', changeColor);
+addEvent(paletteDiv, 'click', changeSelectedColor);
+addEvent(pixels, 'click', changeColor);
