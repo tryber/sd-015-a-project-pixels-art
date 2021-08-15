@@ -2,6 +2,7 @@ body {
   background-color: rgb(214, 224, 223);
   text-align: center;
 }
+
 /* Estilização do REQUISITO 2 */
 .color {
   border: solid black 1px;
@@ -11,17 +12,18 @@ body {
   height: 70px;
 }
 
-/* Estiliza elementos com a classe pixel e resolve a segunda especificação do requisito 5. Verifica se 40 pixels é o tamanho total do elemento, incluindo seu conteúdo e excluindo a borda preta, que deve ser criada à parte. */
+/* Estiliza elementos com a classe pixel e resolve a segunda especificação do requisito 5. 
+Verifica se 40 pixels é o tamanho total do elemento. 
+Incluindo seu conteúdo e excluindo a borda preta, que deve ser criada à parte. */
 .pixel {
   border: solid black 1px;
   width: 40px;
   display: inline-block;
-  margin: 0px;
   height: 40px;
   background-color: white;
 }
 
-#color-palette{
+#color-palette {
   line-height: 0;
 }
 
