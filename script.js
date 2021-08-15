@@ -2,6 +2,7 @@ let paitingPixels = document.querySelector('#pixel-board');
 let colors = document.getElementsByClassName('color');
 let colorSelected = document.querySelectorAll('.color')
 let selected = document.querySelector('.selected');
+let pixels = document.getElementsByClassName('pixel');
 
 function makeTable(number) {
   for (let i = 0; i < number; i += 1) {
@@ -48,5 +49,15 @@ for (let i = 0; i < document.querySelectorAll('.pixel').length; i += 1) {
       color = 'red';
     }
     event.target.style.backgroundColor = color;
+  });
+}
+
+window.onload = function () {
+  let btn = document.getElementById('btn');
+
+  btn.addEventListener('click', function() {
+    for (let i = 0; i < pixels.length; i += 1) {
+      pixels[i].style.backgroundColor = 'white';
+    }
   });
 }

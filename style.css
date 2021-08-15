@@ -46,3 +46,12 @@ ul.lines {
     margin: 0;
     margin-bottom: -5px;
 }
+
+#btn {
+    margin: 40px;
+    width: 70px;
+    height: 40px;
+    border-radius: 100px;
+    font-weight: bolder;
+    background-color: lightgray;
+}
