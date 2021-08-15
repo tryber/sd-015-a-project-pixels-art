@@ -25,15 +25,8 @@ header {
 }
 #color4 {
   background-color: blue;
-}
-#pixel-board {
-  width: 250px;
-
-}
-.pixel {
-  border: 1px solid black;
-  width: 40px;
-  height: 40px;
-  display: inline-block;
-  background-color:white;
+}#pixel-board {
+  margin: 0;
+  padding: 0;
+  font-size: 0;
 }
