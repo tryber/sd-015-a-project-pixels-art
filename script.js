@@ -1,3 +1,4 @@
+window.onload = function (){
 //color pallete
 function createPalette() {
     for (let i = 0; i <  4; i += 1) {
@@ -8,7 +9,7 @@ function createPalette() {
 }
 createPalette();
 
-// Create Pixe-Board
+// Create Pixel-Board
 
 function createBoard() {
     let pixelBoard = document.createElement('section');
@@ -20,12 +21,18 @@ function createBoard() {
         let line = document.createElement('div');  
         line.className = 'line'      
         pixelBoard.appendChild(line);        
-        for (x = 0 ; x < 5; x += 1){
-        let pixelBlock = document.createElement('div');
-        pixelBlock.className = 'pixel';
-        pixelBlock.style.backgroundColor = 'white';
-        line.appendChild(pixelBlock);
+            for (x = 0 ; x < 5; x += 1){
+            let pixelBlock = document.createElement('div');
+            pixelBlock.className = 'pixel';
+            pixelBlock.style.backgroundColor = 'white';
+            line.appendChild(pixelBlock);
         }
     }
 }
 createBoard();
+
+//add class 'selected' in element color black
+let blackSelected = document.querySelectorAll('.color')[0];
+blackSelected.classList.add('selected');
+
+}
