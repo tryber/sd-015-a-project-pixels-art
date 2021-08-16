@@ -41,3 +41,38 @@ for (let index = 0; index < qtePixel; index += 1) {
   paletadiv.style.backgroundColor = 'rgb(255,255,255)';
   pixels.appendChild(paletadiv);
 };
+/*recuperando a cor, nome de cores e a Div com a classe = pixel*/
+const listColor = document.getElementsByClassName('color');
+const nvcores = ['black','blue','yellow','red'];
+const listpixel = document.getElementsByClassName('pixel');
+
+function selPalette(){
+  for (let index = 0;index < qtePixelPaleta; index += 1) {
+    listColor[index].addEventListener('click',(evento) => {
+      let seleciona = document.querySelector('.selected');
+      seleciona.classList.remove('selected');
+      evento.target.classList.add('selected'); 
+    });      
+  };
+};
+
+selPalette();
+/*Parei Aqui*/
+function novaPalette(){
+  for (let index=0; index < qtePixelPaleta; index += 1) {
+    listColor[index].style.backgroundColor = nvcores[index];
+  };
+};
+novaPalette();
+
+function clickPixel(){
+  for (let index=0; index < qtePixel; index += 1){
+    listpixel[index].addEventListener('click',paintpix);
+  };
+};
+
+clickPixel();
+
+function paintpix(event) {
+  event.target.style.backgroundColor = document.querySelector('.selected').style.backgroundColor;
+};
