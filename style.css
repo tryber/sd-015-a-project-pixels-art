@@ -1,0 +1,42 @@
+body {
+  background-color: rgb(214, 224, 223);
+  text-align: center;
+}
+
+/* Estilização do REQUISITO 2 */
+.color {
+  border: solid black 1px;
+  width: 70px;
+  display: inline-block;
+  margin: 2px;
+  height: 70px;
+}
+
+.pixel {
+  border: solid black 1px;
+  width: 40px;
+  display: inline-block;
+  height: 40px;
+  background-color: white;
+}
+
+#color-palette {
+  line-height: 0;
+}
+
+.columns {
+  line-height: 0;
+}
+
+#clear-board {
+  margin: auto;
+  display: block;
+}
+
+#board-size {
+  margin: 20px;
+}
+
+#pixel-board {
+  line-height: 0;
+}
