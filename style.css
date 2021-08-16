@@ -2,7 +2,7 @@
     border: 1px solid;
     height: 80px;
     width: 80px;
-    background-color:black;
+    /* background-color:black; */
     display: inline-block;
 }
 
@@ -14,4 +14,10 @@
 
 .pixel{
     border: 1px solid;
+    width: 40px;
+    height: 40px;
+    list-style-type: none;
+    display: inline-block;
+    margin-top: 4px;
+    background-color: rgb(255, 255, 255);
 }

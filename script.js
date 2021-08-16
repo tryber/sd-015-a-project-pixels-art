@@ -5,6 +5,10 @@ function paletaDeCores(){
 
     let colorBrown = document.getElementsByClassName("color")[3].style.backgroundColor = "brown";
 
+    let  colorBlack = document.getElementsByClassName("color")[0].style.backgroundColor = "black";
+
+    
+
 }
 paletaDeCores();
 
