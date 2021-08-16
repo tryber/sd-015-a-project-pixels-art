@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,9 +7,9 @@
          initial-scale=1.0">
         <link href="stylesheet"  type="text/css" href="style.css" 
         href="script.js"> 
-        <title>Document</title>
+        <title>Pixel art</title>
     </head>
-    <body>
+    <body style="text-align: center;">
 
     </body>
     <script>
@@ -19,6 +19,7 @@
         titulo.id = 'title'
         titulo.innerText='Paleta de Cores'
         body.appendChild(titulo)
+        
         
         // requisito 2
         let paletaDeCores = document.createElement('div')
@@ -99,6 +100,17 @@
                 
             }
         }
+
+        let cores = document.getElementsByClassName('color')
+        console.log(cores)
+
+        for (let i = 0; i < cores.length; i++) {
+            if (cores[i].style.backgroundColor === 'black') {
+                cores[i].classList.add('selected')
+            }
+        }
+        
+
         
         
 
