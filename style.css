@@ -15,3 +15,11 @@
 
 #green{
     background-color: green;}
+
+#pixel-board
+
+.pixel{
+    border: 1px solid black;
+    height: 40px;
+    width: 40px;
+    background-color: rgb(255, 255, 255);}
