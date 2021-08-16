@@ -1,14 +1,29 @@
-// eslint-disable-next-line func-names
-window.onload = function () {
+window.onload = function nomeQualquer() {
   const blackColor = document.getElementById('color1');
   blackColor.classList.add('selected');
 };
 
+function getRandomInt() {
+  return Math.floor(Math.random() * 255);
+}
+getRandomInt();
+
+function generateNum() {
+  let numALeatorio2 = 'rgb(';
+  numALeatorio2 += getRandomInt();
+  numALeatorio2 += ', ';
+  numALeatorio2 += getRandomInt();
+  numALeatorio2 += ', ';
+  numALeatorio2 += getRandomInt();
+  numALeatorio2 += ')';
+  return numALeatorio2;
+}
+
 function addColorToBox() {
   document.querySelector('#color1').style.backgroundColor = 'black';
-  document.querySelector('#color2').style.backgroundColor = 'rgb(2, 62, 138)';
-  document.querySelector('#color3').style.backgroundColor = 'rgb(199, 31, 55)';
-  document.querySelector('#color4').style.backgroundColor = 'rgb(255, 255, 63)';
+  document.querySelector('#color2').style.backgroundColor = generateNum();
+  document.querySelector('#color3').style.backgroundColor = generateNum();
+  document.querySelector('#color4').style.backgroundColor = generateNum();
 }
 addColorToBox();
 
@@ -21,6 +36,26 @@ function createButton() {
 }
 createButton();
 
+function createInput() {
+  const bodyTag = document.querySelector('body');
+  const inputField = document.createElement('input');
+  bodyTag.appendChild(inputField);
+  inputField.id = 'board-size';
+  inputField.type = 'number';
+  inputField.min = '1';
+  inputField.max = '50';
+}
+createInput();
+
+function createButtonBoard() {
+  const bodyTag = document.querySelector('body');
+  const buttonBoardSize = document.createElement('button');
+  bodyTag.appendChild(buttonBoardSize);
+  buttonBoardSize.id = 'generate-board';
+  buttonBoardSize.innerText = 'VQV';
+}
+createButtonBoard();
+
 function createPixelBoard() {
   const body = document.getElementsByTagName('body');
   const pixelBoard = document.createElement('section');
@@ -30,23 +65,61 @@ function createPixelBoard() {
 createPixelBoard();
 
 const pixelBoard = document.querySelector('#pixel-board');
-function createPixelsLine() {
-  for (let i = 1; i <= 5; i += 1) {
+function createPixelsLine(num1) {
+  for (let i = 1; i <= num1; i += 1) {
     const pixel = document.createElement('div');
     pixelBoard.appendChild(pixel);
     pixel.className = 'pixel';
   }
 }
-createPixelsLine();
+createPixelsLine(5);
 
-function fillPixelBoard() {
-  for (let j = 1; j < 5; j += 1) {
+function fillPixelBoard(num) {
+  for (let j = 1; j < num; j += 1) {
     const lineBreak = document.createElement('br');
     pixelBoard.appendChild(lineBreak);
-    createPixelsLine();
+    createPixelsLine(num);
   }
 }
-fillPixelBoard();
+fillPixelBoard(5);
+
+function erasePixelBoard() {
+  const pixelBox = document.querySelectorAll('.pixel');
+  const lineBreak = document.querySelectorAll('br');
+  for (let i = 0; i < pixelBox.length; i += 1) {
+    pixelBox[i].parentNode.removeChild(pixelBox[i]);
+  }
+  for (let j = 0; j < lineBreak.length; j += 1) {
+    lineBreak[j].parentNode.removeChild(lineBreak[j]);
+  }
+}
+
+function elseInput() {
+  const inputField = document.querySelector('#board-size');
+  if (inputField.value <= 5) {
+    inputField.value = 5;
+  }
+  if (inputField.value >= 50) {
+    inputField.value = 50;
+  }
+  erasePixelBoard();
+  createPixelsLine(inputField.value);
+  fillPixelBoard(inputField.value);
+}
+
+function numInput(event) {
+  const sizeTarget = event.target;
+  const inputField = document.querySelector('#board-size');
+  sizeTarget.value = inputField.value;
+  if (inputField.value < 1) {
+    alert('Board inválido!');
+  } else {
+    elseInput();
+  }
+}
+
+const buttonBoardSize = document.querySelector('#generate-board');
+buttonBoardSize.addEventListener('click', numInput);
 
 const colorBox = document.getElementsByClassName('color');
 
