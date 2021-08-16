@@ -2,7 +2,6 @@
     display: inline-block;
 }
 
-
 .pixel {
     background-color: white;
     width: 40px;
@@ -13,9 +12,13 @@
     border-color: black;    
     border-style: solid;
     margin: -1px;  
-    margin-bottom: -4;
-      
+    margin-bottom: -4;      
 }
+
+.quebraLinha {
+    background-color: white;
+}
+
 .firstPixelScreen {
     background-color: white;
     width: 40px;
@@ -51,7 +54,6 @@
     border-color: black;    
     border-style: solid;
     margin: 2px;
-
 }
 
 #preto {
@@ -64,7 +66,6 @@
     border-color: black;    
     border-style: solid;
     margin: 2px;
-
 }
 
 #azul {
@@ -88,8 +89,7 @@
     display: inline-block;
     border-radius: 1px;
     border-color: black;
-    margin: -1px; 
-  
+    margin: -1px;   
 }
 
 #color-palete {
@@ -98,8 +98,7 @@
     margin: 2px;
     align-items: center;
     display: flex;
-    flex-flow: row wrap;
-    
+    flex-flow: row wrap;    
 }
 
 body {
