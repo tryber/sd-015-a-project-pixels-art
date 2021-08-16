@@ -3,7 +3,7 @@ const accessRed = document.getElementById('red-color');
 const acessBlue = document.getElementById('blue-color');
 const accessGreen = document.getElementById('green-color');
 const accessDivBlock = document.querySelectorAll('section.block');
-const accessButton = document.querySelector('#button');
+const accessButton = document.querySelector('#clear-board');
 
 document.getElementById('black-color').style.backgroundColor = 'black';
 document.getElementById('red-color').style.backgroundColor = 'red';
