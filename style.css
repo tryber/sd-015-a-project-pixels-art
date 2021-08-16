@@ -1,0 +1,16 @@
+.color {
+  display: inline-block;
+  border: 1px solid black;
+  padding: 25px;
+}
+
+#pixel-board {
+  font-size: 0;
+}
+
+.pixel {
+  display: inline-block;
+  border: 1px solid black;
+  padding: 40px;
+  margin: 0;
+}
