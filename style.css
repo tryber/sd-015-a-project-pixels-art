@@ -1,22 +1,20 @@
 body {
     /* Imagem retirada do site https://pattern.monster/blobs/ */
-    background-image: url('pattern_blobs.png');
+    background-image: url('blobs-opaco.png');
     background-size: cover;
 }
 #color-palette {
-    border: black solid 1px;
     width: 208px;
     height: 50px;
-    list-style: none;
     padding: 0;
     margin:auto;
 }
 #title {
     text-align: center;
-    font-family: 'Festive', cursive;
-    font-size: 60px;
-    font-weight:normal;
-    
+    font-family: 'Berkshire Swash', cursive;
+    font-size: 70px;
+    color:rgb(68, 68, 71);
+    text-shadow: 3px 3px rgb(0, 0, 0);
 }
 .color {
     width: 50px;
@@ -25,6 +23,7 @@ body {
     border-width: 1px;
     border-style:solid;
     border-color: black;
+    border-radius: 10%;
 }
 .pixel {
     width: 40px;
@@ -60,4 +59,11 @@ body {
     display: inline-block;
     margin-left: 45%;
 
+}
+button {
+    font-family: 'Comfortaa', cursive;
+    font-weight: bolder;
+}
+.selected {
+    opacity: 0.3;
 }

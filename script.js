@@ -20,7 +20,7 @@ function createItemsPalette(n) {
         }
     }
 }
-createItemsPalette(4);
+window.onload = createItemsPalette(4);
 //Remove o input anterior de linhas e consequentemente de pixels do quadro
 //Procura o pixel-board, pai das divs, linhas do quadro. Procura as linhas e itera a remoção delas a partir do pai.
 function removeLines () {
@@ -124,4 +124,9 @@ function clearPixels () {
             divPixel[index].style.backgroundColor = 'white';
         }                                                 
     }
+}
+const title = document.getElementById('title');
+title.addEventListener('mouseover', changeColorTitle);
+function changeColorTitle () {
+    title.style.color = randomColors();
 }
