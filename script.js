@@ -80,34 +80,34 @@ function adicionaPixels() {
   let n = parseInt(input.value);
   pixelsBoard.innerHTML = '';
   if (input.value === '') {
-    alert("Board inválido!");
+    alert('Board inválido!');
   } else if (input.value < 5) {
     n = 5;
   } else if (input.value > 50) {
     n = 50;
   }
-  pixelsBoard.style.width = (49.5 * n) + "px";
+  pixelsBoard.style.width = (49.5 * n) + 'px';
   pixelsBoard.style.height = pixelsBoard.style.width;
   for (let index = 0; index < n; index += 1) {
-    let createNewPixel = document.createElement("div");
-    createNewPixel.className = "pixel";
+    let createNewPixel = document.createElement('div');
+    createNewPixel.className = 'pixel';
     pixelsBoard.appendChild(createNewPixel);
     for (let index = 1; index < n; index += 1) {
-      let createNewPixel = document.createElement("div");
-      createNewPixel.className = "pixel";
+      let createNewPixel = document.createElement('div');
+      createNewPixel.className = 'pixel';
       pixelsBoard.appendChild(createNewPixel);
     }
   }
-  let createNewPixel = document.querySelectorAll(".pixel");
-  for (let index of createNewPixel) {
-    index.addEventListener("click", putColor);
+  let createNewPixel = document.querySelectorAll('.pixel');
+  for (const index of createNewPixel) {
+    index.addEventListener('click', putColor);
   }
 }
 function generateRandomColor() {
   for (let index = 1; index < colors.length; index += 1) {
-    let r = Math.random() * 255;
-    let g = Math.random() * 255;
-    let b = Math.random() * 255;
+    const r = Math.random() * 255;
+    const g = Math.random() * 255;
+    const b = Math.random() * 255;
     colors[index].style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
   }
 } window.onload = generateRandomColor();
