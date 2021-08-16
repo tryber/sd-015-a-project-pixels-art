@@ -1,12 +1,12 @@
 const colorPalette = document.getElementById('color-palette');
 const colors = colorPalette.children;
 
-//Source: https://wallacemaxters.com.br/blog/2021/02/20/como-gerar-cores-aleatorias-no-javascript
-//Utilizei o site para entender como gerar cores aleatórias
+// Source: https://wallacemaxters.com.br/blog/2021/02/20/como-gerar-cores-aleatorias-no-javascript
+// Utilizei o site para entender como gerar cores aleatórias
 function generateColor() {
-  let r = Math.floor(Math.random() * 255);
-  let g = Math.floor(Math.random() * 255);
-  let b = Math.floor(Math.random() * 255);
+  const r = Math.floor(Math.random() * 255);
+  const g = Math.floor(Math.random() * 255);
+  const b = Math.floor(Math.random() * 255);
   return `rgb(${r}, ${g}, ${b})`;
 }
 
