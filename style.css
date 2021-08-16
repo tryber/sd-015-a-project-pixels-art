@@ -13,7 +13,7 @@ body {
 }
 
 #color-palette {
-  margin-bottom: 40px;
+  margin-bottom: 0x;
 }
 
 .color {
@@ -41,4 +41,5 @@ body {
   margin-left: auto;
   margin-right: auto;
   display: block;
+  margin-bottom: 20px;
 }
