@@ -26,7 +26,7 @@ function addBackgroundColor() {
     if (index === 0) {
       getClassColor[index].style.backgroundColor = 'black';
     } else {
-      const aleatoryColor = '#' + Math.floor(Math.random() * 0x1000000).toString(16).padStart(6, '0');
+      const aleatoryColor = `#${Math.floor(Math.random() * 0x1000000).toString(16).padStart(6, '0')}`;
       getClassColor[index].style.backgroundColor = aleatoryColor;
     }
   }
@@ -40,18 +40,19 @@ const getMain = document.querySelector('#principal');
 getMain.appendChild(newSection);
 
 function createFramePixels(param1) {
-  if (param1 < 5) {
+  let boardSize = param1;
+  if (boardSize < 5) {
     alert('Board inválido! Mínimo 5 e máximo 50.');
-    param1 = 5;
-  } else if (param1 > 50) {
+    boardSize = 5;
+  } else if (boardSize > 50) {
     alert('Board inválido! Mínimo 5 e máximo 50.');
-    param1 = 50;
+    boardSize = 50;
   }
-  for (let index = 1; index <= param1; index += 1) {
+  for (let index = 1; index <= boardSize; index += 1) {
     const newColumn = document.createElement('div');
     newColumn.className = 'columns';
     newSection.appendChild(newColumn);
-    for (let index2 = 1; index2 <= param1; index2 += 1) {
+    for (let index2 = 1; index2 <= boardSize; index2 += 1) {
       const createPixels = document.createElement('div');
       createPixels.className = 'pixel';
       newColumn.appendChild(createPixels);
@@ -80,9 +81,10 @@ for (let index = 0; index < getClassColor.length; index += 1) {
 
 // Requisito 8 - Clicar em um pixel dentro do quadro após selecionar uma cor na paleta faz com que o pixel seja preenchido com a cor selecionada.
 function changeColor(event) {
+  const pixel = event.target;
   const getColor = document.querySelector('.selected');
   const background1 = window.getComputedStyle(getColor).getPropertyValue('background-color');
-  event.target.style.backgroundColor = background1;
+  pixel.style.backgroundColor = background1;
 }
 
 function newColor() {
