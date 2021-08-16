@@ -3,48 +3,62 @@
   height: 50px;
   border: 1px black solid;
   display: inline-block;
+
 }
+
 #black {
-  background-color: rgb(0, 0, 0) black;
+  background-color: black;
 
 }
+
 #red {
-  background-color: rgb(255, 0, 0) red;
+  background-color: red;
 
 }
+
 #blue {
-  background-color: rgb(0, 0, 255) blue;
+  background-color: blue;
 
 }
+
 #green {
-  background-color: rgb(0, 128, 0) green;
+  background-color: green;
 
 }
+
 .pixel {
   width: 40px;
   height: 40px;
-  border: 1px rgb(0, 0, 0) black solid;
+  border: 1px black solid;
   display: inline-block;
-  background-color: rgb(255, 255, 255) white; 
+  background-color: white;
 
 }
+
 #pixel-board {
   width: 210px;
   height: auto;
   background-color: black;
+
 }
+
 .selected {
   width: 50px;
   height: 50px;
   border: 1px black solid;
   display: inline-block;
+
 }
+
 #white {
- background-color: rgb(255, 255, 255);
+  background-color: white;
+
 }
+
 #clear-board {
   margin-top: 40px;
   border: 1px black solid;
-  background-color: rgb(211, 211, 211);
+  background-color: lightgray;
   width: 50px;
+
 }
