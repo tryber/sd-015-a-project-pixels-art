@@ -25,7 +25,6 @@ let selected = '';
 colorSelected.forEach((color) => {
   if (color.classList.contains('selected')) {
     selected = color;
-
     changeTagSelected(selected);
   }
 });
