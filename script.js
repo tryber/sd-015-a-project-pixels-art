@@ -28,7 +28,6 @@ function selecPreto() {
     let getSelec = document.querySelector(".selected");
     if (getSelec.classList.contains('selected')) {
         getSelec.classList.remove('selected');
-        console.log("funfou");
     }
     blkSelec.classList.add('selected');
 }
@@ -38,7 +37,6 @@ function selecAzul() {
     let getSelec = document.querySelector(".selected");
     if (getSelec.classList.contains('selected')) {
         getSelec.classList.remove('selected');
-        console.log("funfou");
     }
     blueSelec.classList.add('selected');
 }
@@ -48,7 +46,6 @@ function selecMarr() {
     let getSelec = document.querySelector(".selected");
     if (getSelec.classList.contains('selected')) {
         getSelec.classList.remove('selected');
-        console.log("funfou");
     }
     brwnSelec.classList.add('selected');
 }
@@ -58,7 +55,6 @@ function selecVerm() {
     let getSelec = document.querySelector(".selected");
     if (getSelec.classList.contains('selected')) {
         getSelec.classList.remove('selected');
-        console.log("funfou");
     }
     redSelec.classList.add('selected');
 }
