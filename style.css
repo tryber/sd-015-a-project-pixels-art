@@ -23,6 +23,12 @@
     background-color: red;
 }
 
+/* .selected {
+    border-style: solid;
+    border-width: 2px;
+    border-color: white;
+} */
+
 .pixel {
     border-style: solid;
     border-width: 1px;

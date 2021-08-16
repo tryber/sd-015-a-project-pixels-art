@@ -1,5 +1,7 @@
 let rowcol = 5;
 let board = document.getElementById("pixel-board");
+let seleColor = document.getElementById("black");
+
 
 function pxlgrid() {
     for (let i = 0; i < rowcol; i += 1) {
@@ -11,6 +13,10 @@ function pxlgrid() {
             test2.className = "pixel";
             test.appendChild(test2);
         }
-    } 
+    }
 }
 pxlgrid()
+
+window.onload = function select() {
+    seleColor.classList.add("selected");
+}
