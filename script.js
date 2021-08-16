@@ -78,21 +78,30 @@ function clearAllPixels() {
 
 clearBoard.addEventListener('click', clearAllPixels);
 
+function checkSizeValue(number) {
+  if (number === '' || number < 1) {
+    return false;
+  }
+  if (number < 5) {
+    return 5;
+  }
+  if (number > 50) {
+    return 50
+  }
+  return number;
+}
+
 function changeBoard() {
   sizeValue = document.getElementById('board-size').value;
-  if (sizeValue === '' || sizeValue < 1) {
+  sizeValue = checkSizeValue(sizeValue);
+  if (sizeValue === false) {
     window.alert('Board inválido!');
-  } else {
-    if (sizeValue < 5) {
-      sizeValue = 5;
-    } else if (sizeValue > 50) {
-      sizeValue = 50;
-    }
+    sizeValue = 5;
+  }
     pixelBoard.innerHTML = '';
     createPixels(sizeValue);
     pixels = document.querySelectorAll('.pixel');
     EvListenerInArrayOfElem(pixels, 'click', changePixelColor);
-  }
 }
 
 const btnBoardSize = document.querySelector('#generate-board');
