@@ -55,11 +55,12 @@ for (let index = 0; index < allPixels.length; index += 1) {
 }
 
 // Limpa o quadro
-const buttonClear = document.querySelector('#clear-board')
-buttonClear.addEventListener('click', clearBoard)
+const buttonClear = document.querySelector('#clear-board');
 
 function clearBoard() {
   for (let index = 0; index < allPixels.length; index += 1) {
     allPixels[index].style.backgroundColor = 'white'
   }
 }
+
+buttonClear.addEventListener('click', clearBoard)
