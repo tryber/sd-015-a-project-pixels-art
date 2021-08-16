@@ -1,5 +1,4 @@
-#c1 {
-    background-color: black;
+.color {
     height: 40px;
     width: 40px;
     display: inline-block;
@@ -8,33 +7,6 @@
     margin-left: 5px;
 }
 
-#c2 {
-    background-color: chartreuse;
-    height: 40px;
-    width: 40px;
-    display: inline-block;
-    border: solid;
-    border-width: 1px;
-    margin-left: 5px;
-}
-#c3 {
-    background-color: crimson;
-    height: 40px;
-    width: 40px;
-    display: inline-block;
-    border: solid;
-    border-width: 1px;
-    margin-left: 5px;
-}
-#c4 {
-    background-color: deepskyblue;
-    height: 40px;
-    width: 40px;
-    display: inline-block;
-    border: solid;
-    border-width: 1px;
-    margin-left: 5px;
-}
 
 .pixel {
     background-color: white;

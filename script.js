@@ -1,6 +1,7 @@
 let elementMain = document.createElement('main');
 let pallete = document.createElement('section');
 
+const possColors = ['black', 'chartreuse', 'crimson', 'deepskyblue'];
 
 function createColorsPalleteTitle() {
     let ch1 = document.createElement('h1');
@@ -19,7 +20,6 @@ function createColors() {
     for (let i = 1; i <= 4; i += 1) {
     let color = document.createElement('div');
     color.className = 'color';
-    color.id = 'c' + i;
     pallete.appendChild(color);
     }
 }
@@ -37,7 +37,7 @@ function pixels() {
         line.className = 'line';
         palB.appendChild(line);
         lineP(i);
-
+        
     }
 }
 
@@ -48,34 +48,31 @@ function lineP(ln) {
         pix.className = 'pixel clicked';
         pix.id = 'a' + i2;
         getPB.appendChild(pix);
-        
     }
 }
 
-function brush() {
-    document.addEventListener('click', selecting())
+function setColors() {
+    const unlockedColors = document.getElementById('color-palette').children;
+    for (let ind = 0; ind < possColors.length; ind += 1) {
+        unlockedColors[ind].style.backgroundColor = possColors[ind];
+    }
 }
-
-function selecting() {
-    
-}
-
-let selected = 'black'
-let selectable1 = document.querySelector('#c1');
-let selectable2 = document.querySelector('#c2');
-let selectable3 = document.querySelector('#c3');
-let selectable4 = document.querySelector('#c4');
 
 // function settingBorder() {
-//     for (let i = 0; i <= 3; i += 1) {
-//     let colors = document.getElementsByClassName('color')[i];
-//     colors.style.borderWidth = '1px';
-//     }    
-// }
-
+    //     for (let i = 0; i <= 3; i += 1) {
+        //     let colors = document.getElementsByClassName('color')[i];
+        //     colors.style.borderWidth = '1px';
+        //     }    
+        // }
+        
+window.onload = function start() {
+    document.querySelector('.color').classList.add('selected');
+}
+        
 createColorsPalleteTitle()
 createPallete()
 createColors()
-// settingBorder()
+setColors()
+        // settingBorder()
 boardOfP()
 pixels()
