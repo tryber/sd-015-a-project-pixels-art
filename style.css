@@ -1,0 +1,59 @@
+* {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-family: 'New Super Mario Font U', sans-serif;
+}
+
+img {
+  position:absolute;
+  top:-20px;
+  left:0;
+  z-index:1;
+  width: 1360px;
+  height: 665px;
+}
+
+#title {
+  text-align: center;
+  color: black;
+  z-index: 2;
+  position:relative;
+  font-size: 50px;
+}
+
+#clear-board {
+  margin-left: 620px;
+  position:relative;
+  z-index:3;
+  font-size: 20px;
+}
+
+.color {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid black;
+  display: inline-block;
+  margin-left: -5px;
+  z-index: 4;
+  position:relative;
+}
+
+#pixel-board, #color-palette {
+  width: 250px;
+  margin-left: 555px;
+  background-color: white;
+  position:relative;
+}
+
+.pixel {
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+  display: inline-block;
+  margin: 0px;
+  margin-left: 0px;
+  margin-top: -4px;
+  position:relative;
+  z-index:5;
+  background-color:white;
+}
