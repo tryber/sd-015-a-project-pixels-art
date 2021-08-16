@@ -1,56 +1,64 @@
-let paletaCores = document.getElementById('color-palette');
- 
-let cores = ['green', 'yellow', 'blue'];
+const paletaCores = document.getElementById('color-palette');
+const cores = ['green', 'yellow', 'blue'];
 
-for (let i = 0; i < 3; i += 1){
-    let corItem = cores[i];
-    let item = document.createElement('div');
-    item.className = 'color';
-    item.style.backgroundColor = corItem;
-    paletaCores.appendChild(item);
+for (let i = 0; i < 3; i += 1) {
+  const corItem = cores[i];
+  const item = document.createElement('div');
+  item.className = 'color';
+  item.style.backgroundColor = corItem;
+  paletaCores.appendChild(item);
 }
 
-let quadro = document.getElementById('pixel-board');
+const quadro = document.getElementById('pixel-board');
+const generateBoard = document.getElementById('generate-board');
+let tamanho = document.getElementById('board-size');
 
-for (let i = 0; i < 25; i += 1){
-    let itemQuadro = document.createElement('div');
+function addPixels(n) {
+  for (let i = 0; i < n; i += 1) {
+    const itemQuadro = document.createElement('div');
     itemQuadro.className = 'pixel';
     quadro.appendChild(itemQuadro);
-
+  }
 }
 
-let pixel = document.querySelectorAll('.pixel');
+addPixels(25);
 
-let color = document.querySelectorAll('.color');
-let preto = document.getElementById('preto');
-
-for (let i = 0; i < color.length; i += 1){
-    color[i].addEventListener('click', addClasse);
-}
+const pixel = document.querySelectorAll('.pixel');
+const color = document.querySelectorAll('.color');
 
 function addClasse(event) {
-    for (let i = 0; i < color.length; i += 1){
-        color[i].className = 'color';
-    }
-    event.target.className += ' selected'; 
-    let qualCor = event.target.style.backgroundColor;
+  for (let i = 0; i < color.length; i += 1) {
+    color[i].className = 'color';
+  }
+  event.target.className += ' selected';
+  const qualCor = event.target.style.backgroundColor;
 
-for (let i = 0; i < pixel.length; i += 1){
-    pixel[i].addEventListener('click', addCor);
-}
-
-function addCor(event) {
+  function addCor(event) {
     event.target.style.backgroundColor = qualCor;
-}
-    
+  }
+
+  for (let i = 0; i < pixel.length; i += 1) {
+    pixel[i].addEventListener('click', addCor);
+  }
 }
 
-for (let i = 0; i < pixel.length; i += 1){
-    pixel[i].addEventListener('click', addPreto);
+for (let i = 0; i < color.length; i += 1) {
+  color[i].addEventListener('click', addClasse);
 }
 
 function addPreto(event) {
-    event.target.style.backgroundColor = 'black';
+  event.target.style.backgroundColor = 'black';
 }
 
- 
+for (let i = 0; i < pixel.length; i += 1) {
+  pixel[i].addEventListener('click', addPreto);
+}
+
+function limparQuadro() {
+  for (let i = 0; i < pixel.length; i += 1) {
+    pixel[i].style.backgroundColor = 'white';
+  }
+}
+
+let limpar = document.getElementById('clear-board');
+limpar.addEventListener('click', limparQuadro);
