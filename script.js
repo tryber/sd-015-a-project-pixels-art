@@ -63,3 +63,46 @@ function addClickClearBtn() {
   clearButton.addEventListener('click', clearTheBoard);
 }
 addClickClearBtn();
+
+// requisito 10 e 11
+const pixelBoard = document.getElementById('pixel-board');
+
+const inputBoardSize = document.getElementById('board-size');
+const vqvButton = document.getElementById('generate-board');
+
+function calcBoardSize() {
+  let boardSize = inputBoardSize.value;
+  if (boardSize < 5) {
+    boardSize = 5;
+  }
+  if (boardSize > 50) {
+    boardSize = 50;
+  }
+  return boardSize;
+}
+
+function removeBoard() {
+  for (let i = 0; i < 5; i += 1) {
+    const line = document.querySelector('.line');
+    pixelBoard.removeChild(line);
+  }
+}
+function generateBoard() {
+  if (inputBoardSize.value === '') {
+    window.alert('Board inválido!');
+    return;
+  }
+  removeBoard();
+  const boardSize = calcBoardSize();
+  for (let i = 0; i < boardSize; i += 1) {
+    const line = document.createElement('div');
+    line.className = 'line';
+    pixelBoard.appendChild(line);
+  }
+  addPixelsToLines();
+  addClickPixels();
+}
+function addClickVqvBtn() {
+  vqvButton.addEventListener('click', generateBoard);
+}
+addClickVqvBtn();
