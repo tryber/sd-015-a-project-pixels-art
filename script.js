@@ -24,4 +24,4 @@ window.onload = function () {
     pixel.addEventListener('click', changeColor);
   }
   document.querySelector('#clear-board').addEventListener('click', clear);
-};
+}

@@ -8,6 +8,10 @@
   margin: 5px;
 }
 
+#board-siz, #generate-board{
+  margin: 5px;
+}
+
 .color {
   width: 20px;
   padding: 20px;
