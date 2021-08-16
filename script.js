@@ -39,6 +39,14 @@ newSection.id = 'pixel-board';
 const getMain = document.querySelector('#principal');
 getMain.appendChild(newSection);
 
+// Requisito 8 - Clicar em um pixel dentro do quadro após selecionar uma cor na paleta faz com que o pixel seja preenchido com a cor selecionada.
+function changeColor(event) {
+  const pixel = event.target;
+  const getColor = document.querySelector('.selected');
+  const background1 = window.getComputedStyle(getColor).getPropertyValue('background-color');
+  pixel.style.backgroundColor = background1;
+}
+
 function newColor() {
   const getPixel = document.getElementsByClassName('pixel');
   for (let index = 0; index < getPixel.length; index += 1) {
@@ -82,14 +90,6 @@ function setColor(event) {
 
 for (let index = 0; index < getClassColor.length; index += 1) {
   getClassColor[index].addEventListener('click', setColor);
-}
-
-// Requisito 8 - Clicar em um pixel dentro do quadro após selecionar uma cor na paleta faz com que o pixel seja preenchido com a cor selecionada.
-function changeColor(event) {
-  const pixel = event.target;
-  const getColor = document.querySelector('.selected');
-  const background1 = window.getComputedStyle(getColor).getPropertyValue('background-color');
-  pixel.style.backgroundColor = background1;
 }
 
 // Requisito 9 - Crie um botão que, ao ser clicado, limpa o quadro preenchendo a cor de todos seus pixels com branco.
