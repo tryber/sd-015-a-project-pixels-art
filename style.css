@@ -5,6 +5,10 @@
     display: inline-block;
 }
 
+#black {
+    background-color: black;
+}
+
 #blue {
     background-color: blue;
 }
@@ -17,7 +21,5 @@
     background-color: green;
 }
 
-#black {
-    background-color: black;
-}
+
 
