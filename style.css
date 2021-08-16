@@ -12,11 +12,12 @@
   height: 100px;
 }
 
-.pixel{
+.pixel {
   background-color: white;
   border-color: black;
   width: 40px;
-  height: 44px;
+  height: 40px;
   border: 1px;
   border-style: solid;
+  display: inline-block;
 }
