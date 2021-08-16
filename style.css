@@ -1,0 +1,71 @@
+body {
+    /* Imagem retirada do site https://pattern.monster/blobs/ */
+    background-image: url('blobs-opaco.png');
+    background-size: cover;
+}
+#color-palette {
+    width: 208px;
+    height: 50px;
+    padding: 0;
+    margin:auto;
+}
+#title {
+    text-align: center;
+    font-family: 'Berkshire Swash', cursive;
+    font-size: 70px;
+    color:rgb(68, 68, 71);
+    text-shadow: 3px 3px rgb(0, 0, 0);
+    width: fit-content;
+    margin: 30px auto;
+}
+.color {
+    width: 50px;
+    height:50px;
+    display:inline-block;
+    border-width: 1px;
+    border-style:solid;
+    border-color: black;
+    border-radius: 10%;
+}
+.pixel {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    display: inline-block;
+    border: black solid 1px;
+}
+#pixel-board {
+    margin: auto;
+    margin-top: 50px;
+    text-align: center;
+    clear: both;
+    overflow: hidden;
+    width: fit-content;
+    height: fit-content;
+    border: black solid;
+}
+.lines {
+    height: 40px;
+}
+#clear-board {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    float: right;
+    display: inline-block;
+    margin-right: 45%;
+}
+#input-button {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    float: left;
+    display: inline-block;
+    margin-left: 45%;
+
+}
+button {
+    font-family: 'Comfortaa', cursive;
+    font-weight: bolder;
+}
+.selected {
+    opacity: 0.3;
+}
