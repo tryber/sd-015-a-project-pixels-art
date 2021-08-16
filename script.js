@@ -7,6 +7,7 @@ function randomColor() {
   return (`rgb(${r}, ${g}, ${b})`);
 }
 
+// Gera cores aleatórias ao recarregar a página
 window.onload = function makeRandom() {
   document.getElementById('black').style.backgroundColor = 'black';
   document.getElementById('secondColor').style.backgroundColor = randomColor();
@@ -54,4 +55,17 @@ function newSelected(color) {
 
 for (let i = 0; i < palette.length; i += 1) {
   palette[i].addEventListener('click', newSelected);
+}
+
+// Pinta o pixel selecionado
+const selectPixel = document.querySelectorAll('.pixel');
+
+function paintPixel(pixel) {
+  const pixelTarget = pixel.target;
+  pixelTarget.style.backgroundColor = document.querySelector('.selected').style.backgroundColor;
+}
+
+// Adiciona evento de click para todos elementos com classe pixel
+for (let i = 0; i < selectPixel.length; i += 1) {
+  selectPixel[i].addEventListener('click', paintPixel);
 }
