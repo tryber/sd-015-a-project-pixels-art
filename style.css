@@ -10,8 +10,8 @@
 /* Source: https://www.w3schools.com/css/css_grid.asp */
 #pixel-board {
   display: grid;
-  grid-template-columns: auto auto auto auto auto; 
-  width: 200px;
+  grid-template-columns: auto auto auto auto auto;
+  width: 200px
 }
 
 .pixel {
@@ -37,6 +37,6 @@
   background-color: green;
 } */
 
-input {
+button {
   margin-bottom: 10px;
 }

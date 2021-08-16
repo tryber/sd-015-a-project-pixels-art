@@ -23,7 +23,7 @@ verde.addEventListener('click', addClassSelected);
 
 // Requisito 8
 function addColors(event) {
-  let divPixel = event.target
+  const divPixel = event.target;
   divPixel.style.backgroundColor = document.querySelector('.selected').style.backgroundColor;
 }
 
@@ -35,16 +35,16 @@ for (let index = 0; index < pixel.length; index += 1) {
 
 // Requisito 9
 
-botão.addEventListener('click', function(event) {
+botão.addEventListener('click', function () {
   for (let index2 = 0; index2 < pixel.length; index2 += 1) {
-    pixel[index2].style.backgroundColor = 'white'
+    pixel[index2].style.backgroundColor = 'white';
   }
 });
 
-window.addEventListener('click', function(event) {
-  console.log(event);
-  const testeCor = event.target.classList[1];
-  const testElementoSelecionado = event.target;
-  console.log(testeCor);
-  console.log(testElementoSelecionado);
-})
+// window.addEventListener('click', function(event) {
+//   console.log(event);
+//   const testeCor = event.target.classList[1];
+//   const testElementoSelecionado = event.target;
+//   console.log(testeCor);
+//   console.log(testElementoSelecionado);
+// })
