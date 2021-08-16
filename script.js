@@ -125,6 +125,7 @@ function clearPixels () {
         }                                                 
     }
 }
+//Resgata o elemento title e coloca um escutador de eventos nele do tipo mouseover que executa a função changeColorTitle. Nessa função a cor do título muda de forma randômica sempre que o pomteiro do mouve passar por cima.
 const title = document.getElementById('title');
 title.addEventListener('mouseover', changeColorTitle);
 function changeColorTitle () {
