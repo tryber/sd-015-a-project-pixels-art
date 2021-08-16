@@ -7,22 +7,6 @@
   display: inline-block;
 }
 
-#black {
-  background: black;
-}
-
-#red {
-  background: red;
-}
-
-#blue {
-  background: blue;
-}
-
-#green {
-  background: green;
-}
-
 #pixel-board {
   border: 1px solid black;
   height: 226px;
