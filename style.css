@@ -1,0 +1,61 @@
+#blue{
+    background-color: blue;
+    width: 40px;
+    height: 40px;
+    border: solid black 1px;
+    display: inline-block;
+    text-align: center;
+}
+#red{
+    background-color: red;
+    width: 40px;
+    height: 40px;
+    border: solid black 1px;
+    display: inline-block;
+    text-align: center;
+}
+#black{
+    background-color: black;
+    width: 40px;
+    height: 40px;
+    border: solid  1px ;
+    display: inline-block;
+    text-align: center;
+}
+#green{
+    background-color: green;
+    width: 40px;
+    height: 40px;
+    border: solid  1px;
+    display: inline-block;
+    text-align: center;
+}
+.pixel{
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    border: black solid 1px;
+    display: inline-block;
+}
+#title{
+    color: rgb(53, 53, 52);
+    text-align: center;
+}
+#tit{
+    text-align: center;
+    color: black;
+}
+.line{
+    text-align: center;
+}
+#color-palette{
+    text-align: center;
+}
+body{
+    background-color: rgb(226, 162, 66);
+}
+button{
+    margin-left: 650px;
+    margin-top: 9px;
+    margin-bottom: 9px;
+}
