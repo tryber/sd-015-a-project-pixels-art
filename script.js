@@ -8,3 +8,11 @@ function selecionadorCor(event) {
   }
   event.target.className = 'color selected';
 }
+let cadaQuadrado = document.getElementsByClassName('pixel')
+for (index = 0; index < cadaQuadrado.length; index += 1) {
+  cadaQuadrado[index].addEventListener('click', pintando)
+}
+function pintando(event) {
+  let selecionado = document.getElementsByClassName('selected')[0];
+  event.target.style.backgroundColor = selecionado.id
+}
