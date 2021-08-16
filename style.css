@@ -1,16 +1,24 @@
 .color {
-  display: inline-block;
   border: 1px solid black;
-  padding: 25px;
+  width: 35px;
+  height: 35px;
 }
 
-#pixel-board {
-  font-size: 0;
+#color-palette {
+  display: flex;
+  width: 200px;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
 }
 
 .pixel {
-  display: inline-block;
   border: 1px solid black;
-  padding: 40px;
-  margin: 0;
+  width: 40px;
+  height: 40px;
+}
+
+#pixel-board {
+  display: flex;
+  width: 220px;
+  flex-wrap: wrap;
 }
