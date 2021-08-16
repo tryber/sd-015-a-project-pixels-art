@@ -86,7 +86,7 @@ function checkSizeValue(number) {
     return 5;
   }
   if (number > 50) {
-    return 50
+    return 50;
   }
   return number;
 }
@@ -98,10 +98,10 @@ function changeBoard() {
     window.alert('Board inválido!');
     sizeValue = 5;
   }
-    pixelBoard.innerHTML = '';
-    createPixels(sizeValue);
-    pixels = document.querySelectorAll('.pixel');
-    EvListenerInArrayOfElem(pixels, 'click', changePixelColor);
+  pixelBoard.innerHTML = '';
+  createPixels(sizeValue);
+  pixels = document.querySelectorAll('.pixel');
+  EvListenerInArrayOfElem(pixels, 'click', changePixelColor);
 }
 
 const btnBoardSize = document.querySelector('#generate-board');
