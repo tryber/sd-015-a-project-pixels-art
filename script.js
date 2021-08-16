@@ -1,10 +1,10 @@
 window.onload = function (){
+let colorPalette = document.querySelectorAll('.color');
+let colorsArray = ['black', 'red', 'green', 'blue'];
 //color pallete
 function createPalette() {
-    for (let i = 0; i <  4; i += 1) {
-    let colorsArray = ['black', 'red', 'green', 'blue'];
-    let color = document.querySelectorAll('.color')[i];
-    color.style.backgroundColor = colorsArray[i];
+    for (let i = 0; i <  4; i += 1) {    
+    colorPalette[i].style.backgroundColor = colorsArray[i];
    }
 }
 createPalette();
@@ -32,7 +32,32 @@ function createBoard() {
 createBoard();
 
 //add class 'selected' in element color black
-let blackSelected = document.querySelectorAll('.color')[0];
-blackSelected.classList.add('selected');
+colorPalette[0].classList.add('selected');
+
+//select color
+function selectedColor(event) {
+    let selected = document.querySelector('.selected');
+    let clicked = event.target
+        selected.classList.remove('selected');
+        clicked.classList.add('selected');
+}
+
+function clickSelect (){
+    for (let x = 0; x < colorPalette.length; x += 1){
+    colorPalette[x].addEventListener('click', selectedColor);
+    }
+}
+clickSelect();
+
+// function clickSelect (){
+//     for(let x in colorPalette){
+//     colorPalette[x].addEventListener('click', selectedColor);
+//     }
+// }
+// clickSelect();
 
 }
+
+
+
+
