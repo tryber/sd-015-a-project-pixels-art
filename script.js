@@ -1,9 +1,9 @@
 function createPalette() {
-  let arrayColors = ['black', 'red', 'blue', 'purple'];
-  let sectionPalette = document.getElementById('color-palette');
+  const arrayColors = ['black', 'red', 'blue', 'purple'];
+  const sectionPalette = document.getElementById('color-palette');
 
   for (color of arrayColors) {
-    let box = document.createElement('div');
+    const box = document.createElement('div');
     box.className = 'color';
     box.style.backgroundColor = color;
     
@@ -46,12 +46,30 @@ function clickColor() {
 clickColor();
 
 function colorPixels() {
-  let pixels = document.querySelectorAll('.pixel');
+  const pixels = document.querySelectorAll('.pixel');
 
-  for (let index3 = 0; index3 < pixels.length; index3 +=1) {
+  for (let index3 = 0; index3 < pixels.length; index3 += 1) {
     pixels[index3].addEventListener('click', function (event){
       event.target.style.backgroundColor = document.querySelector('.selected').style.backgroundColor;
     });
   }
 }
 colorPixels();
+
+function clearBoard() {
+
+  let clearColor = document.createElement('button');
+  let sectionClear = document.getElementById('clear-button');
+  let pixels = document.querySelectorAll('.pixel'); 
+  sectionClear.appendChild(clearColor);
+  clearColor.id = 'clear-board';
+  clearColor.innerHTML = 'Limpar'; 
+
+  clearColor.addEventListener('click', function(event) {
+    for (let index4 = 0; index4 < pixels.length; index4 += 1) {
+      pixels[index4].style.backgroundColor = 'white';
+    }
+    
+  });
+}
+clearBoard(); 
