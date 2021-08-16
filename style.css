@@ -66,5 +66,13 @@
 #clear-board {
     margin-left: 75px;
     margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#board-size{
+    margin-top: 5px;
+}
+
+#generate-board{
     margin-bottom: 10px;
 }
