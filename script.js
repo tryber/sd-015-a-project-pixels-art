@@ -1,5 +1,5 @@
 function quadradoDeCor () {
-  let tamanho = 5
+  let tamanho = 25
   let quadroDePixels = document.createElement("div")
   quadroDePixels.id = "pixel-board"
   document.body.appendChild(quadroDePixels)
@@ -7,11 +7,11 @@ function quadradoDeCor () {
     let novoQuadrado = document.createElement("div")
     novoQuadrado.className = "pixel"
     quadroDePixels.appendChild(novoQuadrado)
-    for (let index1 = 0;index1 < 4; index1 += 1) {
-      let linhas = document.createElement("div")
-      linhas.className = "pixel"
-      quadroDePixels.appendChild(linhas)
-    }
+    // for (let index1 = 0;index1 < 4; index1 += 1) {
+    //   let linhas = document.createElement("div")
+    //   linhas.className = "pixel"
+    //   quadroDePixels.appendChild(linhas)
+    // }
   }
 }
 
@@ -37,7 +37,7 @@ quadradoDeCor()
 
 // chamarQuadrado()
 
-function classeSelect () {
+function colorSelect () {
   let paletaDeCores = document.querySelector(".selected")
   let purple = document.querySelector("#purple")
   let green = document.querySelector("#green")
@@ -51,10 +51,10 @@ function classeSelect () {
 })
 }
 
-classeSelect()
+colorSelect()
 
 
-function classeSelect () {
+function colorSelect () {
   let paletaDeCores = document.querySelector(".selected")
   let purple = document.querySelector("#purple")
   let green = document.querySelector("#green")
@@ -90,5 +90,20 @@ function classeSelect () {
 })
 }
 
-classeSelect()
+colorSelect()
 
+function colorPrint () {
+  let quadrados = document.querySelectorAll(".pixel")
+  for (index = 0; index < quadrados.length; index += 1) {
+    let posiQuadrados = quadrados[index]
+    posiQuadrados.addEventListener("click", function(event) {
+      let posi = event.target
+      let posiColor = document.querySelector(".selected")
+      let compStyle = window.getComputedStyle(posiColor)
+      posi.style.backgroundColor = compStyle.getPropertyValue("background-color")
+      console.log(compStyle.getPropertyValue("background-color"))
+    })
+  }
+}
+
+colorPrint()
