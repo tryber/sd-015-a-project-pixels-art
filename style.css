@@ -1,22 +1,33 @@
+
+/* Repositório de  ferrazmichel consultado. https://github.com/tryber/sd-015-a-project-pixels-art/commit/da26befb0161746bf1a496fffc367c104efdba0f */
+
+
+.pixel {background-color: white; border: 1px solid black;  height: 50px;
+  width: 50px; }
+
+
+
+.linha{display: inline-block}
+
 .color {
-    border: 1px solid black;
-    display: inline-block;
-    height: 50px;
-    width: 50px;
-  }
+  border: 1px solid black;
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+}
 
-  #cor2 {
-    background-color: blue;
-  }
-  
-  #cor3 {
-    background-color: green;
-  }
-  
-  #cor4 {
-    background-color: yellow;
-  }
+#cor2 {
+  background-color: blue;
+}
 
-  #preto {
-    background-color: black;
-  }
+#cor3 {
+  background-color: green;
+}
+
+#cor4 {
+  background-color: yellow;
+}
+
+#preto {
+  background-color: black;
+} 
