@@ -26,8 +26,8 @@ function addBackgroundColor() {
     if (index === 0) {
       getClassColor[index].style.backgroundColor = 'black';
     } else {
-      const aleatoryColor = `#${Math.floor(Math.random()*0x1000000).toString(16).padStart(6, '0')}`;
-      getClassColor[index].style.backgroundColor = aleatoryColor;
+      const randomColor = `#${Math.floor(Math.random() * 0x1000000).toString(16).padStart(6, '0')}`;
+      getClassColor[index].style.backgroundColor = randomColor;
     }
   }
 }
