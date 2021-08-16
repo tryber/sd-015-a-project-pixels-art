@@ -53,3 +53,13 @@ for (let index = 0; index < allPixels.length; index += 1) {
   const selectedPixel = document.querySelectorAll('.pixel')[index];
   selectedPixel.addEventListener('click', paintPixel);
 }
+
+// Limpa o quadro
+const buttonClear = document.querySelector('#clear-board')
+buttonClear.addEventListener('click', clearBoard)
+
+function clearBoard() {
+  for (let index = 0; index < allPixels.length; index += 1) {
+    allPixels[index].style.backgroundColor = 'white'
+  }
+}

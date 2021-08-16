@@ -43,3 +43,7 @@ body {
   background-color: white;
   display: inline-block;
 }
+
+#clear-board {
+  margin-top: 20px;
+}
