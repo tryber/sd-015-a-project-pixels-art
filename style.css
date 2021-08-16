@@ -4,7 +4,7 @@
 .pixel {background-color: white; border: 1px solid black;  height: 40px;
   width: 40px; }
 
-#pixel-board{width: 200px; height: 200px ;}
+#pixel-board{width: 200px; height: 200px;}
 
 .linha{display: table-cell}
 
