@@ -1,0 +1,50 @@
+/* body {
+    margin: 0;
+    padding: 0;
+} */
+
+.color {
+    border: 1px solid black;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+}
+
+.color:nth-child(1) {
+    background-color: black;
+}
+
+/* .color:nth-child(2) {
+    background-color: orangered;
+}
+
+.color:nth-child(3) {
+    background-color: greenyellow;
+}
+
+.color:nth-child(4) {
+    background-color: gold;
+} */
+
+#pixel-board {
+    width: 210px;
+    border: 1px solid black;
+}
+
+.pixel {
+    display: block;
+    width: 40px;
+    height: 40px;
+    border: black solid 1px;
+    margin: 0;
+    padding: 0;
+    float: left;
+    background-color: rgb(255,255,255);
+}
+
+.clear {
+    clear: both;
+}
+button {
+    margin: 10px 0;
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Art</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+    <main>
+        <h1 id="title">Paleta de Cores</h1>
+        <section id="color-palette">
+            <div class="color selected"></div>
+            <div class="color random"></div>
+            <div class="color random"></div>
+            <div class="color random"></div>
+        </section>
+
+        <button id="clear-board">Limpar</button>
+
+        <input type="number" name="Valor do lado do board" id="board-size" placeholder="Insira o valor do lado" min="1">
+
+        <button id="generate-board">VQV</button>
+
+        <section id="pixel-board">
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="clear"></div>
+            <!-- o elemento <div> foi colocado abaixo dos elementos com float para a esquerda, no qual aplico um clear:both, nao permitindo elementos flutuados na esquerda dele -->
+        </section>
+<!-- ### 10 - Faça o quadro de pixels ter seu tamanho definido pela pessoa usuária.
+
+- Crie um input e um botão que permitam definir um quadro de pixels com tamanho entre 5 e 50. Ao clicar no botão, deve ser gerado um quadro de **N** pixels de largura e **N** pixels de altura, onde **N** é o número inserido no input;
+
+ - Ou seja, se o valor passado para o input for 7, ao clicar no botão, vai ser gerado um quadro de 49 pixels (7 pixels de largura x 7 pixels de altura);
+
+- O input deve ter o `id` denominado `board-size` e o botão deve ter o `id` denominado `generate-board`;
+
+- O input só deve aceitar número maiores que zero. Essa restrição **deve** ser feita usando os atributos do elemento `input`;
+
+- O botão deve conter o texto "VQV";
+
+- O input deve estar posicionado entre a paleta de cores e o quadro de pixels;
+
+- O botão deve estar posicionado ao lado do input;
+
+- Se nenhum valor for colocado no input ao clicar no botão, mostre um `alert` com o texto: "Board inválido!";
+
+- O novo quadro deve ter todos os pixels preenchidos com a cor branca.
+
+**O que será verificado:**
+
+- Verifica se existe um input com o id `board-size`
+
+- Verifica se existe um botão com o id `generate-board`
+
+- Verifica se o input só aceita número maiores que zero. Essa restrição deve ser feita usando os atributos do elemento `input`
+
+- Verifica se o botão contém o texto \'VQV\'
+
+- Verifica se o input está posicionado entre a paleta de cores e o quadro de pixels
+
+- Verifica se o botão está posicionado ao lado do input
+
+- Verifica se nenhum valor for colocado no input ao clicar no botão, um `alert` é exibido com o texto: \'Board inválido!\'
+
+- Verifica se ao clicar no botão com um valor preenchido, o tamanho do board muda.
+
+- Verifica se o novo quadro tem todos os pixels preenchidos com a cor branca -->
+    </main>
+    <script src="./script.js"></script>
+</body>
+</html>
