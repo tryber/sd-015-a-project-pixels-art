@@ -1,3 +1,17 @@
+.body {
+  height: 1366px;
+  width: 768px;
+}
+
+#title {
+  margin-left: 50px;
+}
+
+#color-palette {
+  margin-left: 50px;
+  padding: 5px;
+}
+
 .pixel1 {
   background-color:black;
   border: solid 1px black;
@@ -24,7 +38,15 @@
   height: 50px;
   width: 50px;
   border: solid 1px black;
-  display: inline-block;
+  display: inline-block ;
+}
+
+.tabela {
+  border: solid 1px black;
+  padding: 10px;
+  height: 270px;;
+  width: 320px;
+  background-color: whitesmoke;
 }
 
 .pixel {
@@ -34,4 +56,6 @@
   border: solid 1px black;
   display: inline-block;
   padding: 5px;
+  margin-left: 10px;
+  
 }
