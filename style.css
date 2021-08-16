@@ -1,28 +1,37 @@
-.body {
-    background-size: 80%;
-}
 .pixel1 {
-    background-color:black;
-    border: solid 1px black;
+  background-color:black;
+  border: solid 1px black;
 
 }
+
 .pixel2 {
-    background-color:red;
-    border: solid 1px black;
+  background-color:red;
+  border: solid 1px black;
 }
+
 .pixel3 {
-    background-color:yellow;
-    border: solid 1px black;
+  background-color:yellow;
+  border: solid 1px black;
 }
+
 .pixel4 {
-    background-color:blue;
-    border: solid 1px black;
+  background-color:blue;
+  border: solid 1px black;
 }
 
 .color {
-    margin: center;
-    height: 60px;
-    width: 60px;
-    border: solid 1px black;
-    display: inline-block;
+  margin: center;
+  height: 50px;
+  width: 50px;
+  border: solid 1px black;
+  display: inline-block;
+}
+
+.pixel {
+  background-color: white;
+  height: 40px;
+  width: 40px;
+  border: solid 1px black;
+  display: inline-block;
+  padding: 5px;
 }
