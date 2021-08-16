@@ -24,6 +24,7 @@ const pixelBox = document.getElementsByClassName('pixel');
 
 function paintBox(event) {
   const selectColor = document.querySelector('.selected');
+  // ref: https://www.w3schools.com/jsref/jsref_getcomputedstyle.asp
   const pColor = window.getComputedStyle(selectColor, null).getPropertyValue('background-color');
   event.target.style.backgroundColor = pColor;
 }
