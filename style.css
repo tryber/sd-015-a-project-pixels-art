@@ -29,13 +29,21 @@
 }
 #blue
 {
-  background-color: rgb(6, 154, 240);
+  background-color: blue;
 }
 #red
 {
-  background-color: rgb(255, 60, 0);
+  background-color: red;
 }
 #green
 {
   background-color: lime;
+}
+#clear-board
+{
+  display: block;
+  width: 80px;
+  height: 20px;
+  border: 1px solid;
+  margin: 1px; 
 }
