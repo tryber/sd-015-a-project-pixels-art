@@ -24,3 +24,30 @@
 #color-4 {
   background-color: chartreuse;
 }
+
+.pixel {
+  border: 1px solid black;
+  height: 3rem;
+  width: 3rem;
+  background-color: white;
+}
+
+#column-one {
+  float: left;
+}
+
+#column-two {
+  float: left;
+}
+
+#column-three{
+  float: left;
+}
+
+#column-four {
+  float: left;
+}
+
+#column-five {
+  float: left;
+}
