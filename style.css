@@ -16,7 +16,7 @@
 }
 
 #brown {
-    background-color: brown;
+    background-color: #ffd987;
 }
 
 #red {
@@ -28,6 +28,10 @@
     border-width: 2px;
     border-color: white;
 } */
+
+.pixels {
+    line-height: 0px;
+}
 
 .pixel {
     border-style: solid;

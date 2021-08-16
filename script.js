@@ -1,11 +1,10 @@
 let rowcol = 5;
 let board = document.getElementById("pixel-board");
-// let allColors = document.querySelector(".color");
 let blkSelec = document.getElementById("black");
 let blueSelec = document.getElementById("blue");
 let brwnSelec = document.getElementById("brown");
 let redSelec = document.getElementById("red");
-let getSelec = document.querySelector(".selected");
+let button = document.getElementById("clear-board");
 
 window.onload = blkSelec.classList.add("selected");
 
@@ -25,37 +24,58 @@ pxlgrid()
 
 blkSelec.addEventListener('click', selecPreto);
 function selecPreto() {
-    let getSelec = document.querySelector(".selected");
-    if (getSelec.classList.contains('selected')) {
-        getSelec.classList.remove('selected');
+    let selec = document.querySelector(".selected");
+    if (selec.classList.contains('selected')) {
+        selec.classList.remove('selected');
     }
     blkSelec.classList.add('selected');
 }
 
 blueSelec.addEventListener('click', selecAzul);
 function selecAzul() {
-    let getSelec = document.querySelector(".selected");
-    if (getSelec.classList.contains('selected')) {
-        getSelec.classList.remove('selected');
+    let selec = document.querySelector(".selected");
+    if (selec.classList.contains('selected')) {
+        selec.classList.remove('selected');
     }
     blueSelec.classList.add('selected');
 }
 
 brwnSelec.addEventListener('click', selecMarr);
 function selecMarr() {
-    let getSelec = document.querySelector(".selected");
-    if (getSelec.classList.contains('selected')) {
-        getSelec.classList.remove('selected');
+    let selec = document.querySelector(".selected");
+    if (selec.classList.contains('selected')) {
+        selec.classList.remove('selected');
     }
     brwnSelec.classList.add('selected');
 }
 
 redSelec.addEventListener('click', selecVerm);
 function selecVerm() {
-    let getSelec = document.querySelector(".selected");
-    if (getSelec.classList.contains('selected')) {
-        getSelec.classList.remove('selected');
+    let selec = document.querySelector(".selected");
+    if (selec.classList.contains('selected')) {
+        selec.classList.remove('selected');
     }
     redSelec.classList.add('selected');
 }
 
+function getPaint(event) {
+    let selec = document.querySelector(".selected");
+    let paint = window.getComputedStyle(selec).getPropertyValue('background-color');
+    event.target.style.backgroundColor = paint;
+}
+
+function paintPix() {
+    let pxlselec = document.querySelectorAll(".pixel");
+    for (let i = 0; i < pxlselec.length; i += 1) {
+        pxlselec[i].addEventListener("click", getPaint);
+    }
+}
+paintPix();
+
+button.addEventListener("click", clearAll);
+function clearAll() {
+    let pxlselec = document.querySelectorAll(".pixel");
+    for (let i = 0; i < pxlselec.length; i += 1) {
+        pxlselec[i].style.backgroundColor = "white";
+    }
+}
