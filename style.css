@@ -1,36 +1,43 @@
-#color-palette {
-  left: 100px;
-}
-.color {
-  border: 1px solid black;
-  width: 40px;
-  height: 40px;
-  display: inline-block;
-  top: 100px;
-}
-.black {
-  background-color: black;
-  left: 60px;
-}
-.red {
-  background-color: red;
-  left: 90px;
-}
-.blue {
-  background-color: blue;
-  left: 105px;
-}
-.green {
-  background-color: green;
-  left: 125px;
-}
-.pixel {
-  width: 40px;
-  height: 40px;
-  border: 1px solid black;
-  display: inline-block;
-  background-color: white;
-}
 #pixel-board {
   font-size: 0px;
+} 
+
+#title {
+  font-family: sans-serif;
+  font-size: 35px;
+}
+
+.color {
+  border: 1px solid black;
+  height: 40px;
+  width: 40px;
+  display: inline-block;
+}
+
+#black {
+  background-color: black;
+}
+
+#red {
+  background-color: red;
+}
+
+#green {
+  background-color: green;
+}
+
+#blue {
+  background-color: blue;
+}
+
+.pixel {
+  background-color: white;
+  border: 1px solid black;
+  height: 40px;
+  width: 40px;
+  display: inline-block;
+}
+
+#clear-board {
+  margin-top: 10px;
 }
