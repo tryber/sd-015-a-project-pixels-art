@@ -39,13 +39,18 @@ newSection.id = 'pixel-board';
 const getMain = document.querySelector('#principal');
 getMain.appendChild(newSection);
 
+function newColor() {
+  const getPixel = document.getElementsByClassName('pixel');
+  for (let index = 0; index < getPixel.length; index += 1) {
+    getPixel[index].addEventListener('click', changeColor);
+  }
+}
+
 function createFramePixels(param1) {
   let boardSize = param1;
   if (boardSize < 5) {
-    alert('Board inválido! Mínimo 5 e máximo 50.');
     boardSize = 5;
   } else if (boardSize > 50) {
-    alert('Board inválido! Mínimo 5 e máximo 50.');
     boardSize = 50;
   }
   for (let index = 1; index <= boardSize; index += 1) {
@@ -85,13 +90,6 @@ function changeColor(event) {
   const getColor = document.querySelector('.selected');
   const background1 = window.getComputedStyle(getColor).getPropertyValue('background-color');
   pixel.style.backgroundColor = background1;
-}
-
-function newColor() {
-  const getPixel = document.getElementsByClassName('pixel');
-  for (let index = 0; index < getPixel.length; index += 1) {
-    getPixel[index].addEventListener('click', changeColor);
-  }
 }
 
 // Requisito 9 - Crie um botão que, ao ser clicado, limpa o quadro preenchendo a cor de todos seus pixels com branco.
