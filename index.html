@@ -124,6 +124,25 @@
                 })
             }
             
+            // requsito 8
+
+            let pixelArr = document.querySelectorAll('.pixel')
+            console.log(pixelArr)
+            
+            let colorSelected  = document.querySelector('.selected')
+            colorSelected = colorSelected.style.backgroundColor
+            console.log(colorSelected) 
+
+            for (let i = 0; i < pixelArr.length; i++) {
+            pixelArr[i].addEventListener('click', function (){
+                let colorSelected  = document.querySelector('.selected')
+                colorSelected = colorSelected.style.backgroundColor
+            
+                pixelArr[i].style.backgroundColor = colorSelected
+            })
+            }
+            
+
 
 
 
