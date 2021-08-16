@@ -109,7 +109,23 @@
                 cores[i].classList.add('selected')
             }
         }
-        
+
+        // teste requisito 7
+
+            function removeSelected () {
+            let removeClass = document.querySelector('.selected')
+            removeClass.classList.remove('selected')
+            }
+
+            for (let i = 0; i < cores.length; i++) {
+                cores[i].addEventListener ('click', function (){
+                    removeSelected();
+                    cores[i].classList.add('selected')
+                })
+            }
+            
+
+
 
         
         
