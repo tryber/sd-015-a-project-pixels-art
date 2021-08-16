@@ -19,10 +19,15 @@
 #coluna{
   display: inline-block;
 }
+#pixel-board{
+  border: 1px black;
+  width: 250px;
+}
 
 .pixel{
   width: 40px;
   height: 40px;
   border: solid 1px black;
   background-color: rgb(255, 255, 255);
+  display: inline-block;
 }
