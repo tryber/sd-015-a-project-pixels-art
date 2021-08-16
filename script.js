@@ -1,4 +1,5 @@
 window.onload = function init() {
+ 
 
   const size = 5;
   fillPixelboard();
@@ -46,8 +47,6 @@ pClick[0].classList.add("selected");
 
 for(let index = 0 ; index < pClick.length ; index +=1 ) {
    pClick[index].addEventListener("click",  getColor);
-
-
 }
 
 function getColor(evento){
