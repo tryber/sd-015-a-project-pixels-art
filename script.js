@@ -31,7 +31,6 @@ function addClickPalette() {
     paletteColors[i].addEventListener('click', selectColor);
   }
 }
-addClickPalette();
 
 // requisito 8
 const pixels = document.getElementsByClassName('pixel');
@@ -82,7 +81,7 @@ function calcBoardSize() {
 }
 
 function removeBoard() {
-  for (let i = 0; i < 5; i += 1) {
+  while (pixelBoard.childElementCount !== 0) {
     const line = document.querySelector('.line');
     pixelBoard.removeChild(line);
   }
@@ -106,3 +105,21 @@ function addClickVqvBtn() {
   vqvButton.addEventListener('click', generateBoard);
 }
 addClickVqvBtn();
+
+// requisito 12
+const colorPalette = document.getElementById('color-palette');
+
+function randomRGB() {
+  const randomNumber255 = Math.floor(Math.random() * 256);
+  return randomNumber255;
+}
+function generatePaletteColors() {
+  for (let i = 0; i < 3; i += 1) {
+    const color = document.createElement('div');
+    color.className = 'color';
+    color.style.backgroundColor = `rgb(${randomRGB()}, ${randomRGB()}, ${randomRGB()})`;
+    colorPalette.appendChild(color);
+  }
+  addClickPalette();
+}
+generatePaletteColors();
