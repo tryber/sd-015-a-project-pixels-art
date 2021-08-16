@@ -3,6 +3,7 @@ const accessRed = document.getElementById('red-color');
 const acessBlue = document.getElementById('blue-color');
 const accessGreen = document.getElementById('green-color');
 const accessDivBlock = document.querySelectorAll('section.block');
+const accessButton = document.querySelector('#button');
 
 document.getElementById('black-color').style.backgroundColor = 'black';
 document.getElementById('red-color').style.backgroundColor = 'red';
@@ -35,16 +36,25 @@ createBlock();
 function changeColor(evento) {
   const newBackGroundColor = document.querySelector('.selected');
   const way = evento.target;
-  const change = window.getComputedStyle(newBackGroundColor).getPropertyValue('background-color');
+  const change = newBackGroundColor.style.backgroundColor
   way.style.backgroundColor = change;
 }
 
 function selectedBlock() {
-  const accessAlBlocks = document.querySelectorAll('.pixel');
-  for (let i = 0; i < accessAlBlocks.length; i += 1) {
-    const listBlock = accessAlBlocks[i];
+  const accessAllBlocks = document.querySelectorAll('.pixel');
+  for (let i = 0; i < accessAllBlocks.length; i += 1) {
+    const listBlock = accessAllBlocks[i];
     listBlock.addEventListener('click', changeColor);
   }
 }
 
 selectedBlock();
+
+function clearBox() {
+  const accessAllBlocks = document.querySelectorAll('.pixel');
+  for (let i = 0; i < accessAllBlocks.length; i += 1) {
+    accessAllBlocks[i].style.backgroundColor = 'white'
+  }
+}
+
+accessButton.addEventListener('click', clearBox)
