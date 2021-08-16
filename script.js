@@ -35,12 +35,23 @@ allColors.addEventListener('click', (color) => {
 
 function paintPixel() {
   const pixels = document.querySelectorAll('.pixel');
-  pixels.forEach((pixel) => {
-    pixel.addEventListener('click', (evento) => {
+  for (let i = 0; i < pixels.length; i += 1) {
+    pixels[i].addEventListener('click', (evento) => {
       const elementPixel = evento.target;
       const colorSelected = document.getElementsByClassName('color selected')[0];
       elementPixel.style.backgroundColor = colorSelected.id;
     });
-  });
+  }
 }
 paintPixel();
+
+function clearBoard() {
+  const buttonOne = document.getElementById('clear-board');
+  buttonOne.addEventListener('click', () => {
+    const pixels = document.querySelectorAll('.pixel');
+    for (let i = 0; i < pixels.length; i += 1) {
+      pixels[i].style.backgroundColor = 'white';
+    }
+  });
+}
+clearBoard();
