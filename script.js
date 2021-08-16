@@ -58,6 +58,7 @@ function selecVerm() {
     redSelec.classList.add('selected');
 }
 
+//Para as funções getPaint e paintPix usei como base threads de dúvida do slack, principalmente esta: https://trybecourse.slack.com/archives/C0273HYKPGT/p1628896978132400 
 function getPaint(event) {
     let selec = document.querySelector(".selected");
     let paint = window.getComputedStyle(selec).getPropertyValue('background-color');
