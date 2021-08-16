@@ -1,50 +1,57 @@
 .black {
-    border: 1px solid black;
-    display: inline-block;
-    width: 55px;
-    height: 55px;
-    background-color: black;
+  border: 1px solid black;
+  display: inline-block;
+  width: 55px;
+  height: 55px;
+  background-color: black;
 }
+
 .red {
-    border: 1px solid black;
-    display: inline-block;
-    width: 55px;
-    height: 55px;
-    background-color: rgb(170, 14, 14);
+  border: 1px solid black;
+  display: inline-block;
+  width: 55px;
+  height: 55px;
+  background-color: rgb(170, 14, 14);
 }
+
 .blue {
-    border: 1px solid black;
-    display: inline-block;
-    width: 55px;
-    height: 55px;
-    background-color: blue;
+  border: 1px solid black;
+  display: inline-block;
+  width: 55px;
+  height: 55px;
+  background-color: blue;
 }
+
 .green {
-    border: 1px solid black;
-    display: inline-block;
-    width: 55px;
-    height: 55px;
-    background-color: green;
+  border: 1px solid black;
+  display: inline-block;
+  width: 55px;
+  height: 55px;
+  background-color: green;
 }
+
 .pixel {
-    border: 1px solid black;
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    margin: 2px 2px 2px 5px;
-    background-color: white;
+  border: 1px solid black;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin: 2px 2px 2px 5px;
+  background-color: white;
 }
+
 #color-palette {
-    width: 500px;
-    height: 58px;
-    margin-left: 5px
+  width: 500px;
+  height: 58px;
+  margin-left: 5px;
 }
+
 .color {
-    display: inline-block;
-    margin-left: 15px;
+  display: inline-block;
+  margin-left: 15px;
 }
+
 #pixel-board {
-    margin-top: 110px;
-    margin-left: 35px;
-    width: 250px;
+  margin-top: 110px;
+  margin-left: 35px;
+  width: 250px;
 }

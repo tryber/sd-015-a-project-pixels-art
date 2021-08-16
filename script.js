@@ -102,16 +102,15 @@ function adicionaPixels() {
         }
     }
     let createNewPixel = document.querySelectorAll(".pixel");
-    for(let index of createNewPixel) {
+    for (let index of createNewPixel) {
         index.addEventListener("click", putColor);
     }
-    }
-    function generateRandomColor() {
-       for(let index = 1; index < colors.length; index += 1) {
+}
+function generateRandomColor() {
+    for (let index = 1; index < colors.length; index += 1) {
         let r = Math.random() * 255;
         let g = Math.random() * 255;
         let b = Math.random() * 255;
-           colors[index].style.backgroundColor =`rgb(${r}, ${g}, ${b})`; 
-       }
-    } window.onload = generateRandomColor();
-
+        colors[index].style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+    }
+} window.onload = generateRandomColor();
