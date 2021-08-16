@@ -4,9 +4,9 @@ function getColor(event) {
 }
 
 function reciveColor(event) {
-  document.getElementById(event.target.id).style.backgroundColor = color;
+  event.target.style.backgroundColor = color;
 }
 
 function Apagarcor() {
-  document.getElementById("white").style.backgroundColor = "white";
+  document.getElementById("button").style.backgroundColor = "white";
 }
