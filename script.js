@@ -1,3 +1,20 @@
+function createPalette() {
+  let arrayColors = ['black', 'red', 'blue', 'purple'];
+  let sectionPalette = document.getElementById('color-palette');
+
+  for (color of arrayColors) {
+    let box = document.createElement('div');
+    box.className = 'color';
+    box.style.backgroundColor = color;
+    
+    if (color === 'black') {
+      box.classList.add('selected');
+    }
+    sectionPalette.appendChild(box);
+  }
+}
+createPalette();
+
 const boardSection = document.getElementById('pixel-board');
 const n = 5;
 
@@ -33,11 +50,8 @@ function colorPixels() {
 
   for (let index3 = 0; index3 < pixels.length; index3 +=1) {
     pixels[index3].addEventListener('click', function (event){
-      event.target.style.backgroundColor = window.getComputedStyle(document.querySelector('.selected')).backgroundColor;
+      event.target.style.backgroundColor = document.querySelector('.selected').style.backgroundColor;
     });
   }
 }
-colorPixels(); 
-
-
-
+colorPixels();
