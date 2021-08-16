@@ -21,22 +21,22 @@ function criaQuadroDePixels() {
 }
 criaQuadroDePixels();
 
-function selecionaCorPreencher() {
-  const selecionadaInicial = document.getElementsByClassName('selected color');
-  const coresSeleção = document.querySelector('color');
+function selecionaCorPreencher(event) {
+  const selecionadaInicial = document.querySelector('.selected');
 
-  function selecionaCores(event) {
-    if (selecionadaInicial.length === 0) {
-      event.target.className = 'selected color';
-    } else {
-      event.target.className = 'color';
-    }
-  }
-  coresSeleção.addEventListener('click', selecionaCores);
+  selecionadaInicial.classList.remove('selected');
+  event.target.classList.add('selected');
 }
-selecionaCorPreencher();
 
 window.onload = function colorClassSelected() {
   const selecionaColor = document.querySelector('.color');
   selecionaColor.className = 'selected color';
+  const coresSeleção = document.querySelectorAll('.color')[0];
+  const coresSeleção2 = document.querySelectorAll('.color')[1];
+  const coresSeleção3 = document.querySelectorAll('.color')[2];
+  const coresSeleção4 = document.querySelectorAll('.color')[3];
+  coresSeleção.addEventListener('click', selecionaCorPreencher);
+  coresSeleção2.addEventListener('click', selecionaCorPreencher);
+  coresSeleção3.addEventListener('click', selecionaCorPreencher);
+  coresSeleção4.addEventListener('click', selecionaCorPreencher);
 };
