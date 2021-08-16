@@ -1,0 +1,42 @@
+.color {
+  border: 1px solid black;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+}
+
+#black {
+  background-color: black;
+  text-align: center;
+}
+
+#purple {
+  background-color: purple;
+  text-align: center;
+}
+
+#gray {
+  background-color: gray;
+  text-align: center;
+}
+
+#blue {
+  background-color: blue;
+  text-align: center;
+}
+
+.pixel-board {
+  border: 1px solid black;
+  width: 102px;
+  height: 102px;
+  display: inline-block;
+}
+
+.pixel {
+  border: 1px solid black;
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  margin-right: 4px;
+}
