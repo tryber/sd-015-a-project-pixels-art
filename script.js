@@ -55,6 +55,23 @@ clickSelect();
 //     }
 // }
 // clickSelect();
+function useColor (event) {
+    let selectedColor = document.querySelector('.selected').style.backgroundColor
+    let click = event.target
+    click.style.backgroundColor = selectedColor;
+}
+
+function pixelColor () {
+    let pixel = document.querySelectorAll('.pixel')
+    for (x = 0 ; x < pixel.length; x += 1)
+    pixel[x].addEventListener('click', useColor);
+}
+pixelColor();
+
+
+
+
+
 
 }
 
