@@ -1,5 +1,5 @@
 const todasCores = document.getElementsByClassName('color');
-function selecionadorCor() {
+function selecionadorCor(event) {
   for (let index = 0; index < todasCores.length; index += 1) {
     todasCores[index].classList.remove('selected');
   }
@@ -8,8 +8,8 @@ function selecionadorCor() {
 for (let index = 0; index < todasCores.length; index += 1) {
   todasCores[index].addEventListener('click', selecionadorCor);
 }
-let cadaQuadrado = document.getElementsByClassName('pixel')
-function pintando() {
+const cadaQuadrado = document.getElementsByClassName('pixel');
+function pintando(event) {
   const selecionado = document.getElementsByClassName('selected')[0];
   event.target.style.backgroundColor = selecionado.id;
 }
