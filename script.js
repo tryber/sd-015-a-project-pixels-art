@@ -24,3 +24,9 @@ let getColor = document.querySelector('.selected');
 let background1 = window.getComputedStyle(getColor).getPropertyValue('background-color');
 event.target.style.backgroundColor = background1;
 } 
+
+let botao = document.getElementById("clear-board");
+botao.addEventListener("click", colorwhite);
+function colorwhite (event1){
+    location.reload();
+}

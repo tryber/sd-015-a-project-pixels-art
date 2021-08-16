@@ -4,6 +4,7 @@
     height: 40px;
     border: solid black 1px;
     display: inline-block;
+    text-align: center;
 }
 #red{
     background-color: red;
@@ -11,6 +12,7 @@
     height: 40px;
     border: solid black 1px;
     display: inline-block;
+    text-align: center;
 }
 #black{
     background-color: black;
@@ -18,6 +20,7 @@
     height: 40px;
     border: solid  1px ;
     display: inline-block;
+    text-align: center;
 }
 #green{
     background-color: green;
@@ -25,6 +28,7 @@
     height: 40px;
     border: solid  1px;
     display: inline-block;
+    text-align: center;
 }
 .pixel{
     background-color: white;
@@ -32,4 +36,25 @@
     height: 40px;
     border: black solid 1px;
     display: inline-block;
+}
+#title{
+    color: rgb(53, 53, 52);
+    text-align: center;
+}
+#tit{
+    text-align: center;
+    color: black;
+}
+.line{
+    text-align: center;
+}
+#color-palette{
+    text-align: center;
+}
+body{
+    background-color: rgb(226, 162, 66);
+}
+button{
+    text-align: center;
+    
 }
