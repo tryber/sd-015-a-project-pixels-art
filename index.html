@@ -11,7 +11,7 @@
   <h1 id = "title">Paleta de Cores</h1>
 
   <div id = "color-palette">
-    <div id = "black" class = "color selected"></div>
+    <div id = "black" class = "color"></div>
     <div id = "blue" class = "color"></div>
     <div id = "red" class = "color"></div>
     <div id = "yellow" class = "color"></div>
@@ -19,11 +19,14 @@
   </div>
 
   <button id = "clear-board">Limpar</button>
-  
-  <input id = "board-size" type = "number" min= "1">
-  <button id = "generate-board">VQV</button>
 
-  <div id = "pixel-board"></div>
+  <div id = "pixel-board">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
 
   <script type = "text/javascript" src = "script.js"></script>
 </body>
