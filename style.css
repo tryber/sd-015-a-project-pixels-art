@@ -18,7 +18,7 @@
 }
 
 #color-3 {
- background-color: aquamarine; 
+  background-color: aquamarine; 
 }
 
 #color-4 {
@@ -27,27 +27,16 @@
 
 .pixel {
   border: 1px solid black;
-  height: 3rem;
-  width: 3rem;
+  height: 40px;
+  width: 40px;
   background-color: white;
 }
 
-#column-one {
+.column {
   float: left;
 }
 
-#column-two {
-  float: left;
-}
-
-#column-three{
-  float: left;
-}
-
-#column-four {
-  float: left;
-}
-
-#column-five {
-  float: left;
+#pixel-board {
+  height: 210px;
+  width: 210px;
 }
