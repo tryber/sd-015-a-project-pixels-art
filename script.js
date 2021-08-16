@@ -1,18 +1,23 @@
-function paletaDeCores(){
-    let colorGreen = document.getElementsByClassName("color")[1].style.backgroundColor = "blue";
-
-    let colorRed = document.getElementsByClassName("color")[2].style.backgroundColor = "red";
-
-    let colorBrown = document.getElementsByClassName("color")[3].style.backgroundColor = "brown";
-
-    let  colorBlack = document.getElementsByClassName("color")[0].style.backgroundColor = "black";
-
+function paletaDeCores(event){
     
+    document.getElementsByClassName("color")[1].style.backgroundColor = "blue";
+
+    document.getElementsByClassName("color")[2].style.backgroundColor = "red";
+
+    document.getElementsByClassName("color")[3].style.backgroundColor = "brown";
 
 }
 paletaDeCores();
 
-function pixelBoard(){
+    function classSelected (){
+        
+    const elementSelected = document.querySelector(".color");
+    elementSelected.classList.add("selected");
+    }
+    classSelected();
+
+
+function pixelBoard(selected, event){
     
 }
 pixelBoard();
