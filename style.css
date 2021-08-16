@@ -6,3 +6,12 @@
     display: inline-block;
 }
 
+#pixel-board{
+    border: 1px solid;
+    height: 250px;
+    width: 250px;
+}
+
+.pixel{
+    border: 1px solid;
+}

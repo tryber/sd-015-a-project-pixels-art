@@ -8,5 +8,9 @@ function paletaDeCores(){
 }
 paletaDeCores();
 
+function pixelBoard(){
+    
+}
+pixelBoard();
 
 
