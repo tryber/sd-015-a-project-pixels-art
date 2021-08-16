@@ -122,11 +122,11 @@ function novoQuadroPixel() {
     // quando eu deleto o primeiro filho do quadro, o segundo se torna o primeiro, esse segundo é deletado, o terceiro se torna o primeiro, o terceiro é deletado... assim sucessivamente até não haver mais nenhum filho no quadro
   }
 
-  // quadro antigo deletado, aqui começa o processo de criação do novo quadro, onde a variavel tamanho recebe o valor do input, e cria as funções de coluna e linha
+  // quadro antigo deletado, aqui começa o processo de criação do novo quadro, onde a variavel tamanho recebe o valor do input (ela está criada em cima pq o if q limita o tamanho entre 5 e 50 usa a variavel tamanho), e cria as funções de coluna e linha
 
   repetelinhaPixel(); // aqui só preciso do repete pq ele já chama o criarLinhaPixel, q cria as colunas
 
-  // logica de pintar os pixels: aqui como a função ja foi criada, só preciso colocar o click em cada pixel novamente
+  // logica de pintar os pixels: aqui como a função ja foi criada, só preciso colocar o click em cada pixel novo criado.
   const pixel = document.querySelectorAll('.pixel'); // pega todos os pixel
   for (let i = 0; i < pixel.length; i += 1) {
     pixel[i].addEventListener('click', pintaPixel); // add em cada um o addEventListener com a função pintaPixel
