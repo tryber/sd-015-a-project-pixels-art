@@ -14,7 +14,7 @@ function PixelBoardBox() {
 }
 
 function selecionado() {
-  const palette = document.querySelectorAll('#color-palette div');
+  const palette = document.querySelectorAll('#color-palette > div');
 
   function limpaSelec() {
     palette.forEach((div) => {
@@ -30,24 +30,17 @@ function selecionado() {
   });
 }
 
-/*
-function pegarCor(event) {
-  const cor = document.querySelector('.selected');
-  const bgcolor = window
-    .getComputedStyle(cor, null)
-    .getPropertyValue('background-color');
-  event.target.style.backgroundColor = bgcolor;
+function pintarPixel() {
+  const pixBoard = document.getElementById('pixel-board');
+  pixBoard.addEventListener('click', (e) => {
+    if (e.target.classList.contains('pixel')) {
+      const pixel = e;
+      const selecColor = document.getElementsByClassName('selected')[0];
+      const color = getComputedStyle(selecColor).backgroundColor;
+      pixel.target.style.backgroundColor = color;
+    }
+  });
 }
-
-function colocarCor() {
-  const pix = document.querySelectorAll('.pixel');
-  for (let index = 0; index < pix.length; index += 1) {
-    const alt = pix[index];
-    alt.addEventListener('click', pegarCor);
-  }
-}
-colocarCor();
-*/
 
 function limparQuadro() {
   const limpar = document.getElementById('clear-board');
@@ -65,12 +58,13 @@ function corRandom() {
   const b = Math.floor(Math.random() * 255);
 
   const paleta = document.querySelectorAll('.color');
-  paleta[1].style.backgroundColor = 'rgb(' + r + ',' + g + ',' + b + ')';
-  paleta[2].style.backgroundColor = 'rgb(' + g + ',' + b + ',' + r + ')';
-  paleta[3].style.backgroundColor = 'rgb(' + b + ',' + r + ',' + g + ')';
+  paleta[1].style.backgroundColor = `rgb( ${r}, ${g}, ${b} )`;
+  paleta[2].style.backgroundColor = `rgb( ${g}, ${b}, ${r} )`;
+  paleta[3].style.backgroundColor = `rgb( ${b}, ${r}, ${g} )`;
 }
 
 PixelBoardBox();
 limparQuadro();
 selecionado();
+pintarPixel();
 corRandom();
