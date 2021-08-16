@@ -14,13 +14,12 @@
 
   function coresPadrao() {
     const divs = document.querySelectorAll(".color");
-    const cores = ["#B105F5", "#DC07DE", "#FA0886", "#6607DE"];
+    const cores = ["#000000", "#DC07DE", "#FA0886", "#6607DE"];
 
       for (let index = 0; index < divs.length; index+= 1) {
         let divAtual = divs[index];
         divAtual.style.backgroundColor = cores[index];
         divs[index].className += ' box';
-        
       }
   }
 
