@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script src="script.js"></script>
   <link rel="stylesheet" href="style.css">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,10 +11,47 @@
 <body>
   <h1 id="title">Paleta de Cores</h1>
   <section id="color-palette">
-        <div id="color-one" class="color"></div>
-        <div id="color-two" class="color"></div>
-        <div id="color-three" class="color"></div>
-        <div id="color-four" class="color"></div>
+        <div id="black" onclick="getColor(event)" class="color"></div>
+        <div id="purple" onclick="getColor(event)" class="color"></div>
+        <div id="blue" onclick="getColor(event)" class="color"></div>
+        <div id="green" onclick="getColor(event)" class="color"></div>
+  </section>
+  <section id="pixel-board">
+    <div class="lines">
+      <div  id="box-1" onclick="reciveColor(event)" class="pixel"></div>
+      <div id="box-2" onclick="reciveColor(event)" class="pixel"></div>
+      <div id="box-3" onclick="reciveColor(event)" class="pixel"></div>
+      <div id="box-4" onclick="reciveColor(event)" class="pixel"></div>
+      <div id="box-5" onclick="reciveColor(event)" class="pixel"></div>
+    </div>
+    <div class="lines">
+      <div id="box-6" onclick="reciveColor(event)" class="pixel"></div>
+      <div id="box-7" onclick="reciveColor(event)" class="pixel"></div>
+      <div id="box-8" onclick="reciveColor(event)" class="pixel"></div>
+      <div id="box-9"  onclick="reciveColor(event)" class="pixel"></div>
+      <div id="box-10" onclick="reciveColor(event)" class="pixel"></div>
+    </div>
+    <div class="lines">
+      <div id="box-11" onclick="reciveColor(event)" class="pixel"></div>
+      <div id="box-12" onclick="reciveColor(event)" class="pixel"></div>
+      <div id="box-13" onclick="reciveColor(event)" class="pixel"></div>
+      <div id="box-14" onclick="reciveColor(event)" class="pixel"></div>
+      <div id="box-15" onclick="reciveColor(event)" class="pixel"></div>
+    </div>
+    <div class="lines">
+      <div id="box-16"  onclick="reciveColor(event)" class="pixel"></div>
+      <div id="box-17"  onclick="reciveColor(event)" class="pixel"></div>
+      <div id="box-18" onclick="reciveColor(event)" class="pixel"></div>
+      <div id="box-19" onclick="reciveColor(event)" class="pixel"></div>
+      <div id="box-20"  onclick="reciveColor(event)" class="pixel"></div>
+    </div>
+    <div class="lines">
+      <div id="box-21" onclick="reciveColor(event)" class="pixel"></div>
+      <div id="box-22" onclick="reciveColor(event)" class="pixel"></div>
+      <div id="box-23" onclick="reciveColor(event)" class="pixel"></div>
+      <div id="box-24" onclick="reciveColor(event)" class="pixel"></div>
+      <div id="box-25" onclick="reciveColor(event)" class="pixel"></div>
+    </div>
   </section>
 </body>
 </html> 
