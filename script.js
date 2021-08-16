@@ -5,9 +5,9 @@ vermelho.style.backgroundColor = 'red';
 const azul = document.querySelector('.azul');
 azul.style.backgroundColor = 'blue';
 const verde = document.querySelector('.verde');
-verde.style.backgroundColor = 'green'
+verde.style.backgroundColor = 'green';
 const pixel = document.querySelectorAll('.pixel');
-
+const botão = document.getElementById('clear-board');
 
 // Requisito 7
 function addClassSelected(event) {
@@ -23,18 +23,28 @@ verde.addEventListener('click', addClassSelected);
 
 // Requisito 8
 function addColors(event) {
-  event.target.style.backgroundColor = document.querySelector('.selected').style.backgroundColor
+  let divPixel = event.target
+  divPixel.style.backgroundColor = document.querySelector('.selected').style.backgroundColor;
 }
+
 // source: https://stackoverflow.com/questions/32027935/addeventlistener-is-not-a-function-why-does-this-error-occur
+
 for (let index = 0; index < pixel.length; index += 1) {
   pixel[index].addEventListener('click', addColors);
 }
 
+// Requisito 9
+
+botão.addEventListener('click', function(event) {
+  for (let index2 = 0; index2 < pixel.length; index2 += 1) {
+    pixel[index2].style.backgroundColor = 'white'
+  }
+});
 
 window.addEventListener('click', function(event) {
-  console.log(event)
-  var testeCor = event.target.classList[1]
-  var testElementoSelecionado = event.target
-  console.log(testeCor)
-  console.log(testElementoSelecionado)
+  console.log(event);
+  const testeCor = event.target.classList[1];
+  const testElementoSelecionado = event.target;
+  console.log(testeCor);
+  console.log(testElementoSelecionado);
 })
