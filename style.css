@@ -1,0 +1,31 @@
+body {
+    margin: 20px;
+    font-family: 'Roboto', sans-serif;
+    /* text-align: center; */
+    margin: 0px;    
+}
+
+.color {
+    border: solid black 1px;
+    display: inline-block;
+    padding: 25px; 
+}
+
+#pixel-board {
+    font-size: 0;
+    width: 210px;
+    height: 205px;
+   
+    
+}
+.pixel{
+    
+    text-align: center;
+    margin: 0 auto;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border: solid black 1px;
+   
+}
