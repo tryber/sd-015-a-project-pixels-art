@@ -16,3 +16,10 @@ function pintando(event) {
   let selecionado = document.getElementsByClassName('selected')[0];
   event.target.style.backgroundColor = selecionado.id
 }
+let botaoLimpar = document.getElementById('clear-board')
+botaoLimpar.addEventListener('click', branco)
+function branco() {
+  for (index = 0; index < cadaQuadrado.length; index += 1) {
+    cadaQuadrado[index].style.backgroundColor = 'white'
+  }
+}
