@@ -1,13 +1,12 @@
-
 /* Repositório de  ferrazmichel consultado. https://github.com/tryber/sd-015-a-project-pixels-art/commit/da26befb0161746bf1a496fffc367c104efdba0f */
 
 
-.pixel {background-color: white; border: 1px solid black;  height: 50px;
-  width: 50px; }
+.pixel {background-color: white; border: 1px solid black;  height: 40px;
+  width: 40px; }
 
+#pixel-board{ ;}
 
-
-.linha{display: inline-block}
+.linha{display: table-cell}
 
 .color {
   border: 1px solid black;
