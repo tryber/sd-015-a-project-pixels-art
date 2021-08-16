@@ -1,0 +1,47 @@
+.color {
+    border-style: solid;
+    border-width: 1px;
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+    margin-bottom: 30px;
+}
+
+#black {
+    background-color: black;
+}
+
+#blue {
+    background-color: blue;
+}
+
+#brown {
+    background-color: #ffd987;
+}
+
+#red {
+    background-color: red;
+}
+
+/* .selected {
+    border-style: solid;
+    border-width: 2px;
+    border-color: white;
+} */
+
+.pixels {
+    line-height: 0px;
+}
+
+.pixel {
+    border-style: solid;
+    border-width: 1px;
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+    background-color: white;
+}
+
+body {
+    background-color: teal;
+}
