@@ -1,0 +1,26 @@
+* {
+  border: 0;
+}
+
+.color {
+  display: inline-block;
+  height: 3rem;
+  width: 3rem;
+  border: 1px solid black;
+}
+
+#color-1 {
+  background-color: black;
+}
+
+#color-2 {
+  background-color: blue;
+}
+
+#color-3 {
+ background-color: aquamarine; 
+}
+
+#color-4 {
+  background-color: chartreuse;
+}
