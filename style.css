@@ -55,6 +55,7 @@ body{
     background-color: rgb(226, 162, 66);
 }
 button{
-    text-align: center;
-    
+    margin-left: 650px;
+    margin-top: 9px;
+    margin-bottom: 9px;
 }
