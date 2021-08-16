@@ -32,7 +32,7 @@ for (const index of allPixels) {
   index.addEventListener('click', putColor);
 }
 function putColor(event) {
-  let clicked = document.querySelector(".selected")
+  const clicked = document.querySelector('.selected');
   const change = getComputedStyle(clicked);
   event.target.style.backgroundColor = change.backgroundColor;
 }
@@ -77,37 +77,37 @@ const input = document.querySelector('#board-size');
 input.min = 1;
 input.type = 'number';
 function adicionaPixels() {
-    let n = parseInt(input.value);
-    pixelsBoard.innerHTML = '';
-    if (input.value === "") {
-  alert("Board inválido!");
+  let n = parseInt(input.value);
+  pixelsBoard.innerHTML = '';
+  if (input.value === '') {
+    alert("Board inválido!");
   } else if (input.value < 5) {
-  n = 5;
-    } else if (input.value > 50) {
-  n = 50;
+    n = 5;
+  } else if (input.value > 50) {
+    n = 50;
+  }
+  pixelsBoard.style.width = (49.5 * n) + "px";
+  pixelsBoard.style.height = pixelsBoard.style.width;
+  for (let index = 0; index < n; index += 1) {
+    let createNewPixel = document.createElement("div");
+    createNewPixel.className = "pixel";
+    pixelsBoard.appendChild(createNewPixel);
+    for (let index = 1; index < n; index += 1) {
+      let createNewPixel = document.createElement("div");
+      createNewPixel.className = "pixel";
+      pixelsBoard.appendChild(createNewPixel);
     }
-    pixelsBoard.style.width = (49.5 * n) + "px";
-    pixelsBoard.style.height = pixelsBoard.style.width;
-    for (let index = 0; index < n; index += 1) {
-        let createNewPixel = document.createElement("div");
-        createNewPixel.className = "pixel";
-        pixelsBoard.appendChild(createNewPixel);
-        for (let index = 1; index < n; index += 1) {
-            let createNewPixel = document.createElement("div");
-            createNewPixel.className = "pixel";
-            pixelsBoard.appendChild(createNewPixel);
-        }
-    }
-    let createNewPixel = document.querySelectorAll(".pixel");
-    for (let index of createNewPixel) {
-        index.addEventListener("click", putColor);
-    }
+  }
+  let createNewPixel = document.querySelectorAll(".pixel");
+  for (let index of createNewPixel) {
+    index.addEventListener("click", putColor);
+  }
 }
 function generateRandomColor() {
-    for (let index = 1; index < colors.length; index += 1) {
-        let r = Math.random() * 255;
-        let g = Math.random() * 255;
-        let b = Math.random() * 255;
-        colors[index].style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
-    }
+  for (let index = 1; index < colors.length; index += 1) {
+    let r = Math.random() * 255;
+    let g = Math.random() * 255;
+    let b = Math.random() * 255;
+    colors[index].style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+  }
 } window.onload = generateRandomColor();
