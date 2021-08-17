@@ -1,0 +1,46 @@
+.color{
+  display: inline-block;
+  border:1px, black, solid;
+  width: 40px;
+  height: 40px;
+}
+
+.selected{
+  border: 1px solid black;
+  background-color: black;
+}
+
+#color1 {
+  border: 1px solid black;
+  background-color: black;
+}
+
+#color2 { 
+  border: 1px solid black;
+  background-color: red;
+}
+
+#color3 {
+  border: 1px solid black;  
+  background-color:blue;
+}
+
+#color4 { 
+   border: 1px solid black;
+   background-color: yellow;
+}
+
+.pixel{
+  display: inline-block;
+  border:1px, black, solid;
+  width: 40px;
+  height: 40px;
+}
+
+#square{
+  border: 1px solid black;
+  background-color:white;
+}
+
+
+
