@@ -45,8 +45,9 @@ window.onload = function() {
 
 function selectedCor() {
     let getCores = document.getElementsByClassName('color');
+    let getDivsPixels = document.getElementsByClassName('pixel');
     getCores[0].addEventListener('click', function(event) {
-        alert("clicou no preto");
+
         getCores[0].className = 'color selected';
         getCores[1].className = 'color';
         getCores[2].className = 'color';
@@ -59,7 +60,7 @@ function selectedCor() {
         getCores[2].className = 'color';
         getCores[3].className = 'color';
 
-        alert("clicou no azul");
+
     });
 
     getCores[2].addEventListener('click', function(event) {
@@ -67,7 +68,7 @@ function selectedCor() {
         getCores[0].className = 'color';
         getCores[1].className = 'color';
         getCores[3].className = 'color';
-        alert("clicou no amarelo");
+
     });
 
     getCores[3].addEventListener('click', function(event) {
@@ -75,9 +76,24 @@ function selectedCor() {
         getCores[0].className = 'color';
         getCores[1].className = 'color';
         getCores[2].className = 'color';
-        alert("clicou no vermelho");
+
     });
 
 
 }
 selectedCor();
+
+function colorePixel() {
+    let getDivsPixels = document.getElementsByClassName('pixel');
+
+    for (let i = 0; i < getDivsPixels.length; i += 1) {
+
+        getDivsPixels[i].addEventListener('click', function(event) {
+            let getCorClicada = document.querySelector('.selected');
+            let cor = getCorClicada.style.backgroundColor;
+            getDivsPixels[i].style.backgroundColor = (cor);
+
+        });
+    } //for
+}
+colorePixel(); //funcao
