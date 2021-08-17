@@ -30,10 +30,18 @@
     }
     
     .estiloPixelPai {
-        margin-top: 70px;
+        margin-top: 40px;
         padding-left: 40%;
     }
     
     .selected {
         background-color: black;
+    }
+    
+    .estlLimpa {
+        background-color: rgb(169, 169, 169);
+        margin-top: 40px;
+        width: 60px;
+        height: 40px;
+        margin-left: 45%;
     }

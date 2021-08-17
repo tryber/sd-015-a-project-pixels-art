@@ -11,6 +11,33 @@ function corDinamPaleta() {
 }
 corDinamPaleta();
 
+function criaBtnLimp() {
+    let getCores = document.getElementsByClassName('color');
+    let getDivsPixels = document.getElementsByClassName('pixel');
+
+    let getBody = document.querySelector('body');
+    let btnLimpa = document.createElement('button');
+    btnLimpa.id = 'clear-board';
+    btnLimpa.innerText = 'Limpar';
+    btnLimpa.className = ('estlLimpa');
+    btnLimpa.innerHTML;
+    getBody.appendChild(btnLimpa);
+
+    btnLimpa.addEventListener('click', function(event) {
+
+        for (let i = 0; i < getDivsPixels.length; i += 1) {
+
+            getDivsPixels[i].style = '.pixel';
+            getDivsPixels.innerHTML;
+
+        }
+
+
+    });
+
+}
+criaBtnLimp();
+
 function criaPixels() {
     let getBody = document.querySelector('body');
     let divPaiPixels = document.createElement('div');
@@ -32,6 +59,8 @@ function criaPixels() {
             blocoDe5.innerHTML;
             linha.appendChild(blocoDe5);
         }
+
+
 
     }
 
@@ -94,6 +123,6 @@ function colorePixel() {
             getDivsPixels[i].style.backgroundColor = (cor);
 
         });
-    } //for
+    }
 }
-colorePixel(); //funcao
+colorePixel();
