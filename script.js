@@ -38,12 +38,10 @@ function criaPixels() {
 }
 criaPixels();
 
-
-
-/*window.onload = function() {
+window.onload = function() {
     let corSelecionada = document.querySelector('#divBlack');
-    corSelecionada.className = 'selected';
-}*/
+    corSelecionada.className = 'selected color';
+}
 
 function selected() {
 
