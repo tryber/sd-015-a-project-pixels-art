@@ -8,11 +8,11 @@ for (let i = 1; i <= 25; i += 1) {
 }
 // Seleciona uma cor.
 const colorPalete = document.getElementsByClassName('color');
-for (color of colorPalete) {
-  color.addEventListener('click', selectColor)
-}
 function selectColor() {
   const selectedColor = document.querySelector('.selected');
   selectedColor.classList.remove('selected');
   this.classList.add('selected');
+}
+for (let color of colorPalete) {
+  color.addEventListener('click', selectColor);
 }
