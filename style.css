@@ -1,5 +1,23 @@
 * {
   border: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  min-width: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+#title {
+  text-align: center;
+  position: absolute;
+  top: 5rem;
 }
 
 .color {
@@ -10,33 +28,27 @@
 }
 
 #color-1 {
-  background-color: black;
+  background-color: #000000;
 }
 
 #color-2 {
-  background-color: blue;
+  background-color: #023047;
 }
 
 #color-3 {
-  background-color: aquamarine;
+  background-color: #CB997E;
 }
 
 #color-4 {
-  background-color: chartreuse;
+  background-color: #D00000;
 }
 
 .pixel {
   border: 1px solid black;
+  float: left;
   height: 40px;
   width: 40px;
+  margin-left: 1px;
+  margin-bottom: 1px;
   background-color: white;
-}
-
-.column {
-  float: left;
-}
-
-#pixel-board {
-  height: 210px;
-  width: 210px;
 }
