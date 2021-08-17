@@ -1,17 +1,16 @@
 function createTable() {
   const pixelBoard = document.querySelector('#pixel-board');
-  for (let i = 0; i < 5; i += 1) {
-    //cria coluna
-    let pixelColumn = document.createElement('div')
-    pixelColumn.id = "column";
-    pixelBoard.appendChild(pixelColumn);
-    //cria 5 linhas dentro da coluna
-    for (let i = 0; i < 5; i += 1) {
-      let pixelLine = document.createElement('div')
-      pixelLine.className = "pixel";
-      pixelLine.id = "line";
-      pixelColumn.appendChild(pixelLine);
+  for (let index = 0; index < 5; index += 1) {
+    //adiciona linhas
+    const pixelLine = document.createElement('div');
+    pixelLine.id ="line";
+    pixelBoard.appendChild(pixelLine);
+    // adiciona 5 colunas para cada linha
+    for (let index2 = 0; index2 < 5; index2 += 1) {
+      const pixelColumn = document.createElement('div');
+      pixelLine.appendChild(pixelColumn);
+      pixelColumn.className = 'pixel';
     }
   }
 }
-createTable()
+createTable();
