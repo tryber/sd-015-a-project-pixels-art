@@ -1,5 +1,7 @@
 window.onload = function() {
+    
   colorSelect();
+  colorPaint();
 
   function colorSelect() {
     const btnBlack = document.querySelector('#black');
@@ -65,6 +67,30 @@ window.onload = function() {
     btnYellow.addEventListener('click', function(){
       if(tfYellow === false) {
         yellow();
+      }
+    })
+  }
+
+  function colorPaint() {
+    const pixelsBoard = document.querySelector('#pixel-board')
+
+    const btnBlack = document.querySelector('#black');
+    const btnBlue = document.querySelector('#blue');
+    const btnGreen = document.querySelector('#green');
+    const btnYellow = document.querySelector('#yellow');
+  
+    pixelsBoard.addEventListener('click', function(event){
+      if(btnBlack.classList.contains('selected')){
+        event.target.style.backgroundColor = "black";
+      } 
+      else if(btnBlue.classList.contains('selected')) {
+        event.target.style.backgroundColor = "blue";
+      }
+      else if(btnGreen.classList.contains('selected')) {
+        event.target.style.backgroundColor = "green";
+      }
+      else if(btnYellow.classList.contains('selected')) {
+        event.target.style.backgroundColor = "yellow";
       }
     })
   }
