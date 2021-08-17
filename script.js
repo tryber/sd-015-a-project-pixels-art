@@ -53,7 +53,7 @@ function createPixelBoard(boardSizeVar) {
     }
     pixelBoard.appendChild(line);
   }
-  boardSizeField.value = boardSizeVar;
+  boardSizeField.placeholder = boardSizeVar;
   colorizePixel();
 }
 
@@ -73,7 +73,6 @@ document.querySelectorAll('.color').forEach((colorOnPalette) => {
       thisColorClasses.add('selected');
       currentColorText.innerHTML = `selected: &#128396 ${color.target.id}`;
       currentColorText.style.color = colorPalette[color.target.id];
-      // alert(`${color.target.id} selected`);
     }
   });
 });
@@ -92,16 +91,14 @@ function resetBlackSelection() {
   currentColorText.innerHTML = `selected: &#128396 ${blackColor.id}`;
 }
 
-// let newFieldSize = '';
+let newFieldSize = '';
+// let checkSize = true;
 document.querySelector('#generate-board').addEventListener('click', () => {
-  let newFieldSize = document.querySelector('#board-size');
-  console.log(newFieldSize);
-  console.log(newFieldSize.value);
-  if (!newFieldSize.value) {
+  newFieldSize = document.querySelector('#board-size').value;
+  if (newFieldSize === '') {
     alert('Board inválido!');
   } else {
-    createPixelBoard(newFieldSize.value);
-    // document.location.reload(); // ref https://www.w3schools.com/jsref/met_loc_reload.asp
+    createPixelBoard(newFieldSize);
   }
 });
 
