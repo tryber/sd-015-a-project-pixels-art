@@ -30,3 +30,18 @@ function createPixels(height, width) {
 }
 
 createPixels(heightPixelBoard, widthPixelBoard);
+
+window.onload = function() {
+  selectedColor = document.querySelector('.color');
+  selectedColor.classList.add('selected');
+}
+
+function selectColor(event) {
+  selectedColor.classList.remove('selected');
+  selectedColor = event.target;
+  selectedColor.classList.add('selected');
+}
+
+for (let i = 0; i < colors.length; i += 1) {
+  colors[i].addEventListener('click', selectColor);
+}
