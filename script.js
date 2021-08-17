@@ -63,8 +63,8 @@ function sizeOfBoard(size) {
       createColumn.addEventListener('click', paintPixels);
     }
   }
+  console.log(document.querySelector('#board-size'));
 }
-// sizeOfBoard();
 
 const generateBoardBtn = document.getElementById('generate-board');
 
@@ -107,6 +107,7 @@ function clearBoard() {
 clearBoardBtn.addEventListener('click', clearBoard);
 
 window.onload = function carregamento() {
+  color1.style.backgroundColor = 'black';
   color2.style.backgroundColor = generateRandomColor();
   color3.style.backgroundColor = generateRandomColor();
   color4.style.backgroundColor = generateRandomColor();
