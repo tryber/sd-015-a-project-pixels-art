@@ -56,7 +56,7 @@ function createPixel() {
   newPixel.className = 'pixel';
   return newPixel;
 }
-  
+
 function createBoardLoop(selectedNumber) {
   for (let i = 0; i < selectedNumber; i += 1) {
     const newLine = document.createElement('tr');
@@ -66,7 +66,7 @@ function createBoardLoop(selectedNumber) {
     pixelColor.appendChild(newLine);
   }
 }
-  
+
 function createBoard() {
   let selectedNumber = inputSize.value;
   pixelColor.innerHTML = '';
