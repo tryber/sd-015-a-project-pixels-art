@@ -50,15 +50,15 @@ color4.addEventListener('click', trocarClasseSelected);
 
 // criar os quadros de pixels
 
-function criarOQuadroDeArt() {
+function criarOQuadroDeArt(numero) {
   const divDoQuadro = document.querySelector('#pixel-board');
-  for (let index = 0; index < 25; index += 1) {
+  for (let index = 0; index < numero * numero; index += 1) {
     const quadroPixel = document.createElement('div');
     quadroPixel.classList = 'pixel';
     divDoQuadro.appendChild(quadroPixel);
   }
 }
-criarOQuadroDeArt();
+criarOQuadroDeArt(5);
 
 // funções que serão responsaveis para pintar cada pixel do quadro
 // função que recupera a classe e pega a cor que está com ela e atribui a cor de fundo nos pixels com o event
@@ -106,3 +106,31 @@ function limpezaPixels() { // coloca estilo branco nos pixels e será acinado pe
 
 const botaoLimpeza = document.querySelector('#clear-board');
 botaoLimpeza.addEventListener('click', limpezaPixels); // botão que faz que adicione a cor branca nos quadrados
+
+// o valor que eu coloquei naquela função de criar é que vou mudar na hora que botar no input.
+
+// primeiro eu vou criar o input e o botão depois pensarei nos eventos
+
+// agora vou criar o input
+function criarInput() {
+  let divDoBotao = document.querySelector('#div-button');
+  let input = document.createElement('input');
+  input.id = 'board-size';
+  input.placeholder = 'numero';
+  input.type = 'number';
+  input.min = 1;
+  input.max = 50;
+  divDoBotao.appendChild(input);
+}
+criarInput();
+
+// depois vou criar o botão
+
+function criarBotaoVqv() {
+  let divDoBotao = document.querySelector('#div-button');
+  let botaoVqv = document.createElement('button');
+  botaoVqv.id = 'generate-board';
+  botaoVqv.innerHTML = 'VQV';
+  divDoBotao.appendChild(botaoVqv);
+}
+criarBotaoVqv();
