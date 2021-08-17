@@ -3,6 +3,9 @@ document.getElementById('black').style.backgroundColor = 'black';
 const color = document.getElementsByClassName('color');
 const pixel = document.getElementsByClassName('pixel');
 const clearB = document.getElementById('clear-board');
+const boardSize = document.getElementById('board-size');
+const genBoard = document.getElementById('generate-board');
+const pixelBoard = document.getElementById('pixel-board');
 
 function selectColor() {
   for (let i = 0; i < color.length; i += 1) {
@@ -46,3 +49,36 @@ function randomColor() {
 document.getElementById('color1').style.backgroundColor = randomColor();
 document.getElementById('color2').style.backgroundColor = randomColor();
 document.getElementById('color3').style.backgroundColor = randomColor();
+
+function entireBoard(wxh) {
+  while (pixelBoard.firstChild) {
+    pixelBoard.removeChild(pixelBoard.firstChild);
+  }
+  for (let i = 0; i < wxh; i += 1) {
+    const row = document.createElement('div');
+    pixelBoard.appendChild(row);
+    for (let j = 0; j < wxh; j += 1) {
+      const cell = document.createElement('div');
+      cell.classList.add('pixel');
+      row.appendChild(cell);
+    }
+  }
+  clearBoard();
+  colorPixel();
+}
+
+entireBoard(5);
+
+function boardCheck() {
+  if (boardSize.value === '') {
+    alert('Board inválido!');
+  } else if (boardSize.value < 5) {
+    entireBoard(5);
+  } else if (boardSize.value > 50) {
+    entireBoard(50);
+  } else {
+    entireBoard(boardSize.value);
+  }
+}
+
+genBoard.addEventListener('click', boardCheck);
