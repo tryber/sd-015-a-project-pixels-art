@@ -1,4 +1,12 @@
-const linesPixel = document.querySelectorAll('.line');
+let linesPixel = document.querySelectorAll('.line');
+
+function trocaCor(event) {
+  let elementoCor = document.querySelector('.selected');
+  let corSelecionada = window
+    .getComputedStyle(elementoCor, null)
+    .getPropertyValue('background-color');
+  event.target.style.backgroundColor = corSelecionada;
+}
 
 for (let i = 0; i < 5; i += 1) {
   let divLinha = linesPixel[i];
@@ -6,16 +14,17 @@ for (let i = 0; i < 5; i += 1) {
     let divPixel = document.createElement('div');
     divPixel.className = 'pixel';
     divLinha.appendChild(divPixel);
+    divPixel.addEventListener('click', trocaCor);
   }
 }
 
-function pinta(event) {
-  event.target.style.backgroundColor = 'black';
+function selecionaCor(event) {
+  document.querySelector('.selected').classList.remove('selected');
+  event.target.classList.add('selected');
 }
 
-const pixels = document.querySelectorAll('.pixel');
-
-for (let k of pixels) {
-  let cadaPixel = k;
-  cadaPixel.addEventListener('click', pinta);
+const colors = document.getElementsByClassName('color');
+for (let k of colors) {
+  let cadaCor = k;
+  cadaCor.addEventListener('click', selecionaCor);
 }

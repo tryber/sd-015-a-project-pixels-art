@@ -7,19 +7,19 @@
   display: inline-block;
 }
 
-.red {
+#red {
   background-color: red;
 }
 
-.black {
-  background-color: black;
+#black {
+  background-color: rgb(0, 0, 0);
 }
 
-.yellow {
+#yellow {
   background-color: yellow;
 }
 
-.blue {
+#blue {
   background-color: blue;
 }
 
