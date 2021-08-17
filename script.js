@@ -40,8 +40,25 @@ function selectColor(event) {
   selectedColor.classList.remove('selected');
   selectedColor = event.target;
   selectedColor.classList.add('selected');
+  // console.log('Teste botão paleta');
+
 }
 
 for (let i = 0; i < colors.length; i += 1) {
   colors[i].addEventListener('click', selectColor);
+}
+
+
+function paintingPixel(event) {
+  // console.log('Teste botão que recebe cor');
+  let corbackground = document.querySelector('.selected');
+  // console.log(corbackground.style.backgroundColor);
+  event.target.style.backgroundColor = corbackground.style.backgroundColor;
+
+}
+
+let allPixels = document.querySelectorAll('.pixel');
+
+for (let index3 =0; index3 < allPixels.length; index3 += 1) {
+  allPixels[index3].addEventListener('click', paintingPixel);
 }
