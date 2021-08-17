@@ -69,3 +69,14 @@ function paintPixel(pixel) {
 for (let i = 0; i < selectPixel.length; i += 1) {
   selectPixel[i].addEventListener('click', paintPixel);
 }
+
+// Limpa o quadro de pixels
+const cleanPixelBoardButton = document.getElementById('clear-board');
+
+function clearBoard() {
+  for (let i = 0; i < selectPixel.length; i += 1) {
+    selectPixel[i].style.backgroundColor = 'white';
+  }
+}
+
+cleanPixelBoardButton.addEventListener('click', clearBoard);
