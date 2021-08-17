@@ -101,3 +101,23 @@ function removeDivs () {
   divs.innerHTML = "";
 }
 
+//Requisito 12 cores aleatorias
+
+const color01 = document.querySelector('.purple');
+const color02 = document.querySelector('.darkgreen');
+const color03 = document.querySelector('.red');
+
+function randomNumberColor (){
+ const colorRed = parseInt( Math.random() * 255);
+ const colorGreen = parseInt( Math.random() * 255);
+ const colorBlue = parseInt( Math.random() * 255);
+const randomColor = 'rgb(' + colorRed + ', ' + colorGreen + ', ' + colorBlue + ')';
+return randomColor;
+}
+
+function colorRandom (){
+  color01.style.backgroundColor = randomNumberColor();
+  color02.style.backgroundColor = randomNumberColor();
+  color03.style.backgroundColor = randomNumberColor();
+}
+colorRandom();
