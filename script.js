@@ -2,6 +2,8 @@ const selectedColor = document.getElementById('color-palette');
 const pixelColor = document.getElementById('pixel-board');
 const clearAll = document.getElementById('clear-board');
 const pixels = document.getElementsByClassName('pixel');
+const generateBoard = document.getElementById('generate-board');
+const inputSize = document.getElementById('board-size');
 
 // Cria cor aleatória
 // Consulta: https://stackoverflow.com/questions/23095637/how-do-you-get-random-rgb-in-javascript
@@ -47,3 +49,37 @@ function clearBoard() {
 }
 
 clearAll.addEventListener('click', clearBoard);
+
+// Criar o quadro de acordo com o input
+function createPixel() {
+  const newPixel = document.createElement('td');
+  newPixel.className = 'pixel';
+  return newPixel;
+}
+  
+function createBoardLoop(selectedNumber) {
+  for (let i = 0; i < selectedNumber; i += 1) {
+    const newLine = document.createElement('tr');
+    for (let x = 0; x < selectedNumber; x += 1) {
+      newLine.appendChild(createPixel());
+    }
+    pixelColor.appendChild(newLine);
+  }
+}
+  
+function createBoard() {
+  let selectedNumber = inputSize.value;
+  pixelColor.innerHTML = '';
+
+  if (selectedNumber === '') {
+    alert('Board inválido!');
+  } else if (selectedNumber < 5) {
+    selectedNumber = 5;
+  } else if (selectedNumber > 50) {
+    selectedNumber = 50;
+  }
+
+  createBoardLoop(selectedNumber);
+}
+
+generateBoard.addEventListener('click', createBoard);
