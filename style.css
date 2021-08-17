@@ -9,22 +9,6 @@
   height: 80px;
 }
 
-#first {
-  background-color: black;
-}
-
-#second {
-  background-color: blue;
-}
-
-#third {
-  background-color: crimson;
-}
-
-#fourth {
-  background-color: darkgreen;
-}
-
 .pixel {
   border: 1px solid black;
   background-color: white;
