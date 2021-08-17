@@ -55,3 +55,14 @@ function pinturaPixel() {
     pixelsIndex.addEventListener('click', pintaCor);
   }
 } pinturaPixel();
+
+function arr() {
+  const quadrosPixels = document.querySelectorAll('.pixel');
+  for (let index = 0; index < quadrosPixels.length; index += 1) {
+    quadrosPixels[index].style.backgroundColor = 'white';
+  }
+}
+function limpar() {
+  const botao = document.getElementById('clear-board');
+  botao.addEventListener('click', arr);
+}limpar();
