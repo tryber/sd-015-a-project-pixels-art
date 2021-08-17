@@ -11,21 +11,12 @@ let selectedColor = document.getElementsByClassName("black")[0]
 const pixels = document.getElementById("pixel-board");
 const spans = document.getElementsByTagName("span")
 const botao = document.getElementsByTagName("button")[0];
+const botaoWidth = document.querySelector("#button-width")
+const inputWidth = document.querySelector("#input-width")
 
-createSpans();
 
-function createSpans() {
-    for (let index = 1; index <= 29; index += 1) {
-        if (index === 6 | index === 12 | index === 18 | index === 24) {
-            let br = document.createElement('br');
-            quadro.appendChild(br);
-        } else {
-            let span = document.createElement('span');
-            span.className = "pixel"
-            quadro.appendChild(span);
-        }
-    }
-}
+
+
 
 
 
@@ -66,5 +57,34 @@ function limpaQuadro(event) {
     for (let index = 0; index < spans.length; index += 1) {
         let pixelAtual = spans[index];
         pixelAtual.style.backgroundColor = "white";
+    }
+}
+
+
+botaoWidth.addEventListener("click", alteraTamanho);
+
+function alteraTamanho(event) {
+    let quadroChild = quadro.children;
+    for (let index = (quadroChild.length - 1); index >= 0; index -= 1) {
+        let actualChild = quadroChild[index]
+        quadro.removeChild(actualChild)
+    }
+    let inputValue = inputWidth.value
+    inputValue = parseInt(inputValue)
+    if (inputValue >= 5 && inputValue <= 50) {
+        function createSpans() {
+            let spanNumber = inputValue;
+            for (let index = 1; index <= (spanNumber * spanNumber) + (spanNumber - 1); index += 1) {
+                if (index % (spanNumber + 1) === 0) {
+                    let br = document.createElement('br');
+                    quadro.appendChild(br);
+                } else {
+                    let span = document.createElement('span');
+                    span.className = "pixel"
+                    quadro.appendChild(span);
+                }
+            }
+        }
+        createSpans();
     }
 }
