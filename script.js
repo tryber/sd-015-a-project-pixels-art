@@ -1,8 +1,7 @@
 window.onload = function() {
-    
   colorSelect();
   colorPaint();
-
+  btnClear()
   function colorSelect() {
     const btnBlack = document.querySelector('#black');
     btnBlack.classList.add('selected');
@@ -70,7 +69,6 @@ window.onload = function() {
       }
     })
   }
-
   function colorPaint() {
     const pixelsBoard = document.querySelector('#pixel-board')
 
@@ -93,5 +91,18 @@ window.onload = function() {
         event.target.style.backgroundColor = "yellow";
       }
     })
+  }
+  function btnClear(){
+    const btnClear = document.querySelector('#clear-board')
+    btnClear.addEventListener('click', addClear)
+    function addClear(){
+      // não da para simplesmente colocar backgroundColor em varias classes 
+      // foi preciso definir uma por uma 
+      let pixelsBoard = document.querySelectorAll('.pixel');
+      for (let i = 0; i < pixelsBoard.length; i += 1) {
+        let color = pixelsBoard[i];
+        color.style.backgroundColor = 'white';
+      }
+    }
   }
 }
