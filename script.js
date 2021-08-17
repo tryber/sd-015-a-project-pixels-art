@@ -86,8 +86,8 @@ pintarPixel();
 
 // aqui vamos criar um botão para colocar branco em todas as divs do quadro de pixels
 
+const divDoBotao = document.querySelector('#div-button');
 function criarBotaoClareador(limpar) { // criar botão de limpeza dinamicamente
-  const divDoBotao = document.querySelector('#div-button');
   const botaoLimpar = document.createElement('button');
   botaoLimpar.innerHTML = limpar;
   botaoLimpar.id = 'clear-board';
@@ -113,8 +113,7 @@ botaoLimpeza.addEventListener('click', limpezaPixels); // botão que faz que adi
 
 // agora vou criar o input
 function criarInput() {
-  let divDoBotao = document.querySelector('#div-button');
-  let input = document.createElement('input');
+  const input = document.createElement('input');
   input.id = 'board-size';
   input.placeholder = 'numero';
   input.type = 'number';
@@ -127,8 +126,7 @@ criarInput();
 // depois vou criar o botão
 
 function criarBotaoVqv() {
-  let divDoBotao = document.querySelector('#div-button');
-  let botaoVqv = document.createElement('button');
+  const botaoVqv = document.createElement('button');
   botaoVqv.id = 'generate-board';
   botaoVqv.innerHTML = 'VQV';
   divDoBotao.appendChild(botaoVqv);
