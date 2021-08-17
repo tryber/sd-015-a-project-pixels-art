@@ -27,7 +27,7 @@ function createBox() {
       let emptyBox = document.createElement("div");
       emptyBox.className = "pixel";
       createLine.appendChild(emptyBox);
-  
+       emptyBox.addEventListener("click", paintPixel);
     }
     getIdSection.appendChild(createLine);
   }
@@ -36,15 +36,24 @@ function createBox() {
 
 // selecionar a cor da paleta, colocar no quadro de pixel selecionado, e ao mesmo tempo remover a classe "selected" da cor anterior.
 
-function getColor(evento) {
+function addClassSelectedAndRemove(evento) {
      
    document.getElementsByClassName("selected")[0].classList.remove("selected");
    evento.target.classList.add("selected");
 }
 
 let idColorPalette = document.getElementById("color-palette");
-idColorPalette.addEventListener("click", getColor);
+idColorPalette.addEventListener("click", addClassSelectedAndRemove);
 
+// ao clicar na paleta de cores, a cor selecionada deve ser adionada no quadro de pixel em branco selecionado. 
+
+function paintPixel(evento) {
+  let reciveColorSelected = document.getElementsByClassName("selected")[0];
+  console.log(reciveColorSelected);
+ console.log(evento.target.style.backgroundColor);
+ console.log(reciveColorSelected.style.backgroundColor);
+  evento.target.style.backgroundColor = reciveColorSelected.style.backgroundColor;
+}
 
 
 
