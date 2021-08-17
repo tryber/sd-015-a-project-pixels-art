@@ -91,9 +91,7 @@ function removeBoard() {
 
 function changeBoard() {
   const inputSize = document.querySelector('#board-size').value;
-  console.log(inputSize);
-  console.log(inputSize);
-  if (inputSize < 0) {
+  if (inputSize === '') {
     alert('Board inválido!');
   } else if (inputSize < 5) {
     removeBoard();
@@ -105,6 +103,7 @@ function changeBoard() {
     removeBoard();
     createBoard(inputSize);
   }
+  console.log(inputSize);
 }
 
 buttonSizeBoard.addEventListener('click', changeBoard);
