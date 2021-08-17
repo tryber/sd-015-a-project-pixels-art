@@ -1,11 +1,13 @@
 
 
-window.onload = corpreta
+window.onload = colorblack
 
-function corpreta(){
+function colorblack(){
 let element = document.querySelector(".color")
+//na lista de classes de element add selected
+// source https://www.w3schools.com/howto/howto_js_add_class.asp  -------  https://developer.mozilla.org/pt-BR/docs/Web/API/Element/classList
 element.classList.add("selected");
-return corpreta
+return colorblack
 }
 
 
