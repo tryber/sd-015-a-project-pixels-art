@@ -92,12 +92,15 @@ function resetBlackSelection() {
   currentColorText.innerHTML = `selected: &#128396 ${blackColor.id}`;
 }
 
+// let newFieldSize = '';
 document.querySelector('#generate-board').addEventListener('click', () => {
-  const newFieldSize = document.querySelector('#board-size').value;
-  if (newFieldSize === '') {
+  let newFieldSize = document.querySelector('#board-size');
+  console.log(newFieldSize);
+  console.log(newFieldSize.value);
+  if (!newFieldSize.value) {
     alert('Board inválido!');
   } else {
-    createPixelBoard(newFieldSize);
+    createPixelBoard(newFieldSize.value);
     // document.location.reload(); // ref https://www.w3schools.com/jsref/met_loc_reload.asp
   }
 });
