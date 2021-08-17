@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,
+         initial-scale=1.0">
+        <link href="stylesheet"  type="text/css" href="style.css" 
+        href="script.js"> 
+        <title>Pixel art</title>
+    </head>
+    <body style="text-align: center;">
+
+    </body>
+    <script>
+        // requisito 1
+        let body = document.querySelector('body')
+        let titulo = document.createElement('h1')
+        titulo.id = 'title'
+        titulo.innerText='Paleta de Cores'
+        body.appendChild(titulo)
+        
+        
+        // requisito 2
+        let paletaDeCores = document.createElement('div')
+        paletaDeCores.id = 'color-palette'
+        body.appendChild(paletaDeCores)
+        paletaDeCores.style.listStyle = 'none'
+        paletaDeCores.style.display = 'flex'
+        paletaDeCores.style.width = '300px'
+        paletaDeCores.style.margin = 'auto'
+        
+        let cor1 = document.createElement('div')
+        cor1.className = 'color'
+        paletaDeCores.appendChild(cor1)
+        cor1.style.backgroundColor = 'black'
+        cor1.style.border = '1px solid black'
+        cor1.style.width = '50px'
+        cor1.style.height = '50px'
+        cor1.style.margin = '10px'
+
+        let cor2 = document.createElement('div')
+        cor2.className = 'color'
+        paletaDeCores.appendChild(cor2)
+        cor2.style.backgroundColor = 'green'
+        cor2.style.border = '1px solid black'
+        cor2.style.width = '50px'
+        cor2.style.height = '50px'
+        cor2.style.margin = '10px'
+
+        
+        let cor3 = document.createElement('div')
+        cor3.className = 'color'
+        paletaDeCores.appendChild(cor3)
+        cor3.style.backgroundColor = 'blue'
+        cor3.style.border = '1px solid black'
+        cor3.style.width = '50px'
+        cor3.style.height = '50px'
+        cor3.style.margin = '10px'
+        
+        let cor4 = document.createElement('div')
+        cor4.className = 'color'
+        paletaDeCores.appendChild(cor4)
+        cor4.style.backgroundColor = 'red'
+        cor4.style.border = '1px solid black'
+        cor4.style.width = '50px'
+        cor4.style.height = '50px'
+        cor4.style.margin = '10px'
+
+        let botaoReset = document.createElement('button')
+            body.appendChild(botaoReset)
+            botaoReset.innerHTML = 'Limpar'
+            botaoReset.id = 'clear-board'
+            botaoReset.style.marginTop = '10px'
+            botaoReset.style.marginBottom = '10px'
+            botaoReset.addEventListener('click', function (){
+                for (let i = 0; i < pixelArr.length; i ++) {
+                    pixelArr[i].style.backgroundColor = 'white'
+                }
+            })
+        
+        let quadro = document.createElement('table')
+        quadro.id = 'pixel-board'
+        body.appendChild(quadro)
+        quadro.style.width = '25px'
+        quadro.style.height = '25px'
+        quadro.style.margin = 'auto'
+        
+
+
+        
+
+        for (let i = 0; i < 5; i += 1){
+            let linha = document.createElement('section')
+            linha.className = `linha ${i + 1}` 
+            quadro.appendChild(linha)
+            linha.style.display = 'flex'
+        }
+
+        let auxLinhas = document.querySelectorAll('.linha')
+        console.log(auxLinhas)
+        
+        for (let i = 0; i < auxLinhas.length; i++){
+            for (let j = 0; j < auxLinhas.length; j++){
+                let pixel = document.createElement('div')
+                pixel.className = 'pixel'
+                auxLinhas[i].appendChild(pixel)
+                pixel.style.backgroundColor = 'white'
+                pixel.style.width = '40px'
+                pixel.style.height = '40px'
+                pixel.style.border = '1px solid black'
+                
+            }
+        }
+
+        let cores = document.getElementsByClassName('color')
+        console.log(cores)
+
+        for (let i = 0; i < cores.length; i++) {
+            if (cores[i].style.backgroundColor === 'black') {
+                cores[i].classList.add('selected')
+            }
+        }
+
+        // teste requisito 7
+
+            function removeSelected () {
+            let removeClass = document.querySelector('.selected')
+            removeClass.classList.remove('selected')
+            }
+
+            for (let i = 0; i < cores.length; i++) {
+                cores[i].addEventListener ('click', function (){
+                    removeSelected();
+                    cores[i].classList.add('selected')
+                })
+            }
+            
+            // requsito 8
+
+            let pixelArr = document.querySelectorAll('.pixel')
+            console.log(pixelArr)
+            
+            let colorSelected  = document.querySelector('.selected')
+            colorSelected = colorSelected.style.backgroundColor
+            console.log(colorSelected) 
+
+            for (let i = 0; i < pixelArr.length; i++) {
+            pixelArr[i].addEventListener('click', function (){
+                let colorSelected  = document.querySelector('.selected')
+                colorSelected = colorSelected.style.backgroundColor
+            
+                pixelArr[i].style.backgroundColor = colorSelected
+            })
+            }
+
+            
+
+        
+        
+
+    </script>
+</html>
