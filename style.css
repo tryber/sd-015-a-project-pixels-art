@@ -12,6 +12,10 @@
   padding: 5px;
 }
 
+/* .selected {
+  border-width: 2px !important;
+} */
+
 .pixel1 {
   background-color: black;
   border: solid 1px black;

@@ -6,33 +6,35 @@ function criaDiv(tamanho) {
       criaDiv.classList.add('pixel');
       criaDiv.id = 'pixel-board';
       chamaSection.appendChild(criaDiv);
-    } 
+    }
   }
 }
- criaDiv(5); 
+criaDiv(5);
 
-function selecionaCor(event) { 
-  let colors = document.querySelector('.selected').classList.remove('selected');
-    event.target.classList.add('selected');
-  }
+function selecionaCor(event) {//função remove a classe quando outro elemento é selecionado
+  const colors = document.querySelector('.selected').classList.remove('selected');
+  event.target.classList.add('selected');
+}
 
-  function pintaPixels (event) {//não esta pintando
-    const pixelsCor = document.querySelector('.selected').style.backgroundColor;
-    const pixelsPintar = event.target;
-    pixelsPintar.style.backgroundColor = pixelsCor
-    }
-  
+function pintaPixels(event) {
+  const element = document.querySelector('#color-palette .selected');
+  const compStyle = getComputedStyle(element);//obtem todas propriedades e valores css
+  const pixelsCor = compStyle.backgroundColor;//atribui o estilo background capturado na const compStyle
+
+  event.target.style.backgroundColor = pixelsCor;
+}
+
 
 function click() {
-  let colorBlocks = document.getElementsByClassName('color');
+  const colorBlocks = document.getElementsByClassName('color');
   for (let i = 0; i < colorBlocks.length; i += 1)
     colorBlocks[i].addEventListener('click', selecionaCor);
-  }
-click() 
+}
+click()
 
-function clickTabela () {
-  let pixelBranco = document.getElementsByClassName('pixel');
-  for (let i = 0; i < pixelBranco.length; i += 1) 
-  pixelBranco[i].addEventListener('click', pintaPixels);
+function clickTabela() {//função busca os pixels do board
+  const pixelBranco = document.getElementsByClassName('pixel');
+  for (let i = 0; i < pixelBranco.length; i += 1)
+    pixelBranco[i].addEventListener('click', pintaPixels);
 }
 clickTabela()
