@@ -1,0 +1,41 @@
+ 
+.color{
+    display: inline-block;
+    border: solid 1px black;
+    height: 50px;
+    width: 50px;
+}
+#black{
+   background-color: black;
+}
+#purple{
+    background-color: purple;
+}
+#blue{
+    background-color: blue;
+}
+#green{
+    background-color: green;
+}
+.pixel{
+    display: inline-block;
+    border: solid 1px black;
+    height:40px;
+    width: 40px;
+    background-color: white;
+}
+
+.line{
+    background-color: pink;
+    width: 500px;
+    height: 50px;
+}
+
+#white, button{
+        border-radius: 50%;
+        display: inline-block;
+        border: solid 1px black;
+        height:40px;
+        width: 40px;
+        background-color: white;   
+}
