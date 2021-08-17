@@ -5,9 +5,24 @@ let gridSize = gridHeight * gridWidth;
 
 function changeGridSize() {
   const newGridValue = parseInt(document.querySelector('#board-size').value);
-  const newGridSize = newGridValue * newGridValue;
+  let newGridSize = newGridValue * newGridValue;
   if (document.querySelector('#board-size').value === '') {
     alert('Board inválido!');
+  } else if (newGridValue < 5) {
+    alert('Valor menor que 5, considerar 5 como padrão');
+  }else if (newGridValue > 50) {
+    alert('Valor maior que 50, considerar 50 como padrão');
+    newGridSize = 2500;
+    const parent = document.querySelector('#pixel-board');
+    for (let i = 1; i <= gridSize; i += 1) {
+      parent.lastChild.remove();
+    }
+    gridSize = newGridSize;
+    createGrid();
+    for (let i = 0; i < gridSize; i += 1) {
+      const blockColors = document.querySelectorAll('.pixel')[i];
+      blockColors.addEventListener('click', setSelectedColor);
+      }
   } else {
   const parent = document.querySelector('#pixel-board');
   for (let i = 1; i <= gridSize; i += 1) {
@@ -18,7 +33,7 @@ function changeGridSize() {
   for (let i = 0; i < gridSize; i += 1) {
     const blockColors = document.querySelectorAll('.pixel')[i];
     blockColors.addEventListener('click', setSelectedColor);
-    }  
+    }
   }
 }
 
