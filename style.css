@@ -1,0 +1,23 @@
+.color {
+  height: 50px;
+  margin-left: 10px;
+  vertical-align: middle;
+  width: 50px;
+  border: 1px solid black;
+  display: inline-block;
+}
+
+#pixel-board {
+  border: 1px solid black;
+  height: 226px;
+  width: 210px;
+  display: inline-block;
+}
+
+.pixel {
+  border: 1px solid black;
+  height: 40px;
+  width: 40px;
+  display: inline-block;
+  background: white;
+}
