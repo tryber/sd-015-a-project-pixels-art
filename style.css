@@ -1,0 +1,62 @@
+#title {
+  text-align: center;
+}
+
+#color-palette {
+  max-width: 568px;
+  margin: auto;
+  padding: 0 auto;
+}
+
+.color {
+  border: 1px solid black;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  padding: 10px;
+  margin: 10px;
+}
+
+#pixel-board {
+  max-width: 210px;
+  margin: 0 auto;
+  line-height: 0px;
+  margin-bottom: 20px;
+}
+
+.pixel {
+  border: 1px solid black;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  background-color: white;
+}
+
+button {
+  margin: auto;
+  display: block;
+  margin-bottom: 20px;
+}
+
+input {
+  margin: auto;
+  display: inline-block;
+  margin-bottom: 20px;
+  width: 50px;
+  height: 10px;
+}
+
+#generate-board {
+  display: inline-block;
+  width: 45px;
+  height: 20px;
+}
+
+.board-text {
+  text-align: center;
+}
+
+.size-changer {
+  max-width: 107px;
+  margin: auto;
+}
