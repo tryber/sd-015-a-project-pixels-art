@@ -15,6 +15,21 @@ const botaoWidth = document.querySelector("#generate-board")
 const inputWidth = document.querySelector("#board-size")
 
 
+createSpans();
+function createSpans() {
+    let spanNumber = 5;
+    for (let index = 1; index <= (spanNumber * spanNumber) + (spanNumber - 1); index += 1) {
+        if (index % (spanNumber + 1) === 0) {
+            let br = document.createElement('br');
+            quadro.appendChild(br);
+        } else {
+            let span = document.createElement('span');
+            span.className = "pixel"
+            quadro.appendChild(span);
+        }
+    }
+}
+
 
 
 
