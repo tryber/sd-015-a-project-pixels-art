@@ -54,7 +54,6 @@ function paintingPixel(event) {
   let corbackground = document.querySelector('.selected');
   // console.log(corbackground.style.backgroundColor);
   event.target.style.backgroundColor = corbackground.style.backgroundColor;
-
 }
 
 let allPixels = document.querySelectorAll('.pixel');
@@ -62,3 +61,17 @@ let allPixels = document.querySelectorAll('.pixel');
 for (let index3 =0; index3 < allPixels.length; index3 += 1) {
   allPixels[index3].addEventListener('click', paintingPixel);
 }
+
+
+// Requisito 9 - Limpar o quadro
+let pixels = document.querySelectorAll('.pixel');
+
+let clearBoard = document.getElementById('clear-board');
+
+function clearAllPixels () {
+  for (let i = 0; i < pixels.length; i += 1) {
+    pixels[i].style.backgroundColor = 'white';
+  }
+}
+
+clearBoard.addEventListener('click', clearAllPixels);
