@@ -1,21 +1,39 @@
-.estlTitle {
-    text-align: center;
-}
-
-.estlBody {
-    background-color: LightGrey;
-}
-
-.estilizaPaleta {
-    border-color: rgb(238, 8, 123);
-    border-style: solid;
-}
-
-.color {
-    margin-left: 20px;
-    display: inline-block;
-    border-style: solid;
-    border-width: 1px;
-    width: 140px;
-    height: 140px;
-}
+    .estlTitle {
+        text-align: center;
+    }
+    
+    .estlBody {
+        background-color: LightGrey;
+    }
+    
+    .estilizaPaleta {
+        margin-top: 80px;
+        padding-left: 25%;
+    }
+    
+    .color {
+        margin-left: 20px;
+        display: inline-block;
+        border-style: solid;
+        border-width: 1px;
+        width: 140px;
+        height: 140px;
+    }
+    
+    .pixel {
+        border-style: solid;
+        border-width: 1px;
+        width: 40px;
+        height: 40px;
+        display: inline-block;
+        background-color: white;
+    }
+    
+    .estiloPixelPai {
+        margin-top: 70px;
+        padding-left: 30%;
+    }
+    
+    .selected {
+        background-color: black;
+    }
