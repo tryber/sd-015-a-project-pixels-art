@@ -25,3 +25,15 @@
     display: inline-block;
     border: 1px solid black;
 }
+
+#column{
+    margin-top: 50px;
+    display: inline-block;
+}
+
+#line{
+    padding: 40px;
+    border: 1px solid black ;
+    background-color: white;
+}
+
