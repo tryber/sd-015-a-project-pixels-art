@@ -1,13 +1,16 @@
-* {
-  margin: 0;
-  padding: 0;
-  border: 0;
-}
 
 header {
   margin: 20px;
   font-family: 'Press Start 2P', cursive;
   text-align: center;
+}
+
+.container {
+  text-align: center;
+}
+
+.input-button {
+  margin: 10px;
 }
 
 #color-palette {
@@ -51,7 +54,7 @@ header {
    margin-left: auto;
    margin-right: auto;
    width: 250px;
-   height:250px;
+   height: 250px;
    text-align: center;
    border: black solid 2px;
    padding: 10px;
@@ -66,13 +69,5 @@ header {
   background-color: rgb(255, 255, 255);
  }
 
- #clear-board {
-  display : block;
-  margin : auto;
-  background-color : gray;
-  color : white;
-  height : 30px;
-  width : 50px;
-  border-radius: 10px;
- }
+
 

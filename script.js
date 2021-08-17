@@ -23,7 +23,7 @@ function targetColor (event) {
 }
 
 // Requisito 8 colorindo as caixas
-const setBox = document.querySelectorAll('.pixel');
+const setBox = document.getElementsByClassName('pixel');
 
 for (let index = 0; index < setBox.length; index += 1) {
   setBox[index].addEventListener('click', fillBoxPixel);
@@ -47,8 +47,57 @@ function paintBoxPixels () {
  }
 }
 
-// 
+// Requisito 10 - 
+
+const setButtonGenerate = document.getElementById('generate-board');
 
 
+function transFormPixels (){
+  
+  const valueInput = document.getElementById('board-size');
+  if(valueInput.value == 0) {
+    alert("Board inválido!");
+  } else  if (valueInput.value < 5 ) {
+    let fixedPixels = 25;
+    removeDivs();
+    for (let index = 0; index < fixedPixels; index+= 1) { 
+      const creatDivs = document.createElement('div');
+      creatDivs.className = 'pixel';
+      divs.appendChild(creatDivs);
+      creatDivs.addEventListener('click', fillBoxPixel);
+    }
 
+  } else if (valueInput.value > 50 ) {
+    let fixedPixels2 = 2500;
+    removeDivs();
+    for (let index = 0; index < fixedPixels2; index+= 1) { 
+      const creatDivs = document.createElement('div');
+      creatDivs.className = 'pixel';
+      divs.appendChild(creatDivs);
+      creatDivs.addEventListener('click', fillBoxPixel);
+    }
+    const sizePixel = 50 * 45;
+    divs.style.width = sizePixel + 'px';
+    divs.style.height = sizePixel + 'px';  
+
+  }  else {
+    removeDivs();  
+    const qtdDivs = valueInput.value * valueInput.value;
+    for (let index = 0; index < qtdDivs; index += 1) {      
+      const creatDivs = document.createElement('div');
+      creatDivs.className = 'pixel';
+      divs.appendChild(creatDivs);
+      creatDivs.addEventListener('click', fillBoxPixel);
+     }
+    const sizePixel = valueInput.value * 45;
+    divs.style.width = sizePixel + 'px';
+    divs.style.height = sizePixel + 'px';    
+  }
+}
+setButtonGenerate.addEventListener('click', transFormPixels);
+
+const divs = document.getElementById('pixel-board');
+function removeDivs () {
+  divs.innerHTML = "";
+}
 
