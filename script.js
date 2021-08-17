@@ -1,4 +1,4 @@
-let linesPixel = document.querySelectorAll('.line');
+const linesPixel = document.querySelectorAll('.line');
 
 function trocaCor(event) {
   let elementoCor = document.querySelector('.selected');
@@ -28,3 +28,7 @@ for (let k of colors) {
   let cadaCor = k;
   cadaCor.addEventListener('click', selecionaCor);
 }
+const botaoClear = document.getElementById('clear-board');
+botaoClear.addEventListener('click', function () {
+  location.reload();
+});
