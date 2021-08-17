@@ -11,16 +11,16 @@ function backgroundOfColors() {
 backgroundOfColors();
 
 let pixelBoard = document.getElementById('pixel-board');
-let heightPixelBoard = 5; //5 elementos de altura
-let widthPixelBoard = 5; //5 elementos de largura
+let heightPixelBoard = 5; // 5 elementos de altura
+let widthPixelBoard = 5; // 5 elementos de largura
 
-function createPixels (height, width) {
+function createPixels(height, width) {
   for (let index = 1; index <= height; index += 1) {
     let line = document.createElement('section');
     line.className = 'line';
     pixelBoard.appendChild(line);
 
-    for (let index = 1; index <= width; index += 1) {
+    for (let index2 = 1; index2 <= width; index2 += 1) {
       let pixel = document.createElement('div');
       pixel.className = 'pixel';
       pixel.style.backgroundColor = 'white';
