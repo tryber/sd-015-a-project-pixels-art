@@ -1,0 +1,53 @@
+body {
+  text-align: center;
+}
+
+.color {
+  display: inline-block;
+  border-style: solid;
+  border-width: 1px;
+  height: 40px;
+  width: 40px;
+  margin: 7px;
+  border-radius: 10%;
+}
+
+#color1 {
+  background-color: black;
+}
+
+#color2 {
+  background-color: green;
+}
+
+#color3 {
+  background-color: red;
+}
+
+#color4 {
+  background-color: blue;
+}
+
+.pixel {
+  border-style: solid;
+  border-width: 1px;
+  height: 40px;
+  width: 40px;
+  background-color: white;
+  display: inline-block;
+  margin: auto;
+}
+
+tr {
+  width: auto;
+  height: auto;
+}
+
+table {
+  margin: auto;
+}
+
+#meio {
+  margin: 10px;
+}
+
