@@ -4,15 +4,12 @@ const colorPalette = {
   color1: '#FF0000', // red
   color2: '#00FF00', // green
   color3: '#0000FF', // blue
-  // color4: `#${Math.floor(Math.random()*16777215).toString(16)}`, // ref https://css-tricks.com/snippets/javascript/random-hex-color/
 };
-const boardSizeField = document.querySelector('#board-size').value;
-const boardSize = parseInt(boardSizeField); // Board size n x n
+const boardSizeField = document.querySelector('#board-size');
 const currentColorText = document.querySelector('#currentColorField');
 
 // Populate palette with colors defined above
 const paletteSize = Object.keys(colorPalette).length;
-// Object.getOwnPropertyNames(colorPalette[i])
 const paletteUl = document.querySelector('#color-palette ul');
 for (let i = 0; i < paletteSize; i += 1) {
   const colors = document.createElement('li');
@@ -26,6 +23,17 @@ for (let i = 0; i < paletteSize; i += 1) {
 // Create array with all colors in palette to be used later
 const fullPaletteLi = document.querySelectorAll('#color-palette ul li');
 
+// Colorize clicked pixel
+function colorizePixel() {
+  document.querySelectorAll('.pixel').forEach((pixelOnGrid) => {
+    pixelOnGrid.addEventListener('click', (eventPixel) => {
+      const whichColorSelected = document.querySelector('.color.selected').id;
+      const thisPixel = eventPixel;
+      thisPixel.target.style.backgroundColor = colorPalette[whichColorSelected];
+    });
+  });
+}
+
 // Create the pixel board
 const pixelBoard = document.querySelector('#pixel-board');
 function createPixelBoard(boardSizeVar) {
@@ -36,7 +44,6 @@ function createPixelBoard(boardSizeVar) {
     const lineName = `line ${y}`;
     line.id = lineName;
     line.className = 'line';
-
     for (let x = 1; x <= totalSize; x += 1) {
       const pixel = document.createElement('div');
       pixel.className = 'pixel';
@@ -46,6 +53,7 @@ function createPixelBoard(boardSizeVar) {
     }
     pixelBoard.appendChild(line);
   }
+  boardSizeField.value = boardSizeVar;
   colorizePixel();
 }
 
@@ -64,22 +72,11 @@ document.querySelectorAll('.color').forEach((colorOnPalette) => {
       clearColorSelection();
       thisColorClasses.add('selected');
       currentColorText.innerHTML = `selected: &#128396 ${color.target.id}`;
-      currentColorText.style.color = colorPalette[color.target.id]
+      currentColorText.style.color = colorPalette[color.target.id];
       // alert(`${color.target.id} selected`);
     }
   });
 });
-
-// Colorize clicked pixel
-function colorizePixel() {
-  document.querySelectorAll('.pixel').forEach((pixelOnGrid) => {
-    pixelOnGrid.addEventListener('click', (eventPixel) => {
-      const whichColorSelected = document.querySelector('.color.selected').id;
-      const thisPixel = eventPixel;
-      thisPixel.target.style.backgroundColor = colorPalette[whichColorSelected];
-    });
-  });
-}
 
 // Clear board
 document.querySelector('#clear-board').addEventListener('click', () => {
@@ -97,16 +94,16 @@ function resetBlackSelection() {
 
 document.querySelector('#generate-board').addEventListener('click', () => {
   const newFieldSize = document.querySelector('#board-size').value;
-  if (newFieldSize !== '') {
-    createPixelBoard(newFieldSize);
-  } else {
+  if (newFieldSize === '') {
     alert('Board inválido!');
+  } else {
+    createPixelBoard(newFieldSize);
     // document.location.reload(); // ref https://www.w3schools.com/jsref/met_loc_reload.asp
   }
-})
+});
 
 window.onload = function startAllection() {
-  createPixelBoard(boardSize);
+  createPixelBoard(5);
   clearColorSelection();
   resetBlackSelection();
 };

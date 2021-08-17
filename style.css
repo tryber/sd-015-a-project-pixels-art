@@ -64,4 +64,5 @@ main {
   line-height: 15px;
   width: fit-content;
   resize: none;
+  font-weight:bolder;
 }
