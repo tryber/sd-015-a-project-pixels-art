@@ -3,6 +3,7 @@
   display: inline-block;
   width: 40px;
   height: 40px;
+  background-color: black;
 }
 
 .color:nth-of-type(1) {
@@ -32,4 +33,7 @@
   width: 40px;
   height: 40px;
   float: left;
+}
+
+.selected {
 }
