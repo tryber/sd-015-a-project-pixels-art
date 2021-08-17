@@ -1,5 +1,5 @@
 .color {
-  border: 1px solid rgb(0, 0, 0);
+  border: 1px solid black;
   display: inline-block;
   width: 50px;
   height: 50px;
@@ -23,4 +23,10 @@
 
 #fourth {
   background-color: darkgreen;
+}
+
+.pixel {
+  background-color: white;
+  height: 25px;
+  width: 25px;
 }
