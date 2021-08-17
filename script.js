@@ -1,3 +1,14 @@
+
+
+window.onload = corpreta
+
+function corpreta(){
+let element = document.querySelector(".color")
+element.classList.add("selected");
+return corpreta
+}
+
+
 function createTable() {
   const pixelBoard = document.querySelector('#pixel-board');
   for (let index = 0; index < 5; index += 1) {

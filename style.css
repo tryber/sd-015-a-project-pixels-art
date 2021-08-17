@@ -1,6 +1,5 @@
 #title{
     font-family: sans-serif;
-
 }
 #color-one{
     background-color: black;
@@ -26,22 +25,18 @@
     display: inline-block;
     border: 1px solid black;
 }
-
 .pixel{
     border: 1px solid black ;
     background-color: white;
     height: 40px;
     width: 40px;
-    display: inline-block ;
-  
+    display: inline-block ; 
 }
-
 #pixel-board{
     height: 250px;
     margin-top: 25px ;
     width: 250px;
 }
-
 #line{
     margin: -4px;
 }
