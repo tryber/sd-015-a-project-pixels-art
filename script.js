@@ -11,8 +11,8 @@ let selectedColor = document.getElementsByClassName("black")[0]
 const pixels = document.getElementById("pixel-board");
 const spans = document.getElementsByTagName("span")
 const botao = document.getElementsByTagName("button")[0];
-const botaoWidth = document.querySelector("#button-width")
-const inputWidth = document.querySelector("#input-width")
+const botaoWidth = document.querySelector("#generate-board")
+const inputWidth = document.querySelector("#board-size")
 
 
 

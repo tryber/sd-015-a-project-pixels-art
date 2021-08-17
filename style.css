@@ -53,12 +53,12 @@ button {
     left: 115px;
 }
 
-#input-width {
+#board-size {
     position:absolute;
     top: 250px;
 }
 
-#button-width {
+#generate-board {
     position: absolute;
     top: 250px;
     left: 200px;
