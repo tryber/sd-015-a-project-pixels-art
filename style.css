@@ -33,6 +33,12 @@
   display: inline-block;
 }
 .line {
-  width: 450px;
-  height: 40px;
+  width: max-content;
+  height: auto;
+}
+
+body {
+  align-items: center;
+  margin-left: 30%;
+  background-color: rgb(112, 173, 112);
 }
