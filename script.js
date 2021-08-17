@@ -1,4 +1,16 @@
-const colors = ['black', 'red', 'green', 'blue'];
+const colorsOptions = ['red', 'green', 'blue', 'pink', 'darkBlue', 'orange', 'yellow', 'purple', 'darkGrey', 'darkRed'];
+
+function randomColors(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  const randomNumber = Math.floor(Math.random() * (max - min)) + min;
+  const ramdomColor = colorsOptions[randomNumber];
+  return ramdomColor;
+}
+
+console.log(randomColors(0, 9));
+
+const colors = ['black', randomColors(0, 9), randomColors(0, 9), randomColors(0, 9)];
 let gridHeight = 5;
 let gridWidth = 5;
 let gridSize = gridHeight * gridWidth;
