@@ -9,10 +9,10 @@ function trocaCor(event) {
 }
 
 const botaoVQV = document.getElementById('generate-board');
-botaoVQV.addEventListener('click', subCriaBoard);
+botaoVQV.addEventListener('click', validaCriaBoard);
 const inputVQV = document.getElementById('board-size');
 
-function subCriaBoard() {
+function validaCriaBoard() {
   if (inputVQV.value === '') {
     return alert('Board inválido!');
   } else {
