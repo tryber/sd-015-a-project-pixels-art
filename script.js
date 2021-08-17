@@ -34,7 +34,16 @@ function createBox() {
 
 }
 
+// selecionar a cor da paleta, colocar no quadro de pixel selecionado, e ao mesmo tempo remover a classe "selected" da cor anterior.
 
+function getColor(evento) {
+     
+   document.getElementsByClassName("selected")[0].classList.remove("selected");
+   evento.target.classList.add("selected");
+}
+
+let idColorPalette = document.getElementById("color-palette");
+idColorPalette.addEventListener("click", getColor);
 
 
 
@@ -64,15 +73,6 @@ function createBox() {
 // }
 
 
-// function getColor(event) {
-//   for (let index = 0; index < array.length; index +=1){
-//     console.log(array[index]);
-      
-//       array[index].classList.remove('selected')
-    
-//   }
-//   event.target.classList.add("selected")
-// }
 //  //const color = 0;
 // function reciveColor(event) {
 //   let styleColor = document.getElementsByClassName("selected")
