@@ -93,19 +93,17 @@ function changeBoard() {
   const inputSize = document.querySelector('#board-size').value;
   console.log(inputSize);
   console.log(inputSize);
-  if (inputSize > 0) {
-    if (inputSize < 5) {
-      removeBoard();
-      createBoard(5);
-    } else if (inputSize > 50) {
-      removeBoard();
-      createBoard(50);
-    } else {
-      removeBoard();
-      createBoard(inputSize);
-    }
-  } else {
+  if (inputSize < 0) {
     alert('Board inválido!');
+  } else if (inputSize < 5) {
+    removeBoard();
+    createBoard(5);
+  } else if (inputSize > 50) {
+    removeBoard();
+    createBoard(50);
+  } else {
+    removeBoard();
+    createBoard(inputSize);
   }
 }
 
