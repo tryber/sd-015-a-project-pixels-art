@@ -21,7 +21,7 @@
   max-width: 210px;
   margin: 0 auto;
   line-height: 0px;
-  border: 1px solid black;
+  margin-bottom: 20px;
 }
 
 .pixel {
@@ -36,4 +36,27 @@ button {
   margin: auto;
   display: block;
   margin-bottom: 20px;
+}
+
+input {
+  margin: auto;
+  display: inline-block;
+  margin-bottom: 20px;
+  width: 50px;
+  height: 10px;
+}
+
+#generate-board {
+  display: inline-block;
+  width: 45px;
+  height: 20px;
+}
+
+.board-text {
+  text-align: center;
+}
+
+.size-changer {
+  max-width: 107px;
+  margin: auto;
 }

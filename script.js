@@ -1,7 +1,28 @@
 const colors = ['black', 'red', 'green', 'blue'];
-const gridHeight = 5;
-const gridWidth = 5;
-const gridSize = gridHeight * gridWidth;
+let gridHeight = 5;
+let gridWidth = 5;
+let gridSize = gridHeight * gridWidth;
+
+function changeGridSize() {
+  const newGridValue = parseInt(document.querySelector('#board-size').value);
+  const newGridSize = newGridValue * newGridValue;
+  if (document.querySelector('#board-size').value === '') {
+    alert('Board inválido!');
+  } else {
+  const parent = document.querySelector('#pixel-board');
+  for (let i = 1; i <= gridSize; i += 1) {
+    parent.lastChild.remove();
+  }
+  gridSize = newGridSize;
+  createGrid();
+  for (let i = 0; i < gridSize; i += 1) {
+    const blockColors = document.querySelectorAll('.pixel')[i];
+    blockColors.addEventListener('click', setSelectedColor);
+    }  
+  }
+}
+
+document.querySelector('#generate-board').addEventListener('click', changeGridSize);
 
 function palette(colorArray) {
   for (let i = 0; i < colorArray.length; i += 1) {
@@ -26,26 +47,27 @@ function createGrid() {
     divG.className = 'pixel';
 
     parent.appendChild(divG);
+    divG.addEventListener('click', setSelectedColor);
   }
   document.querySelector('.pixel').classList.add('selectedColor');
 }
 
 createGrid();
 
-let toPaint = document.querySelector('.selected').classList[1];
+let paintColor = document.querySelector('.selected').classList[1];
 
-function setSelected() {
+function setSelected(event) {
   const selectedBlock = document.querySelector('.selected');
   const clickedBlock = event.currentTarget;
 
   if (clickedBlock.classList.contains('selected') === false) {
     clickedBlock.classList.add('selected');
     selectedBlock.classList.remove('selected');
-    toPaint = clickedBlock.classList[1];
+    paintColor = clickedBlock.classList[1];
   }
 }
 
-function setSelectedColor() {
+function setSelectedColor(event) {
   const selectedBlock = document.querySelector('.selectedColor');
   const clickedBlock = event.currentTarget;
 
@@ -53,7 +75,7 @@ function setSelectedColor() {
     clickedBlock.classList.add('selectedColor');
     selectedBlock.classList.remove('selectedColor');
   }
-  clickedBlock.style.backgroundColor = toPaint;
+  clickedBlock.style.backgroundColor = paintColor;
 }
 
 function createButton() {
@@ -74,9 +96,4 @@ createButton();
 for (let i = 0; i < colors.length; i += 1) {
   const blockColors = document.querySelectorAll('.color')[i];
   blockColors.addEventListener('click', setSelected);
-}
-
-for (let i = 0; i < gridSize; i += 1) {
-  const blockColors = document.querySelectorAll('.pixel')[i];
-  blockColors.addEventListener('click', setSelectedColor);
 }

@@ -9,17 +9,24 @@
 </head>
 
 <body>
-    <header>
-        <h1 id="title">Paleta de Cores</h1>
-    </header>
-    <section>
-        <div id="color-palette">
-        </div>
-        <button id="clear-board">
-        </button>
-        <div id="pixel-board">
-        </div>
-    </section>
+  <header>
+      <h1 id="title">Paleta de Cores</h1>
+  </header>
+  <section>
+    <div id="color-palette">
+    </div>
+    <p class="board-text">
+      Insira o tamanho do quadro (de 5 a 50):
+    </p>
+    <div class="size-changer">
+      <input type="number" min="1" id="board-size">
+      <button id="generate-board">VQV</button>
+    </div>
+    <button id="clear-board">
+    </button>
+    <div id="pixel-board">
+    </div>
+  </section>
 </body>
 
 <script src="script.js">
