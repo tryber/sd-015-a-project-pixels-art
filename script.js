@@ -43,10 +43,41 @@ window.onload = function() {
     corSelecionada.className = 'selected color';
 }
 
-function selected() {
+function selectedCor() {
+    let getCores = document.getElementsByClassName('color');
+    getCores[0].addEventListener('click', function(event) {
+        alert("clicou no preto");
+        getCores[0].className = 'color selected';
+        getCores[1].className = 'color';
+        getCores[2].className = 'color';
+        getCores[3].className = 'color';
+    });
+
+    getCores[1].addEventListener('click', function(event) {
+        getCores[1].className = 'color selected';
+        getCores[0].className = 'color';
+        getCores[2].className = 'color';
+        getCores[3].className = 'color';
+
+        alert("clicou no azul");
+    });
+
+    getCores[2].addEventListener('click', function(event) {
+        getCores[2].className = 'color selected';
+        getCores[0].className = 'color';
+        getCores[1].className = 'color';
+        getCores[3].className = 'color';
+        alert("clicou no amarelo");
+    });
+
+    getCores[3].addEventListener('click', function(event) {
+        getCores[3].className = 'color selected';
+        getCores[0].className = 'color';
+        getCores[1].className = 'color';
+        getCores[2].className = 'color';
+        alert("clicou no vermelho");
+    });
+
 
 }
-
-function selecionaCor() {
-
-}
+selectedCor();
