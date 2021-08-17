@@ -1,5 +1,7 @@
 const selectedColor = document.getElementById('color-palette');
 const pixelColor = document.getElementById('pixel-board');
+const clearAll = document.getElementById('clear-board');
+const pixels = document.getElementsByClassName('pixel');
 
 // Cria cor aleatória
 // Consulta: https://stackoverflow.com/questions/23095637/how-do-you-get-random-rgb-in-javascript
@@ -13,11 +15,11 @@ function randomColor() {
 
 // Primeira cor em preto, outras aleatórias
 window.onload = function putColor() {
-  document.getElementById('first').stylebackgroundColor = 'black';
-  document.getElementById('second').stylebackgroundColor = randomColor();
-  document.getElementById('third').stylebackgroundColor = randomColor();
-  document.getElementById('fourth').stylebackgroundColor = randomColor();
-}
+  document.getElementById('first').style.backgroundColor = 'black';
+  document.getElementById('second').style.backgroundColor = randomColor();
+  document.getElementById('third').style.backgroundColor = randomColor();
+  document.getElementById('fourth').style.backgroundColor = randomColor();
+};
 
 // Mudar cor selecionada
 // Consulta: https://www.w3schools.com/jsref/prop_element_classlist.asp
@@ -37,3 +39,11 @@ function colorPixel(event) {
 
 pixelColor.addEventListener('click', colorPixel);
 
+// Limpar o quadro
+function clearBoard() {
+  for (let i = 0; i < pixels.length; i += 1) {
+    pixels[i].style.backgroundColor = 'white';
+  }
+}
+
+clearAll.addEventListener('click', clearBoard);
