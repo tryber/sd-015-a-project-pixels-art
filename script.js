@@ -63,7 +63,6 @@ function sizeOfBoard(size) {
       createColumn.addEventListener('click', paintPixels);
     }
   }
-  console.log(document.querySelector('#board-size'));
 }
 
 const generateBoardBtn = document.getElementById('generate-board');
@@ -85,11 +84,12 @@ const sizeValue = document.getElementById('board-size');
 function generateBoard() {
   console.log(`${sizeValue.value}`);
   if (sizeValue.value !== '') {
+    board.innerHTML = '';
     boardCheck(sizeValue.value);
   } else {
     alert('Board inválido!');
-    // const sizeFixed = 5;
-    // sizeOfBoard(sizeFixed);
+    const sizeFixed = 5;
+    sizeOfBoard(sizeFixed);
   }
 }
 
