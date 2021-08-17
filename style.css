@@ -1,0 +1,47 @@
+    .estlTitle {
+        text-align: center;
+    }
+    
+    .estlBody {
+        background-color: LightGrey;
+    }
+    
+    .estilizaPaleta {
+        margin-top: 80px;
+        padding-left: 25%;
+    }
+    
+    .color {
+        margin-left: 20px;
+        display: inline-block;
+        border-style: solid;
+        border-width: 1px;
+        width: 140px;
+        height: 140px;
+    }
+    
+    .pixel {
+        border-style: solid;
+        border-width: 1px;
+        width: 40px;
+        height: 40px;
+        display: inline-block;
+        background-color: white;
+    }
+    
+    .estiloPixelPai {
+        margin-top: 40px;
+        padding-left: 40%;
+    }
+    
+    .selected {
+        background-color: black;
+    }
+    
+    .estlLimpa {
+        background-color: rgb(169, 169, 169);
+        margin-top: 40px;
+        width: 60px;
+        height: 40px;
+        margin-left: 45%;
+    }
