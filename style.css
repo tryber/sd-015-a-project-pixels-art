@@ -15,7 +15,9 @@
 /* .selected {
   border-width: 2px !important;
 } */
-
+#clear {
+  border: black solid 2px;
+}
 .pixel1 {
   background-color: black;
   border: solid 1px black;

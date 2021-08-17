@@ -32,9 +32,21 @@ function click() {
 }
 click()
 
+
+
+const pixelClean = document.getElementsByClassName('pixel');
 function clickTabela() {//função busca os pixels do board
-  const pixelBranco = document.getElementsByClassName('pixel');
-  for (let i = 0; i < pixelBranco.length; i += 1)
-    pixelBranco[i].addEventListener('click', pintaPixels);
+  //const pixelClean = document.getElementsByClassName('pixel');
+  for (let i = 0; i < pixelClean.length; i += 1)
+    pixelClean[i].addEventListener('click', pintaPixels);
 }
 clickTabela()
+
+function criaBotaoClear() { //não ta funcionando
+  let board = document.querySelector('.body');
+  let botaoClear = document.createElement('button');
+  botaoClear.innerText = 'clear-board';
+  botaoClear.id = 'clear-board';
+  board.appendChild(botaoClear);
+}
+criaBotaoClear()
