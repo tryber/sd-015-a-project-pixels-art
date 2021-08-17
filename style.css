@@ -1,8 +1,5 @@
 body {
   text-align: center;
-  background-image: linear-gradient(rgb(248, 249, 250), rgb(222, 226, 230), rgb(173, 181, 189));
-  background-repeat: no-repeat;
-  background-attachment: fixed; 
 }
 
 .color {
