@@ -67,6 +67,18 @@
         cor4.style.height = '50px'
         cor4.style.margin = '10px'
 
+        let botaoReset = document.createElement('button')
+            body.appendChild(botaoReset)
+            botaoReset.innerHTML = 'Limpar'
+            botaoReset.id = 'clear-board'
+            botaoReset.style.marginTop = '10px'
+            botaoReset.style.marginBottom = '10px'
+            botaoReset.addEventListener('click', function (){
+                for (let i = 0; i < pixelArr.length; i ++) {
+                    pixelArr[i].style.backgroundColor = 'white'
+                }
+            })
+        
         let quadro = document.createElement('table')
         quadro.id = 'pixel-board'
         body.appendChild(quadro)
@@ -141,10 +153,8 @@
                 pixelArr[i].style.backgroundColor = colorSelected
             })
             }
+
             
-
-
-
 
         
         
