@@ -95,11 +95,15 @@ let newFieldSize = '';
 // let checkSize = true;
 document.querySelector('#generate-board').addEventListener('click', () => {
   newFieldSize = document.querySelector('#board-size').value;
-  if (newFieldSize === '') {
+  if (newFieldSize === '' || newFieldSize < 0) {
     alert('Board inválido!');
-  } else {
-    createPixelBoard(newFieldSize);
+    return
+  } else if (newFieldSize < 5) {
+    newFieldSize = 5;    
+  } else if (newFieldSize > 50) {
+    newFieldSize = 50;
   }
+  createPixelBoard(newFieldSize);
 });
 
 window.onload = function startAllection() {
