@@ -1,5 +1,7 @@
 let elementMain = document.createElement('main');
 let pallete = document.createElement('section');
+const pal = document.getElementById('color-palette');
+
 
 const possColors = ['black', 'chartreuse', 'crimson', 'deepskyblue'];
 
@@ -16,11 +18,18 @@ function createPallete() {
     elementMain.appendChild(pallete);
 }
 
-function createColors() {
+function createColorClass() {
     for (let i = 1; i <= 4; i += 1) {
     let color = document.createElement('div');
     color.className = 'color';
     pallete.appendChild(color);
+    }
+}
+
+function setColors() {
+    const unlockedColors = document.getElementById('color-palette').children;
+    for (let ind = 0; ind < possColors.length; ind += 1) {
+        unlockedColors[ind].style.backgroundColor = possColors[ind];
     }
 }
 
@@ -45,34 +54,49 @@ function lineP(ln) {
     for (let i2 = 1; i2 <= 5; i2 += 1) {
         let getPB = document.getElementsByClassName('line')[ln];
         let pix = document.createElement('div');
-        pix.className = 'pixel clicked';
-        pix.id = 'a' + i2;
+        pix.className = 'pixel';
         getPB.appendChild(pix);
     }
 }
 
-function setColors() {
-    const unlockedColors = document.getElementById('color-palette').children;
-    for (let ind = 0; ind < possColors.length; ind += 1) {
-        unlockedColors[ind].style.backgroundColor = possColors[ind];
+function selec(action) {
+    const abcd = document.getElementsByClassName('color');
+    for (let index = 0; index < abcd.length; index += 1) {
+        abcd[index].addEventListener(action, function (action) {
+            document.querySelector('.selected').classList.remove('selected');
+            action.target.classList.add('selected');               
+        })
+        
+    }
+
+}
+
+function changeColor(clickP) {
+    const abcd = document.getElementsByClassName('pixel');
+    for (let index = 0; index < abcd.length; index += 1) {
+        abcd[index].addEventListener(clickP, function (clickP) {
+            const colP = document.getElementsByClassName('selected')[0].style.backgroundColor;
+            console.log(colP);
+            clickP.target.style.backgroundColor = colP;  
+        })
     }
 }
 
-// function settingBorder() {
-    //     for (let i = 0; i <= 3; i += 1) {
-        //     let colors = document.getElementsByClassName('color')[i];
-        //     colors.style.borderWidth = '1px';
-        //     }    
-        // }
-        
+
 window.onload = function start() {
+    
     document.querySelector('.color').classList.add('selected');
 }
-        
-createColorsPalleteTitle()
-createPallete()
-createColors()
-setColors()
-        // settingBorder()
-boardOfP()
-pixels()
+
+
+
+createColorsPalleteTitle();
+createPallete();
+createColorClass();
+setColors();
+
+boardOfP();
+pixels();
+selec('click')
+changeColor('click')
+
