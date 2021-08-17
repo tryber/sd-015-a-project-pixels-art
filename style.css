@@ -28,7 +28,7 @@ body {
 }
 
 #color-1 {
-  background-color: #000000;
+  background-color: black;
 }
 
 #color-2 {
@@ -36,11 +36,11 @@ body {
 }
 
 #color-3 {
-  background-color: #CB997E;
+  background-color: #Cb997e;
 }
 
 #color-4 {
-  background-color: #D00000;
+  background-color: #d00000;
 }
 
 .pixel {
