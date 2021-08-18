@@ -1,6 +1,24 @@
 window.onload = function() {
-        let black = document.getElementsByClassName("black")[0]
-        black.className = black.className + " selected"
+        let palette1 = document.querySelectorAll("#color-palette")[0]
+        palette1.className = palette1.className + " selected"
+        let hashtag1 = "#"
+        let randomColor1 = Math.floor(Math.random()*16777215).toString(16);
+        palette1.style.backgroundColor = hashtag1 + randomColor1;
+
+        let palette2 = document.querySelectorAll("#color-palette")[1]
+        let hashtag2 = "#"
+        let randomColor2 = Math.floor(Math.random()*16777215).toString(16);
+        palette2.style.backgroundColor = hashtag2 + randomColor2;
+
+        let palette3 = document.querySelectorAll("#color-palette")[2]
+        let hashtag3 = "#"
+        let randomColor3 = Math.floor(Math.random()*16777215).toString(16);
+        palette3.style.backgroundColor = hashtag3 + randomColor3;
+
+        let palette4 = document.querySelectorAll("#color-palette")[3]
+        let hashtag4 = "#"
+        let randomColor4 = Math.floor(Math.random()*16777215).toString(16);
+        palette4.style.backgroundColor = hashtag4 + randomColor4;
 }
 
 
@@ -55,13 +73,17 @@ function paintPixel(event) {
         pixel.style.backgroundColor = "white";
     } else {
         if (selecionado.className === "color black selected") {
-            pixel.style.backgroundColor = "black";
+            let cor = document.querySelector("#color-palette")
+            pixel.style.backgroundColor = cor.style.backgroundColor
         } else if (selecionado.className === "color yellow selected") {
-            pixel.style.backgroundColor = "yellow";
+            let cor = document.querySelectorAll("#color-palette")[1]
+            pixel.style.backgroundColor = cor.style.backgroundColor
         } else if (selecionado.className === "color red selected") {
-            pixel.style.backgroundColor = "red";
+            let cor = document.querySelectorAll("#color-palette")[2]
+            pixel.style.backgroundColor = cor.style.backgroundColor
         } else if (selecionado.className === "color purple selected") {
-            pixel.style.backgroundColor = "purple";
+            let cor = document.querySelectorAll("#color-palette")[3]
+            pixel.style.backgroundColor = cor.style.backgroundColor
         }
 }
 }
