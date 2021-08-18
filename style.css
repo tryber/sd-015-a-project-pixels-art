@@ -25,6 +25,7 @@ body {
   height: 3rem;
   width: 3rem;
   border: 1px solid black;
+  border-radius: 10px;
 }
 
 .pixel {
@@ -35,4 +36,13 @@ body {
   margin-left: 1px;
   margin-bottom: 1px;
   background-color: white;
+}
+
+#clear-board {
+  width: 6rem;
+  height: 2rem;
+  border-radius: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 3.4rem;
 }

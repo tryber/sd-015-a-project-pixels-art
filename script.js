@@ -62,3 +62,12 @@ function paintPixels(event) {
 
 /* Add evento para chamar a função */
 pixelFrame.addEventListener('click', paintPixels);
+
+/* Guarda o elemento botão */
+const buttonClear = document.getElementById('clear-board');
+
+/* Retorna para estado natural */
+function clearBoard() {
+  window.location.reload();
+}
+buttonClear.addEventListener('click', clearBoard);
