@@ -102,7 +102,7 @@ function alteraTamanho(event) {
         }
         createSpans();
     } else if (inputValue === "" | inputValue < 5 | typeof inputValue === "string") {
-        alert("Board inválido")
+        alert("Board inválido!")
         function createSpans() {
             let spanNumber = 5;
             for (let index = 1; index <= (spanNumber * spanNumber) + (spanNumber - 1); index += 1) {
