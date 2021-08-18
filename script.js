@@ -10,10 +10,10 @@ const colorThree = document.getElementsByClassName('color')[2];
 const colorFour = document.getElementsByClassName('color')[3];
 
 /* Define o backgroundColor dos elementos da paleta de cores */
-colorOne.style.backgroundColor = 'black'; 
-colorTwo.style.backgroundColor = '#023047'; 
-colorThree.style.backgroundColor = '#cb997e'; 
-colorFour.style.backgroundColor = '#d00000'; 
+colorOne.style.backgroundColor = 'black';
+colorTwo.style.backgroundColor = '#023047';
+colorThree.style.backgroundColor = '#cb997e';
+colorFour.style.backgroundColor = '#d00000';
 
 /* Funções para seleção de cor na paleta de cores */
 function clickColorOne() {
@@ -54,7 +54,7 @@ colorFour.addEventListener('click', clickColorFour);
 const pixelFrame = document.getElementById('pixel-board');
 
 /* Define como backgroudColor do pixel o backgroundColor do elemento selecionado na paleta */
-function paintPixels(event) { 
+function paintPixels(event) {
   const selectedPixel = event.target;
   const selectorColor = document.querySelector('.selected').style.backgroundColor;
   selectedPixel.style.backgroundColor = selectorColor;
