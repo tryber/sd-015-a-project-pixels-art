@@ -93,4 +93,13 @@ function createTable() {
 
 createTable();
 
+// quando eu aperto o botão ele entra na função cleanPixel e percorre todos os pixel colocando backgroudColor white
+let buttonClear = document.getElementById("clear-board");
+buttonClear.addEventListener("click", cleanPixel);
+function cleanPixel(){
+  for(i=0; i<25;i++){
+    let colorwhite = document.querySelectorAll(".pixel")[i]
+    colorwhite.style.backgroundColor = "white";
+  }
 
+}
