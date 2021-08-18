@@ -1,4 +1,8 @@
 const quadro = document.getElementById('pixel-board');
+let firstColor = document.getElementById('vermelha');
+let secondColor = document.getElementById('amarela');
+let thirdColor = document.getElementById('verde');
+let colorPalette = document.getElementById('color-palette');
 
 function criarquadro() {
  for (let index = 0; index < 25; index += 1) {
@@ -59,3 +63,12 @@ function criatButton(string){
         color.style.backgroundColor = 'white';
     }
   }
+
+window.onload = function colorGenerate() {
+  let random1 = '#'+Math.floor(Math.random()*16777215).toString(16);
+  let random2 = '#'+Math.floor(Math.random()*16777215).toString(16);
+  let random3 = '#'+Math.floor(Math.random()*16777215).toString(16);
+  firstColor.style.backgroundColor = random1;
+  secondColor.style.backgroundColor  = random2;
+  thirdColor.style.backgroundColor  = random3;
+}
