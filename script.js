@@ -1,6 +1,8 @@
 let colorDiv = document.querySelectorAll('.color');
 let pixelBord = document.getElementById('pixel-board');
 let colorSelected = document.getElementsByTagName('div')[0];
+let buttonClear = document.getElementById('button-clear');
+let pixel = document.getElementsByClassName('pixel');
 let columnDiv = 5;
 let lineDiv = 5;
 
@@ -10,7 +12,7 @@ function randomColor() {
   let b = Math.floor(Math.random() * 256);
 
   return `rgb(${r}, ${g}, ${b})`; //https://wallacemaxters.com.br/blog/2021/02/20/como-gerar-cores-aleatorias-no-javascript
-}
+} // requisito 12 ok
 
 function changeColorDiv() {
   for (let index = 0; index < colorDiv.length; index += 1) {
@@ -18,7 +20,6 @@ function changeColorDiv() {
       colorDiv[0].style.backgroundColor = 'black';
     }
     colorDiv[index].style.backgroundColor = randomColor();
-    console.log(colorDiv[index]);
   }
 }
 changeColorDiv();
@@ -62,7 +63,15 @@ pixelBord.addEventListener('click', function (event) {
   }
 });
 
-// for (let index = 0; index < pixelBordChildren.length; index += 1) {
-//   pixelBordChildren[index]
-
-// }
+function addButtonClear() {
+  let benjaminButton = document.createElement('button');
+  benjaminButton.id = 'clear-board';
+  benjaminButton.innerText = 'Limpar';
+  buttonClear.appendChild(benjaminButton);
+  benjaminButton.addEventListener('click', function () {
+    for (let index = 0; index < pixel.length; index += 1) {
+      pixel[index].style.backgroundColor = 'white';
+    }
+  });
+}
+addButtonClear(); //
