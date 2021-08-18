@@ -1,32 +1,49 @@
-/* Repositório de  ferrazmichel consultado. https://github.com/tryber/sd-015-a-project-pixels-art/commit/da26befb0161746bf1a496fffc367c104efdba0f */
+//*Repositório de italosergio consultado, link: https://github.com/tryber/sd-015-a-project-pixels-art/blob/ee8bebadbe0f903ec1c4482f1ce454ad51aa9f7a/style.css */
 
+#title {
 
-.pixel {background-color: white; border: 1px solid black;  height: 40px;
-  width: 40px; }
-
-#pixel-board{width: 200px; height: 200px;}
-
-.linha{display: table-cell}
+}
 
 .color {
-  border: 1px solid black;
-  display: inline-block;
-  height: 50px;
-  width: 50px;
+    border: 1px solid black;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
 }
 
-#cor2 {
-  background-color: blue;
+#black {
+    background-color: black;
 }
 
-#cor3 {
-  background-color: green;
+#red {
+    background-color: red;
 }
 
-#cor4 {
-  background-color: yellow;
+#yellow {
+    background-color: yellow;
 }
 
-#preto {
-  background-color: black;
-} 
+#green {
+    background-color: green
+}
+
+.pixel {
+    border: 1px solid black;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    background-color: white;
+
+}
+
+#pixel-board { width: 270px; height: 1070px;
+                 
+}
+
+
+
+.selected {
+    
+}
+
+
