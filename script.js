@@ -10,7 +10,6 @@ function botaCor (pixel) {
 }
 botaoApagar.addEventListener ('click', apagarTudo)
 function apagarTudo () {
-  let todosPixels = document.querySelectorAll('.pixel') 
-  todosPixels.style.removeAttribute('background-color')
-  
+  let todosPixels = document.querySelectorAll('.pixel')
+  for (let index = 0; index > todosPixels.length; index += 1)
 }
