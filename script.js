@@ -3,11 +3,14 @@
 window.onload = colorblack
 
 function colorblack(){
-let element = document.querySelector(".color")
-//na lista de classes de element add selected
-// source https://www.w3schools.com/howto/howto_js_add_class.asp  -------  https://developer.mozilla.org/pt-BR/docs/Web/API/Element/classList
-element.classList.add("selected");
-return colorblack
+  let element = document.querySelector(".color")
+  //na lista de classes de element add selected
+  // source https://www.w3schools.com/howto/howto_js_add_class.asp  -------  https://developer.mozilla.org/pt-BR/docs/Web/API/Element/classList
+  element.classList.add("selected");
+  //troca a cor do backgroud-color do selected para acessa-lo abaixo
+  let selectiontest = document.querySelector(".selected")
+  selectiontest.style.backgroundColor = "black";
+  return colorblack
 }
 
 //Source: https://www.mundojs.com.br/2018/01/11/diferenca-de-classname-classlist-e-setattribute/
@@ -28,6 +31,9 @@ function clickBlack() {
     buttonRed.className = 'color';
     buttonGreen.className = 'color';
     buttonBrown.className = 'color';
+    //troca a cor do backgroud-color do selected para acessa-lo abaixo
+    let selectiontest = document.querySelector(".selected")
+    selectiontest.style.backgroundColor = "black";
 
 }
 function clickRed() {
@@ -35,13 +41,19 @@ function clickRed() {
     buttonRed.className = 'color selected';
     buttonGreen.className = 'color';
     buttonBrown.className = 'color';
-
+    //troca a cor do backgroud-color do selected para acessa-lo abaixo
+    let selectiontest = document.querySelector(".selected")
+    selectiontest.style.backgroundColor = "red";
 }
 function clickGreen() {
     buttonBlack.className = 'color';
     buttonRed.className = 'color';
     buttonGreen.className = 'color selected';
     buttonBrown.className = 'color';
+    //troca a cor do backgroud-color do selected para acessa-lo abaixo
+    let selectiontest = document.querySelector(".selected")
+    selectiontest.style.backgroundColor = "green";
+
 
 }
 function clickBrown() {
@@ -49,6 +61,9 @@ function clickBrown() {
     buttonRed.className = 'color';
     buttonGreen.className = 'color';
     buttonBrown.className = 'color selected';
+    //troca a cor do backgroud-color do selected para acessa-lo abaixo
+    let selectiontest = document.querySelector(".selected")
+    selectiontest.style.backgroundColor = "brown";
 }
 
 
@@ -65,7 +80,17 @@ function createTable() {
       const pixelColumn = document.createElement('div');
       pixelLine.appendChild(pixelColumn);
       pixelColumn.className = 'pixel';
+      //cria coloração dos pixels
+      pixelColumn.addEventListener('click', fillPixel);
+      function fillPixel(event) {
+        const selected = document.querySelector('.selected');
+        const color = selected.style.backgroundColor;
+        event.target.style.backgroundColor = color;
+      }
     }
   }
 }
+
 createTable();
+
+
