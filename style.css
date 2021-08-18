@@ -1,26 +1,30 @@
 body {
   margin: 0%;
   color: #484538;
-  background-color: #f8f8f8;
   text-align: center;
-}
-
-header {
-  background-color: #BDD5EA;
-  margin: 30px;
+  background-image: url('background.png');
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 #title {
-  margin: 0%;
+  font-family: 'Gloria Hallelujah', cursive;
+  font-size: 4rem;
   line-height: 60px;
 }
 
+#painel-container {
+  margin: 30px auto;
+  width: 500px;
+  padding: 20px;
+  background-color: rgb(224, 208, 209);
+  box-shadow: 10px 10px 1px #484538;
+}
+
 #color-palette {
-  background-color: white;
   display: inline-block;
   height: 70px;
-  padding: 10px 35px 30px;
-  margin-bottom: 30px;
+  padding: 10px 35px;
   margin: 0px auto 30px;
 }
 
@@ -39,48 +43,47 @@ header {
   margin: 0px 20px;
   font-size: 10px;
   display: inline-block;
+  box-shadow: 10px 10px 1px #484538;
 }
 
 #c1 {
-  background-color: #000000;
-  color: white;
+  color: black;
 }
 
 #c2 {
-  background-color: #642CA9;
   color: white;
 }
 
 #c3 {
-  background-color: #82D173;
   color: black;
 }
 
 #c4 {
-  background-color: #FFB8D1;
   color: black;
 }
 
 #pixel-board div div {
   display: inline-block;
+  box-shadow: 10px 10px 1px #484538;
+  margin-bottom: 30px;
 }
 
 #clear-board {
   display: block;
-  margin: 0px auto 30px;
+  margin: 0px auto 10px;
 }
 
+button {
+  margin: 10px 5px;
+  border: 0;
+  padding: 9px 15px;
+  background-color: white;
+  box-shadow: 10px 10px 1px #484538;
+}
 
-
-
-
-
-
-footer {
-  bottom: 0%;
-  background-color: #BDD5EA;
-  margin: 30px;
-  text-align: center;
-  height: 60px;
-  text-align: center;
+input {
+  margin: 0;
+  border: 0;
+  padding: 10px 10px 9px;
+  box-shadow: 10px 10px 1px #484538;
 }
