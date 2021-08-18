@@ -1,35 +1,63 @@
 const colorPalette = document.getElementById('color-palette');
-const pixelBoard = document.getElementById('pixel-board');
 const color = document.getElementsByClassName('color');
 const pixel = document.getElementsByClassName('pixel');
 const clearBtn = document.getElementById('clear-board');
-const initialSelection = document.querySelectorAll('.color');
-let selectedColor = 'black';
+const initialSelection = document.getElementsByClassName('color');
+const btnBSize = document.querySelector('#generate-board');
+const boardSize = document.querySelector('#board-size');
+let pixelBoard = document.querySelector('#pixel-board');
+let selectedColor;
+let colorList = ['black'];
 
 window.onload = function() {
   for (let i = 0; i < initialSelection.length; i += 1) {
     if (initialSelection[i].style.backgroundColor === 'black') {
       initialSelection[i].classList.add('selected');
+      selectedColor = initialSelection[i].style.backgroundColor;
     } else {
       initialSelection[0].classList.add('selected');
     }
   }
+};
+
+
+function randomColor() {
+  let colorCode = '0123456789ABCDEF';
+  let randomColor = '#';
+  for (let i = 0; i < 6; i += 1) {
+    randomColor += colorCode[Math.floor(Math.random() * 16)];
+  }
+  return randomColor;
 }
 
 for (let i = 0; i < 4; i += 1) {
-  let createColor = document.createElement('div');
-  let colors = ['black', 'orange', 'red', 'green'];
-  createColor.className = 'color';
-  colorPalette.appendChild(createColor);
-  createColor.style.backgroundColor = colors[i];
+  colorList.push(randomColor());
 }
 
-for (let i = 0; i < 25; i += 1) {
-  let pixelBoard = document.getElementById('pixel-board');
-  let createPixel = document.createElement('div');
-  createPixel.className = 'pixel';
-  pixelBoard.appendChild(createPixel);
-  createPixel.style.backgroundColor = 'white';
+for (let i = 0; i < 4; i += 1) {
+  const createColor = document.createElement('div');
+  createColor.className = 'color';
+  colorPalette.appendChild(createColor);
+  createColor.style.backgroundColor = colorList[i];
+}
+
+function fillPixelBoard(numberOfPixels) {
+  for (let i = 0; i < numberOfPixels; i += 1) {
+    let pixelBoard = document.getElementById('pixel-board');
+    let createPixel = document.createElement('div');
+    createPixel.className = 'pixel';
+    pixelBoard.appendChild(createPixel);
+    pixel[i].addEventListener('click', function() {
+      pixel[i].style.backgroundColor = selectedColor;
+    })
+  }
+}
+fillPixelBoard(25);
+
+function deletePixelBoard() {
+  for (let i = pixel.length - 1; i >= 0; i -= 1) {
+    pixelBoard.removeChild(pixel[i]);
+  }
 }
 
 for (let i = 0; i < color.length; i += 1) {
@@ -39,19 +67,39 @@ for (let i = 0; i < color.length; i += 1) {
     }
     color[i].classList.add('selected');
     selectedColor = color[i].style.backgroundColor;
-  })
-}
-
-for (let i = 0; i < pixel.length; i += 1) {
-  pixel[i].addEventListener('click', function() {
-    let selectedPixel = pixel[i];
-    selectedPixel.style.backgroundColor = selectedColor;
-    console.log(selectedColor);
+    console.log(`${selectedColor} selecionado`)
   })
 }
 
 clearBtn.addEventListener('click', function() {
   for (let i = 0; i < pixel.length; i += 1) {
     pixel[i].style.backgroundColor = 'white';
+  }
+})
+
+function minMaxBSize(size) {
+  if (size.value < 5) {
+    deletePixelBoard();
+    fillPixelBoard(Math.pow(5, 2));
+    pixelBoard.style.setProperty('grid-template-columns', `repeat(5, 0fr)`);
+  } else if (size.value > 50) {
+    deletePixelBoard();
+    fillPixelBoard(Math.pow(50, 2));
+    pixelBoard.style.setProperty('grid-template-columns', `repeat(50, 0fr)`);
+  }
+  alert('número de pixels deve estar entre 5 e 50')
+}
+
+btnBSize.addEventListener('click', function() {
+  console
+  let sqBoardSize = Math.pow(boardSize.value, 2);
+  if (boardSize.value === '') {
+    alert('Board inválido!')
+  } else if (boardSize.value < 5 || boardSize.value > 50) {
+    minMaxBSize(boardSize)
+  } else {
+    deletePixelBoard();
+    fillPixelBoard(sqBoardSize);
+    pixelBoard.style.setProperty('grid-template-columns', 'repeat(' + boardSize.value + ', 0fr)');
   }
 })

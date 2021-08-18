@@ -16,17 +16,18 @@
 }
 
 #pixel-board {
-  height: 200px;
-  width: 200px;
-  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(5, 0fr);
+  justify-content: center;
 }
 
 .pixel {
   height: 40px;
   width: 40px;
+  margin: auto;
+  align-content: center;
+  background-color: white;
   border: 1px solid black;
-  display: inline-table;
-  margin: -3px -1px;
 }
 
 #btn-wrapper {
@@ -35,4 +36,11 @@
   text-align: center;
   margin: auto;
   padding: 20px;
+}
+
+#bsize-wrapper {
+  display: block;
+  text-align: center;
+  margin: auto;
+  padding: auto;
 }

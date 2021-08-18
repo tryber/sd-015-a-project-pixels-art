@@ -11,9 +11,16 @@
 
 <body>
   <h1 id='title'>'Paleta de Cores'</h1>
-  <div id='color-palette'></div>
+  <div id='color-palette'>
+    <h3>Escolha a cor</h3>
+  </div>
+  <div id='bsize-wrapper'>
+    <h3>Insira o número de pixels da tabela</h3>
+    <input type='number' id="board-size" min='1' max='50'>
+    <button type='button' id='generate-board'>VQV</button>
+  </div>
   <div id='btn-wrapper'>
-    <button id='clear-board'>'Limpar'</button>
+    <button type='button' id='clear-board'>Limpar</button>
   </div>
   <div id='pixel-board'></div>
   <script src='script.js'></script>
