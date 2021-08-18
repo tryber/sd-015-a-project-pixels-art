@@ -1,0 +1,68 @@
+#color-palette {
+  display: block;
+  border: 2px solid black;
+  height: 70px;
+  width: 100%;
+}
+
+#color-palette ul {
+  vertical-align: middle;
+  margin: 10px 0 0 10px;
+  padding: 0;
+}
+
+.color {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  margin: 0 10px 0 0;
+  border-radius: 50%;
+}
+
+main {
+  margin-top: 10px;
+}
+
+.line {
+  display: block;
+  margin: 0;
+  padding: 0;
+  height: 40px;
+}
+
+.pixel {
+  background-color: white;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  border: 1px solid black;
+  margin: 0;
+}
+
+#controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  margin-bottom: 10px;
+  width: fit-content;
+  height: 25px;
+  line-height: 25px;
+}
+
+#controls button {
+  margin: 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#currentColorField {
+  display: inline-block;
+  font-size: 12px;
+  height: 15px;
+  line-height: 15px;
+  width: fit-content;
+  resize: none;
+  font-weight: 900;
+}

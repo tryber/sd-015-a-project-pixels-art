@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Pixels Art</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 id="title">Paleta de Cores</h1>
+    <textarea name="currentColorField" id="currentColorField" readonly="true" disabled="true"></textarea>
+    <section id="color-palette">
+      <ul></ul>
+    </section>
+    <main>
+      <section id="controls">
+        <button id="clear-board">Limpar</button>
+        <span>Tamanho:</span>
+        <input type="number" id="board-size" min="1" placeholder="5-50">
+        <button id="generate-board">VQV</button>
+      </section>
+      <section id="pixel-board"></section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
