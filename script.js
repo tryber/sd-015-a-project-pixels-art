@@ -1,9 +1,26 @@
-// código das cores em HEX
+function randomizeColor() {
+  const r = Math.ceil(Math.random() * 254);
+  const g = Math.ceil(Math.random() * 254);
+  const b = Math.ceil(Math.random() * 254);
+  const randomColor = `rgb(${r}, ${g}, ${b})`;
+  console.log(randomColor);
+  if (randomColor === 'rgb(255, 255, 255)') {
+    console.log('Cannot generate white');
+    randomizeColor();
+  } else {
+    return randomColor;
+  }
+}
+
+// código das cores em RGB
 const colorPalette = {
-  color0: '#000000', // black
-  color1: '#FF0000', // red
-  color2: '#00FF00', // green
-  color3: '#0000FF', // blue
+  color0: 'rgb(0, 0, 0)', // black
+  color1: randomizeColor(),
+  color2: randomizeColor(),
+  color3: randomizeColor(),
+  // color4: 'rgb(255, 0, 0)', // red
+  // color5: 'rgb(0, 255, 0)', // green
+  // color6: 'rgb(0, 0, 255)', // blue
 };
 const boardSizeField = document.querySelector('#board-size');
 const currentColorText = document.querySelector('#currentColorField');
@@ -92,14 +109,13 @@ function resetBlackSelection() {
 }
 
 let newFieldSize = '';
-// let checkSize = true;
 document.querySelector('#generate-board').addEventListener('click', () => {
   newFieldSize = document.querySelector('#board-size').value;
   if (newFieldSize === '' || newFieldSize < 0) {
     alert('Board inválido!');
-    return
+    newFieldSize = 5;
   } else if (newFieldSize < 5) {
-    newFieldSize = 5;    
+    newFieldSize = 5;
   } else if (newFieldSize > 50) {
     newFieldSize = 50;
   }
