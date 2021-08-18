@@ -1,3 +1,9 @@
+/* eslint-disable func-names */
+/* eslint-disable no-loop-func */
+/* eslint-disable prefer-template */
+/* eslint-disable no-restricted-properties */
+/* eslint-disable prefer-const */
+/* eslint-disable prefer-arrow-callback */
 const colorPalette = document.getElementById('color-palette');
 const color = document.getElementsByClassName('color');
 const pixel = document.getElementsByClassName('pixel');
@@ -9,25 +15,18 @@ let pixelBoard = document.querySelector('#pixel-board');
 let selectedColor;
 let colorList = ['black'];
 
-window.onload = function() {
-  for (let i = 0; i < initialSelection.length; i += 1) {
-    if (initialSelection[i].style.backgroundColor === 'black') {
-      initialSelection[i].classList.add('selected');
-      selectedColor = initialSelection[i].style.backgroundColor;
-    } else {
-      initialSelection[0].classList.add('selected');
-    }
-  }
+window.onload = function () {
+  initialSelection[0].classList.add('selected');
+  selectedColor = initialSelection[0].style.backgroundColor;
 };
-
 
 function randomColor() {
   let colorCode = '0123456789ABCDEF';
-  let randomColor = '#';
+  let rndColor = '#';
   for (let i = 0; i < 6; i += 1) {
-    randomColor += colorCode[Math.floor(Math.random() * 16)];
+    rndColor += colorCode[Math.floor(Math.random() * 16)];
   }
-  return randomColor;
+  return rndColor;
 }
 
 for (let i = 0; i < 4; i += 1) {
@@ -47,9 +46,9 @@ function fillPixelBoard(numberOfPixels) {
     let createPixel = document.createElement('div');
     createPixel.className = 'pixel';
     pixelBoard.appendChild(createPixel);
-    pixel[i].addEventListener('click', function() {
+    pixel[i].addEventListener('click', function () {
       pixel[i].style.backgroundColor = selectedColor;
-    })
+    });
   }
 }
 fillPixelBoard(25);
@@ -61,45 +60,44 @@ function deletePixelBoard() {
 }
 
 for (let i = 0; i < color.length; i += 1) {
-  color[i].addEventListener('click', function() {
+  color[i].addEventListener('click', function () {
     for (let i = 0; i < color.length; i += 1) {
       color[i].classList.remove('selected');
     }
     color[i].classList.add('selected');
     selectedColor = color[i].style.backgroundColor;
-    console.log(`${selectedColor} selecionado`)
-  })
+    console.log(`${selectedColor} selecionado`);
+  });
 }
 
-clearBtn.addEventListener('click', function() {
+clearBtn.addEventListener('click', function () {
   for (let i = 0; i < pixel.length; i += 1) {
     pixel[i].style.backgroundColor = 'white';
   }
-})
+});
 
 function minMaxBSize(size) {
   if (size.value < 5) {
     deletePixelBoard();
     fillPixelBoard(Math.pow(5, 2));
-    pixelBoard.style.setProperty('grid-template-columns', `repeat(5, 0fr)`);
+    pixelBoard.style.setProperty('grid-template-columns', 'repeat(5, 0fr)');
   } else if (size.value > 50) {
     deletePixelBoard();
     fillPixelBoard(Math.pow(50, 2));
-    pixelBoard.style.setProperty('grid-template-columns', `repeat(50, 0fr)`);
+    pixelBoard.style.setProperty('grid-template-columns', 'repeat(50, 0fr)');
   }
-  alert('número de pixels deve estar entre 5 e 50')
+  alert('número de pixels deve estar entre 5 e 50');
 }
 
-btnBSize.addEventListener('click', function() {
-  console
+btnBSize.addEventListener('click', function () {
   let sqBoardSize = Math.pow(boardSize.value, 2);
   if (boardSize.value === '') {
-    alert('Board inválido!')
+    alert('Board inválido!');
   } else if (boardSize.value < 5 || boardSize.value > 50) {
-    minMaxBSize(boardSize)
+    minMaxBSize(boardSize);
   } else {
     deletePixelBoard();
     fillPixelBoard(sqBoardSize);
     pixelBoard.style.setProperty('grid-template-columns', 'repeat(' + boardSize.value + ', 0fr)');
   }
-})
+});
