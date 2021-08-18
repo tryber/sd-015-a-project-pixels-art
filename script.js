@@ -63,6 +63,17 @@ function pintarPixel() {
   }
 }
 
+// funções que serão responsaveis para pintar cada pixel do quadro
+// função que recupera a classe e pega a cor que está com ela e atribui a cor de fundo nos pixels com o event
+// target, que é responsavel por pintar cada quadradinho
+function pegarEstilo(event) {
+  const evento = event.target;
+  const pegarOEstiloSelecionado = document.querySelector('.selected');
+  const estilo = window.getComputedStyle(pegarOEstiloSelecionado, null)
+    .getPropertyValue('background-color');
+  evento.style.backgroundColor = estilo;
+}
+
 function criarOQuadroDeArt(numero) {
   const divDoQuadro = document.querySelector('#pixel-board');
   divDoQuadro.innerHTML = ''; // limpa tag html; isso vai ser para função de mudar o board
@@ -76,17 +87,6 @@ function criarOQuadroDeArt(numero) {
   pintarPixel(); // adiciona os eventos no pixel depois de cria-los;
 }
 criarOQuadroDeArt(5);
-
-// funções que serão responsaveis para pintar cada pixel do quadro
-// função que recupera a classe e pega a cor que está com ela e atribui a cor de fundo nos pixels com o event
-// target, que é responsavel por pintar cada quadradinho
-function pegarEstilo(event) {
-  const evento = event.target;
-  const pegarOEstiloSelecionado = document.querySelector('.selected');
-  const estilo = window.getComputedStyle(pegarOEstiloSelecionado, null)
-    .getPropertyValue('background-color');
-  evento.style.backgroundColor = estilo;
-}
 
 // aqui vamos criar um botão para colocar branco em todas as divs do quadro de pixels
 
@@ -148,7 +148,7 @@ function criarBotaoVqv() {
   const botaoVqv = document.createElement('button');
   botaoVqv.id = 'generate-board';
   botaoVqv.innerHTML = 'VQV';
-  botaoVqv.addEventListener('click', mudarBoard)
+  botaoVqv.addEventListener('click', mudarBoard);
   divDoBotao.appendChild(botaoVqv);
 }
 criarBotaoVqv();
