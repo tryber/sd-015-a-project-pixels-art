@@ -85,8 +85,9 @@ function alteraTamanho(event) {
         quadro.removeChild(actualChild)
     }
     let inputValue = inputWidth.value
-    if (parseInt(inputValue) >= 5 && parseInt(inputValue) <= 50 && inputValue.length > 0) {
+    if (parseInt(inputValue) >= 5 && parseInt(inputValue) <= 50 && parseInt(inputValue).length == undefined) {
         function createSpans() {
+            inputValue = parseInt(inputValue)
             let spanNumber = inputValue;
             for (let index = 1; index <= (spanNumber * spanNumber) + (spanNumber - 1); index += 1) {
                 if (index % (spanNumber + 1) === 0) {
@@ -100,7 +101,21 @@ function alteraTamanho(event) {
             }
         }
         createSpans();
-    } else if (inputValue === "") {
+    } else if (inputValue === "" | inputValue < 5 | typeof inputValue === "string") {
         alert("Board inválido")
+        function createSpans() {
+            let spanNumber = 5;
+            for (let index = 1; index <= (spanNumber * spanNumber) + (spanNumber - 1); index += 1) {
+                if (index % (spanNumber + 1) === 0) {
+                    let br = document.createElement('br');
+                    quadro.appendChild(br);
+                } else {
+                    let span = document.createElement('span');
+                    span.className = "pixel"
+                    quadro.appendChild(span);
+                }
+            }
+        }
+        createSpans();
     }
 }
