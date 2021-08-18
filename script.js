@@ -1,9 +1,7 @@
 window.onload = function() {
         let palette1 = document.querySelectorAll("#color-palette")[0]
         palette1.className = palette1.className + " selected"
-        let hashtag1 = "#"
-        let randomColor1 = Math.floor(Math.random()*16777215).toString(16);
-        palette1.style.backgroundColor = hashtag1 + randomColor1;
+        palette1.style.backgroundColor = "black";
 
         let palette2 = document.querySelectorAll("#color-palette")[1]
         let hashtag2 = "#"
