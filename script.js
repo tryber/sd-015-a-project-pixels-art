@@ -1,5 +1,5 @@
 
-
+window.onload = function(){ 
   const listOfColors = document.querySelectorAll('.color');
 for(let index=0;index<listOfColors.length;index+=1){
   listOfColors[index].addEventListener('click', function(event){
@@ -11,8 +11,6 @@ for(let index=0;index<listOfColors.length;index+=1){
    }
 }
   )}
-    
-  window.onload = function(){ 
     const pixels = document.querySelectorAll('.pixel');
     for(let index=0;index<pixels.length;index+=1){
     pixels[index].addEventListener('click', setColor);
@@ -22,7 +20,14 @@ for(let index=0;index<listOfColors.length;index+=1){
     event.target.style.backgroundColor = getColor
     }
     } 
-  }
+    const deleteAll = document.querySelector('#clear-board');
+    deleteAll.addEventListener('click', clearAll); 
+    function clearAll(){
+      const pixels = document.querySelectorAll('.pixel');
+      for(let index=0;index<pixels.length;index+=1)
+      pixels[index].style.backgroundColor = 'white';
+    }
+}
 
 
  
