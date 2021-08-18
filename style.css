@@ -8,22 +8,7 @@
   width: 40px;
   height: 40px;
   display: inline-block;
-}
-
-.blue {
-  background-color: blue;
-}
-
-.green {
-  background-color: green;
-}
-
-.red {
-  background-color: red;
-}
-
-.black {
-  background-color: black;
+  cursor: pointer;
 }
 
 .pixel {
@@ -32,6 +17,7 @@
   height: 40px;
   display: inline-block;
   background-color: white;
+  cursor: pointer;
 }
 
 .quad {
