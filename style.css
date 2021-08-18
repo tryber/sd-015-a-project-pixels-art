@@ -9,3 +9,14 @@
     display: inline-block;
     border: solid black 1px;
 }
+.pixel{
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    background-color:white;
+    margin: 0px 5px 0px 0px;
+}
+
+#pixel-board {
+    width: 150px;
+}

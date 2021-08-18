@@ -24,4 +24,25 @@
   }
 
   coresPadrao()
-  
+
+  function criarPixels() {
+    let paletaDeCores = document.getElementById('pixel-board');
+
+    for (let i = 0; i < 25; i+= 1) {
+      let filho = document.createElement('div')
+      filho.classList.add('pixel')
+      paletaDeCores.appendChild(filho);
+    }
+  };
+
+  criarPixels()
+
+  // function criarLinhas() {
+  //   let paletaLis = document.querySelectorAll('#pixel-board div')
+  //   for (let index = 0; index < paletaLis.length; index +=1) {
+  //     let posicaoAtual = paletaLis[index]
+  //     if (index == 4) {
+  //       posicaoAtual.classList.add('pixel');
+  //     }
+  //   }
+  // };
