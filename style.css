@@ -18,7 +18,11 @@
 
 #pixel-board
 
+.linha{
+    height: 40px;}
+
 .pixel{
+    margin-left: -1px;
     display: inline-block;
     border: 1px solid black;
     height: 40px;
