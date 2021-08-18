@@ -48,6 +48,17 @@ color2.addEventListener('click', trocarClasseSelected);
 color3.addEventListener('click', trocarClasseSelected);
 color4.addEventListener('click', trocarClasseSelected);
 
+// funções que serão responsaveis para pintar cada pixel do quadro
+// função que recupera a classe e pega a cor que está com ela e atribui a cor de fundo nos pixels com o event
+// target, que é responsavel por pintar cada quadradinho
+function pegarEstilo(event) {
+  const evento = event.target;
+  const pegarOEstiloSelecionado = document.querySelector('.selected');
+  const estilo = window.getComputedStyle(pegarOEstiloSelecionado, null)
+    .getPropertyValue('background-color');
+  evento.style.backgroundColor = estilo;
+}
+
 // criar os quadros de pixels
 
 // função getComputedStyle pega o estilo que tem dentro de uma classe, id ou elemento e guarda dentro de si
@@ -61,17 +72,6 @@ function pintarPixel() {
     const odia = pegarPixel[index];
     odia.addEventListener('click', pegarEstilo);
   }
-}
-
-// funções que serão responsaveis para pintar cada pixel do quadro
-// função que recupera a classe e pega a cor que está com ela e atribui a cor de fundo nos pixels com o event
-// target, que é responsavel por pintar cada quadradinho
-function pegarEstilo(event) {
-  const evento = event.target;
-  const pegarOEstiloSelecionado = document.querySelector('.selected');
-  const estilo = window.getComputedStyle(pegarOEstiloSelecionado, null)
-    .getPropertyValue('background-color');
-  evento.style.backgroundColor = estilo;
 }
 
 function criarOQuadroDeArt(numero) {
