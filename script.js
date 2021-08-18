@@ -50,13 +50,29 @@ color4.addEventListener('click', trocarClasseSelected);
 
 // criar os quadros de pixels
 
+// função getComputedStyle pega o estilo que tem dentro de uma classe, id ou elemento e guarda dentro de si
+// para fazer a manipulação. A fonte está abaixo.
+// fonte: https://www.w3schools.com/jsref/jsref_getcomputedstyle.asp
+
+// adiciona o evento nos quadradinhos
+function pintarPixel() {
+  const pegarPixel = document.querySelectorAll('.pixel');
+  for (let index = 0; index < pegarPixel.length; index += 1) {
+    const odia = pegarPixel[index];
+    odia.addEventListener('click', pegarEstilo);
+  }
+}
+
 function criarOQuadroDeArt(numero) {
   const divDoQuadro = document.querySelector('#pixel-board');
+  divDoQuadro.innerHTML = '';
+  divDoQuadro.style.width = `${(48 * numero)}px`
   for (let index = 0; index < numero * numero; index += 1) {
     const quadroPixel = document.createElement('div');
     quadroPixel.classList = 'pixel';
     divDoQuadro.appendChild(quadroPixel);
   }
+  pintarPixel();
 }
 criarOQuadroDeArt(5);
 
@@ -70,19 +86,6 @@ function pegarEstilo(event) {
     .getPropertyValue('background-color');
   evento.style.backgroundColor = estilo;
 }
-// função getComputedStyle pega o estilo que tem dentro de uma classe, id ou elemento e guarda dentro de si
-// para fazer a manipulação. A fonte está abaixo.
-// fonte: https://www.w3schools.com/jsref/jsref_getcomputedstyle.asp
-
-// adiciona o evento nos quadradinhos
-function pintarPixel() {
-  const pegarPixel = document.querySelectorAll('.pixel');
-  for (let index = 0; index < pegarPixel.length; index += 1) {
-    const odia = pegarPixel[index];
-    odia.addEventListener('click', pegarEstilo);
-  }
-}
-pintarPixel();
 
 // aqui vamos criar um botão para colocar branco em todas as divs do quadro de pixels
 
@@ -129,6 +132,22 @@ function criarBotaoVqv() {
   const botaoVqv = document.createElement('button');
   botaoVqv.id = 'generate-board';
   botaoVqv.innerHTML = 'VQV';
+  botaoVqv.addEventListener('click', mudarBoard)
   divDoBotao.appendChild(botaoVqv);
 }
 criarBotaoVqv();
+
+function mudarBoard() {
+  const recuperaValor = document.querySelector('#board-size');
+  if (recuperaValor.value === '') {
+    alert('Board inválido!');
+  } else {
+    if (recuperaValor.value < 5) {
+      recuperaValor.value = 5;
+    } else if (recuperaValor.value > 50) {
+      recuperaValor.value = 50;
+    }
+    criarOQuadroDeArt(recuperaValor.value);
+  }
+  recuperaValor.value = '';
+}
