@@ -10,22 +10,32 @@
   display: inline-block;
 }
 
-#blue {
+.blue {
   background-color: blue;
 }
 
-#green {
+.green {
   background-color: green;
 }
 
-#red {
+.red {
   background-color: red;
 }
 
-#black {
+.black {
   background-color: black;
 }
 
-#white {
+.pixel {
+  border: 1px solid black;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  background-color: white;
+}
+
+.quad {
+  width: 210px;
+  height: 225px;
   background-color: white;
 }
