@@ -48,7 +48,7 @@ for (let i = 0; i < allQuads.length; i += 1) {
   allQuads[i].addEventListener('click', pintaPixel);
 }
 
-const clearPixelBoard = document.getElementById('clear');
+const clearPixelBoard = document.getElementById('clear-board');
 
 function buttonClear() {
   for (let i = 0; i < allQuads.length; i += 1) {
