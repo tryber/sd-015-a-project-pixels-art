@@ -1,0 +1,88 @@
+body , html {
+    height: 100%;
+}
+
+body {
+    background-image: linear-gradient(white, silver,#6B1310,#450F10, #0D2118);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.color {
+    border: 1px solid black;
+    display: inline-block;
+    font-size: 50px;
+    padding: 20px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    margin-top: 8px;
+    margin-left: 2px;
+}
+
+.pixel {
+    border: 1px solid black;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    text-align: center;
+    padding: auto;
+    margin-left: 6.5px;
+    margin-top: 3px;
+}
+
+#title {
+    text-align: center;  
+    padding: auto;
+    font-size: 45px;
+}
+
+#color-palette {
+    width: auto;
+    text-align: center;
+    padding: auto;
+}
+
+#preta {
+    background-color: black;
+    margin-left: 1px;
+}
+
+#vermelha {
+    background-color: red;
+}
+
+#amarela {
+    background-color: yellow;
+}
+
+#verde {
+    background-color: green;
+}
+
+#pixel-board {
+    border: 1px solid black;
+    width: 270px;
+    text-align: center;
+    padding: auto;
+    margin: 0 auto;
+    background-color: silver;
+}
+
+#clear-board {
+    border: 1px solid black;
+    width: 55px;
+    height: 20px;
+    background-color: rgba(rgb(124, 124, 124), 0.3);
+    margin-bottom: 5px;
+    margin-right: 5px;
+    text-align: center;
+    padding: auto;
+}
+
+#butao {
+    width: auto;
+    text-align: center;
+    padding: auto;
+}
