@@ -51,8 +51,9 @@ for (let i = 0; i < allQuads.length; i += 1) {
 const clearPixelBoard = document.getElementById('clear-board');
 
 function buttonClear() {
-  for (let i = 0; i < allQuads.length; i += 1) {
-    allQuads[i].style.backgroundColor = 'white';
+  const allQuad = document.querySelectorAll('.pixel');
+  for (let i = 0; i < allQuad.length; i += 1) {
+    allQuad[i].style.backgroundColor = 'white';
   }
 }
 clearPixelBoard.addEventListener('click', buttonClear);
