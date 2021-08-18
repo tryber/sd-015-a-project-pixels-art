@@ -85,8 +85,7 @@ function alteraTamanho(event) {
         quadro.removeChild(actualChild)
     }
     let inputValue = inputWidth.value
-    inputValue = parseInt(inputValue)
-    if (inputValue >= 5 && inputValue <= 50) {
+    if (parseInt(inputValue) >= 5 && parseInt(inputValue) <= 50 && inputValue.length > 0) {
         function createSpans() {
             let spanNumber = inputValue;
             for (let index = 1; index <= (spanNumber * spanNumber) + (spanNumber - 1); index += 1) {
@@ -101,5 +100,7 @@ function alteraTamanho(event) {
             }
         }
         createSpans();
+    } else if (inputValue === "") {
+        alert("Board inválido")
     }
 }

@@ -29,7 +29,7 @@
 
 #pixel-board {
     left: 40px;
-    top: 400px;
+    top: 450px;
     padding: auto;
     background-color:white;
     position: absolute;
@@ -47,19 +47,20 @@
     margin-left: -0.5px;
 }
 
-button {
+#clear-board {
     position:absolute;
     top: 370px;
-    left: 115px;
+    left: 0px;
 }
 
 #board-size {
     position:absolute;
-    top: 250px;
+    top: 370px;
+    left: 60px;
 }
 
 #generate-board {
     position: absolute;
-    top: 250px;
-    left: 200px;
+    top: 370px;
+    left: 250px;
 }
