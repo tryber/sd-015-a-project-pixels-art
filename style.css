@@ -27,22 +27,6 @@ body {
   border: 1px solid black;
 }
 
-#color-1 {
-  background-color: black;
-}
-
-#color-2 {
-  background-color: #023047;
-}
-
-#color-3 {
-  background-color: #cb997e;
-}
-
-#color-4 {
-  background-color: #d00000;
-}
-
 .pixel {
   border: 1px solid black;
   float: left;
