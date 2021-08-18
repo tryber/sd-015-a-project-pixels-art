@@ -10,13 +10,14 @@
     border: solid black 1px;
 }
 .pixel{
-    width: 25px;
-    height: 25px;
+    width: 40px;
+    height: 40px;
     display: inline-block;
     background-color:white;
-    margin: 0px 5px 0px 0px;
+    border: solid black 1px;
+    margin-right: 5px;
 }
 
 #pixel-board {
-    width: 150px;
+    width: 235px;
 }
