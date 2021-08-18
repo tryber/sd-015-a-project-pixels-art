@@ -1,0 +1,89 @@
+body {
+  margin: 0%;
+  color: #484538;
+  text-align: center;
+  background-image: url('background.png');
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+#title {
+  font-family: 'Gloria Hallelujah', cursive;
+  font-size: 4rem;
+  line-height: 60px;
+}
+
+#painel-container {
+  margin: 30px auto;
+  width: 500px;
+  padding: 20px;
+  background-color: rgb(224, 208, 209);
+  box-shadow: 10px 10px 1px #484538;
+}
+
+#color-palette {
+  display: inline-block;
+  height: 70px;
+  padding: 10px 35px;
+  margin: 0px auto 30px;
+}
+
+#color-palette h2 {
+  display: inline-block;
+}
+
+#color-palette h2{
+  display: block;
+}
+
+.color {
+  height: 40px;
+  width: 40px;
+  border: 1px solid black;
+  margin: 0px 20px;
+  font-size: 10px;
+  display: inline-block;
+  box-shadow: 10px 10px 1px #484538;
+}
+
+#c1 {
+  color: black;
+}
+
+#c2 {
+  color: white;
+}
+
+#c3 {
+  color: black;
+}
+
+#c4 {
+  color: black;
+}
+
+#pixel-board div div {
+  display: inline-block;
+  box-shadow: 10px 10px 1px #484538;
+  margin-bottom: 30px;
+}
+
+#clear-board {
+  display: block;
+  margin: 0px auto 10px;
+}
+
+button {
+  margin: 10px 5px;
+  border: 0;
+  padding: 9px 15px;
+  background-color: white;
+  box-shadow: 10px 10px 1px #484538;
+}
+
+input {
+  margin: 0;
+  border: 0;
+  padding: 10px 10px 9px;
+  box-shadow: 10px 10px 1px #484538;
+}

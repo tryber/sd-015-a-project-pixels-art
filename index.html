@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pixel Art Project</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+  <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1 id="title">Paleta de Cores</h1>
+  </header>
+  
+  <section id="painel-container">
+    <!-- COLOR PALETTE -->
+      <section id='color-palette'>
+        <div id='c1' class="color selected"></div>
+        <div id='c2' class="color"></div>
+        <div id='c3' class="color"></div>
+        <div id='c4' class="color"></div>
+        <h2>Escolha uma cor acima!</h2>
+      </section>
+    
+    <!-- CLEAR BUTTON -->
+      <button id="clear-board" class="board">Limpar</button>
+    
+    <!-- BOARD SIZE INPUT AND BUTTON -->
+      <div id="input-container">
+        <label id="task-input">Tamanho do quadro:</label>
+        <input 
+          type="number"
+          id="board-size"
+          min='1'
+          required
+          placeholder="De 5 a 50"
+        >
+        <button id="generate-board">VQV</button>
+        
+      </div>
+  </section>
+
+<!-- FUNCTION CREATED PIXELS BOARD -->
+  <section id='pixel-board'></section>
+
+  <script src='script.js'></script>
+</body>
+</html>
