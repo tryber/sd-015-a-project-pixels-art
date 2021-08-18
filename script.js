@@ -65,14 +65,15 @@ function pintarPixel() {
 
 function criarOQuadroDeArt(numero) {
   const divDoQuadro = document.querySelector('#pixel-board');
-  divDoQuadro.innerHTML = '';
-  divDoQuadro.style.width = `${(48 * numero)}px`
+  divDoQuadro.innerHTML = ''; // limpa tag html; isso vai ser para função de mudar o board
+  divDoQuadro.style.width = `${(48 * numero)}px`;
+  // isso aqui vai ser para mudar o board e fazer o calculo para mudar a div
   for (let index = 0; index < numero * numero; index += 1) {
     const quadroPixel = document.createElement('div');
     quadroPixel.classList = 'pixel';
     divDoQuadro.appendChild(quadroPixel);
   }
-  pintarPixel();
+  pintarPixel(); // adiciona os eventos no pixel depois de cria-los;
 }
 criarOQuadroDeArt(5);
 
@@ -128,15 +129,6 @@ criarInput();
 
 // depois vou criar o botão
 
-function criarBotaoVqv() {
-  const botaoVqv = document.createElement('button');
-  botaoVqv.id = 'generate-board';
-  botaoVqv.innerHTML = 'VQV';
-  botaoVqv.addEventListener('click', mudarBoard)
-  divDoBotao.appendChild(botaoVqv);
-}
-criarBotaoVqv();
-
 function mudarBoard() {
   const recuperaValor = document.querySelector('#board-size');
   if (recuperaValor.value === '') {
@@ -151,3 +143,12 @@ function mudarBoard() {
   }
   recuperaValor.value = '';
 }
+
+function criarBotaoVqv() {
+  const botaoVqv = document.createElement('button');
+  botaoVqv.id = 'generate-board';
+  botaoVqv.innerHTML = 'VQV';
+  botaoVqv.addEventListener('click', mudarBoard)
+  divDoBotao.appendChild(botaoVqv);
+}
+criarBotaoVqv();
