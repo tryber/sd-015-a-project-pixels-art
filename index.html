@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1 id="title">Paleta de Cores</h1>
+  <div id="color-palette">
+    <div class="color selected" style="background-color: black;" onclick="botaCorDoClick('black')" ></div>
+    <div class="color" style="background-color: blue;"onclick="botaCorDoClick('blue')"></div>
+    <div class="color" style="background-color: chartreuse;"onclick="botaCorDoClick('chartreuse')"></div>
+    <div class="color" style="background-color: brown;"onclick="botaCorDoClick('brown')"></div>
+  </div>
+  <button id="clear-board" >Limpar</button>
+  <div id="pixel-board">
+    <div class="row">
+     <div class="pixel"onclick="botaCor(this)"></div>
+     <div class="pixel"onclick="botaCor(this)"></div>
+     <div class="pixel"onclick="botaCor(this)"></div>
+     <div class="pixel"onclick="botaCor(this)"></div>
+     <div class="pixel"onclick="botaCor(this)"></div>
+  </div>
+    <div class="row">
+      <div class="pixel"onclick="botaCor(this)"></div>
+      <div class="pixel"onclick="botaCor(this)"></div>
+      <div class="pixel"onclick="botaCor(this)"></div>
+      <div class="pixel"onclick="botaCor(this)"></div>
+      <div class="pixel"onclick="botaCor(this)"></div>
+   <div class="row">
+    <div class="pixel"onclick="botaCor(this)"></div>
+    <div class="pixel"onclick="botaCor(this)"></div>
+    <div class="pixel"onclick="botaCor(this)"></div>
+    <div class="pixel"onclick="botaCor(this)"></div>
+    <div class="pixel"onclick="botaCor(this)"></div>
+  </div>
+  <div class="row">
+    <div class="pixel"onclick="botaCor(this)"></div>
+    <div class="pixel"onclick="botaCor(this)"></div>
+    <div class="pixel"onclick="botaCor(this)"></div>
+    <div class="pixel"onclick="botaCor(this)"></div>
+    <div class="pixel"onclick="botaCor(this)"></div>
+  <div class="row">
+      <div class="pixel"onclick="botaCor(this)"></div>
+      <div class="pixel"onclick="botaCor(this)"></div>
+      <div class="pixel"onclick="botaCor(this)"></div>
+      <div class="pixel"onclick="botaCor(this)"></div>
+      <div class="pixel"onclick="botaCor(this)"></div>
+  </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
