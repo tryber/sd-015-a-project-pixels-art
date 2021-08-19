@@ -1,8 +1,16 @@
-function selecionaCor(cor) {
-    document.querySelector('.selected').classList.remove('selected');
-    cor.target.classList.add('selected'); 
+const paleta = document.querySelectorAll('.color');
+
+function changeSelected() {
+  for (let i = 0; i < paleta.length; i += 1) {
+    paleta[i].classList.remove('selected');
+  }
 }
 
-for (let cor = 0; cor < document.querySelectorAll('.color').length; cor += 1) {
-    document.querySelectorAll('.color')[cor].addEventListener('click', selecionaCor);
+function newSelected(cor) {
+  changeSelected();
+  cor.target.classList.add('selected');
+}
+
+for (let i = 0; i < paleta.length; i += 1) {
+  paleta[i].addEventListener('click', newSelected);
 }
