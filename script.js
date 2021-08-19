@@ -6,6 +6,15 @@ let cores = (document.getElementsByClassName('color'));
 
 let tabela = (document.getElementsByClassName('pixel'));
 
+let button = (document.getElementById('clear-board'));
+
+//botão para apagar pixels
+
+button.onclick = function(){
+    for(let index = 0; index < tabela.length; index += 1) {
+        tabela[index].style.backgroundColor = '#FFFFFF'
+    }
+}
 
 //codigo BRUTO
 
