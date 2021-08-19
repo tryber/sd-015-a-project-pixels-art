@@ -95,7 +95,7 @@ function pintarPixel() {
   const pegarPixel = document.querySelectorAll('.pixel');
   for (let index = 0; index < pegarPixel.length; index += 1) {
     const odia = pegarPixel[index];
-    odia.addEventListener('click', pegarEstilo); 
+    odia.addEventListener('click', pegarEstilo);
     // aqui chamei a função para pintar os pixels com a cor selecionada.
   }
 }
