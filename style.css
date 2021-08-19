@@ -1,0 +1,32 @@
+.color {
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+  display: inline-block;
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.color:nth-child( 1 ) {
+  background-color: black;
+}
+
+#pixel-board {
+  max-width: 250px;
+  padding-left: 7px;
+  text-align: center;
+}
+
+#clear-board {
+  margin: 10px;
+}
+
+.pixel {
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+  display: inline-block;
+  margin-right: 4px;
+}
