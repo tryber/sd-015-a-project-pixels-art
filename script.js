@@ -30,6 +30,8 @@ function selecionado() {
   });
 }
 
+// Consultei o repositório de Leonardo Felix para resolver essa parte
+// https://github.com/tryber/sd-015-a-project-pixels-art/blob/leonardo-felix-pixels-art/script.js
 function pintarPixel() {
   const pixBoard = document.getElementById('pixel-board');
   pixBoard.addEventListener('click', (e) => {
