@@ -44,6 +44,7 @@ selectedColor();
 
 //7
 //Codigo utilizado da PR de Emily Nilsen Carvalho - Turma 15 Tribo A
+// link: https://github.com/tryber/sd-015-a-project-pixels-art/pull/44/files
 function alvoCor(event) {
   removeSelected();
   event.target.classList.add('selected');
@@ -61,4 +62,26 @@ function removeSelected() {
     selecionarCor[i].classList.remove('selected');
   }
 }
+
+//8
+function pintarCor(event) {
+  const boxPixel = event.target;
+  const pegarPixel = document.querySelector('.selected');
+  const estilo = getComputedStyle(pegarPixel);
+  boxPixel.style.backgroundColor = estilo.backgroundColor;
+}
+const corPixel = document.querySelectorAll('.pixel');
+for (let i = 0; i < corPixel.length; i += 1) {
+  corPixel[i].addEventListener('click', pintarCor);
+}
 //Codigo utilizado da PR de Emily Nilsen Carvalho - Turma 15 Tribo A
+// link: https://github.com/tryber/sd-015-a-project-pixels-art/pull/44/files
+
+//9
+const clearButton = document.querySelector('#clear-board');
+clearButton.addEventListener('click', function () {
+  const allPixelsBox = document.querySelectorAll('.pixel');
+  for (let i = 0; i < allPixelsBox.length; i += 1) {
+    allPixelsBox[i].style.backgroundColor = 'white';
+  }
+});
