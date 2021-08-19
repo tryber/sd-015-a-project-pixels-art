@@ -9,3 +9,7 @@ function botaCor (pixel) {
   pixel.style.backgroundColor = corDoClick
 }
 botaoApagar.addEventListener ('click', apagarTudo)
+function apagarTudo () {
+  let todosPixels = document.querySelectorAll('.pixel')
+  todosPixels.style.removeAttribute('background-color')
+}
