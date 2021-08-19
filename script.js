@@ -1,21 +1,14 @@
 let numberOfBlocks = 5;
+let pixelBoard = document.querySelector('#pixel-board');
 
-for (let i = 0, i < numberOfBlocks, i += 1) {
-    for (let j = 0, j < numberOfBlocks, j += 1) {
-
+for (i = 0; i < numberOfBlocks; i += 1) {
+    let pixelLine = document.createElement('div');
+    pixelLine.className = 'line';
+    for (let j = 0; j < numberOfBlocks; j += 1) {
+        let block = document.createElement('div');
+        block.className = 'pixel';
+        pixelLine.appendChild(block);
     }
+    pixelBoard.appendChild(pixelLine);
+
 }
-
-// Cria uma caixa com base nas diferentes classes
-function createBlock(className) {
-    let block = document.createElement("div");
-    block.className = className;
-    return block;
-  }
-
-  // Preenche uma linha
-  function createLine(divs) {
-    for (let i = 1; i <= numberOfBlocks; i += 1) {
-        let block = createblock("block");
-        divs.appendChild(block);
-    }
