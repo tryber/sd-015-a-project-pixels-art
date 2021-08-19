@@ -39,7 +39,9 @@ color4.style.backgroundColor = CriarCoresAleatorias();
 // remove e adiciona classe nas cores da paleta.
 function trocarClasseSelected(event) {
   const selecionado = document.querySelector('.selected');
-  selecionado.classList.remove('selected');
+  if (selecionado) {
+    selecionado.classList.remove('selected');
+  }
   event.target.classList.add('selected');
 }
 
@@ -47,46 +49,6 @@ color1.addEventListener('click', trocarClasseSelected);
 color2.addEventListener('click', trocarClasseSelected);
 color3.addEventListener('click', trocarClasseSelected);
 color4.addEventListener('click', trocarClasseSelected);
-
-// funções que serão responsaveis para pintar cada pixel do quadro
-// função que recupera a classe e pega a cor que está com ela e atribui a cor de fundo nos pixels com o event
-// target, que é responsavel por pintar cada quadradinho
-function pegarEstilo(event) {
-  const evento = event.target;
-  const pegarOEstiloSelecionado = document.querySelector('.selected');
-  const estilo = window.getComputedStyle(pegarOEstiloSelecionado, null)
-    .getPropertyValue('background-color');
-  evento.style.backgroundColor = estilo;
-}
-
-// criar os quadros de pixels
-
-// função getComputedStyle pega o estilo que tem dentro de uma classe, id ou elemento e guarda dentro de si
-// para fazer a manipulação. A fonte está abaixo.
-// fonte: https://www.w3schools.com/jsref/jsref_getcomputedstyle.asp
-
-// adiciona o evento nos quadradinhos
-function pintarPixel() {
-  const pegarPixel = document.querySelectorAll('.pixel');
-  for (let index = 0; index < pegarPixel.length; index += 1) {
-    const odia = pegarPixel[index];
-    odia.addEventListener('click', pegarEstilo);
-  }
-}
-
-function criarOQuadroDeArt(numero) {
-  const divDoQuadro = document.querySelector('#pixel-board');
-  divDoQuadro.innerHTML = ''; // limpa tag html; isso vai ser para função de mudar o board
-  divDoQuadro.style.width = `${(48 * numero)}px`;
-  // isso aqui vai ser para mudar o board e fazer o calculo para mudar a div
-  for (let index = 0; index < numero * numero; index += 1) {
-    const quadroPixel = document.createElement('div');
-    quadroPixel.classList = 'pixel';
-    divDoQuadro.appendChild(quadroPixel);
-  }
-  pintarPixel(); // adiciona os eventos no pixel depois de cria-los;
-}
-criarOQuadroDeArt(5);
 
 // aqui vamos criar um botão para colocar branco em todas as divs do quadro de pixels
 
@@ -111,6 +73,47 @@ function limpezaPixels() { // coloca estilo branco nos pixels e será acinado pe
 const botaoLimpeza = document.querySelector('#clear-board');
 botaoLimpeza.addEventListener('click', limpezaPixels); // botão que faz que adicione a cor branca nos quadrados
 
+// funções que serão responsaveis para pintar cada pixel do quadro
+// função que recupera a classe e pega a cor que está com ela e atribui a cor de fundo nos pixels com o event
+// target, que é responsavel por pintar cada quadradinho
+function pegarEstilo(event) {
+  const evento = event.target;
+  const pegarOEstiloSelecionado = document.querySelector('.selected');
+  const estilo = window.getComputedStyle(pegarOEstiloSelecionado, null)
+    .getPropertyValue('background-color');
+  evento.style.backgroundColor = estilo;
+}
+
+// criar os quadros de pixels
+
+// função getComputedStyle pega o estilo que tem dentro de uma classe, id ou elemento e guarda dentro de si
+// para fazer a manipulação. A fonte está abaixo.
+// fonte: https://www.w3schools.com/jsref/jsref_getcomputedstyle.asp
+
+// adiciona o evento nos quadradinhos
+function pintarPixel() {
+  const pegarPixel = document.querySelectorAll('.pixel');
+  for (let index = 0; index < pegarPixel.length; index += 1) {
+    const odia = pegarPixel[index];
+    odia.addEventListener('click', pegarEstilo); 
+    // aqui chamei a função para pintar os pixels com a cor selecionada.
+  }
+}
+
+function criarOQuadroDeArt(numero) {
+  const divDoQuadro = document.querySelector('#pixel-board');
+  divDoQuadro.innerHTML = ''; // limpa tag html; isso vai ser para função de mudar o board
+  divDoQuadro.style.width = `${(48 * numero)}px`;
+  // isso aqui vai ser para mudar o board e fazer o calculo para mudar a div
+  for (let index = 0; index < numero * numero; index += 1) {
+    const quadroPixel = document.createElement('div');
+    quadroPixel.classList = 'pixel';
+    divDoQuadro.appendChild(quadroPixel);
+  }
+  pintarPixel(); // adiciona os eventos no pixel depois de cria-los;
+}
+criarOQuadroDeArt(5);
+
 // o valor que eu coloquei naquela função de criar é que vou mudar na hora que botar no input.
 
 // primeiro eu vou criar o input e o botão depois pensarei nos eventos
@@ -129,7 +132,7 @@ criarInput();
 
 // depois vou criar o botão
 
-function mudarBoard() {
+function mudarBoard() { // essa função tive ajuda do summer Rafael Machado
   const recuperaValor = document.querySelector('#board-size');
   if (recuperaValor.value === '') {
     alert('Board inválido!');
