@@ -1,0 +1,42 @@
+body {
+  background-color: bisque;
+}
+
+#color-palette{
+ 
+ display: inline-block;
+}
+
+
+  .color{
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    margin-right: 2px;
+    border: 1px solid black;
+    border-radius: 50%;
+    text-align: center;
+    margin-bottom: 7px;
+
+  }
+
+
+
+  .pixel {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    border-collapse:inherit;
+     margin-top: -5px;
+    
+  }
+
+#clear-board {
+  margin-bottom: 7px;
+  
+}
+#board-size{
+  width: 55px;
+  
+}
