@@ -1,8 +1,6 @@
-//*Repositório de italosergio consultado, link: https://github.com/tryber/sd-015-a-project-pixels-art/blob/ee8bebadbe0f903ec1c4482f1ce454ad51aa9f7a/style.css */
+/*Repositório de italosergio consultado, link: https://github.com/tryber/sd-015-a-project-pixels-art/blob/ee8bebadbe0f903ec1c4482f1ce454ad51aa9f7a/style.css */
 
-#title {
 
-}
 
 .color {
     border: 1px solid black;
@@ -10,6 +8,11 @@
     height: 25px;
     display: inline-block;
 }
+
+.a {background-color: black;}
+.b {background-color: red ;}
+.c {background-color: green;}
+.d {background-color: yellow;}
 
 #black {
     background-color: black;
@@ -42,7 +45,7 @@
 
 
 
-.selected {
+.selected {background-color: azure;
     
 }
 
