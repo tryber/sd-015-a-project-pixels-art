@@ -33,11 +33,17 @@ h1 , #color-palette {
 }
 
 #pixel-board {
-  border: 1px solid black;
   text-align: center;
   width: max-content;
   padding: 0;
   margin: 25px auto;
+}
+
+.line {
+  display: flex;
+  align-content: space-around;
+  justify-content: center;
+  align-items: center;
 }
 
 #color-palette div:nth-of-type( 1 ) {
