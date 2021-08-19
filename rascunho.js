@@ -1,10 +1,22 @@
-let n = 5;
-let symbol = '*';
-let inputLine = '';
+let numberOfBlocks = 5;
+let pixelBoard = document.querySelector('#pixel-board');
 
-for (let lineIndex = 0; lineIndex < n; lineIndex += 1) {
-  inputLine = inputLine + symbol;
-};
-for (let lineIndex = 0; lineIndex < n; lineIndex += 1) {
-  console.log(inputLine);
-};
+let block = document.createElement('div');
+block.className = 'pixel2';
+
+let pixelLine = document.createElement('div');
+pixelLine.className = 'line';
+
+    pixelLine.appendChild(block);
+    pixelLine.appendChild(block);
+    pixelLine.appendChild(block);
+    pixelLine.appendChild(block);
+    pixelLine.appendChild(block);
+
+
+
+
+    pixelBoard.appendChild(pixelLine);
+    pixelBoard.appendChild(pixelLine);
+    pixelBoard.appendChild(pixelLine);
+    pixelBoard.appendChild(pixelLine);
