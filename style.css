@@ -1,0 +1,25 @@
+/* Requisito 2 e 3 */
+.color {
+  border-color: black;
+  border: 1px;
+  border-style: solid;
+  display: inline-table;
+  height: 40px;
+  width: 40px;
+}
+
+#red {
+  background-color: red;
+}
+
+#orange {
+  background-color: orange;
+}
+
+#yellow {
+  background-color: yellow;
+}
+
+#black {
+  background-color: black;
+}
