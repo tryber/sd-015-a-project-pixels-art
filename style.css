@@ -13,7 +13,7 @@ h1 {
 }
 
 #color-palette {
-    margin-left: 450px;
+    margin-left: 470px;
     margin-top: 50px;
 }
 
@@ -28,28 +28,47 @@ h1 {
   background-color: black;
 }
 
+#black:hover {
+  background-color: rgb(63, 61, 61);
+}
+
 #blue {
   background-color: blue;
+}
+
+#blue:hover {
+  background-color: rgb(119, 119, 247);
 }
 
 #red {
   background-color: red;
 }
 
+#red:hover {
+  background-color: rgb(235, 109, 109);
+}
+
 #yellow {
   background-color: yellow;
 }
 
+#yellow:hover {
+  background-color: rgb(245, 245, 127);
+}
+
 #clear-board {
-  margin-left: 590px;
+  margin-left: 30px;
   margin-top: 20px;
   width: 60px;
   height: 25px;
 }
 
+#board-size {
+  margin-left: 470px;
+}
+
 #pixel-board {
-    width: 210px;
-    margin-left: 520px;
+    margin-left: 100px;
     margin-top: 50px;
     font-size:  0px;
 
