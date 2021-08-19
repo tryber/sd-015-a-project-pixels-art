@@ -86,8 +86,12 @@ cores[0].onclick = function(){
     tabela[24].onclick = function(){
         tabela[24].style.backgroundColor = selected
     }
-    //adicionar classe 'selected'
+    //adiciona a classe 'selected'
+    cores[3].classList.remove('selected')
     cores[0].classList.add('selected')
+    cores[1].classList.remove('selected')
+    cores[2].classList.remove('selected')
+
 
 }
 cores[1].onclick = function(){
@@ -168,7 +172,10 @@ cores[1].onclick = function(){
         tabela[24].style.backgroundColor = selected
     }
     //adicionar a classe 'selected
+    cores[3].classList.remove('selected')
+    cores[0].classList.remove('selected')
     cores[1].classList.add('selected')
+    cores[2].classList.remove('selected')
 
 }
 cores[2].onclick = function(){
@@ -249,8 +256,10 @@ cores[2].onclick = function(){
         tabela[24].style.backgroundColor = selected
     }
     //adicionar a classe 'selected'
+    cores[3].classList.remove('selected')
+    cores[0].classList.remove('selected')
+    cores[1].classList.remove('selected')
     cores[2].classList.add('selected')
-
 }
 cores[3].onclick = function(){
     let selected = window.getComputedStyle(cores[3]).getPropertyValue('background-color')
@@ -331,12 +340,18 @@ cores[3].onclick = function(){
     }
     //adicionar a classe 'selected'
     cores[3].classList.add('selected')
+    cores[0].classList.remove('selected')
+    cores[1].classList.remove('selected')
+    cores[2].classList.remove('selected')
 
 }
 
 let selected = window.getComputedStyle(cores[0]).getPropertyValue('background-color')
 //adicionar a classe 'selected'
 cores[0].classList.add('selected')
+cores[3].classList.remove('selected')
+cores[1].classList.remove('selected')
+cores[2].classList.remove('selected')
 
 tabela[0].onclick = function(){
     tabela[0].style.backgroundColor = selected
