@@ -20,3 +20,11 @@ background-color: blue ;
 #quartaCor {
     background-color: deeppink;
 }
+
+.pixel{
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+    background-color: white;
+    border: 1px solid black;
+}
