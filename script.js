@@ -6,7 +6,7 @@ window.onload = function() {
         let palette2 = document.querySelectorAll("#color-palette")[1]
         let hashtag2 = "#"
         let randomColor2 = Math.floor(Math.random()*16777215).toString(16); 
-        // O código da linha 8, 13 e 18 eu fui auxiliado pelo site https://css-tricks.com/snippets/javascript/random-hex-color/ 
+        // O código da linha 8, 14 e 19 eu fui auxiliado pelo site https://css-tricks.com/snippets/javascript/random-hex-color/ 
         palette2.style.backgroundColor = hashtag2 + randomColor2;
 
         let palette3 = document.querySelectorAll("#color-palette")[2]
