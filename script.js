@@ -66,6 +66,7 @@ button.addEventListener("click", function() {
 
 paintAndClean()     
 
+//Função que apagar todo o quadro de pixels
 function cleanPixels () {
     let fatherPixels = document.getElementById("pixel-board")
     while (fatherPixels.hasChildNodes()) {  
@@ -74,6 +75,7 @@ function cleanPixels () {
 }
 
 const button = document.getElementById("generate-board")
+
 button.addEventListener("click", function() {
     cleanPixels()
     const input = document.getElementById("board-size")
