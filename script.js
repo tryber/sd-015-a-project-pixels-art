@@ -38,13 +38,14 @@ for (let i = 0; i < (pixelBoardConfig.lines * pixelBoardConfig.colums); i += 1) 
 
 window.onload = function() {
     reloadPage()
+    generateRandomColors()
 }
 
 
 function selectColor(color) {
     document.getElementsByClassName('selected')[0].classList.remove('selected'); // reseta cor selecionada
     document.getElementById(color.target.id).classList.add('selected'); // coloca na nova cor a classe selected
-    document.getElementById("selected-color-box").style.background = color.target.id;
+    document.getElementById("selected-color-box").style.background = document.getElementsByClassName('color selected')[0].style.background;
 }
 
 function paintPixel(color) {
@@ -85,4 +86,20 @@ function resizeBoard() {
         pixelBoardConfig.lines = document.getElementById('board-size').value
         reloadPage()
     }
+}
+
+function generateRandomColors() {
+    for (let i = 0; i <= 3; i += 1) {
+        if (i === 0) {
+            document.querySelectorAll('.color')[i].style.background = 'black';
+        }
+        else {
+        document.querySelectorAll('.color')[i].style.background = ('rgb(' + getRandomNumber() + ',' + getRandomNumber() + ',' + getRandomNumber() + ")")
+    }
+}
+    console.log(('rgb(' + getRandomNumber() + ',' + getRandomNumber() + ',' + getRandomNumber() + ");"))
+}
+
+function getRandomNumber() {
+    return Math.floor(Math.random() * 256);
 }

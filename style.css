@@ -23,7 +23,6 @@
 }
 
 #red {
-    background: red;
     width: 40px;
     height: 40px;
     display: inline-block;
@@ -33,7 +32,6 @@
 }
 
 #blue {
-    background: blue;
     width: 40px;
     height: 40px;
     display: inline-block;
@@ -42,9 +40,7 @@
     border-width: 1px;
 }
 
-
 #yellow {
-    background: yellow;
     width: 40px;
     height: 40px;
     display: inline-block;
