@@ -85,3 +85,4 @@ function cleanPixel(){
     let colorwhite = document.querySelectorAll(".pixel")[i]
     colorwhite.style.backgroundColor = "white";
   }
+}
