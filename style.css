@@ -1,3 +1,15 @@
+body{
+  background-image: url('color.jpg');
+}
+
+h1{
+  text-align: center;
+}
+ #title{
+   color: white;
+   font-family: monospace, sans-serif;
+ }
+
 #black {
   display: inline-block;
   border: solid 1px black;
@@ -36,7 +48,19 @@
   float: left;
   background-color: white;
 }
+
+#color-palette{
+  margin-left: 410px;
+  
+}
+
+#clear-board{
+  margin-left: 470px;
+  margin-top: 30px;
+}
+
 #pixel-board {
   width: 210px;
   height: 210px;
+  margin: 40px auto;
 }
