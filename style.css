@@ -32,7 +32,6 @@
         background-color: blue;
         margin: 2px;
     }
- 
     .pixel{
         border: 1px solid black;
         width: 40px;
@@ -42,8 +41,12 @@
         
     }
     #tabela {
+        position:relative;
+        top:75%;
+        left:40%;
         width: 250px;
         height: 250px;
         background-color: #888888;   
-        display:flexbox;   
+        display: flex;
+        align-items: center;
     }
