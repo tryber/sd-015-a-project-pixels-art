@@ -21,3 +21,19 @@
 .yellow {
   background-color: yellow;
 }
+
+#pixel-board {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+}
+
+.pixel {
+  background-color: #fff;
+  border: 1px solid black;
+  width: 40px;
+  height: 40px;
+}
