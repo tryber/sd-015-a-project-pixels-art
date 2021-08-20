@@ -1,22 +1,24 @@
-let numberOfBlocks = 5;
-let pixelBoard = document.querySelector('#pixel-board');
+// Requisito 07
+let selected = document.getElementById('color-palette');
+selected.addEventListener('click', selectColor);
 
-let block = document.createElement('div');
-block.className = 'pixel2';
+function selectColor(color) {
+    let selectColor = color.target.id;
+    return selectColor;
+}
 
-let pixelLine = document.createElement('div');
-pixelLine.className = 'line';
+// Limpeza da classe selected
+let qtdColors = selected.children.length;
+let listColors = selected.children;
 
-    pixelLine.appendChild(block);
-    pixelLine.appendChild(block);
-    pixelLine.appendChild(block);
-    pixelLine.appendChild(block);
-    pixelLine.appendChild(block);
-
-
-
-
-    pixelBoard.appendChild(pixelLine);
-    pixelBoard.appendChild(pixelLine);
-    pixelBoard.appendChild(pixelLine);
-    pixelBoard.appendChild(pixelLine);
+for (i = 0;i < qtdColors; i += 1) {
+    let comparedColor = listColors[i];
+    let comparedColorId = comparedColor.id;
+    if (selectColor !== comparedColorId) {
+        if (comparedColor.classList.contains('selected')) {
+            comparedColor.remove('selected');
+        // } else {
+        //     comparedColor.classList = 'selected';
+        }
+    }
+// }
