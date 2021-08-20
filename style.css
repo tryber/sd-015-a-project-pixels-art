@@ -24,8 +24,7 @@ text-align: center;
 .color.palette4{
     background-color: rgb(42, 54, 165);
 }
-#pixel-board{
-width: 25px;
-height: 25px;
-}
 
+.pixel{
+    background-color: white;
+}
