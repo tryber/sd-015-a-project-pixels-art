@@ -35,7 +35,7 @@ background-color: yellow;
 
 .pixel {
     display: inline-block;
-    background-color: rgb(59, 31, 31);
+    background-color: rgb(255, 255, 255);
     border: 1px solid black;
     margin: 1px;
     width: 40px;

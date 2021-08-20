@@ -20,16 +20,20 @@ function standardSelected() {
 standardSelected();
 
 // Requisito 07 - Seleciona a cor para preenchimento do pixel
+// Ref.: https://pt.stackoverflow.com/questions/252117/obter-css-por-javascript
 selected.addEventListener('click', selectColor);
 
 function selectColor(color) {
     clearSelected();
     let selectColor = color.target;
+    let selectColorID = selectColor;
     selectColor.classList.add('selected');
-
+    let paint = document.querySelector('.selected');
+    let bcColor = window.getComputedStyle(paint).backgroundColor;
 }
 
 // Requisito 08
+
 
 
 // Requisito 09
