@@ -21,8 +21,11 @@ function pintaPixel(event) {
   let selectedClass = document.querySelector('.selected');
   cssSelected = window.getComputedStyle(selectedClass, null).getPropertyValue('background-color');
   
-} 
-   console.log(cssSelected);
+  event.target.style.background = cssSelected;
+  console.log(event.target);
+
+}
+
 
 const pixel = document.getElementsByClassName('pixel'); 
 for (let i = 0; i < pixel.length; i += 1) {
