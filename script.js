@@ -1,18 +1,32 @@
-window.onload
-//cria os div pixal
+
+//aqui as divs nascem, e se fortalecem 
 for (let i = 0; i < 25; i += 1) {
   const caixa = document.createElement('cor');
   caixa.className = 'pixel';
   document.getElementById('pixel-board').appendChild(caixa);
 }
-let event = 
+
 // muda classe da cor para selecionado
 function mudaClasse() {
-  let corselecionada = document.getElementById("color-palette");
-  corselecionada.classList.add("selected");
+  const mudaClasse = document.querySelector('.selected');
+  mudaClasse.classList.remove('selected');
+  change.target.classList.add('selected');
 }
 
-function removeClasse(){
-  let cormudada = document.getElementById();
-  cormudada.classList.remove("Selected");
+// aqui declaro as variaveis a passo para transitar na funçao mudaclasse
+
+const paleta = document.querySelectorAll('.color');
+function mudacor() {
+  for (let i = 0; i < paleta.length; i += 1) {
+    paleta[i].classList.remove('selected');
+  }
+}
+
+function novacor(cor) {
+  mudacor();
+  cor.target.classList.add('selected');
+}
+
+for (let i = 0; i < paleta.length; i += 1) {
+  paleta[i].addEventListener('click', novacor);
 }
