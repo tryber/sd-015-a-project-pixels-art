@@ -1,0 +1,30 @@
+.color {
+width: 40px;
+height: 40px;
+border: solid 1px black;
+display: inline-block;
+}
+
+#black {
+background-color: black;   
+}
+
+#green {
+background-color: green;
+}
+
+#purple {
+background-color: purple;
+}
+
+#blue {
+background-color: blue; 
+}
+
+.pixel {
+width: 40px;
+height: 40px;
+border: solid 1px black;
+background-color: white;
+display: inline-block;
+}
