@@ -9,7 +9,8 @@ for (let index = 0; index < 5; index += 1) {
 const tr = document.getElementsByClassName('tr');
 
 for (let index = 0; index < 5; index += 1) {
-  for (index = 0; index < 5; index += 1) {
+  // eslint-disable-next-line no-shadow
+  for (let index = 0; index < 5; index += 1) {
     const createTd = document.createElement('td');
     createTd.className = 'pixel';
     tr[index].appendChild(createTd);
@@ -39,7 +40,7 @@ pixelBoard.addEventListener('click', (event) => {
   }
 });
 
-// Requisito 9 - AINDA FALTA
+// Requisito 9
 const button = document.getElementById('clear-board');
 const pixel = document.getElementsByClassName('pixel');
 
