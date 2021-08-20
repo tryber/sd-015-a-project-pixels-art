@@ -1,0 +1,66 @@
+body{
+  background-image: url('color.jpg');
+}
+
+h1{
+  text-align: center;
+}
+ #title{
+   color: white;
+   font-family: monospace, sans-serif;
+ }
+
+#black {
+  display: inline-block;
+  border: solid 1px black;
+  width: 40px;
+  height: 40px;
+
+  background-color: black;
+}
+#red {
+  display: inline-block;
+  border: solid 1px black;
+  width: 40px;
+  height: 40px;
+  background-color: red;
+}
+#blue {
+  display: inline-block;
+  border: solid 1px black;
+  width: 40px;
+  height: 40px;
+  background-color: blue;
+}
+
+#yellow {
+  border: solid 1px black;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: yellow;
+}
+
+.pixel {
+  height: 40px;
+  width: 40px;
+  border: solid 1px black;
+  float: left;
+  background-color: white;
+}
+
+#color-palette{
+  margin-left: 410px;
+  
+}
+
+#clear-board{
+  margin-left: 470px;
+  margin-top: 30px;
+}
+
+#pixel-board {
+  width: 210px;
+  height: 210px;
+  margin: 40px auto;
+}
