@@ -35,11 +35,7 @@ creatButton.addEventListener('click', (event) => {
     let clearButton = selectPixel[i];
     clearButton.style.backgroundColor = "white";
   }
-  
 
-  if (event.target.classList.contains('pixel')) {
-    event.target.style.backgroundColor = white;
-  }
 })
 
 
