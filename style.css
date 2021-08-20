@@ -1,0 +1,40 @@
+.color{
+    display: inline-block;
+    border-style: solid;
+    border-width: 1px;
+}
+
+#preta{
+    background-color: #000000;
+    width: 200px;
+    height: 200px;
+}
+#amarelo{
+    background-color: #fafad2;
+    width: 200px;
+    height: 200px;
+}
+#verde{
+    background-color: #90ee90;
+    width: 200px;
+    height: 200px;
+}
+#vermelho{
+    background-color: #FF0000;
+    width: 200px;
+    height: 200px;
+}
+#pixel-board {
+    width: 832px;
+    height: 832px;
+}
+.pixel {
+    width: 40px;
+    height: 40px;
+    background-color: rgb(255, 255, 255);
+    border: black solid 1px;
+    padding: none;
+    margin: none;
+    
+}
+
