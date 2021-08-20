@@ -1,0 +1,62 @@
+#c1 {
+  background-color: black;
+  width: 50px;
+  height: 50px;
+  border: solid 1px black;
+  cursor: pointer;
+}
+
+#c2 {
+  background-color:crimson;
+  width: 50px;
+  height: 50px;
+  border: solid 1px black;
+  cursor: pointer;
+}
+
+#c3 {
+  background-color:darkgreen;
+  width: 50px;
+  height: 50px;
+  border: solid 1px black;
+  cursor: pointer;
+}
+
+#c4 {
+  background-color: goldenrod;
+  width: 50px;
+  height: 50px;
+  border: solid 1px black;
+  cursor: pointer;
+}
+
+.color {
+  display: inline-block;
+}
+
+#pixel-board {
+  width: 260px;
+  height: 260px;
+  border: solid 1px black;
+  margin-left: 39.5%;
+  margin-top: 15px;
+}
+
+.pixel {
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  border: solid 1px black;
+  display: inline-flex;
+  margin-left: 5px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+#color-palette {
+  text-align: center;
+}
+
+#title {
+  text-align: center;
+}
