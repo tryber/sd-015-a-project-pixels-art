@@ -23,16 +23,23 @@ standardSelected();
 // Ref.: https://pt.stackoverflow.com/questions/252117/obter-css-por-javascript
 selected.addEventListener('click', selectColor);
 
-function selectColor(color) {
+function selectColor(event) {
     clearSelected();
-    let selectColor = color.target;
-    let selectColorID = selectColor;
+    let selectColor = event.target;
     selectColor.classList.add('selected');
-    let paint = document.querySelector('.selected');
-    let bcColor = window.getComputedStyle(paint).backgroundColor;
 }
 
 // Requisito 08
+let pixelBoard = document.querySelector('#pixel-board');
+pixelBoard.addEventListener('click', paintPixel);
+function paintPixel(pixelToPaint){
+    let colored = pixelToPaint.target;
+    let paint = document.querySelector('.selected');
+    let bcColor = window.getComputedStyle(paint).backgroundColor;
+    colored.style.backgroundColor = bcColor;
+    console.log(bcColor)
+    ;
+}
 
 
 
@@ -51,7 +58,6 @@ function clearBoard() {
 // Requisito 10
 // Ref.: https://github.com/tryber/exercise-end-block5
 let numberOfBlocks = 5;
-let pixelBoard = document.querySelector('#pixel-board');
 
 for (i = 0; i < numberOfBlocks; i += 1) {
     let pixelLine = document.createElement('div');
