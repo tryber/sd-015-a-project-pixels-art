@@ -24,13 +24,10 @@ selected.addEventListener('click', selectColor);
 
 function selectColor(color) {
     clearSelected();
-    let selectColor = color.target.id;
-    let selectColor2 = color.target;
-    selectColor2.classList.add('selected');
-    console.log(selectColor);
-    console.log(selectColor2);
-    return selectColor;
-    }
+    let selectColor = color.target;
+    selectColor.classList.add('selected');
+
+}
 
 
 
