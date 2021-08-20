@@ -20,7 +20,6 @@ function standardSelected() {
 standardSelected();
 
 // Requisito 07 - Seleciona a cor para preenchimento do pixel
-// Ref.: https://pt.stackoverflow.com/questions/252117/obter-css-por-javascript
 selected.addEventListener('click', selectColor);
 
 function selectColor(event) {
@@ -30,8 +29,11 @@ function selectColor(event) {
 }
 
 // Requisito 08
+// Ref.: https://pt.stackoverflow.com/questions/252117/obter-css-por-javascript
 let pixelBoard = document.querySelector('#pixel-board');
+
 pixelBoard.addEventListener('click', paintPixel);
+
 function paintPixel(pixelToPaint){
     let colored = pixelToPaint.target;
     let paint = document.querySelector('.selected');
@@ -41,8 +43,6 @@ function paintPixel(pixelToPaint){
     ;
 }
 
-
-
 // Requisito 09
 // Ref.: https://stackoverflow.com/questions/9436123/javascript-changing-a-class-style/65471649
 let clearButton = document.getElementById('clear-board');
@@ -51,8 +51,7 @@ function clearBoard() {
     let pixelUnit = document.getElementsByClassName('pixel');
     for (let i = 0; i < pixelUnit.length; i += 1) {
         pixelUnit[i].style.backgroundColor = 'rgb(255,255,255)';
-
-}
+    }
 }
 
 // Requisito 10
