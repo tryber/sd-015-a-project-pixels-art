@@ -32,3 +32,12 @@ function fillBoxPixel (event) {
   boxPixel.style.backgroundColor = style.backgroundColor;
 }
 
+const colorPalette = document.getElementById('clear-board');
+
+colorPalette.addEventListener('click', paintBoxPixels);
+
+function paintBoxPixels () {
+ for (let index = 0; index < setBox.length; index+=1) {
+   setBox[index].style.backgroundColor = "white"
+ }
+}
