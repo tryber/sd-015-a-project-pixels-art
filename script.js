@@ -29,27 +29,20 @@ function selectColor(color) {
 
 }
 
+// Requisito 08
 
 
+// Requisito 09
+// Ref.: https://stackoverflow.com/questions/9436123/javascript-changing-a-class-style/65471649
+let clearButton = document.getElementById('clear-board');
+clearButton.addEventListener('click', clearBoard);
+function clearBoard() {
+    let pixelUnit = document.getElementsByClassName('pixel');
+    for (let i = 0; i < pixelUnit.length; i += 1) {
+        pixelUnit[i].style.backgroundColor = 'rgb(255,255,255)';
 
-
-
-// // Limpeza da classe selected
-// let listColors = selected.children;
-
-// for (i = 0;i < qtdColors; i += 1) {
-//     let comparedColor = listColors[i];
-//     let comparedColorId = comparedColor.id;
-//     if (selectColor !== comparedColorId) {
-//         if (comparedColor.classList.contains('selected')) {
-//             comparedColor.remove('selected');
-//         // } else {
-//         //     comparedColor.classList = 'selected';
-//         }
-//     }
-// // }
-
-
+}
+}
 
 // Requisito 10
 // Ref.: https://github.com/tryber/exercise-end-block5
