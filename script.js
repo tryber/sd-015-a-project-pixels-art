@@ -1,11 +1,14 @@
 
 // Requisito 06 - Define a cor preta como padrão de seleção (selected)
+// Ref.: branch artur-bacilla-project-pixels-art
 let selected = document.getElementById('color-palette');
 let qtdColors = selected.children.length;
 
 function clearSelected() {
     for (let i = 0; i < qtdColors; i += 1) {
-        selected[i].classList.remove('selected');
+        if (selected.children[i].classList.contains('selected')) {
+            selected.children[i].classList.remove('selected');
+        };
     }
 }
 
@@ -16,13 +19,23 @@ function standardSelected() {
 
 standardSelected();
 
-// Requisito 07
-// selected.addEventListener('click', selectColor);
+// Requisito 07 - Seleciona a cor para preenchimento do pixel
+selected.addEventListener('click', selectColor);
 
-// function selectColor(color) {
-//     let selectColor = color.target.id;
-//     return selectColor;
-// }
+function selectColor(color) {
+    clearSelected();
+    let selectColor = color.target.id;
+    let selectColor2 = color.target;
+    selectColor2.classList.add('selected');
+    console.log(selectColor);
+    console.log(selectColor2);
+    return selectColor;
+    }
+
+
+
+
+
 
 // // Limpeza da classe selected
 // let listColors = selected.children;
@@ -42,6 +55,7 @@ standardSelected();
 
 
 // Requisito 10
+// Ref.: https://github.com/tryber/exercise-end-block5
 let numberOfBlocks = 5;
 let pixelBoard = document.querySelector('#pixel-board');
 
