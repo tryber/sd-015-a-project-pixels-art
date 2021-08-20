@@ -21,3 +21,25 @@ selectMain.addEventListener('click', (event) => {
       event.target.style.backgroundColor = color;
   }
 })
+
+// Requesito 9
+let creatButton = document.createElement('button');
+creatButton.id = 'clear-board';
+creatButton.innerHTML = "Limpar";
+let selectDiv = document.querySelector('#creatButton');
+selectDiv.appendChild(creatButton);
+
+creatButton.addEventListener('click', (event) => {
+  let selectPixel = document.querySelectorAll('#pixel-board .pixel');
+  for (let i = 0; i < selectPixel.length; i++) {
+    let clearButton = selectPixel[i];
+    clearButton.style.backgroundColor = "white";
+  }
+  
+
+  if (event.target.classList.contains('pixel')) {
+    event.target.style.backgroundColor = white;
+  }
+})
+
+
