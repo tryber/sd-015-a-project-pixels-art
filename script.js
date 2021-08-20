@@ -1,12 +1,5 @@
-let coluna = 5;
-let linha = 5;
-let caixa = coluna * linha;
-
-function criadorCaixa (){
-for (let cont = 0; i < caixa; cont += 1){
- let CaixaP = document.createElement('div');
- let anexado = document.querySelector('#pixel-board');
-   CaixaP.className= 'pixel';
-    anexado.appendChild(CaixaP); 
- }
+for (let i = 0; i < 25; i += 1) {
+  const caixa = document.createElement('cor');
+  caixa.className = 'pixel';
+  document.getElementById('pixel-board').appendChild(caixa);
 }

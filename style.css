@@ -1,63 +1,49 @@
-.color{
-display:inline-block;
-border: 1px solid black;
-box-shadow: 3px 1px 3px #888888;
-}
-#color-palette{
-display: inline-block;
-border: 5px solid black;
-box-shadow: 10px 10px 5px #242222;
-background-color: #ffffff;
-}
-#color01{
-    height: 100px;
-    width: 100px;
-    background-color:black;
-    margin: 2px;
-    color:blanchedalmond;
-   }
-#color03{
-    height: 100px;
-    width: 100px;
-    background-color: yellow;
-    margin: 2px;
-}
-#color02{
-    height: 100px;
-    width: 100px;
-    background-color: red;
-    margin: 2px;
-}
-#color03{
-    height: 100px;
-    width: 100px;
-    background-color: yellow;
-    margin: 2px;
-}
-#color04{
-    height: 100px;
-    width: 100px;
-    background-color: green;
-    margin: px;
-}
-#color05{
-    height: 100px;
-    width: 100px;
-    background-color: blue;
-    margin: 2px;
-
-}
-.pixel{
-    border: 1px solid black;
-    width: 40px;
-    height: 40px;
-    background-color: white;
-    display: inline-block;
-    margin: 0px;
-    padding: 0px;
+ body{
+        background-color: rgb(224, 255, 245);
+        text-align: center;
     }
-#pixel-board{
-    max-width: 250px;
-    margin: 0px;
+.color{
+    display:inline-block;
     border: 1px solid black;
-}
+    box-shadow: 3px 1px 3px #888888;
+    }
+    #color1{
+        height: 100px;
+        width: 100px;
+        background-color:black;
+        margin: 2px;
+        color:blanchedalmond;
+       }
+    #color2{
+        height: 100px;
+        width: 100px;
+        background-color: red;
+        margin: 2px;
+    }
+    #color3{
+        height: 100px;
+        width: 100px;
+        background-color: green;
+        margin: 2px;
+    }
+    #color4{
+        height: 100px;
+        width: 100px;
+        background-color: blue;
+        margin: 2px;
+    }
+ 
+    .pixel{
+        border: 1px solid black;
+        width: 40px;
+        height: 40px;
+        background-color: white;
+        display:inline-flex;
+        
+    }
+    #tabela {
+        width: 250px;
+        height: 250px;
+        background-color: #888888;   
+        display:flexbox;   
+    }
