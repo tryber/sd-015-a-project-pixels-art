@@ -1,6 +1,9 @@
  body{
         background-color: rgb(224, 255, 245);
         text-align: center;
+          border: 0;
+  margin: 0;
+  padding: 0;
     }
 .color{
     display:inline-block;
@@ -42,7 +45,6 @@
     }
     #tabela {
         position:relative;
-        top:75%;
         left:40%;
         width: 250px;
         height: 250px;
@@ -51,9 +53,8 @@
         align-items: center;
     }
     #clear-board{
-    text-align: center;
-    width: 100px;
-    height: 50px;
-    background-color: #da6969;   
+      width: 210px;
+  height: 225px;
+  background-color: white; width: 60px;
+  height: 50px;
     }
-    

@@ -1,4 +1,4 @@
-window.onload
+
 //aqui as divs nascem, e se fortalecem para formar a tabela 5*5
 for (let i = 0; i < 25; i += 1) {
   const caixa = document.createElement('cor');
@@ -45,4 +45,9 @@ function pintador(event){
 }
 
 const botao = document.getElementById('clear-board');
+// essa soluçao é legal, pq so zera a pagina :)
+function zera() {
+  window.location.reload();
+}
+botao.addEventListener('click', zera);
 
