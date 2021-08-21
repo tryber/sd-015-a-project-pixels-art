@@ -27,7 +27,21 @@ function trocaClasse(cor) {
   removeCor();
   cor.target.classList.add('selected');
 }
-// esse contador aqui é o que vai dar o evento de click para a classe e desencadirar a funçao q puxa uma funçao que puxa uma funçao q faz funcionar tudo muahaha
+//* esse contador aqui é o que vai dar o evento de click para a classe e desencadirar a funçao q puxa uma funçao que puxa uma funçao q faz funcionar tudo muahaha
 for (let i = 0; i < paleta.length; i += 1) {
   paleta[i].addEventListener('click',trocaClasse);
 }
+// aqui vou setar o uma const pra class pixel-board e manipular ela ali em baixo
+//no for um contador seleciona o numero do pixel e aciona a funçao
+const pixelColoridinho = document.querySelector('.pixel');
+for (let i = 0; i < pixelColoridinho.length; i += 1) {
+pixelColoridinho[i].addEventListener('click', pintador);
+}
+// aqui o pintador pega a cor da paleta selected e joga no clicado, ao menos deveria :/ 
+function pintador(event){
+  const pintado = document.querySelector('.selected').style.backgroundColor;
+  event.target.style.backgroundColor = pintado
+
+}
+
+
