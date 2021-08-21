@@ -4,20 +4,37 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  
+  <!-- CSS only -->
+  
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
   <title>Project Pixels Art</title>
 </head>
 <body>   
+  <!-- Requisit one - creat a title. -->
   <h1 id="title" >Paleta de Cores</h1>
    
   <div id="color-palette"></div>
-  <div>
-  <button id="clear-board">Limpar</button>
-  <input type="number" min="1" max="50" id="board-size">
-  <button id="generate-board">VQV</button>
-</div>
+  
+  <div id="inputContainer" class="container-fluid">
+
+    <button id="clear-board" class="btn btn-warning">Limpar</button>
+    
+    <div class="input-group mb-3"></div>
+
+      <input type="number" min="1" max="50" id="board-size" class="form-control">
+      <button  id="generate-board" class="btn btn-success" type="button" id="button-addon2">VQV</button>
+    
+    </div> 
+  </div>
+  
   <div id="pixel-board" ></div>
   
+  <br><br>
+  <footer>
+    <p>Project Pixels Art - Developed by Raphael Taglialgna (Trybe Course)</p>
+  </footer> 
   <script src="script.js"></script>
 </body>
 </html>
