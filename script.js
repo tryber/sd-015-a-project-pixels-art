@@ -27,22 +27,30 @@ function trocaClasse(cor) {
   removeCor();
   cor.target.classList.add('selected');
 }
-//* esse contador aqui é o que vai dar o evento de click para a classe e desencadirar a funçao q puxa uma funçao que puxa uma funçao q faz funcionar tudo muahaha
+//esse contador aqui é o que vai dar o evento de click para a classe e desencadirar a funçao q puxa uma funçao que puxa uma funçao q faz funcionar tudo muahaha
 for (let i = 0; i < paleta.length; i += 1) {
   paleta[i].addEventListener('click',trocaClasse);
 }
-// aqui vou setar o uma const pra class pixel-board e manipular ela ali em baixo
-//no for um contador seleciona o numero do pixel e aciona a funçao
-const pixelColoridinho = document.querySelector('.pixel');
-for (let i = 0; i < pixelColoridinho.length; i += 1) {
-pixelColoridinho[i].addEventListener('click', pintador);
-}
-// aqui o pintador pega a cor da paleta selected e joga no clicado, ao menos deveria :/ 
-function pintador(event){
-  const pintado = document.querySelector('.selected').style.backgroundColor;
-  event.target.style.backgroundColor = pintado
+//aqui seleciono o id pixel-board
+const pixelColoridinho = document.getElementById('pixel-board');
 
+// aqui é magia bruta meu parceiro, essa funçao vai ser responsavel por criar eventos para jogar cor nos pixels 
+function pintor(event) {
+  const selecionado = event.target;
+  const pintado = document.querySelector('.selected').style.backgroundColor;
+  selecionado.style.backgroundColor = pintado;
 }
+
+//aqui eu chamo a funçao ali de cima 
+pixelColoridinho.addEventListener('click', pintor);
+
+
+// aqui vou referenciar o estilo do backgroundcolor, até que valeu a pena
+color1.style.backgroundColor = 'black';
+color2.style.backgroundColor = 'red';
+color3.style.backgroundColor = 'green';
+color4.style.backgroundColor = 'blue';
+
 
 const botao = document.getElementById('clear-board');
 // essa soluçao é legal, pq so zera a pagina :)
