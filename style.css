@@ -23,6 +23,10 @@
   background-color: yellow;
 }
 
+#clear-board {
+  cursor: pointer;
+}
+
 #pixel-board {
   display: flex;
   flex-direction: column;
@@ -37,4 +41,5 @@
   border: 1px solid black;
   width: 40px;
   height: 40px;
+  cursor: pointer;
 }
