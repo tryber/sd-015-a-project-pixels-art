@@ -44,4 +44,5 @@ function pintador(event){
 
 }
 
+const botao = document.getElementById('clear-board');
 
