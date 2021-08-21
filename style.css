@@ -39,5 +39,9 @@
 }
 
 #clear-board {
-  margin-top: 10px;
+  margin: 10px;
+}
+
+.selected {
+  background-color: white;
 }
