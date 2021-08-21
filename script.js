@@ -6,13 +6,28 @@ for (let i = 0; i < 25; i += 1) {
   document.getElementById('pixel-board').appendChild(caixa);
 }
 
-//a const paleta aponta a class color aqui para na funçao abaixo usar a magia da programaçao para adicionar o select e remover o antigo select
+//a const paleta aponta a class color aqui para na funçao abaixo usar a magia da programaçao para  o select e remover o antigo select
 const paleta = document.querySelectorAll('.color');
-function mudacor() {
+function removeCor() {
   for (let i = 0; i < paleta.length; i += 1) {
-    paleta[i].classList.add('selected');
+    paleta[i].classList.remove('selected',);
+
   }
 }
 //nessas linhas radicais aqui, temos um apontamento maravilindo para a cor preto, assim mudando a class dela :)
+//alem disso tbm cria const para manipular as cores individualmente se necessario mais pra frente, vai que ne :P
  const corPreta = document.getElementById('color1');
-corPreta.classList.add('selected');
+ const corVermelha = document.getElementById('color2');
+ const corVerde = document.getElementById('color3');
+ const corAzul = document.getElementById('color4');
+ corPreta.classList.add('selected');
+
+// acho que ta claro que troca a classe né
+function trocaClasse(cor) {
+  removeCor();
+  cor.target.classList.add('selected');
+}
+// esse contador aqui é o que vai dar o evento de click para a classe e desencadirar a funçao q puxa uma funçao que puxa uma funçao q faz funcionar tudo muahaha
+for (let i = 0; i < paleta.length; i += 1) {
+  paleta[i].addEventListener('click',trocaClasse);
+}
