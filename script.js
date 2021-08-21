@@ -2,6 +2,7 @@ window.onload = function () {
 
   const pixelBoard = document.querySelector("#pixel-board");
   const colorPalette = document.getElementById('color-palette');
+  const clearBtn = document.getElementById('clear-board');
 
   function createColorPalette () {
     const colorPaletteSection = document.querySelector('#color-palette');
@@ -21,6 +22,7 @@ window.onload = function () {
     for (let i = 0; i < size * size; i += 1) {
       const pixel = document.createElement('div');
     pixel.classList.add('pixel');
+    pixel.style.backgroundColor = 'white'
     pixel.style.width = `${heightWidth}px`;
     pixel.style.height = `${heightWidth}px`;
     pixel.style.border = '1px solid black';
@@ -49,10 +51,19 @@ window.onload = function () {
   colorPalette.addEventListener('click', changeSelected);
 
   function paintPixels (event) {
-    selectedPixel = event.target;
-    selectedColor = document.querySelector('.selected');
-    selectedPixel.style.backgroundColor = selectedColor.style.backgroundColor;
+    const selectedPixel = event.target;
+    const selectedColor = document.querySelector('.selected');
+    const style = getComputedStyle(selectedColor);
+    selectedPixel.style.backgroundColor = style.backgroundColor;
+  }
   pixelBoard.addEventListener('click', paintPixels);
-}
+
+  function clearBoard () {
+    const pixels = document.querySelectorAll('.pixel');
+    for (let i = 0; i < pixels.length; i += 1) {
+      pixels[i].style.backgroundColor = 'white'
+    }
+  }
+  clearBtn.addEventListener('click', clearBoard);
 }
 
