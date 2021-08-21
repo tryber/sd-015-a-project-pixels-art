@@ -6,7 +6,8 @@
 }
 #pixel-board {
   border-spacing: 0px;
-  border: black solid 1px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .pixel {
   border: black solid 1px;
@@ -18,6 +19,7 @@
 }
 .black {
   background-color: black;
+
 }
 .green {
   background-color: greenyellow;
@@ -34,4 +36,15 @@
   color: white;
   text-transform: uppercase;
   border-color: whitesmoke;
+}
+#header {
+  text-align: center;
+  font-family: 'Architects Daughter', cursive;
+  font-size: 22px;
+}
+#main {
+  text-align: center;
+}
+.line-board {
+  height: 40px;
 }
