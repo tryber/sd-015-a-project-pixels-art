@@ -1,0 +1,21 @@
+
+.color{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: 1px solid black
+}
+
+.pixel{
+    display: inline-block;
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    border:1px solid black
+
+}
+.quadro{
+    width: 20%;
+    
+}
+
