@@ -20,11 +20,29 @@
   border: 1px;
   border-style: solid;
   display: inline-block;
+  margin: 0;
 }
 
-#clear-board {
-  background-color: rgb(123, 223, 123);
+.button {
+  background-color: rgb(110, 133, 202);
   border-radius: 10px;
   width: 60px;
   height: 50px;
+  margin-bottom: 30px;
+}
+
+#clear-board {
+  background-color: rgb(191, 58, 58);
+}
+
+body {
+  width: 4000px;
+}
+
+#removePixel {
+  background-color: lime;
+  width: 110px;
+  height: 50px;
+  border-radius: 10px;
+  
 }

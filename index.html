@@ -10,7 +10,6 @@
   <header>
     <h1 id="title"> Paleta de Cores </h1>
   </header>
-  
   <section id= "color-palette">
     <div class="color selected" id= "black-color"> </div>
     <div class="color" id= "red-color"> </div>
@@ -18,18 +17,11 @@
     <div class="color" id= "green-color"> </div>
   </section>
   
-  <button id="clear-board">Limpar</button>
-
-  <main id="pixel-board">
+  <input type="number" name="input" id="board-size" min="1" placeholder="Adicione mais pixels aqui...">
+  <button id="generate-board" class="button" >VQV</button>
+  <button id="clear-board" class="button">Limpar</button>
    
-      <section class="block"></section>
-      <section class="block"></section>
-      <section class="block"></section>
-      <section class="block"></section>
-      <section class="block"></section>
-  
-    </main>
-  
+  <main id="pixel-board"> </main>
   <script src="script.js"></script>
 </body>
 </html>
