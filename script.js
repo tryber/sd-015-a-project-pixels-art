@@ -1,6 +1,7 @@
 window.onload = function () {
 
   const pixelBoard = document.querySelector("#pixel-board");
+  const colorPalette = document.getElementById('color-palette');
 
   function createColorPalette () {
     const colorPaletteSection = document.querySelector('#color-palette');
@@ -15,11 +16,11 @@ window.onload = function () {
     } 
   }
   createColorPalette();
+
     function createGridLine (size, heightWidth) {
     for (let i = 0; i < size * size; i += 1) {
       const pixel = document.createElement('div');
     pixel.classList.add('pixel');
-    pixel.style.backgroundColor = 'white';
     pixel.style.width = `${heightWidth}px`;
     pixel.style.height = `${heightWidth}px`;
     pixel.style.border = '1px solid black';
@@ -34,6 +35,24 @@ window.onload = function () {
       pixelBoard.style.width = `${((heightWidth + 2) * size)}px`;
   }
   createGrid(5, 40);
-}
 
+  function changeSelected (event) {
+    let colors = document.querySelectorAll('.color');
+    for(let i = 0; i < colors.length; i += 1) {
+      if (colors[i] !== event.target) {
+        colors[i].classList.remove('selected');
+      } else {
+        colors[i].classList.add('selected');
+      }
+    }
+  }
+  colorPalette.addEventListener('click', changeSelected);
+
+  function paintPixels (event) {
+    selectedPixel = event.target;
+    selectedColor = document.querySelector('.selected');
+    selectedPixel.style.backgroundColor = selectedColor.style.backgroundColor;
+  pixelBoard.addEventListener('click', paintPixels);
+}
+}
 
