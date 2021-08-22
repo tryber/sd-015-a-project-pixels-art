@@ -56,15 +56,12 @@ function pintarQuadrado (event){
         document.querySelectorAll(".pixel")[index].addEventListener("click", pintarQuadrado);
 
     }
-        function clearButton (event){
-            let clearBoard = event.target;
-            clearBoard = document.getElementById("clear-board").style.backgroundColor = "white"
-        }
+        
 
-     let clear = document.getElementById(".clear-board");
+     let clear = document.getElementById("clear-board");
      clear.addEventListener("click", function(event){
          if(clear){
-             for(let index = 0; index < document.querySelectorAll(".pixel").length; index +=0){
+             for(let index = 0; index < document.querySelectorAll(".pixel").length; index += 1){
                 let whiteColor = document.querySelectorAll(".pixel")[index];
                 whiteColor.style.backgroundColor = "white"
              }
