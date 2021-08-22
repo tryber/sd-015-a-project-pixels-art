@@ -19,17 +19,41 @@ function classSelected() {
 }
 classSelected();
 
-function checkSelected() {
+function checkSelected(event) {
     let selectedCheck = document.querySelector(".selected");
     
-    let addSelect = document.getElementsByTagName("section");
+    selectedCheck && selectedCheck.classList.remove("selected")
+    document.querySelector(".zoom") && document.querySelector(".zoom").classList.remove("zoom")
+    event.target.classList.add("selected")
+    event.target.classList.add("zoom")
+}
+
+
+
+function zoom(event){
+    event.target.classList.add("over")
+}
+function over(event){
+    event.target.classList.remove("over")
+}
+
+for(let index = 0; index < document.querySelectorAll(".color").length; index +=1){
+    document.querySelectorAll(".color")[index].addEventListener("click", checkSelected);
+    document.querySelectorAll(".color")[index].addEventListener("mouseover", zoom);
+    document.querySelectorAll(".color")[index].addEventListener("mouseout", over);
+}
+
+function pintarQuadrado (event){
+    let pintaQuadro = event.target;
+    pintaQuadro.style.backgroundColor = document.querySelectorAll("selected").style.backgroundColor;
+
+}
     
-    addSelect.addEventListener("click", function(event){
-        if(document.querySelector(".selected")){
-            document.querySelector(".selected").classList.remove("selected");
-           
-           
-        }
-    })
+    for(let index = 0; index < document.querySelectorAll(".pixel"); index += 1){
+        document.querySelectorAll(".pixel")[index].addEventListener("click", pintarQuadrado)
+    }
+    
+
 }
-}
+
+

@@ -1,7 +1,7 @@
 .color{
     border: 1px solid;
-    height: 80px;
-    width: 80px;
+    height: 60px;
+    width: 60px;
     background-color:black;
     display: inline-block;
 }
@@ -20,4 +20,13 @@
     display: inline-block;
     margin-top: 4px;
     background-color: rgb(255, 255, 255);
+}
+
+.zoom{
+    width: 80px;
+    height: 80px;
+}
+.over{
+    width: 80px;
+    height: 80px;
 }
