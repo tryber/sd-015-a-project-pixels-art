@@ -13,6 +13,17 @@ function selectColor() {
   selectedColor.classList.remove('selected');
   this.classList.add('selected');
 }
+// Adiciona evento aos elementos da color-palette.
 for (let color of colorPalete) {
   color.addEventListener('click', selectColor);
+}
+// Muda o background color de um pixel com a cor do elemento selected.
+function paintPixel() {
+  const selectedColor = document.querySelector('.selected');
+  this.style.backgroundColor = selectedColor.style.backgroundColor;
+}
+// Adiciona o evento paintPixel 
+const pixels = document.querySelectorAll('.pixel');
+for (let pixel of pixels) {
+  pixel.addEventListener('click', paintPixel);
 }
