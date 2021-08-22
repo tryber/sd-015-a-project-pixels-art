@@ -148,8 +148,8 @@ generateBoardButton.addEventListener('click', changeBoardSize);
 // cores aleatórias
 function randomColorOnLoad() {
   for (let index = 2; index <= 4; index += 1) {
-    const getBlock = document.querySelector('#block'+index);
-    const randomColor = '#'+Math.floor(Math.random()*16777215).toString(16);
+    const getBlock = document.querySelector('#block' + index);
+    const randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
     getBlock.style.backgroundColor = randomColor;
   }
 }
