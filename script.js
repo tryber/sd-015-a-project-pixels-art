@@ -8,6 +8,8 @@ let escutaBlue = document.getElementById('blue');
 let escutaPink = document.getElementById('pink');
 let escutaRed = document.getElementById('red');
 
+/*variavel botão*/
+let botao = document.getElementById('clear-board');
 
 /*Inicializando a escuta de eventos no quadro*/
 boardPlace.addEventListener('click',pintarQuadro);
@@ -18,6 +20,9 @@ escutaBlue.addEventListener('click',selecionaCor);
 escutaPink.addEventListener('click',selecionaCor);
 escutaRed.addEventListener('click',selecionaCor);
 
+/*Inicializando a escuta de eventos no limpador de quadro*/
+botao.addEventListener('click',limpaQuadro);
+botao.innerText = 'Limpar';
 
 
 /*variaveis que ditam o tamanho do quadro*/
@@ -56,7 +61,13 @@ function pintarQuadro(event){
             event.target.id = idSelected;
         }
     }
-    
-    console.log (event.target,idSelected);
+}
 
+
+function limpaQuadro(){
+    let boardSelected = document.getElementsByClassName('pixel');
+    for (let index in boardSelected){
+        boardSelected[index].id = '';
+    }
+    
 }
