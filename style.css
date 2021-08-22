@@ -22,3 +22,10 @@
   width: 220px;
   flex-wrap: wrap;
 }
+
+.clear-board {
+  width: 210px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+}

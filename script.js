@@ -22,8 +22,17 @@ function paintPixel() {
   const selectedColor = document.querySelector('.selected');
   this.style.backgroundColor = selectedColor.style.backgroundColor;
 }
-// Adiciona o evento paintPixel 
+// Adiciona o evento paintPixel aos elementos do pixel board.
 const pixels = document.querySelectorAll('.pixel');
 for (let pixel of pixels) {
   pixel.addEventListener('click', paintPixel);
 }
+// Muda o background color dos pixels para branco.
+const clearBtn = document.querySelector('#clear-board');
+function clearButton() {
+  for (const pixel of pixels) {
+    pixel.style.backgroundColor = 'white';
+  }
+}
+// Adiciona evento clearButton ao botão.
+clearBtn.addEventListener('click', clearButton);
