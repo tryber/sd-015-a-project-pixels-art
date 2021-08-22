@@ -1,6 +1,8 @@
 window.onload = function(){
 function paletaDeCores(event) {
 
+    document.getElementsByClassName("color")[0].style.backgroundColor = "black";
+
     document.getElementsByClassName("color")[1].style.backgroundColor = "blue";
 
     document.getElementsByClassName("color")[2].style.backgroundColor = "red";
@@ -30,6 +32,7 @@ function checkSelected(event) {
 
 
 
+
 function zoom(event){
     event.target.classList.add("over")
 }
@@ -42,15 +45,16 @@ for(let index = 0; index < document.querySelectorAll(".color").length; index +=1
     document.querySelectorAll(".color")[index].addEventListener("mouseover", zoom);
     document.querySelectorAll(".color")[index].addEventListener("mouseout", over);
 }
-
 function pintarQuadrado (event){
     let pintaQuadro = event.target;
-    pintaQuadro.style.backgroundColor = document.querySelectorAll("selected").style.backgroundColor;
+    pintaQuadro.style.backgroundColor = document.querySelector(".selected").style.backgroundColor;
 
 }
+
     
-    for(let index = 0; index < document.querySelectorAll(".pixel"); index += 1){
-        document.querySelectorAll(".pixel")[index].addEventListener("click", pintarQuadrado)
+    for(let index = 0; index < document.querySelectorAll(".pixel").length; index += 1){
+        document.querySelectorAll(".pixel")[index].addEventListener("click", pintarQuadrado);
+
     }
     
 
