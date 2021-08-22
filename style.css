@@ -1,3 +1,12 @@
+#pixel-board {
+  border-color: black;
+  border-width: 1px;
+  border-style: solid;
+  width: 210px;
+  height: 2px;
+}
+
+
 .color {
   display: inline-block;
   width: 50px;
@@ -8,7 +17,22 @@
   border-style: solid;
 }
 
-#black {
+
+
+.pixel {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  margin-right: -4px;
+  margin-bottom: -4px;
+  border-color: black;
+  border-width: 1px;
+  border-style: solid;
+
+  
+}
+
+/*#black {
   background-color: black;
 }
 
@@ -27,3 +51,4 @@
 #gray {
   background-color: gray;
 }
+*/
