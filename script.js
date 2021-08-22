@@ -38,10 +38,6 @@ function pintaPixel(event) {
   // event.target.style.backgroundColor = window.getComputedStyle(selectedClass, null).getPropertyValue('background-color');
 }
 
-
-
-
-
 window.onload = function () {
   criaBoard();
   const pixels = document.getElementsByClassName('pixel');
