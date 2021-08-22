@@ -1,53 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
 <title>Projeto pixels art</title>
-  </head>
+
+</head>  
 
 <body>
-   <h1 id="title">Paleta de Cores</h1>
 
-<section id="color-palette">
+   <header>
+   <h1 id="title">Paleta de Cores</h1>   
+      <nav id="color-palette">
+<div class="color selected" id="firstColor">Cor 01</div>
+<div class="color" id="secondColor">Cor 02</div>
+<div class="color" id="thirdColor">Cor 03</div>
+<div class="color" id="fourthColor">Cor 04</div>
+      </nav>
+      
+      <button id="clear-board">Limpar</button>
+</header>
 
-<div class="color palette1">Cor 01</div>
-<div class="color palette2">Cor 02</div>
-<div class="color palette3">Cor 03</div>
-<div class="color palette4">Cor 04</div>
 
-</section>
-
-<canvas id="pixel-board">
-   <div class="pixel"></div>
-   <div class="pixel"></div>
-   <div class="pixel"></div>
-   <div class="pixel"></div>
-   <div class="pixel"></div>
-   <div class="pixel"></div>
-   <div class="pixel"></div>
-   <div class="pixel"></div>
-   <div class="pixel"></div>
-   <div class="pixel"></div>
-   <div class="pixel"></div>
-   <div class="pixel"></div>
-   <div class="pixel"></div>
-   <div class="pixel"></div>
-   <div class="pixel"></div>
-   <div class="pixel"></div>
-   <div class="pixel"></div>
-   <div class="pixel"></div>
-   <div class="pixel"></div>
-   <div class="pixel"></div>
-   <div class="pixel"></div>
-   <div class="pixel"></div>
-   <div class="pixel"></div>
-   <div class="pixel"></div>
-   <div class="pixel"></div>
-</canvas>
+      <div id="pixel-board"></div>
+  
+      
 
 
 <script src="script.js"></script>
