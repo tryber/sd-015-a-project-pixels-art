@@ -13,20 +13,17 @@ body {
   display: inline-block;
 }
 
-#block-two {
-  background-color: red;
+#block2 {
   padding: 25px;
   display: inline-block;
 }
 
-#block-three {
-  background-color: blue;
+#block3 {
   padding: 25px;
   display: inline-block;
 }
 
-#block-four {
-  background-color: green;
+#block4 {
   padding: 25px;
   display: inline-block;
 }
