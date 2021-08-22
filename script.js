@@ -10,6 +10,7 @@ function pixelBoard(){
         for(let index = 0; index <=4; index +=1 ){
             let pixelsLine = document.createElement("div")
         pixelsLine.className="pixel";
+        pixelsLine.style.background = "white";
         pixelColun.appendChild(pixelsLine); 
         }
     }
@@ -17,13 +18,42 @@ function pixelBoard(){
 pixelBoard();
 
 
-function pixelSelect(){ 
-    let colorPalette = document.querySelector(".colors-contain");
+function colorPalette(){    
+    let colors = document.querySelectorAll(".color");
     
-    colorPalette.addEventListener("click", function(evento){
+    colors[0].style.backgroundColor = "black"
+    colors[1].style.backgroundColor = "blue"
+    colors[2].style.backgroundColor = "magenta"
+    colors[3].style.backgroundColor = "green"
+    
+    
+}
+colorPalette()
+
+function pixelSelect(){ 
+    let colorPalette = document.getElementsByClassName("color");
+    for (let index=0; index<colorPalette.length;index+=1){
+    colorPalette[index].addEventListener("click", function(evento){
         let selected = document.querySelector(".selected");
       selected.classList.remove("selected");
       evento.target.classList.add("selected")
-    })
+    })}
 }    
 pixelSelect()
+
+
+function selectedColor(){   
+    let pixels = document.getElementsByClassName("pixel");
+    for (let i=0; i<pixels.length; i+=1 ){  
+        pixels[i].addEventListener("click",function(event){  
+         let selectedColor = document.querySelector(".selected").style.backgroundColor
+        if(event.target.style.backgroundColor == "white" ){
+            event.target.style.backgroundColor = selectedColor;
+        }  else if (event.target.style.backgroundColor !=selectedColor){event.target.style.backgroundColor =selectedColor;
+        } else if (event.target.style.backgroundColor == selectedColor){   
+            event.target.style.backgroundColor ="white";
+        }
+        })
+    }
+}
+selectedColor()

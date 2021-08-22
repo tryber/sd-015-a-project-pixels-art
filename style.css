@@ -11,23 +11,23 @@ body{  margin: 0;
             margin: 5px;
             
 }
-.c1{   
+/* .c1{   
    
-    background-color: black;
+    background: black;
 }
 
 .c2{   
-   background-color: blue;
+   background: chartreuse;
 
 }
 .c3{   
-    background-color: rgb(124, 124, 143);
+    background: pink;
 
 }
 .c4{   
     background-color: rgb(191, 100, 160);
 
-}
+} */
 
 .line{  
 
@@ -45,7 +45,7 @@ body{  margin: 0;
          height: 40px;
             border: 1px solid black;
             margin: 5px;
-            background-color: white;
+            
             
 }
 #color-palette { 
