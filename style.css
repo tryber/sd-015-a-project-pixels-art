@@ -1,0 +1,68 @@
+body{  margin: 0;
+    background-color: #16161a;
+}
+.header{    
+    color: #fffffe;
+    text-align: center;
+}
+.color { width: 100px;
+         height: 100px;
+            border: 1px solid black;
+            margin: 5px;
+            
+}
+/* .c1{   
+   
+    background: black;
+}
+
+.c2{   
+   background: chartreuse;
+
+}
+.c3{   
+    background: pink;
+
+}
+.c4{   
+    background-color: rgb(191, 100, 160);
+
+} */
+
+.line{  
+
+}
+.colum{ 
+    display: flex;
+    justify-content: center;
+}
+
+.selected{  
+
+}
+.pixel{ 
+    width: 40px;
+         height: 40px;
+            border: 1px solid black;
+            margin: 5px;
+            
+            
+}
+#color-palette { 
+    display: flex;
+    justify-content:center;
+    
+}
+.button{
+    margin-top: 25px;
+   margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.cleanButton{   
+    height: 30px;
+    width: 90px;
+    
+             
+}
