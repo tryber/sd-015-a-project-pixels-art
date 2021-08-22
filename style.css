@@ -47,3 +47,7 @@ body {
 #clear-board {
   margin-top: 20px;
 }
+
+#board-size {
+  max-width: 50px;
+}
