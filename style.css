@@ -1,0 +1,38 @@
+/*Repositório de Leandro-Hespanhol consultado, link: https://github.com/tryber/sd-015-a-project-pixels-art/blob/920dea05bc2e730722da2c5059c93eab93408df3/style.css */
+
+
+
+body {
+    background-color: bisque;
+  }
+  
+  #color-palette{
+   
+   display: inline-block;
+  }
+  
+  
+    .color{
+      width: 40px;
+      height: 40px;
+      display: inline-block;
+      border: 1px solid black;
+      
+      
+    }
+  
+  #pixel-board{
+    width: 220px;
+    height: 220px;
+  }
+  
+    .pixel {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      border: 1px solid black;
+     
+      
+    }
+
+
