@@ -53,3 +53,16 @@ body{  margin: 0;
     justify-content:center;
     
 }
+.button{
+    margin-top: 25px;
+   margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.cleanButton{   
+    height: 30px;
+    width: 90px;
+    
+             
+}

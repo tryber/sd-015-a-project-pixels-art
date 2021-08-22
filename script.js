@@ -57,3 +57,16 @@ function selectedColor(){
     }
 }
 selectedColor()
+
+function cleanButton(){ 
+    let button = document.querySelector(".cleanButton");
+
+    button.addEventListener("click",function(){
+        let pixels = document.getElementsByClassName("pixel");
+        for (let i=0; i<pixels.length; i+=1 ){
+        pixels[i].style.backgroundColor = "white"}
+    })
+
+}
+cleanButton()
+
