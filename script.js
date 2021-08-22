@@ -46,6 +46,17 @@ function selecionaCor(event){
 }
 
 
-function pintarQuadro(){
+function pintarQuadro(event){
+    colorSelected = document.getElementsByTagName('li');
+    let idSelected;
+    for (index = 0; index < colorSelected.length; index +=1){
+        
+        if (colorSelected[index].classList.contains ('selected')){
+            idSelected = colorSelected[index].id;
+            event.target.id = idSelected;
+        }
+    }
+    
+    console.log (event.target,idSelected);
 
 }
