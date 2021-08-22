@@ -1,28 +1,56 @@
 const h1 = document.createElement('h1');
 const sectionCollorPalette = document.createElement('section');
 const quadroPixel = document.createElement('div');
-const pixelsBoard = document.querySelectorAll('.pixel');
 const tamanhoPaleta = 4;
-const altura = 5;
-const largura = 5;
-
-function corQuadrados () {
-  quadroPixel.addEventListener('click', )
-}
-
-function pintaQuadrado () {
-
-}
-
-sectionCollorPalette.id = 'color-palette';
+const botaoInput = document.createElement('input');
+const inputTamanho = document.createElement('input');
+const divBotoes = document.createElement('section');
+const clearButton = document.createElement('input');
+clearButton.id = 'clear-board';
+clearButton.type = 'reset';
+clearButton.value = 'Limpar';
+clearButton.innerText = 'Limpar';
 quadroPixel.id = 'pixel-board';
-h1.innerText = 'Paleta de Cores';
+sectionCollorPalette.id = 'color-palette';
 h1.id = 'title';
+divBotoes.id = 'div-buttons';
+inputTamanho.id = 'board-size';
+inputTamanho.innerText = 'VQV';
+inputTamanho.placeholder = 'height';
+inputTamanho.type = 'number';
+inputTamanho.min = 1;
+inputTamanho.max = 50;
+botaoInput.type = 'button';
+botaoInput.id = 'generate-board';
+botaoInput.innerHTML = 'VQV';
+botaoInput.value = 'VQV';
+botaoInput.innerText = 'VQV';
+
+h1.innerText = 'Paleta de Cores';
+
+bodyChildren(h1);
+bodyChildren(sectionCollorPalette);
+fillBoard(5);
+teste();
+bodyChildren(clearButton);
+bodyChildren(quadroPixel);
+criaPaletaCores();
+elementClick();
+pasteStyle(elementClick());
+clearBoard();
 
 window.onload = function selectedElement() {
   const elementSelected = document.querySelectorAll('.color')[0];
   elementSelected.classList.add('selected');
+  paletteColors();
 };
+
+function paletteColors() {
+  const paletacoresDiv = document.querySelectorAll('.color');
+  for (let i = 1; i < paletacoresDiv.length; i += 1) {
+    paletacoresDiv[i].style.backgroundColor = 'rgb('+Math.round(Math.random()*255)+','+Math.round(Math.random()*255)+','+Math.round(Math.random()*255)+')';
+  }
+}
 
 // function elementClick() {
 //   let paletaCores = document.querySelectorAll('.color');
@@ -40,25 +68,24 @@ window.onload = function selectedElement() {
 //   return elementoClicado;
 // }
 
-function pasteStyle (element) {
+function pasteStyle(element) {
   const pixels = document.querySelectorAll('.pixel');
 
-    for (let i = 0; i < pixels.length; i += 1) {
-      pixels[i].addEventListener('click', function(event) {
-        event.target.style.backgroundColor = element?element: 'black';
-        console.log(element);
+  for (let i = 0; i < pixels.length; i += 1) {
+    pixels[i].addEventListener('click', (event) => {
+      event.target.style.backgroundColor = element?element: 'black';
     });
   }
 }
 
 function elementClick() {
-  let paletaCores = document.querySelectorAll('.color');
+  const paletaCores = document.querySelectorAll('.color');
   let elementoClicado = document.querySelector('.selected');
   const paletaDeCores = document.querySelector('#color-palette');
   const pixels = document.querySelectorAll('.pixel');
 
   for (let i = 0; i < paletaCores.length; i += 1) {
-    paletaCores[i].addEventListener('click', function (event) {
+    paletaCores[i].addEventListener('click', (event) => {
       removeSelected(elementoClicado);
       elementoClicado = event.target.classList.add('selected');
       elementoClicado = getComputedStyle(event.target).getPropertyValue('background-color');
@@ -67,7 +94,7 @@ function elementClick() {
   } return elementoClicado;
 }
 
-function removeSelected(elemento) {
+function removeSelected(elemento) { 
   const remocaoLista = document.querySelectorAll('.selected');
 
   for (let i = 0; i < remocaoLista.length; i += 1) {
@@ -85,11 +112,10 @@ function pixelBoardChildren(elemento) {
   quadroPixel.appendChild(elemento);
 }
 
-function criaCaixa(j) {
+function criaCaixa() {
   const caixa = document.createElement('div');
   caixa.className = 'pixel';
   caixa.style.border = '1px solid black';
-  caixa.style.marginBottom = '0px';
   return caixa;
 }
 
@@ -107,19 +133,46 @@ function criaPaletaCores() {
   }
 }
 
-function fillBoard() {
-  for (let i = 0; i < largura; i += 1) {
+function fillBoard(valor) {
+  quadroPixel.style.width = `${(valor * 42)}px`;
+  quadroPixel.style.maxHeight = `${(valor * 42)}px`;
+  for (let i = 0; i < valor; i += 1) {
     pixelBoardChildren(criaCaixa());
-    for (let j = 0; j < altura - 1; j += 1) {
+    for (let j = 0; j < valor - 1; j += 1) {
       pixelBoardChildren(criaCaixa());
     }
   }
 }
 
-bodyChildren(h1);
-bodyChildren(sectionCollorPalette);
-bodyChildren(quadroPixel);
-criaPaletaCores();
-fillBoard();
-elementClick();
-pasteStyle(elementClick());
+function putIds(elemento, texto) {
+  // eslint-disable-next-line no-param-reassign
+  elemento.id = texto;
+}
+
+function teste() {
+  bodyChildren(divBotoes);
+  divBotoes.appendChild(inputTamanho);
+  divBotoes.appendChild(botaoInput);
+
+  botaoInput.addEventListener('click', () => {
+    quadroPixel.innerHTML = '';
+    let tamanho = inputTamanho.value;
+    if (tamanho === '') {
+      alert('Board inválido!');
+    } else if (tamanho < 5 && tamanho > 0) {
+      tamanho = 5;
+    } else if (tamanho > 50) {
+      tamanho = 50;
+    }
+    fillBoard(tamanho);
+  });
+}
+
+function clearBoard() {
+  const pegandoPixel = document.getElementsByClassName('pixel');
+  clearButton.addEventListener('click', () => {
+    for (let i = 0; i < pegandoPixel.length; i += 1) {
+      pegandoPixel[i].style.backgroundColor = '#ffffff';
+    }
+  });
+}
