@@ -1,0 +1,30 @@
+.color{
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    border: 1px solid black;}
+
+#black{
+    background-color: black;}
+
+#red{
+    background-color: red;}
+
+#blue{
+    background-color: blue;}
+
+#green{
+    background-color: green;}
+
+#pixel-board
+
+.linha{
+    height: 40px;}
+
+.pixel{
+    margin-left: -1px;
+    display: inline-block;
+    border: 1px solid black;
+    height: 40px;
+    width: 40px;
+    background-color: rgb(255, 255, 255);}
