@@ -1,0 +1,38 @@
+#color-palette  {
+  margin-bottom: 20px;
+}
+
+#color-palette div {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-color: black;
+  border-width: 1px;
+  border-style:solid;
+}
+
+.pixel {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-color: black;
+  margin-right: -1px;
+  margin-top: -4px;
+  border-width: 1px;
+  border-style: solid;
+  background-color: rgb(255,255,255);
+  
+}
+
+#pixel-board {
+  display:flex;
+  flex-flow: row wrap;
+  
+  width: 210px;
+  height: 210px;
+}
+
+
+
+
+
