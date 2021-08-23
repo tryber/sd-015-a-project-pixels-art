@@ -23,11 +23,13 @@ function coresPadrao() {
 
 coresPadrao()
 
+let Ids = [];
+
 function criarPixels() {
   let paletaDeCores = document.getElementById('pixel-board');
-
   for (let i = 0; i < 25; i+= 1) {
     let filho = document.createElement('div')
+    Ids.push(i);
     filho.classList.add('pixel')
     paletaDeCores.appendChild(filho);
   }
@@ -59,6 +61,7 @@ function selecaoCor(event) {
     elementosDiv[index].classList.remove('selected')
   }
   event.target.classList.add('selected')
+  pickColor()
 }
 
 primeiraDiv.addEventListener('click', selecaoCor)
@@ -72,3 +75,30 @@ function selecaoPadrao() {
   };
   
   selecaoPadrao()
+
+let retornoPickColor // retorno da cor clickada
+
+//função de pegar a cor baseado na class selected que seleciona o elemento
+
+function pickColor() {
+  let corSelecionada = document.querySelector('.selected');
+  return retornoPickColor = corSelecionada.style.backgroundColor
+};
+
+pickColor()
+
+// criar Ids na grade a ser pintada, para eu conseguir usar uma ação para cada.
+
+let pixels = document.querySelectorAll('.pixel')
+for (let index = 0; index < pixels.length; index += 1) {
+  let unidadePixel = pixels[index];
+  unidadePixel.id = Ids[index]
+}
+
+for (let index = 0; index < pixels.length; index += 1) {
+  document.getElementById(Ids[index]).addEventListener('click', pintar)
+}
+
+function pintar(event) {
+  event.target.style.backgroundColor = retornoPickColor
+}
