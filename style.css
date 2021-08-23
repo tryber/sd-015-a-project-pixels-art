@@ -1,3 +1,7 @@
+* {
+  margin: 0px;
+}
+
 .color {
   width: 50px;
   height: 50px;
@@ -21,4 +25,21 @@
 
 #violeta {
   background-color: violet;
+}
+
+.pixel {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  display: inline-block;
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+#pixel-board {
+  width: 210px;
+  padding: 0px;
 }
