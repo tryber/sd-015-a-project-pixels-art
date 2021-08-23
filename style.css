@@ -8,18 +8,17 @@ body {
 
 #color-pallete {
   display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-  background-color: #6796cc;
-  height: 60px;
+  justify-content: space-evenly;
+  background-color: #dddddd;
+  height: 80px;
+  padding: 40px;
 
 }
 
 .color {
  border: solid 1px black;
- height: 60px;
- width: 60px;
- margin: 20px;
+ height: 80px;
+ width: 80px;
 
 }
 
