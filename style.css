@@ -37,3 +37,22 @@ body {
 #green {
   background-color: green;
 }
+
+#pixel-board{
+  display: flex;
+  justify-content: center;
+  height: 500px;
+  background-color: rgb(141, 136, 136);
+
+
+  
+}
+
+.pixel {
+  height: 40px;
+  width: 40px;
+  border: solid 1px black;
+  background-color: white;
+  margin: 5px;
+
+}
