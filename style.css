@@ -1,0 +1,60 @@
+.color {
+  border: 1px solid black;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: black;
+}
+
+.color:nth-of-type(1) {
+  background-color: black;
+}
+
+/* .color:nth-of-type(2) {
+  background-color: aquamarine;
+}
+
+.color:nth-of-type(3) {
+  background-color: #cecadf;
+}
+
+.color:nth-of-type(4) {
+  background-color: #e996b7;
+} */
+
+#pixel-board {
+  height: auto;
+  width: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.pixel {
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  float: left;
+}
+
+#generate-board {
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  margin-left: 2px;
+}
+
+#board-size {
+  width: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+#div-buttons {
+  width: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  align-self: center;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
