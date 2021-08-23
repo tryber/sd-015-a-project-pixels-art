@@ -10,7 +10,7 @@ let pixelBoard = document.getElementById("pixel-board");
 let eraseButton = document.getElementById("clear-board")
 let getSquares = document.querySelectorAll(".pixel");
 let setNewColor = 'white';
-let boardSize = document.getElementById("board-size");
+let boardSize = document.getElementById("generate-board");
 
 
 colorOne.style.backgroundColor = "black";
@@ -24,7 +24,6 @@ colorTwo.addEventListener('click', addSelectedClass);
 colorThree.addEventListener('click', addSelectedClass);
 colorFour.addEventListener('click', addSelectedClass);
 pixelBoard.addEventListener('click', changeColor);
-boardSize.addEventListener('input', sizeSelected);
 
 
 function addSelectedClass(event) {
@@ -43,5 +42,3 @@ eraseButton.addEventListener('click', function(){
        getSquares[i].style.backgroundColor = setNewColor;
    }
 });
-
-function sizeSelected(){}
