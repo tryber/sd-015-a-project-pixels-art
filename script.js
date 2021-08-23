@@ -42,12 +42,11 @@ for (let index = 0; index < pintar.length; index += 1) {
 }
 // Retornar pra branco
 
-// const pixels = document.querySelectorAll('.pixel');
-// const limpar = document.getElementById('clear-board');
+const limpar = document.getElementById('clear-board');
 
-// function limparPixel() {
-//   for (let indexP = 0; indexP < pixels.length; indexP += 1) {
-//     pixels[indexP].style.backgroundColor = 'white';
-//   }
-// }
-// limpar.addEventListener('click', 'limparPixel');
+function limparPixel() {
+  for (let indexP = 0; indexP < pintar.length; indexP += 1) {
+    pintar[indexP].style.backgroundColor = 'white';
+  }
+}
+limpar.addEventListener('click', limparPixel);
