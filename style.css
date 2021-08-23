@@ -29,36 +29,41 @@
   
   #black {
     background-color: black;
+    width: 40px;
   }
   
   #blue {
     background-color: blue;
+    width: 40px;
   }
   
   #green {
     background-color: green;
+    width: 40px;
   }
   
   #red {
     background-color: red;
+    width: 40px;
   }
   
   #pink {
     background-color: pink;
+    width: 40px;
   }
   
   /* Pixel Board */
-  
+
   #pixel-board {
-    display: flex;
-    justify-content: center;
-    padding: 10px;
+    width: 250px;
+    height:250px;
   }
   
   .pixel {
     background-color: white;
+    border: 1px solid black;
+    display: inline-block;
     width: 40px;
     height: 40px;
-    border: solid black 1px;
-  }
+}
   
