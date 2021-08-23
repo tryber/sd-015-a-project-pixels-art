@@ -3,10 +3,11 @@ body {
 }
 
 #title {
+  display: flex
   padding: 20px;
 }
 
-#color-pallete {
+#color-palette {
   display: flex;
   justify-content: space-evenly;
   background-color: #dddddd;
