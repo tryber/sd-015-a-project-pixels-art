@@ -17,8 +17,6 @@ function pixelPaint(event) {
   let elementSelected = document.querySelector('.selected');
   let elementColor = window.getComputedStyle(elementSelected).backgroundColor;
   let elementoClicado = event.target;
-
-
 }
 let pixelList = document.querySelectorAll('.pixel');
 for (let index = 0; index < pixelList.length; index += 1) {
