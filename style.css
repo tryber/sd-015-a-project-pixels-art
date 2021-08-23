@@ -1,0 +1,23 @@
+#color-palette {
+    width: 80%;
+    text-align: left;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    border: solid black 1px;
+}
+.pixel{
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    background-color:white;
+    border: solid black 1px;
+    margin-right: 5px;
+}
+
+#pixel-board {
+    width: 235px;
+}
