@@ -27,6 +27,8 @@ function selectedColor(event) {
 }
 
 // pintar os pixels
+// função baseada na dúvida do Emerson Oliveira
+// https://trybecourse.slack.com/archives/C0273HYKPGT/p1629461809110600
 
 function pintaPixel(event) {
   console.log(event.target);
@@ -35,7 +37,6 @@ function pintaPixel(event) {
   console.log(selectedClass[0]);
   console.log(event.target.style.backgroundColor);
   console.log(window.getComputedStyle(selectedClass).backgroundColor);
-  // event.target.style.backgroundColor = window.getComputedStyle(selectedClass, null).getPropertyValue('background-color');
 }
 
 window.onload = function () {
