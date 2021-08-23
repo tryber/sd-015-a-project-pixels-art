@@ -10,7 +10,6 @@ body {
 }
 .primeiraCor {
     background-color: black;
-    color: black;
 }
 .segundaCor {
     background-color: red;
@@ -22,6 +21,8 @@ body {
     background-color: blue;
 }
 
+
+
 .pixel {
     border: 1px solid black;
     display: inline-block;
@@ -32,4 +33,4 @@ body {
 
 button {
     margin: 8px;
-} 
+}
