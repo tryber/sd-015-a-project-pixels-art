@@ -52,3 +52,18 @@ function selecionar() {
   })
 }
 selecionar();
+
+function selecionarCor () {
+  const pixels = document.querySelectorAll('.pixel');
+  for (let index = 0; index < pixels.length; index += 1) {
+    const pixelSelecionado = pixels[index];
+    pixelSelecionado.addEventListener('click', function(event) {
+      let clique = event.target
+      let cliqueCor = document.querySelector('.selected')
+      let estilizar = window.getComputedStyle(cliqueCor)
+      clique.style.backgroundColor = estilizar.getPropertyValue('background-color')
+      console.log(estilizar.getPropertyValue('background-color'))
+    });
+  }
+}
+selecionarCor();
