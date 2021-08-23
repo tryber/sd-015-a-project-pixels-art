@@ -1,6 +1,7 @@
 .color {
   display: inline-block;
   border: 1px solid black;
+  padding: 30px;
 }
 
 #preto {
@@ -17,4 +18,15 @@
 
 #verde {
   background-color: green;
+}
+
+#linha {
+  background-color: white;
+  border: 1px solid black;
+  padding: 50px;
+}
+
+#coluna {
+  display: inline-block;
+  margin-top: 50px;
 }
