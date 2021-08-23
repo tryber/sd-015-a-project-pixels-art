@@ -1,3 +1,4 @@
+
 .color {
     display: inline-block;
     width: 50px;
@@ -6,11 +7,11 @@
 }
 
 #primeiraCor {
-background-color: black;
+    background-color: black;
 }
 
 #segundaCor {
-background-color: blue ;
+    background-color: blue;
 }
 
 #terceiraCor {
@@ -21,10 +22,14 @@ background-color: blue ;
     background-color: deeppink;
 }
 
-.pixel{
+.pixel {
     height: 40px;
     width: 40px;
+    border: 1px solid black;
     display: inline-block;
     background-color: white;
-    border: 1px solid black;
-}
+} 
+
+button {
+    margin: 8px;
+} 
