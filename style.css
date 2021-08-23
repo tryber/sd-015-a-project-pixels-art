@@ -65,5 +65,9 @@ header {
   background-color: rgb(255, 255, 255);
  }
 
+#board-size {
+  width: 155px;
+}
+
 
 

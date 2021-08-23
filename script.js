@@ -47,7 +47,7 @@ function paintBoxPixels () {
  }
 }
 
-// Requisito 10 - 
+// Requisito 10 - tive ajuda dos meus colegas caio e leonardo.
 
 const setButtonGenerate = document.getElementById('generate-board');
 
