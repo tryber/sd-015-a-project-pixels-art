@@ -1,0 +1,45 @@
+#pixel-board {
+  font-size: 0px;
+  max-width: 250px;
+} 
+
+#title {
+  font-family: sans-serif;
+  font-size: 35px;
+}
+
+.color {
+  border: 1px solid black;
+  height: 50px;
+  width: 50px;
+  display: inline-block;
+}
+
+#first {
+  background-color: black;
+}
+
+#second {
+  background-color: red;
+}
+
+#third {
+  background-color: green;
+}
+
+#fourth {
+  background-color: blue;
+}
+
+.pixel {
+  background-color: white;
+  border: 1px solid black;
+  height: 40px;
+  width: 40px;
+  display: inline-block;
+}
+
+#clear-board {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
