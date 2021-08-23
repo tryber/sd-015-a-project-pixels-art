@@ -1,3 +1,13 @@
+/*
+Ajuda para fazer o Project Pixel Art
+Eric Cruz
+Mentoria Técnica Baêta
+Buscas na internet:
+https://www.codigofonte.com.br/codigos/botao-limpar-campos-do-formulario
+www.w3schools.com/
+https://developer.mozilla.org/pt-BR/
+*/
+
 let selected = document.getElementsByClassName('color');
 for (let index = 0; index < selected.length; index += 1) {
   selected[index].addEventListener('click', addClass);
@@ -20,5 +30,5 @@ function pixelPaint(event) {
 }
 let pixelList = document.querySelectorAll('.pixel');
 for (let index = 0; index < pixelList.length; index += 1) {
-  pixelList[index].addEventListener('click',  pixelPaint);
+  pixelList[index].addEventListener('click', pixelPaint);
 }
