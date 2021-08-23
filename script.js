@@ -1,5 +1,4 @@
 primeiraCor.classList.add("selected");
-}
 
 let segundaCor = document.querySelector("#segundaCor");
 let terceiraCor = document.querySelector("#terceiraCor");
@@ -39,6 +38,7 @@ function adicionarClasseSelected (evento) {
 segundaCor.style.backgroundColor = "red";
 terceiraCor.style.backgroundColor = "yellow";
 quartaCor.style.backgroundColor = "blue";
+}
 
 function colorirPixel (evento) {
     let corSelected = document.querySelector(".selected").style.backgroundColor;
@@ -49,6 +49,7 @@ pixelBoard.addEventListener("click",colorirPixel);
 function changeColor(event) {
     let colorSelected = document.querySelector(".selected").style.backgroundColor;
     event.target.style.backgroundColor = colorSelected;
+}
 
 let main = document.querySelector("main");
 let botaoClear = document.createElement("button");
