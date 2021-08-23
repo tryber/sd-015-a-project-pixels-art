@@ -1,14 +1,9 @@
+/* eslint-disable sonarjs/no-duplicate-string */
 const quadroPixels = document.getElementById('pixel-board');
-const quadroBlack = document.getElementsByClassName ('color')[0];
-const quadroRed = document.getElementsByClassName ('color')[1];
-const quadroBlue = document.getElementsByClassName ('color')[2];
-const quadroGreen = document.getElementsByClassName ('color')[3];
-window.onload = clickBlack;
-
-quadroBlack.addEventListener('click', clickBlack);
-quadroRed.addEventListener('click', clickRed);
-quadroBlue.addEventListener('click', clickBlue);
-quadroGreen.addEventListener('click', clickGreen);
+const quadroBlack = document.getElementsByClassName('color')[0];
+const quadroRed = document.getElementsByClassName('color')[1];
+const quadroBlue = document.getElementsByClassName('color')[2];
+const quadroGreen = document.getElementsByClassName('color')[3];
 
 function pintarPixel(event) {
   const selected = document.querySelector('.selected');
@@ -21,8 +16,8 @@ function clickBlack() {
   quadroRed.className = 'color';
   quadroBlue.className = 'color';
   quadroGreen.className = 'color';
-  let itemSelected = document.querySelector(".selected")
-  itemSelected.style.backgroundColor = "black";
+  const itemSelected = document.querySelector('.selected')
+  itemSelected.style.backgroundColor = 'black';
 }
 
 function clickRed() {
@@ -30,8 +25,8 @@ function clickRed() {
   quadroRed.className = 'color selected';
   quadroBlue.className = 'color';
   quadroGreen.className = 'color';
-  let itemSelected = document.querySelector(".selected")
-  itemSelected.style.backgroundColor = "red";
+  const itemSelected = document.querySelector('.selected')
+  itemSelected.style.backgroundColor = 'red';
 }
 
 function clickBlue() {
@@ -39,8 +34,8 @@ function clickBlue() {
   quadroRed.className = 'color';
   quadroBlue.className = 'color selected';
   quadroGreen.className = 'color';
-  let itemSelected = document.querySelector(".selected")
-  itemSelected.style.backgroundColor = "blue";
+  const itemSelected = document.querySelector('.selected')
+  itemSelected.style.backgroundColor = 'blue';
 }
 
 function clickGreen() {
@@ -48,8 +43,8 @@ function clickGreen() {
   quadroRed.className = 'color';
   quadroBlue.className = 'color';
   quadroGreen.className = 'color selected';
-  let itemSelected = document.querySelector(".selected")
-  itemSelected.style.backgroundColor = "green";
+  const itemSelected = document.querySelector('.selected')
+  itemSelected.style.backgroundColor = 'green';
 }
 
 function criaLinha(qtdPixels) {
@@ -57,12 +52,16 @@ function criaLinha(qtdPixels) {
     const pixels = document.createElement('div');
     quadroPixels.appendChild(pixels);
     pixels.className = 'pixel';
+    pixels.style.backgroundColor = 'white';
     pixels.addEventListener('click', pintarPixel);
 } 
 }
 
-
-
+quadroBlack.addEventListener('click', clickBlack);
+quadroRed.addEventListener('click', clickRed);
+quadroBlue.addEventListener('click', clickBlue);
+quadroGreen.addEventListener('click', clickGreen);
+window.onload = clickBlack;
 criaLinha(5);
 criaLinha(5);
 criaLinha(5);
