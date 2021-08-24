@@ -7,6 +7,7 @@ function creatingBoard(size){
       const line = document.createElement("div");
       line.className = "pixel";
       board.appendChild(line);
+      line.addEventListener("click", painting);
     }
   }
 }
@@ -14,8 +15,8 @@ creatingBoard(5);
 
 const palette = document.getElementById("color-palette")
 
+const colors = palette.getElementsByTagName("div");
 function colorPick(event){
-  const colors = palette.getElementsByTagName("div");
   for(let index = 0; index < colors.length; index +=1){
     if(colors[index].className.includes(" selected")){
       colors[index].className = colors[index].className.replace(" selected","");
@@ -25,9 +26,17 @@ function colorPick(event){
 }
 
 function eventSelection(){
-  const colors = palette.getElementsByTagName("div");
   for(let index = 0; index < colors.length; index += 1){
     colors[index].addEventListener("click", colorPick);
   }
 }
 eventSelection();
+
+function painting(event){
+  for(let index = 0; index < colors.length; index += 1){
+    if(colors[index].className.includes(" selected")){
+      const changeColor = getComputedStyle(colors[index]);
+      event.target.style.backgroundColor = changeColor.backgroundColor;
+    }
+  }
+}
