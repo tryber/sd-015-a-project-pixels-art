@@ -1,7 +1,8 @@
 .color {
   display: inline-block;
   border: 1px solid black;
-  padding: 30px;
+  width: 40px;
+  height: 40px;
 }
 
 #preto {
@@ -23,10 +24,13 @@
 #linha {
   background-color: white;
   border: 1px solid black;
-  padding: 50px;
+  width: 40px;
+  height: 40px;
 }
 
 #coluna {
   display: inline-block;
   margin-top: 50px;
+  width: 40px;
+  height: 40px;
 }
