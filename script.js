@@ -67,3 +67,18 @@ const botaoClear = document.getElementById('clear-board');
 botaoClear.addEventListener('click', function () {
   location.reload();
 });
+
+// const geraCor = document.querySelector('#black');
+// geraCor.style.backgroundColor = gerar_cor();
+
+function gerar_cor() {
+  let r = parseInt(Math.random() * 255);
+  let g = parseInt(Math.random() * 255);
+  let b = parseInt(Math.random() * 255);
+
+  return `rgb(${r}, ${g}, ${b})`;
+}
+
+for (let k of colors) {
+  k.style.backgroundColor = gerar_cor();
+}
