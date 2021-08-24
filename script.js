@@ -79,6 +79,6 @@ function gerar_cor() {
   return `rgb(${r}, ${g}, ${b})`;
 }
 
-for (let k of colors) {
-  k.style.backgroundColor = gerar_cor();
+for (let k = 1; k <= 3; k += 1) {
+  colors[k].style.backgroundColor = gerar_cor();
 }
