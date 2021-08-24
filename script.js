@@ -2,7 +2,7 @@ const boardPixel = document.querySelector('#pixel-board');
 
 function trocaCor(event) {
   const elementoCor = document.querySelector('.selected');
-  let corSelecionada = window
+  const corSelecionada = window
     .getComputedStyle(elementoCor, null)
     .getPropertyValue('background-color');
   event.target.style.backgroundColor = corSelecionada;
@@ -23,9 +23,9 @@ function criaBoard() {
   inputVQV.type = 'number';
   inputVQV.min = '1';
   if (document.querySelector('.line') !== null) {
-    let linhas = document.querySelectorAll('.line');
+    const linhas = document.querySelectorAll('.line');
     for (let k of linhas) {
-      linhaRemovida = k;
+      let linhaRemovida = k;
       boardPixel.removeChild(linhaRemovida);
     }
   }
@@ -40,11 +40,11 @@ function criaBoard() {
   }
 
   for (let i = 0; i < tamanhoVQV; i += 1) {
-    let linesPixel = document.createElement('div');
+    const linesPixel = document.createElement('div');
     linesPixel.className = 'line';
     boardPixel.appendChild(linesPixel);
     for (let k = 1; k <= tamanhoVQV; k += 1) {
-      let divPixel = document.createElement('div');
+      const divPixel = document.createElement('div');
       divPixel.className = 'pixel';
       linesPixel.appendChild(divPixel);
       divPixel.addEventListener('click', trocaCor);
