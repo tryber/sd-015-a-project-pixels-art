@@ -1,6 +1,4 @@
 const pixBoard = document.querySelector('#pixel-board');
-const paletaDeCores = document.querySelectorAll('.color');
-
 function criaTabela() {
   for (let coluna = 0; coluna < 5; coluna+=1) {
     let columnPixel = document.createElement('div')
@@ -17,6 +15,7 @@ function criaTabela() {
 
 criaTabela();
 
+const paletaDeCores = document.querySelectorAll('.color');
 function mudaSelected() {
   for (let i = 0; i < paletaDeCores.length; i++) {
     paletaPosition = paletaDeCores[i];
@@ -34,6 +33,7 @@ for (let i = 0; i < paletaDeCores.length; i++) {
   paletaDeCores[i].addEventListener('click', adicionaSelected);
 }
 
+// getPropertyValue em documentação / monitoria
 function coloriPixel(evento) {
   let classSelected = document.querySelector('.selected')
   selectedCor = window.getComputedStyle(classSelected, null).getPropertyValue('background-color');
@@ -43,4 +43,13 @@ function coloriPixel(evento) {
 const pixel = document.getElementsByClassName('pixel') 
 for (let index = 0; index < pixel.length; index+=1) {
   pixel[index].addEventListener('click', coloriPixel);
+}
+
+const botaoLimpar = document.getElementById("clear-board");
+botaoLimpar.addEventListener('click', limparCores);
+function limparCores() {
+  for (let index = 0; index < 25; index+=1) {
+    let pixelsNoIndex = document.querySelectorAll('.pixel')[index];
+    pixelsNoIndex.style.backgroundColor = "white";
+  }
 }
