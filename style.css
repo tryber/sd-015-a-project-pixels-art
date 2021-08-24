@@ -1,0 +1,65 @@
+#color-palette {
+  margin: 0;
+  padding: 0;
+}
+
+#black{
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 10%;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: black;
+}
+
+.color {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+
+#black {
+  background-color: black;
+}
+
+.line {
+  height: 42px;
+}
+
+.pixel {
+  background-color: white;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+}
+
+#clear-board {
+  margin: 4px;
+  width: 100px;
+}
+
+.pixel {
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 8%;
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  display: inline-block;
+}
+
+.color {
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 8%;
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  display: inline-block;
+}
+
