@@ -9,8 +9,7 @@ for (let index = 0; index < 5; index += 1) {
 const tr = document.getElementsByClassName('tr');
 
 for (let index = 0; index < 5; index += 1) {
-  // eslint-disable-next-line no-shadow
-  for (let index = 0; index < 5; index += 1) {
+  for (let i = 0; i < 5; i += 1) {
     const createTd = document.createElement('td');
     createTd.className = 'pixel';
     tr[index].appendChild(createTd);
