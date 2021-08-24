@@ -5,6 +5,23 @@ let selected = document.querySelector('.selected');
 let pixels = document.getElementsByClassName('pixel');
 let send = document.getElementById('generate-board');
 let number = 5;
+let color = '';
+
+let colorRandom1 = parseInt((Math.random() * 255) + 1);
+let colorRandom2 = parseInt((Math.random() * 255) + 1);
+let colorRandom3 = parseInt((Math.random() * 255) + 1);
+let colorRandom4 = parseInt((Math.random() * 255) + 1);
+let colorRandom5 = parseInt((Math.random() * 255) + 1);
+let colorRandom6 = parseInt((Math.random() * 255) + 1);
+let colorRandom7 = parseInt((Math.random() * 255) + 1);
+let colorRandom8 = parseInt((Math.random() * 255) + 1);
+let colorRandom9 = parseInt((Math.random() * 255) + 1);
+
+let color1 = 'rgb(' + colorRandom1 + ',' + colorRandom2 + ',' + colorRandom3 + ')';
+
+let color2 = 'rgb(' + colorRandom4 + ',' + colorRandom5 + ',' + colorRandom6 + ')';
+
+let color3 = 'rgb(' + colorRandom7 + ',' + colorRandom8 + ',' + colorRandom9 + ')';
 
 function makeTable(number) {
   for (let i = 0; i < number; i += 1) {
@@ -21,6 +38,16 @@ function makeTable(number) {
 }
 
 makeTable(number);
+
+let code = 0;
+
+for (let i = 0; i < colors.length; i += 1) {
+  colors[i].addEventListener("click", function() {
+    document.getElementsByClassName('selected')[0].className = 'color';
+    colors[i].className = 'color selected';
+    code = i;
+  })
+}
 
 send.onclick = function() {
   let newSize = document.getElementById('board-size').value;
@@ -41,30 +68,6 @@ send.onclick = function() {
   }
   makeTable(number);
 
-  for (let i = 0; i < document.querySelectorAll('.pixel').length; i += 1) {
-  document.querySelectorAll('.pixel')[i].addEventListener('click', function() {
-    if (code === 0) {
-      color = 'black';
-    } else if (code === 1) {
-      color = 'blue';
-    } else if (code === 2) {
-      color = 'yellow';
-    } else if (code === 3) {
-      color = 'red';
-    }
-    event.target.style.backgroundColor = color;
-  });
-}
-}
-
-let code = 0;
-
-for (let i = 0; i < colors.length; i += 1) {
-  colors[i].addEventListener("click", function() {
-    document.getElementsByClassName('selected')[0].className = 'color';
-    colors[i].className = 'color selected';
-    code = i;
-  })
 }
 
 function selectColor(cor) {
@@ -72,20 +75,18 @@ function selectColor(cor) {
   cor.target.classList.add('selected');
 }
 
-let color = '';
-
 for (let i = 0; i < document.querySelectorAll('.pixel').length; i += 1) {
-  document.querySelectorAll('.pixel')[i].addEventListener('click', function() {
+  document.querySelectorAll('.pixel')[i].addEventListener('click', function(evento) {
     if (code === 0) {
       color = 'black';
     } else if (code === 1) {
-      color = 'blue';
+      color = color1;
     } else if (code === 2) {
-      color = 'yellow';
+      color = color2;
     } else if (code === 3) {
-      color = 'red';
+      color = color3;
     }
-    event.target.style.backgroundColor = color;
+    evento.target.style.backgroundColor = color;
   });
 }
 
@@ -98,3 +99,8 @@ window.onload = function () {
     }
   });
 }
+
+document.getElementsByClassName('color')[1].style.backgroundColor = color1;
+document.getElementsByClassName('color')[2].style.backgroundColor = color2;
+document.getElementsByClassName('color')[3].style.backgroundColor = color3;
+
