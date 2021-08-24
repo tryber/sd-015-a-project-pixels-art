@@ -1,5 +1,6 @@
+const pixBoard = document.querySelector('#pixel-board');
+const paletaDeCores = document.querySelectorAll('.color');
 function criaTabela() {
-  const pixBoard = document.querySelector('#pixel-board');
   for (let coluna = 0; coluna < 5; coluna+=1) {
     let columnPixel = document.createElement('div')
     columnPixel.id = "coluna";
@@ -14,3 +15,19 @@ function criaTabela() {
 }
 
 criaTabela();
+
+function mudaSelected() {
+  for (let i = 0; i < paletaDeCores.length; i++) {
+    paletaPosition = paletaDeCores[i];
+    paletaPosition.classList.remove('selected');
+  }
+}
+
+function adicionaSelected(cor) {
+  mudaSelected();
+  cor.target.classList.add('selected');
+}
+
+for (let i = 0; i < paletaDeCores.length; i++) {
+  paletaDeCores[i].addEventListener('click', adicionaSelected)
+}
