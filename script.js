@@ -1,6 +1,15 @@
 /* eslint-disable sonarjs/no-duplicate-string */
 /* eslint-disable no-param-reassign */
 /* eslint-disable no-inner-declarations */
+function colorblack() {
+  const element = document.querySelector('.color');
+  element.classList.add('selected');
+  const selectiontest = document.querySelector('.selected');
+  selectiontest.style.backgroundColor = 'black';
+  return colorblack;
+}
+
+window.onload = colorblack;
 
 const buttonBlack = document.getElementsByClassName('color')[0];
 const buttonRed = document.getElementsByClassName('color')[1];
