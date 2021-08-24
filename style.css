@@ -10,19 +10,6 @@ body{
     color: white;
 }
 
-#firstColor{
-    background-color: black;
-}
-#secondColor{
-    background-color: chocolate;
-}
-#thirdColor{
-    background-color: darkred;
-}
-#fourthColor{
-    background-color: deepskyblue;
-}
-
 .pixel {
     border: 1px solid black;
     background-color: white;
