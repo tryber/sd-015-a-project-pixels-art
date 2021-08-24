@@ -1,0 +1,36 @@
+.color {
+  display: inline-block;
+  border: 1px solid black;
+  width: 40px;
+  height: 40px;
+}
+
+#black {
+  background-color: black;
+}
+
+#blue {
+  background-color: blue;
+}
+
+#yellow {
+  background-color: yellow;
+}
+
+#green {
+  background-color: green;
+}
+
+#linha {
+  background-color: white;
+  border: 1px solid black;
+  width: 40px;
+  height: 40px;
+}
+
+#coluna {
+  display: inline-block;
+  margin-top: 50px;
+  width: 40px;
+  height: 40px;
+}
