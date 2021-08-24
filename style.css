@@ -1,0 +1,70 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1 {
+    text-align: center;
+    padding: 10px;
+  }
+  
+  /* Collor Pallete */
+  
+  #color-palette {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .color {
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+    text-align: center;
+    align-items: center;
+  }
+  
+  #black {
+    background-color: black;
+    width: 40px;
+  }
+  
+  #blue {
+    background-color: blue;
+    width: 40px;
+  }
+  
+  #green {
+    background-color: green;
+    width: 40px;
+  }
+  
+  #red {
+    background-color: red;
+    width: 40px;
+  }
+  
+  #pink {
+    background-color: pink;
+    width: 40px;
+  }
+  
+  /* Pixel Board */
+
+  #pixel-board {
+    width: 250px;
+    height:250px;
+
+  }
+  
+  .pixel {
+    background-color: white;
+    border: 1px solid black;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+}
+  
