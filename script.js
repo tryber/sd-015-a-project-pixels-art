@@ -1,15 +1,14 @@
 const board = document.getElementById("pixel-board");
 
-function creatingBoard(nColum,nLine){
-  for(index = 0; index < nColum; index += 1){
-    const colum = document.createElement("div");
-    board.appendChild(colum);
+function creatingBoard(size){
+  for(index = 0; index < size; index += 1){
 
-    for(index2 = 0; index2 < nLine; index2 +=1){
+    for(index2 = 0; index2 < size; index2 +=1){
       const line = document.createElement("div");
       line.className = "pixel";
-      colum.appendChild(line);
+      board.appendChild(line);
     }
   }
 }
-creatingBoard(5,5);
+creatingBoard(5);
+

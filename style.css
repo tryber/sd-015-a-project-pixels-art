@@ -3,7 +3,7 @@ body {
 }
 
 #title {
-  display: flex
+  display: flex;
   padding: 20px;
 }
 
@@ -41,9 +41,13 @@ body {
 
 #pixel-board{
   display: flex;
+  flex-flow: row wrap;
+  max-width: 300px;
+  height: 300px;
+  align-items: center;
   justify-content: center;
-  height: 500px;
   background-color: rgb(141, 136, 136);
+ 
 
 
   
