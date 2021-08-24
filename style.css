@@ -1,0 +1,44 @@
+.color {
+  border-color: black;
+  border-width: 1px;
+  border-style: solid;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+}
+
+/* #red {
+  background-color: red;
+} */
+
+#black {
+  background-color: rgb(0, 0, 0);
+}
+
+/* #yellow {
+  background-color: yellow;
+}
+
+#blue {
+  background-color: blue;
+} */
+
+.pixel {
+  background-color: white;
+  border-color: black;
+  border-width: 1px;
+  border-style: solid;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+}
+.line {
+  width: max-content;
+  height: auto;
+}
+
+body {
+  align-items: center;
+  margin-left: 30%;
+  background-color: rgb(112, 173, 112);
+}
