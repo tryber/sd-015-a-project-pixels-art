@@ -1,83 +1,124 @@
-/* eslint-disable sonarjs/no-duplicate-string */
-/* eslint-disable no-param-reassign */
-/* eslint-disable no-inner-declarations */
-
-const buttonBlack = document.getElementsByClassName('color')[0];
-const buttonRed = document.getElementsByClassName('color')[1];
-const buttonGreen = document.getElementsByClassName('color')[2];
-const buttonBrown = document.getElementsByClassName('color')[3];
-
-function clickBlack() {
-  buttonBlack.className = 'color selected';
-  buttonRed.className = 'color';
-  buttonGreen.className = 'color';
-  buttonBrown.className = 'color';
-  const selectiontest = document.querySelector('.selected');
-  selectiontest.style.backgroundColor = 'black';
-}
-
-function clickRed() {
-  buttonBlack.className = 'color';
-  buttonRed.className = 'color selected';
-  buttonGreen.className = 'color';
-  buttonBrown.className = 'color';
-  const selectiontest = document.querySelector('.selected');
-  selectiontest.style.backgroundColor = 'red';
-}
-
-function clickGreen() {
-  buttonBlack.className = 'color';
-  buttonRed.className = 'color';
-  buttonGreen.className = 'color selected';
-  buttonBrown.className = 'color';
-  const selectiontest = document.querySelector('.selected');
-  selectiontest.style.backgroundColor = 'green';
-}
-
-function clickBrown() {
-  buttonBlack.className = 'color';
-  buttonRed.className = 'color';
-  buttonGreen.className = 'color';
-  buttonBrown.className = 'color selected';
-  const selectiontest = document.querySelector('.selected');
-  selectiontest.style.backgroundColor = 'brown';
-}
-
-buttonBlack.addEventListener('click', clickBlack);
-buttonRed.addEventListener('click', clickRed);
-buttonGreen.addEventListener('click', clickGreen);
-buttonBrown.addEventListener('click', clickBrown);
-
-function createTable() {
-  function fillPixel(event) {
-    const selected = document.querySelector('.selected');
-    const color = selected.style.backgroundColor;
-    event.target.style.backgroundColor = color;
+/* eslint-disable no-shadow */
+/* eslint-disable func-names */
+/* eslint-disable max-lines-per-function */
+/* eslint-disable sonarjs/cognitive-complexity */
+/* eslint-disable no-use-before-define */
+function addPixelsToLines() {
+  const lines = document.getElementsByClassName('line');
+  for (let i = 0; i < lines.length; i += 1) {
+    for (let ii = 0; ii < lines.length; ii += 1) {
+      const pixel = document.createElement('div');
+      pixel.className = 'pixel';
+      lines[i].appendChild(pixel);
+    }
   }
+}
+addPixelsToLines();
+function colorSelect() {
+  const paletteColors = document.getElementsByClassName('color');
+  function selectColor(event) {
+    document.querySelector('.selected').className = 'color';
+    const clickedColor = event.target;
+    clickedColor.className += ' selected';
+  }
+  for (let i = 0; i < paletteColors.length; i += 1) {
+    paletteColors[i].addEventListener('click', selectColor);
+  }
+}
+function colorPaint() {
+  const pixels = document.getElementsByClassName('pixel');
 
-  const pixelBoard = document.querySelector('#pixel-board');
-  for (let index = 0; index < 5; index += 1) {
-    const pixelLine = document.createElement('div');
-    pixelLine.id = 'line';
-    pixelBoard.appendChild(pixelLine);
-    for (let index2 = 0; index2 < 5; index2 += 1) {
-      const pixelColumn = document.createElement('div');
-      pixelLine.appendChild(pixelColumn);
-      pixelColumn.className = 'pixel';
-      pixelColumn.addEventListener('click', fillPixel);
+  function paintPixel(event) {
+    const selectedColor = document.querySelector('.selected');
+    const color = window.getComputedStyle(selectedColor, null).getPropertyValue('background-color');
+
+    const clickedPixel = event.target;
+
+    clickedPixel.style.backgroundColor = color;
+  }
+  addClickPixels();
+  function addClickPixels() {
+    for (let i = 0; i < pixels.length; i += 1) {
+      pixels[i].addEventListener('click', paintPixel);
+    }
+  }
+}
+function btnClear() {
+  const btnClear = document.querySelector('#clear-board');
+  btnClear.addEventListener('click', addClear);
+  function addClear() {
+    const pixelsBoard = document.querySelectorAll('.pixel');
+    for (let i = 0; i < pixelsBoard.length; i += 1) {
+      const color = pixelsBoard[i];
+      color.style.backgroundColor = 'white';
     }
   }
 }
 
-createTable();
-
-const buttonClear = document.getElementById('clear-board');
-
-function cleanPixel() {
-  for (let i = 0; i < 25; i += 1) {
-    const colorwhite = document.querySelectorAll('.pixel')[i];
-    colorwhite.style.backgroundColor = 'white';
+function frameSize() {
+  const btnVQV = document.querySelector('#generate-board');
+  btnVQV.addEventListener('click', addPixels);
+  function addPixels() {
+    const pixelsBoard = document.querySelector('#pixel-board');
+    const input = document.querySelector('#board-size');
+    function calcBoardSize() {
+      let pixels = input.value;
+      if (pixels < 5) {
+        pixels = 5;
+      }
+      if (pixels > 50) {
+        pixels = 50;
+      }
+      return pixels;
+    }
+    function deletePixel() {
+      const board = document.querySelectorAll('.line');
+      for (let i = 0; i < board.length; i += 1) {
+        const px = board[i];
+        px.remove();
+      }
+    }
+    function creatingPixels() {
+      if (input.value === '') {
+        window.alert('Board inválido!');
+        return;
+      }
+      deletePixel();
+      const boardSize = calcBoardSize();
+      for (let i = 0; i < boardSize; i += 1) {
+        const line = document.createElement('div');
+        line.className = 'line';
+        pixelsBoard.appendChild(line);
+      }
+      addPixelsToLines();
+    }
+    creatingPixels();
   }
 }
+frameSize();
 
-buttonClear.addEventListener('click', cleanPixel);
+function genColor() {
+  const palette = document.querySelector('#color-palette');
+  function genRGB() {
+    const randomNumber255 = Math.floor(Math.random() * 256);
+    return randomNumber255;
+  }
+  generatePaletteColors();
+  function generatePaletteColors() {
+    for (let i = 0; i < 3; i += 1) {
+      const color = document.createElement('div');
+      color.className = 'color';
+      color.style.backgroundColor = `rgb(${genRGB()}, ${genRGB()}, ${genRGB()})`;
+      palette.appendChild(color);
+    }
+    colorSelect();
+  }
+}
+genColor();
+
+window.onload = function () {
+  const btnBlack = document.querySelector('#black');
+  btnBlack.classList.add('selected');
+  colorPaint();
+  btnClear();
+};
