@@ -1,3 +1,6 @@
+body {
+    background-color: bisque;
+}
 .color {
     border: 1px solid black;
     display: inline-block;
@@ -6,7 +9,7 @@
 }
 
 #color1 {
-    background-color: cornflowerblue;
+    background-color: black;
 }
 
 #color2 {
