@@ -11,95 +11,34 @@ function addPixelsToLines() {
 addPixelsToLines();
 //selecionando a cor 
 function colorSelect() {
-    const btnBlack = document.querySelector('#black');
-    btnBlack.classList.add('selected');
-    const tfBlack = btnBlack.classList.contains('selected');
-    function black(){
-      btnBlack.classList.add('selected');
-      btnBlue.classList.remove('selected');
-      btnGreen.classList.remove('selected');
-      btnYellow.classList.remove('selected');
-    }
-    //------------------------------------
-    const btnBlue = document.querySelector('#blue');
-    const tfBlue = btnBlue.classList.contains('selected');
-    function blue(){
-      btnBlack.classList.remove('selected')
-      btnBlue.classList.add('selected');
-      btnGreen.classList.remove('selected')
-      btnYellow.classList.remove('selected')
-    }
-    //----------------------------------------
-    const btnGreen = document.querySelector('#green');
-    const tfGreen = btnGreen.classList.contains('selected')
-    function green(){
-      btnBlack.classList.remove('selected')
-      btnBlue.classList.remove('selected');
-      btnGreen.classList.add('selected');
-      btnYellow.classList.remove('selected')
-    }
-    //----------------------------------------------
-    const btnYellow = document.querySelector('#yellow');
-    const tfYellow = btnYellow.classList.contains('selected')
-    function yellow() {
-      btnBlack.classList.remove('selected')
-      btnBlue.classList.remove('selected');
-      btnGreen.classList.remove('selected');
-      btnYellow.classList.add('selected');
-    }
-    //-----------------------------------------------------
-    btnBlack.addEventListener('click', function(){
-      if(tfBlack === false) {
-        black();
-      } else {
-        btnBlack.classList.add('selected');
-        btnBlue.classList.remove('selected');
-        btnGreen.classList.remove('selected');
-        btnYellow.classList.remove('selected');
-      }
-    })
-    //-------------------------------------------------------
-    btnBlue.addEventListener('click', function(){
-      if(tfBlue === false) {
-        blue();
-      }
-    })
-    //--------------------------------------------------------------
-    btnGreen.addEventListener('click', function(){
-      if(tfGreen === false) {
-        green();
-      }
-    })
-    //-------------------------------------------------------------
-    btnYellow.addEventListener('click', function(){
-      if(tfYellow === false) {
-        yellow();
-      }
-    })
+  const paletteColors = document.getElementsByClassName('color');
+  function selectColor(event) {
+    document.querySelector('.selected').className = 'color';
+    const clickedColor = event.target;
+    clickedColor.className += ' selected';
+  }
+  for (let i = 0; i < paletteColors.length; i += 1) {
+    paletteColors[i].addEventListener('click', selectColor);
+  }
 }
 //pintando o pixel com a cor lecionada 
 function colorPaint() {
-    const pixelsBoard = document.querySelector('#pixel-board')
+  const pixels = document.getElementsByClassName('pixel');
 
-    const btnBlack = document.querySelector('#black');
-    const btnBlue = document.querySelector('#blue');
-    const btnGreen = document.querySelector('#green');
-    const btnYellow = document.querySelector('#yellow');
+  function paintPixel(event) {
+    const selectedColor = document.querySelector('.selected');
+    const color = window.getComputedStyle(selectedColor, null).getPropertyValue('background-color');
   
-    pixelsBoard.addEventListener('click', function(event){
-      if(btnBlack.classList.contains('selected')){
-        event.target.style.backgroundColor = "black";
-      } 
-      else if(btnBlue.classList.contains('selected')) {
-        event.target.style.backgroundColor = "blue";
-      }
-      else if(btnGreen.classList.contains('selected')) {
-        event.target.style.backgroundColor = "green";
-      }
-      else if(btnYellow.classList.contains('selected')) {
-        event.target.style.backgroundColor = "yellow";
-      }
-    })
+    const clickedPixel = event.target;
+  
+    clickedPixel.style.backgroundColor = color;
+  }
+  addClickPixels()
+  function addClickPixels() {
+    for (let i = 0; i < pixels.length; i += 1) {
+      pixels[i].addEventListener('click', paintPixel);
+    }
+  }
 }
 //limpando todos os pixels
 function btnClear(){
@@ -158,8 +97,28 @@ function frameSize(){
 }
 frameSize();
 
+function genColor() {
+  const palette = document.querySelector('#color-palette');
+  function genRGB() {
+    const randomNumber255 = Math.floor(Math.random() * 256);
+    return randomNumber255;
+  }
+  generatePaletteColors()
+  function generatePaletteColors() {
+    for (let i = 0; i < 3; i += 1) {
+      const color = document.createElement('div');
+      color.className = 'color';
+      color.style.backgroundColor = `rgb(${genRGB()}, ${genRGB()}, ${genRGB()})`;
+      palette.appendChild(color);
+    }
+    colorSelect();
+  }
+}
+genColor()
+
 window.onload = function() {
-  colorSelect();
+  const btnBlack = document.querySelector('#black');
+  btnBlack.classList.add('selected');
   colorPaint();
   btnClear()
 }
