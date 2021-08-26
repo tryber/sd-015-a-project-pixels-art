@@ -1,45 +1,53 @@
 body {
-    box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-#color-palette * {
-    width: 40px;
-    height: 40px;
-    display: inline-block;
-    border: black solid 1px;
-    margin: 2px; 
+
+#color-palette {
+  display: flex;
+  list-style: none;
+  margin: auto;
+  justify-content: center;
+}
+
+.color {
+  border: black solid 1px;
+  width: 40px;
+  height: 40px;
+  margin: 1px;
 }
 
 .black {
-    background-color:black;
+  background-color: black;
 }
 
 .red {
-    background-color: red;
+  background-color: red;
 }
 
 .yellow {
-    background-color: yellow;
+  background-color: yellow;
 }
 
 .orange {
-    background-color: orange;
+  background-color: orange;
 }
 
 #pixel-board {
-    list-style: none;
-    margin-left: 10px;
+  list-style: none;
+  width: 250px;
+  font-size: 0;
+  margin: auto;
 }
 
-.LINHAS {
-    display: flex;
-}
 
 .pixel {
+  display: inline-block;
   border: 1px black solid;
   background-color: white;
   width: 40px;
   height: 40px;
+  cursor: pointer;
 }
