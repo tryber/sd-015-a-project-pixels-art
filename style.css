@@ -7,49 +7,44 @@
     font-size: 25px;
 }
 
-#color-palette {
-}
 
 .color {
     border: solid 1px black;
     display: inline-block;
-    height: 40px;
-    width: 40px;
-    padding: 40px;
+    height: 80px;
+    width: 80px;
 }
-    #black {
-        background-color: black;
-        color: black;     
-    }
-    #red {
-        background-color: red;
-        color: red;
-    }
-    #blue {
-        background-color: blue;
-        color: blue;  
-    }
-    #green {
-        background-color: green;
-        color:green;
-        
-    }
 
-#pixel-board {
-    border:black solid 1px;        
+#black {
+    background-color: black;
+    color: black;     
+}
+#red {
+    background-color: red;
+    color: red;
+}
+#blue {
+    background-color: blue;
+    color: blue;  
+}
+#green {
+    background-color: green;
+    color:green;
+}
+
+#pixel-board {  
+}
+
+.pixel-lines {
+    margin: 0;
 }
 
 .pixel {
     background-color: white;
+    display: inline-block;
+    border:black solid 1px;
     width: 40px;
     height: 40px;
-    border:black solid 1px;
-    padding: 40px;
-    
 }
 
-.pixel-lines {
-    display:inline-flex;
-    
-    
-}
+
