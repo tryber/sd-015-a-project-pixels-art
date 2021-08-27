@@ -14,7 +14,7 @@ addPixelsLines();
 // 7
 //Criado com base no raciocínio de Maria Gabriela
 
-const paletteColors = document.getElementById('color-palette')
+const paletteColors = document.getElementById('color-palette');
 function selectedColorPalette (){
 paletteColors.addEventListener('click', (event) => {
     const selected = document.querySelector('.selected');
@@ -28,8 +28,7 @@ selectedColorPalette();
 
 // 8
 
-const boardPixel = document.getElementById('pixel-board')
-
+const boardPixel = document.getElementById('pixel-board');
 boardPixel.addEventListener('click', (event) => {
     if(event.target.className === 'pixel') {
         const colorCurrent = document.querySelector('.selected').id;
@@ -37,3 +36,13 @@ boardPixel.addEventListener('click', (event) => {
         colorSelected.style.backgroundColor = colorCurrent; 
     }
 })
+
+// 9
+const clearButton = document.getElementById('clear-board');
+clearButton.addEventListener('click', clearPixels);
+function clearPixels (){
+    for (index = 0; index < 25; index += 1) {
+    const white = document.querySelectorAll('.pixel')[index];
+    white.style.backgroundColor = "white";
+}
+}
