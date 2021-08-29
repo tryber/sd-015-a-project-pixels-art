@@ -13,3 +13,12 @@ function clickColor(clickEvent) {
 
 const clickC = document.getElementById('color-palette');
 clickC.addEventListener('click', clickColor);
+
+function selectedColor(clickEvent) {
+  const selection = document.querySelector('.selected').id;
+  const pixelSelection = clickEvent.target;
+  pixelSelection.id = selection;
+}
+
+const clickP = document.getElementById('pixel-board');
+clickP.addEventListener('click', selectedColor);

@@ -1,5 +1,5 @@
 * {
-  margin: 0px;
+  margin: 0;
 }
 
 .color {
@@ -35,11 +35,11 @@
   border-color: black;
   border-style: solid;
   border-width: 1px;
-  margin-top: 0px;
-  margin-bottom: 0px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 #pixel-board {
   width: 210px;
-  padding: 0px;
+  padding: 0;
 }
