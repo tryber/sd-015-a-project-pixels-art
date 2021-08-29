@@ -20,3 +20,13 @@ function selectColor(event) {
 }
 
 colorPallete.addEventListener('click', selectColor);
+
+function changecolor(event) {
+  if (event.target.classList.contains('pixel')) {
+    const pixel = event;
+    const selectedcolor = document.getElementsByClassName('selected')[0];
+    const color = getComputedStyle(selectedcolor).backgroundColor;
+    pixel.target.style.backgroundColor = color;
+  }
+}
+BOard.addEventListener('click', changecolor);
