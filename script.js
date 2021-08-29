@@ -21,6 +21,9 @@ function selectColor(event) {
 
 colorPallete.addEventListener('click', selectColor);
 
+// consultei esse repositorio para resolver
+// https://github.com/tryber/sd-015-a-project-pixels-art/blob/leonardo-felix-pixels-art/script.js
+
 function changecolor(event) {
   if (event.target.classList.contains('pixel')) {
     const pixel = event;
