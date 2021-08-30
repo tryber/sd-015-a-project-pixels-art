@@ -1,3 +1,7 @@
+// Aqui estão guardados os principais valores da tabela
+const tabelaPixelArt = 'pixel-board';
+let numeroPixels = 25;
+
 // função que cria a paleta de Cores
 // Transforma a paleta em cores aleatórias
 function criaPaleta(color) {
@@ -23,9 +27,11 @@ function criaCoresPaleta() {
   }
 }
 
-// função que cria a tabela
-function criaTabela() {
-  for (let i = 0; i < 25; i += 1) {
+criaCoresPaleta();
+
+// função que cria a tabela de acordo com tamanho predefinido
+function criaTabela(tamanho) {
+  for (let i = 0; i < tamanho; i += 1) {
     const tablePixel = document.createElement('div');
     const tableItem = document.createElement('li');
     const parentElement = document.getElementById('pixel-board');
@@ -38,6 +44,31 @@ function criaTabela() {
 }
 
 criaTabela();
+
+// função que diminui tamanho da tabela
+function removePixel(tamanho) {
+  for (let i = 0; i < tamanho; i += 1) {
+    const todosPixels = document.getElementsByClassName('pixel');
+
+    todosPixels[0].remove();
+  }
+}
+
+removePixel();
+
+// função para ajustar o número dos pixels da tabela
+function ajustaTabela(tamanho) {
+  const tamanhoGrade = tamanho * tamanho;
+  if (tamanhoGrade > numeroPixels) {
+    criaTabela((tamanhoGrade - numeroPixels));
+    numeroPixels = tamanhoGrade;
+  } else if (tamanhoGrade < numeroPixels) {
+    removePixel((numeroPixels - tamanhoGrade));
+    numeroPixels = tamanhoGrade;
+  }
+}
+
+ajustaTabela();
 
 // função que define a cor padrão e a cor que ficará selecionada
 function defineCor() {
