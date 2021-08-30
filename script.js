@@ -18,7 +18,7 @@ function paintColors() {
 
 paintColors();
 
-function zeraPizels() {
+function removePixels() {
   const pixels = document.querySelectorAll('.pixel');
   if (pixels.length > 0) {
     for (let i = 0; i < pixels.length; i += 1) {
@@ -28,7 +28,7 @@ function zeraPizels() {
 }
 
 function drawPixels(size) {
-  zeraPizels();
+  removePixels();
   const pixelBoard = document.getElementById('pixel-board');
   const largura = size * 42;
   pixelBoard.style.width = `${largura}px`;
@@ -80,7 +80,7 @@ function limitSize() {
   }
 }
 
-function verificaSize() {
+function verifySize() {
   const size = document.getElementById('board-size');
   if (size.value === '') {
     alert('Board inválido!');
@@ -91,4 +91,4 @@ function verificaSize() {
 }
 
 const clickSize = document.getElementById('generate-board');
-clickSize.addEventListener('click', verificaSize);
+clickSize.addEventListener('click', verifySize);
