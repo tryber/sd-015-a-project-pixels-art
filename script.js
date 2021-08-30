@@ -51,7 +51,7 @@ function removePixel(value) {
 criaPixel();
 removePixel();
 
-// Função que define a cor padrão
+// Funções responsáveis por definir a cor padrão e muda para a cor selecionada
 function defineCor() {
   const corPadrao = document.querySelector('.color');
   corPadrao.classList.add('selected');
