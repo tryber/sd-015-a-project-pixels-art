@@ -11,22 +11,6 @@
   display: inline-block;
 }
 
-#preto {
-  background-color: black;
-}
-
-#azul {
-  background-color: royalblue;
-}
-
-#laranja {
-  background-color: orange;
-}
-
-#violeta {
-  background-color: violet;
-}
-
 .pixel {
   width: 40px;
   height: 40px;

@@ -1,3 +1,23 @@
+function randonColors() {
+  const red = Math.floor(Math.random() * 255);
+  const green = Math.floor(Math.random() * 255);
+  const blue = Math.floor(Math.random() * 255);
+  return `rgb(${red},${green},${blue})`;
+}
+
+function paintColors() {
+  const preto = document.getElementById('preto');
+  const color2 = document.getElementById('color2');
+  const color3 = document.getElementById('color3');
+  const color4 = document.getElementById('color4');
+  color2.style.backgroundColor = randonColors();
+  color3.style.backgroundColor = randonColors();
+  color4.style.backgroundColor = randonColors();
+  preto.style.backgroundColor = 'black';
+}
+
+paintColors();
+
 function zeraPizels() {
   const pixels = document.querySelectorAll('.pixel');
   if (pixels.length > 0) {
@@ -32,9 +52,9 @@ const clickC = document.getElementById('color-palette');
 clickC.addEventListener('click', clickColor);
 
 function selectedColor(clickEvent) {
-  const selection = document.querySelector('.selected').id;
+  const selection = document.querySelector('.selected').style.backgroundColor;
   const pixelSelection = clickEvent.target;
-  pixelSelection.id = selection;
+  pixelSelection.style.backgroundColor = selection;
 }
 
 const clickP = document.getElementById('pixel-board');
@@ -43,7 +63,7 @@ clickP.addEventListener('click', selectedColor);
 function resetPixels() {
   const selection = document.querySelectorAll('.pixel');
   for (let i = 0; i < selection.length; i += 1) {
-    selection[i].removeAttribute('id');
+    selection[i].removeAttribute('style');
   }
 }
 
