@@ -1,19 +1,27 @@
 // função que cria a paleta de Cores
-function criaPaleta() {
-  const colorArray = ['black', 'purple', 'orange', 'cyan'];
-  for (let i = 0; i < colorArray.length; i += 1) {
-    const colorDiv = document.createElement('div');
-    const colorLi = document.createElement('li');
-    const parentElement = document.getElementById('color-palette');
+// Transforma a paleta em cores aleatórias
+function criaPaleta(color) {
+  const colorDiv = document.createElement('div');
+  const colorLi = document.createElement('li');
+  const parentElement = document.getElementById('color-palette');
 
-    colorDiv.className = 'color';
-    colorDiv.style.backgroundColor = colorArray[i];
-    parentElement.appendChild(colorDiv);
-    colorDiv.appendChild(colorLi);
-  }
+  colorDiv.className = 'color';
+  colorDiv.style.backgroundColor = color;
+  parentElement.appendChild(colorDiv);
+  colorDiv.appendChild(colorLi);
 }
 
 criaPaleta();
+
+function criaCoresPaleta() {
+  criaPaleta('black');
+  for (let i = 0; i < 3; i += 1) {
+    const r = Math.floor(Math.random() * 255);
+    const g = Math.floor(Math.random() * 255);
+    const b = Math.floor(Math.random() * 255);
+    criaPaleta(`rgb(${r}, ${g}, ${b})`);
+  }
+}
 
 // função que cria a tabela
 function criaTabela() {
