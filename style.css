@@ -1,6 +1,7 @@
 body {
-    background-color: bisque;
+  background-color: bisque;
 }
+
 .color {
   display: inline-block;
   list-style-type: none;
