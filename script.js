@@ -30,3 +30,24 @@ function criaTabela() {
 }
 
 criaTabela();
+
+// função que define a cor padrão e a cor que ficará selecionada
+function defineCor() {
+  const defaultBg = document.querySelector('.color');
+  defaultBg.classList.add('selected');
+}
+
+defineCor();
+
+function selecionaCor() {
+  const paleta = document.getElementById('color-palette');
+  paleta.addEventListener('dblclick', (event) => {
+    const corSelecionada = document.querySelector('.selected');
+    const novaCor = event.target;
+
+    corSelecionada.classList.remove('selected');
+    novaCor.classList.add('selected');
+  });
+}
+
+selecionaCor();
