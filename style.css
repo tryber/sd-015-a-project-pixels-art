@@ -1,21 +1,19 @@
-#title {
-  font-family: Arial, Helvetica, sans-serif;
-  margin-left: 30px;
-}
-
 .color {
-  display: inline-block;
   list-style-type: none;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
   border: 1px solid black;
-  height: 45px;
-  width: 45px;
-  margin-right: 8px;
+  margin: 0;
+  padding: 0;
 }
 
 #pixel-board {
+  margin: 0;
+  padding: 0;
   width: 240px;
-  height: 300px;
-  border: 1px solid black;
+  list-style: inside;
+  padding-bottom: 20px;
 }
 
 .pixel {
@@ -24,13 +22,17 @@
   width: 40px;
   height: 40px;
   border: 1px solid black;
+  margin: 0;
+  padding: 0;
 }
 
-#clear-board {
+button {
   background-color: purple;
   color: white;
-  padding: 10px;
   border: none;
-  margin-top: 10px;
-  margin-left: 110px;
+  padding: 7px;
+}
+
+section {
+  margin-bottom: 25px;
 }

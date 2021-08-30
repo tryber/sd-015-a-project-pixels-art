@@ -1,5 +1,4 @@
 // Aqui estão guardados os principais valores da tabela
-const tabelaPixelArt = 'pixel-board';
 let numeroPixels = 25;
 
 // função que cria a paleta de Cores
