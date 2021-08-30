@@ -1,3 +1,8 @@
+#title {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 30px;
+}
+
 .color {
   display: inline-block;
   list-style-type: none;
@@ -9,7 +14,8 @@
 
 #pixel-board {
   width: 240px;
-  border: none;
+  height: 300px;
+  border: 1px solid black;
 }
 
 .pixel {
@@ -18,4 +24,14 @@
   width: 40px;
   height: 40px;
   border: 1px solid black;
+}
+
+#clear-board {
+  background-color: purple;
+  color: white;
+  padding: 10px;
+  border: none;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-left: 110px;
 }

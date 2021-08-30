@@ -65,3 +65,19 @@ function preenchePixel() {
 }
 
 preenchePixel();
+
+// função que faz a tabela ficar limpa após clicar no botão 'Limpar'
+function limparTabela() {
+  const clearButton = document.querySelector('button');
+
+  clearButton.innerHTML = 'Limpar';
+  clearButton.id = 'clear-board';
+  clearButton.addEventListener('click', () => {
+    const todosPixels = document.querySelectorAll('.pixel');
+    for (let i = 0; i < todosPixels.length; i += 1) {
+      todosPixels[i].style.backgroundColor = 'white';
+    }
+  });
+}
+
+limparTabela();
