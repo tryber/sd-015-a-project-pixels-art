@@ -50,11 +50,22 @@ function resetPixels() {
 const clickReset = document.getElementById('clear-board');
 clickReset.addEventListener('click', resetPixels);
 
+function limitSize() {
+  const size = document.getElementById('board-size');
+  if (size.value < 5) {
+    size.value = 5;
+  }
+  if (size.value > 50) {
+    size.value = 50;
+  }
+}
+
 function verificaSize() {
   const size = document.getElementById('board-size');
   if (size.value === '') {
     alert('Board inválido!');
   } else {
+    limitSize();
     drawPixels(size.value);
   }
 }
