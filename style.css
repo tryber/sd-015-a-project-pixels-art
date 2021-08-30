@@ -5,7 +5,20 @@ body {
   display: inline-block;
   list-style-type: none;
   border: 1px solid black;
-  height: 25px;
-  width: 25px;
-  margin: 7px;
+  height: 45px;
+  width: 45px;
+  margin-right: 8px;
+}
+
+#pixel-board {
+  width: 240px;
+  border: none;
+}
+
+.pixel {
+  list-style-type: none;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
 }
