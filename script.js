@@ -69,3 +69,14 @@ function selecionaCor() {
 
 defineCor();
 selecionaCor();
+
+function mudaPixel() {
+  const pixel = document.getElementById(tabelaPixelArt);
+  pixel.addEventListener('click', (event) => {
+    const corSelecionada = document.querySelector('.selected').style.backgroundColor;
+    const pixelSelecionado = event.target;
+    pixelSelecionado.style.backgroundColor = corSelecionada;
+  });
+}
+
+mudaPixel();
