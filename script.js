@@ -41,7 +41,7 @@ defineCor();
 
 function selecionaCor() {
   const paleta = document.getElementById('color-palette');
-  paleta.addEventListener('dblclick', (event) => {
+  paleta.addEventListener('click', (event) => {
     const corSelecionada = document.querySelector('.selected');
     const novaCor = event.target;
 
@@ -51,3 +51,18 @@ function selecionaCor() {
 }
 
 selecionaCor();
+
+// função que preenche o pixel com a cor selecionada
+function preenchePixel() {
+  const pixel = document.getElementById('pixel-board');
+
+  pixel.addEventListener('click', (event) => {
+    const corSelecionada = document.querySelector('.selected').style.backgroundColor;
+    const pixelClicado = event.target;
+
+    pixelClicado.style.backgroundColor = corSelecionada;
+  });
+}
+
+preenchePixel();
+
