@@ -1,13 +1,26 @@
-function drawPixels() {
+function zeraPizels() {
+  const pixels = document.querySelectorAll('.pixel');
+  if (pixels.length > 0) {
+    for (let i = 0; i < pixels.length; i += 1) {
+      pixels[i].remove();
+    }
+  }
+}
+
+function drawPixels(size) {
+  zeraPizels();
   const pixelBoard = document.getElementById('pixel-board');
-  for (let i = 0; i < 25; i += 1) {
+  const largura = size * 42;
+  pixelBoard.style.width = `${largura}px`;
+  pixelBoard.style.maxWidth = `${largura}px`;
+  for (let i = 0; i < (size * size); i += 1) {
     const pixel = document.createElement('div');
     pixel.className = 'pixel';
     pixelBoard.appendChild(pixel);
   }
 }
 
-drawPixels();
+drawPixels(5);
 
 function clickColor(clickEvent) {
   const selection = document.querySelector('.selected');
@@ -36,3 +49,15 @@ function resetPixels() {
 
 const clickReset = document.getElementById('clear-board');
 clickReset.addEventListener('click', resetPixels);
+
+function verificaSize() {
+  const size = document.getElementById('board-size');
+  if (size.value === '') {
+    alert('Board inválido!');
+  } else {
+    drawPixels(size.value);
+  }
+}
+
+const clickSize = document.getElementById('generate-board');
+clickSize.addEventListener('click', verificaSize);
