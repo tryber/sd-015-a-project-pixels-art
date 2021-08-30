@@ -50,3 +50,22 @@ function removePixel(value) {
 
 criaPixel();
 removePixel();
+
+// Função que define a cor padrão
+function defineCor() {
+  const corPadrao = document.querySelector('.color');
+  corPadrao.classList.add('selected');
+}
+
+function selecionaCor() {
+  const cor = document.getElementsById('color-palette');
+  cor.addEventListener('click', (event) => {
+    const corSelecionada = document.querySelector('selected');
+    const novaCor = event.target;
+    corSelecionada.classList.remove('selected');
+    novaCor.classList.add('selected');
+  });
+}
+
+defineCor();
+selecionaCor();
