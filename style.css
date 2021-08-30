@@ -2,24 +2,10 @@ body {
     background-color: bisque;
 }
 .color {
-    border: 1px solid black;
-    display: inline-block;
-    height: 25px;
-    width: 25px;
-}
-
-#color1 {
-    background-color: black;
-}
-
-#color2 {
-    background-color: coral;
-}
-
-#color3 {
-    background-color: olive;
-}
-
-#color4 {
-    background-color: grey;
+  display: inline-block;
+  list-style-type: none;
+  border: 1px solid black;
+  height: 25px;
+  width: 25px;
+  margin: 7px;
 }
