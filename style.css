@@ -1,0 +1,58 @@
+#title {
+    text-align: center;
+}
+
+.colors {
+    margin: auto;
+    width: 250px;
+    padding-left: 25px
+}
+
+.color {
+  margin: auto;
+  border: 1px solid black;
+  height: 50px;
+  width: 50px;
+  display: inline-block;
+}
+
+.black {
+    background-color: black;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.orange {
+    background-color: orange;
+}
+
+.red {
+    background-color: red;
+}
+
+#pixel-board {
+    margin: auto;
+    width: 200px;    
+    height: 200px;
+}
+
+.pixel {
+  background-color: white;
+  border: 1px solid black;
+  width: 40px;
+  height: 40px;
+  display: inline-block;  
+  margin: -3px;
+}   
+
+#div {
+    display: flex;
+    justify-content: center;
+    padding: 20px  ;
+}
+
+.button {
+    margin: 0 10px 0 10px;
+}
