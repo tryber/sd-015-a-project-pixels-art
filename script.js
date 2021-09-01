@@ -78,3 +78,16 @@ function bordSize() {
   console.log(input);
 }
 vqv.addEventListener('click', bordSize);
+
+// consultei esse repositorio
+// https://github.com/tryber/sd-015-a-project-pixels-art/pull/46/files
+function randomColor() {
+  const r = Math.floor(Math.random() * 255);
+  const g = Math.floor(Math.random() * 255);
+  const b = Math.floor(Math.random() * 255);
+
+  const pallete = document.querySelectorAll('.color');
+  pallete[1].style.backgroundColor = `rgb( ${r}, ${g}, ${b} )`;
+  pallete[2].style.backgroundColor = `rgb( ${g}, ${b}, ${r} )`;
+  pallete[3].style.backgroundColor = `rgb( ${b}, ${r}, ${g} )`;
+}randomColor();
