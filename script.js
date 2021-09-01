@@ -76,7 +76,7 @@ function generator() {
 const botao = document.querySelector('#generate-board');
 botao.addEventListener('click', generator);
 
-//Raciocinio 10
+//Criado com base no raciocínio da Debora Fatini;
 
 function createBoard(size) {
   const BOard = document.querySelector('#pixel-board');
@@ -121,8 +121,6 @@ function boardSize() {
   console.log(input);
 }
 botao.addEventListener('click', boardSize);
-
-//11
 
 
 //12
