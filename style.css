@@ -1,0 +1,40 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+#color-palette {
+  display: flex;
+  list-style: none;
+  margin: auto;
+  justify-content: center;
+}
+
+.color {
+  border: black solid 1px;
+  width: 40px;
+  height: 40px;
+  margin: 1px;
+}
+
+.black {
+  background-color: black;
+}
+
+
+
+#pixel-board {
+  list-style: none;
+}
+
+
+.pixel {
+  display: inline-block;
+  border: 1px black solid;
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
