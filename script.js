@@ -2,19 +2,31 @@ const accessBlack = document.getElementById('black-color');
 const accessRed = document.getElementById('red-color');
 const acessBlue = document.getElementById('blue-color');
 const accessGreen = document.getElementById('green-color');
-const accessButton = document.querySelector('#clear-board');
-const clearPixels = document.querySelector('#removePixel')
-const buttonGenerete = document.querySelector('#generate-board');
+const main = document.querySelector('#pixel-board');
+
+function rgb() {
+  const red = Math.floor(Math.random() * 255) + 1;
+  const green = Math.floor(Math.random() * 255) + 1;
+  const blue = Math.floor(Math.random() * 255) + 1;
+  return red + green + blue;
+}
 
 document.getElementById('black-color').style.backgroundColor = 'black';
-document.getElementById('red-color').style.backgroundColor = 'red';
-document.getElementById('blue-color').style.backgroundColor = 'blue';
-document.getElementById('green-color').style.backgroundColor = 'green';
+document.getElementById('red-color').style.backgroundColor = rgb();
+document.getElementById('blue-color').style.backgroundColor = rgb();
+document.getElementById('green-color').style.backgroundColor = rgb();
 
-function changeClass(change) {
+function changeClass(event) {
   const accessClassSelected = document.querySelector('.selected');
   accessClassSelected.classList.remove('selected');
-  change.target.classList.add('selected');
+  event.target.classList.add('selected');
+}
+
+function changeColor(event) {
+  const newBackGroundColor = document.querySelector('.selected');
+  const way = event.target;
+  const change = newBackGroundColor.style.backgroundColor;
+  way.style.backgroundColor = change;
 }
 
 accessBlack.addEventListener('click', changeClass);
@@ -23,12 +35,11 @@ acessBlue.addEventListener('click', changeClass);
 accessGreen.addEventListener('click', changeClass);
 
 function fixedBlock() {
-  const main = document.querySelector('#pixel-board');
   for (let i = 0; i < 5; i += 1) {
     const createWidth = document.createElement('section');
     createWidth.classList.add('block');
     main.appendChild(createWidth);
-    for (let i = 0; i < 5; i += 1) {
+    for (let i2 = 0; i2 < 5; i2 += 1) {
       const createPixel = document.createElement('div');
       createPixel.classList.add('pixel');
       createWidth.appendChild(createPixel);
@@ -39,11 +50,14 @@ function fixedBlock() {
 
 fixedBlock();
 
+function clearBoard() {
+  main.innerHTML = '';
+}
+
 function createBlock() {
-  const main = document.querySelector('#pixel-board');
   const number = document.getElementById('board-size').value;
-  let result = parseInt(number);
-  if (number == '') {
+  let result = parseInt(number, 10);
+  if (number === '') {
     alert('Board inválido!');
   } if (result < 5) {
     result = 5;
@@ -55,7 +69,7 @@ function createBlock() {
     const createWidth = document.createElement('section');
     createWidth.classList.add('block');
     main.appendChild(createWidth);
-    for (let i = 0; i < result; i += 1) {
+    for (let i2 = 0; i2 < result; i2 += 1) {
       const createPixel = document.createElement('div');
       createPixel.classList.add('pixel');
       createWidth.appendChild(createPixel);
@@ -64,14 +78,8 @@ function createBlock() {
   }
 }
 
+const buttonGenerete = document.querySelector('#generate-board');
 buttonGenerete.addEventListener('click', createBlock);
-
-function changeColor(event) {
-  const newBackGroundColor = document.querySelector('.selected');
-  const way = event.target;
-  const change = newBackGroundColor.style.backgroundColor;
-  way.style.backgroundColor = change;
-}
 
 function clearBox() {
   const accessAllBlocks = document.querySelectorAll('.pixel');
@@ -80,9 +88,5 @@ function clearBox() {
   }
 }
 
+const accessButton = document.querySelector('#clear-board');
 accessButton.addEventListener('click', clearBox);
-
-function clearBoard() {
-  const main = document.querySelector('#pixel-board');
-  main.innerHTML = ''
-}
