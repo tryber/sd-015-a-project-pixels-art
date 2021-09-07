@@ -1,14 +1,15 @@
 const accessBlack = document.getElementById('black-color');
+const main = document.querySelector('#pixel-board');
+const selected = document.querySelector('#color-palette');
 const accessRed = document.getElementById('red-color');
 const acessBlue = document.getElementById('blue-color');
 const accessGreen = document.getElementById('green-color');
-const main = document.querySelector('#pixel-board');
 
 function rgb() {
   const red = Math.floor(Math.random() * 255) + 1;
   const green = Math.floor(Math.random() * 255) + 1;
   const blue = Math.floor(Math.random() * 255) + 1;
-  return red + green + blue;
+  return `rgb(${red}, ${green}, ${blue})`;
 }
 
 document.getElementById('black-color').style.backgroundColor = 'black';
@@ -28,6 +29,17 @@ function changeColor(event) {
   const change = newBackGroundColor.style.backgroundColor;
   way.style.backgroundColor = change;
 }
+
+function createColor() {
+  const createDiv = document.createElement('div');
+  createDiv.classList.add('color', 'newColor');
+  createDiv.style.backgroundColor = rgb();
+  selected.appendChild(createDiv);
+  createDiv.addEventListener('click', changeClass);
+}
+
+const teste = document.querySelector('#teste');
+teste.addEventListener('click', createColor);
 
 accessBlack.addEventListener('click', changeClass);
 accessRed.addEventListener('click', changeClass);

@@ -3,6 +3,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
   <title>Pixel Art</title>
 <link rel="stylesheet" href="style.css">
 </head>
@@ -17,11 +18,11 @@
     <div class="color" id= "blue-color"> </div>
     <div class="color" id= "green-color"> </div>
   </section>
-  
-  <div>  
+  <div id="buttonInput">  
     <input type="number" name="input" id="board-size" min="1" placeholder="Adicione mais pixels aqui...">
-    <button id="generate-board" class="button" >VQV</button>
-    <button id="clear-board" class="button">Limpar</button>
+    <button id="generate-board" class="btn btn-primary button" >VQV</button>
+    <button id="clear-board" class="btn btn-danger button">Limpar</button>
+    <button id="teste" class="btn btn-success button"> Adicionar Cores </button>
   </div>
 
   <main id="pixel-board"> </main>
