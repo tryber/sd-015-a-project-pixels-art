@@ -66,7 +66,7 @@ function clearBoard() {
   main.innerHTML = '';
 }
 
-function createBlock() {
+function rules() {
   const number = document.getElementById('board-size').value;
   let result = parseInt(number, 10);
   if (number === '') {
@@ -76,6 +76,11 @@ function createBlock() {
   } if (result > 50) {
     result = 50;
   }
+  return result;
+}
+
+function createBlock() {
+  const result = rules();
   clearBoard();
   for (let i = 0; i < result; i += 1) {
     const createWidth = document.createElement('section');
