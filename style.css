@@ -1,0 +1,81 @@
+/* Genet */
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #f4deca;
+  font-family: 'Manrope', sans-serif;
+}
+
+#title {
+  text-align: center;
+  font-size: 50px;
+  margin-top: 60px;
+}
+
+.paragrafo {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 30px;
+}
+
+#color-palette {
+  width: 90%;
+  margin: auto;
+}
+
+/* 4 color */
+
+.color {
+  margin-top: 100px;
+  display: inline-block;
+  width: 200px;
+  height: 250px;
+  border: 1px solid black;
+  margin-right: 50px;
+}
+
+.black {
+  background-color: black;
+  margin-left: 10px;
+  
+}
+
+.red {
+  background-color: red;
+}
+.blue {
+  background-color: blue;
+}
+.green {
+  background-color: green;
+}
+
+/* 4 color */
+
+
+/* 5 squares */
+
+#pixel-board {
+  width: 100%;
+  margin: 40px auto;
+}
+
+.pixel {
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.separe {
+  width: 100%;
+  margin-top: 20px;
+  margin-left: 180px;
+}
