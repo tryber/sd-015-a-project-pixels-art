@@ -1,0 +1,37 @@
+FORMAS DIFERENTES DE SE CRIAR LINHAS E COLUNAS
+
+
+/*
+  function criarPixels() {
+    for (let index = 0; index < 5; index += 1) {
+      const colunaPixels = document.createElement('div'); // cria uma div na coluna[i], essa div sempre vai ser o primeiro quadrado em cada linha
+      colunaPixels.className = 'pixel';
+      colunaPixels.id = [index];
+      quadroPixels.appendChild(colunaPixels);
+      for (let i = 0; i < 4; i += 1) {
+        const linhaPixels = document.createElement('div'); // cria uma div na linha, a primeira div criada sempre vai ser o segundo quadrado em cada linha, pois o primeiro é criado pela coluna
+        linhaPixels.className = 'pixel';
+        linhaPixels.id = [i];
+        quadroPixels.appendChild(linhaPixels);
+      }
+    }
+  }
+  criarPixels();
+*/
+
+
+
+
+
+/*
+  function criarpixels() {
+    // cria os 25 quadrados, aqui o numero de quadrados em cada linha é controlado pelo css
+    for (let i = 1; i <= 25; i += 1) {
+      const pixel = document.createElement('div');
+      pixel.className = 'pixel';
+      // pixel.id = `pixel${[i]}`;
+      quadroPixels.appendChild(pixel);
+    }
+  }
+  criarpixels();
+*/
