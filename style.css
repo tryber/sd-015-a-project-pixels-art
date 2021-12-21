@@ -1,18 +1,30 @@
-.color{
-    width: 51px;
-    height: 55px;
-    border: 1px solid black;
-    display: inline-block;
+body {
+  background-image: url('https://i.pinimg.com/originals/31/0d/4a/310d4a2f36b4fe4a07a31f5f7759a4d3.jpg');
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#title {
+  margin: 20px 0;
+}
+
+.color {
+  border: 1px solid black;
+  display: inline-block;
+  height: 55px;
+  width: 51px;
 }
 
 /* #pixel-board{
     width: 210px;
 } */
 
-.pixel, .gPixel{
-    width: 40px;
-    height: 40px;
-    border: 1px solid black;
-    display: inline-block;
-    background-color: white;
+.pixel , .gPixel {
+  background-color: white;
+  border: 1px solid black;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
 }
