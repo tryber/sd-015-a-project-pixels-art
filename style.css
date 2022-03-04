@@ -1,0 +1,72 @@
+body {
+  background-image: url("./image_back.jpg");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+}
+
+.color {
+  border: black solid 1px;
+  height: 60px;
+  width: 60px;
+  display: inline-block;
+}
+
+.container {
+  background-color: rgb(230, 230, 230);
+  display: flex;
+  flex-direction: column;
+  padding: 5%;
+}
+
+.pixel {
+  border: black solid 1px;
+  width: 60px;
+  height: 60px;
+  display: inline-block;
+  background-color: white;
+  margin: 0px;  
+}
+
+#pixel-board {
+  border-spacing: 0px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.black {
+  background-color: black;
+}
+.green {
+  background-color: #adff02;
+}
+.blue {
+  background-color: #01befe;
+}
+.pink {
+  background-color: #ff006d;
+}
+#clear-board {
+  border-radius: 15px;
+  background-color: rgb(245, 3, 3);
+  border-color: whitesmoke;
+  color: white;
+  margin: 10px;
+  padding: 7px 15px;
+  text-transform: uppercase;
+}
+#header {
+  text-align: center;
+  font-family: 'Architects Daughter', cursive;
+  font-size: 42px;
+}
+#main {
+  text-align: center;
+}
+.line-board {
+  height: 60px;
+}
+
+.selected {
+  box-shadow: -4px 4px 24px rgba(0, 0, 0, 0.8);
+}
