@@ -1,0 +1,117 @@
+.container {
+    display: inline-block;
+}
+
+.pixel {
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    align-items: center;   
+    display: inline-block;    
+    border-width: 1px;
+    border-color: black;    
+    border-style: solid;
+    margin: -1px;  
+    margin-bottom: -4;      
+}
+
+.quebraLinha {
+    background-color: white;
+}
+
+.firstPixelScreen {
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    align-items: center;   
+    display:inline-table;    
+    border-width: 1px;
+    border-color: black;    
+    border-style: solid;
+    margin: -1px;    
+    margin-top: -1;
+}
+
+#vermelho {
+    background-color: red;
+    width: 40px;
+    height: 40px;
+    align-items: center;   
+    display: inline-block;    
+    border-width: 1px;
+    border-color: black;    
+    border-style: solid;
+    margin: 2px;
+}
+
+#verde {
+    background-color: green;
+    width: 40px;
+    height: 40px;
+    align-items: center;   
+    display: inline-block;    
+    border-width: 1px;
+    border-color: black;    
+    border-style: solid;
+    margin: 2px;
+}
+
+#preto {
+    background-color: black;
+    width: 40px;
+    height: 40px;
+    align-items: center;   
+    display: inline-block;    
+    border-width: 1px;
+    border-color: black;    
+    border-style: solid;
+    margin: 2px;
+}
+
+#azul {
+    background-color: blue;
+    width: 40px;
+    height: 40px;
+    align-items: center;   
+    display: inline-block;    
+    border-width: 1px;
+    border-color: black;    
+    border-style: solid;
+    margin: 2px;
+
+}
+
+#white {
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    align-items: center;   
+    display: inline-block;
+    border-radius: 1px;
+    border-color: black;
+    margin: -1px;   
+}
+
+#color-palete {
+    width: 40px;
+    height: 40px;
+    margin: 2px;
+    align-items: center;
+    display: flex;
+    flex-flow: row wrap;    
+}
+
+body {
+    align-items: center ;
+    background-color: #333;
+    color: white;
+    display: flex;
+    flex-flow: column wrap;
+    font-family: Montserrat, sans-serif;
+    height: 100vh;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+  }
+  
